@@ -1,0 +1,86 @@
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\bin\Debug\MailboxCUCEI.exe.config
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\bin\Debug\MailboxCUCEI.exe
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\bin\Debug\MailboxCUCEI.pdb
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\bin\Debug\MySql.Data.dll
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\bin\Debug\Google.Protobuf.dll
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\bin\Debug\Renci.SshNet.dll
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\bin\Debug\MySql.Data.xml
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.csprojAssemblyReference.cache
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Login.resources
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Properties.Resources.resources
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.csproj.CopyComplete
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.exe
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.pdb
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Registro.resources
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.InicioAdmin.resources
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Principal.resources
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.AdminAccess2.resources
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Administrador.resources
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Modificar.resources
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Form8.resources
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\bin\Debug\MySqlBackup.dll
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\bin\Debug\Google.Protobuf.xml
+C:\Users\PC\source\repos\MailboxCUCEI\MailboxCUCEI\bin\Debug\Renci.SshNet.xml
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\bin\Debug\MailboxCUCEI.exe.config
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\bin\Debug\MailboxCUCEI.exe
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\bin\Debug\MailboxCUCEI.pdb
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\bin\Debug\MySql.Data.dll
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\bin\Debug\MySqlBackup.dll
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\bin\Debug\MySql.Data.xml
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Login.resources
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Registro.resources
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Principal.resources
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Administrador.resources
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Form8.resources
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Properties.Resources.resources
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.csproj.GenerateResource.Cache
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.exe
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.pdb
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.FRMPreWri.resources
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.FRMWrite.resources
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.FRMCreateStory.resources
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.csprojAssemblyReference.cache
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.csproj.CoreCompileInputs.cache
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\bin\Debug\BouncyCastle.Crypto.dll
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\bin\Debug\Google.Protobuf.dll
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\bin\Debug\Newtonsoft.Json.dll
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\bin\Debug\Renci.SshNet.dll
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\bin\Debug\Google.Protobuf.xml
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\bin\Debug\Newtonsoft.Json.xml
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\bin\Debug\Renci.SshNet.xml
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.csproj.CopyComplete
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.WaitForm.resources
+D:\Universidad 20a\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.FRMSelectStory.resources
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\bin\Debug\MailboxCUCEI.exe.config
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\bin\Debug\MailboxCUCEI.exe
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\bin\Debug\MailboxCUCEI.pdb
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\bin\Debug\Google.Protobuf.dll
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\bin\Debug\MySql.Data.dll
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\bin\Debug\MySqlBackup.dll
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\bin\Debug\Renci.SshNet.dll
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\bin\Debug\Google.Protobuf.xml
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\bin\Debug\MySql.Data.xml
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\bin\Debug\Renci.SshNet.xml
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Login.resources
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Registro.resources
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.FRMCreateStory.resources
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Principal.resources
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.FRMSelectStory.resources
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.WaitForm.resources
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.FRMPreWri.resources
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Administrador.resources
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.FRMWrite.resources
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Form8.resources
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Properties.Resources.resources
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.csproj.CopyComplete
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.exe
+C:\Users\PC\Desktop\MailboxCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.pdb

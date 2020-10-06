@@ -1,0 +1,131 @@
+-- MySqlBackup.NET 2.3.1
+-- Dump Time: 2019-11-26 22:11:51
+-- --------------------------------------
+-- Server version 5.7.26 MySQL Community Server (GPL)
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES latin1 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+-- 
+-- Definition of reportes
+-- 
+
+DROP TABLE IF EXISTS `reportes`;
+CREATE TABLE IF NOT EXISTS `reportes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `titulo` text NOT NULL,
+  `descripcion` text NOT NULL,
+  `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_user_id` (`user_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table reportes
+-- 
+
+/*!40000 ALTER TABLE `reportes` DISABLE KEYS */;
+INSERT INTO `reportes`(`id`,`user_id`,`titulo`,`descripcion`,`fecha`,`status`) VALUES
+(6,22,'Hola','Prueba 1 de reporte','2019-10-20 23:21:13','R'),
+(7,12,'se rompio','se rompio el vidrio','2019-11-24 15:13:15','A'),
+(8,78,'acb','adf4g5','2019-11-24 16:53:58','A'),
+(9,34,'ccv42gv4','vfvveve','2019-11-24 16:53:58','A');
+/*!40000 ALTER TABLE `reportes` ENABLE KEYS */;
+
+-- 
+-- Definition of sessions
+-- 
+
+DROP TABLE IF EXISTS `sessions`;
+CREATE TABLE IF NOT EXISTS `sessions` (
+  `session_id` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `expires` int(11) unsigned NOT NULL,
+  `data` text CHARACTER SET utf8mb4 COLLATE utf8mb4_bin,
+  PRIMARY KEY (`session_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table sessions
+-- 
+
+/*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
+INSERT INTO `sessions`(`session_id`,`expires`,`data`) VALUES
+('GrKzafnav9bWnHJm8SmmFzj5zYYahPfg',1571718232,'{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"flash\":{}}'),
+('KP1bObDnSSSUthwzccbwjB0rWmXDfWhC',1572913081,'{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"flash\":{}}'),
+('KzlUKeDyBNvL1sO9nkTIzHG--qLfc1Yg',1572318174,'{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"flash\":{\"error\":[\"Missing credentials\",\"Missing credentials\",\"Missing credentials\",\"Missing credentials\",\"Missing credentials\",\"Missing credentials\",\"Missing credentials\",\"Missing credentials\",\"Missing credentials\"]}}'),
+('USD7szBSfx-SdRrh9S7WmYLucL1TBOGQ',1572913022,'{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"flash\":{},\"passport\":{\"user\":3}}'),
+('sACGT3OzVMCE9R3PIhnKDFJFgXszij10',1574715722,'{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"flash\":{},\"passport\":{\"user\":4}}'),
+('vkongGgWYel3yNwOTJZsIewLn_umybt0',1572312753,'{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"flash\":{\"error\":[\"Missing credentials\",\"Missing credentials\",\"Missing credentials\",\"Missing credentials\",\"Missing credentials\",\"Missing credentials\",\"Missing credentials\",\"Missing credentials\"]}}');
+/*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
+
+-- 
+-- Definition of usuario
+-- 
+
+DROP TABLE IF EXISTS `usuario`;
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `usuario_id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `codigo` int(11) NOT NULL,
+  `correo` varchar(50) NOT NULL,
+  PRIMARY KEY (`usuario_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table usuario
+-- 
+
+/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT INTO `usuario`(`usuario_id`,`nombre`,`password`,`codigo`,`correo`) VALUES
+(4,'Angelica Janeth','1308',213420085,'jaime@live.mx'),
+(6,'Administrador','admin123',1,'adm@udg.mx'),
+(7,'FastAdmin','1',1,'1@1.1'),
+(9,'Joselo','1998',213420090,'juan@live.mx'),
+(14,'Bonifasio','9424',6949,'pp@pp.pp');
+/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+
+-- 
+-- Definition of usuario_web
+-- 
+
+DROP TABLE IF EXISTS `usuario_web`;
+CREATE TABLE IF NOT EXISTS `usuario_web` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `codigo` int(9) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(60) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table usuario_web
+-- 
+
+/*!40000 ALTER TABLE `usuario_web` DISABLE KEYS */;
+INSERT INTO `usuario_web`(`id`,`codigo`,`email`,`password`) VALUES
+(4,123,'jaime_monroy@live.com.mx','$2a$10$7xQ/OFXiGG6XKp/d342GcORnNbZCV2mIHhsa3IyMNigS/qldXEvFC');
+/*!40000 ALTER TABLE `usuario_web` ENABLE KEYS */;
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+
+-- Dump completed on 2019-11-26 22:11:51
+-- Total time: 0:0:0:0:477 (d:h:m:s:ms)
