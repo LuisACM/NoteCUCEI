@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -130,6 +131,19 @@ namespace MailboxCUCEI
             directo.User = true;
             directo.Show();
             this.Hide();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            if (File.Exists(@"\Image"))
+            {
+
+            }
+            else
+            {
+                System.IO.Directory.CreateDirectory(@"\Image");
+            }
+            
         }
     }
 }
