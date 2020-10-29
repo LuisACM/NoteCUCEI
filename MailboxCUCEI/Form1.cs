@@ -85,7 +85,6 @@ namespace MailboxCUCEI
         }
         private void BtnInicioSesion_Click(object sender, EventArgs e)
         {
-            
             Esperar.Show();
             MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
             conectar.Open();
@@ -102,12 +101,13 @@ namespace MailboxCUCEI
                 Principal go = new Principal();
                 go.User = false;
                 go.ActUser = ActUser;
+                go.manduser.Text = TxtUsuario.Text;
                 go.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Codigo o contraseña erroneos PRROTE");
+                MessageBox.Show("Codigo o contraseña erroneos");
             }
             conectar.Close();
             Esperar.Hide();

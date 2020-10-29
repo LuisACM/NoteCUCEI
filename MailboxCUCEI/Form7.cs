@@ -27,7 +27,7 @@ namespace MailboxCUCEI
         public void BTNSalir_Click(object sender, EventArgs e)
         {
             Administrador refresh = new Administrador();
-            refresh.Cargar_data_grid();
+            //refresh.Cargar_data_grid();
             this.Hide();
 
         }

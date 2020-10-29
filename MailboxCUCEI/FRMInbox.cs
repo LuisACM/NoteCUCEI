@@ -17,7 +17,7 @@ namespace MailboxCUCEI
         {
             InitializeComponent();
         }
-		int CurrentLocationX, CurrentLocationY;
+		//int CurrentLocationX, CurrentLocationY;
 		public Usuario ActUser;
 
 		void Label1Click(object sender, EventArgs e)

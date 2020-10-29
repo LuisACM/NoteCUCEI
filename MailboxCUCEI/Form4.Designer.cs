@@ -43,6 +43,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.BtnPerfil = new System.Windows.Forms.Button();
+            this.manduser = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.PanelTopStories.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -203,12 +205,37 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "label1";
             // 
+            // BtnPerfil
+            // 
+            this.BtnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPerfil.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPerfil.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.BtnPerfil.Location = new System.Drawing.Point(12, 260);
+            this.BtnPerfil.Name = "BtnPerfil";
+            this.BtnPerfil.Size = new System.Drawing.Size(129, 41);
+            this.BtnPerfil.TabIndex = 10;
+            this.BtnPerfil.Text = "Mi Perfil";
+            this.BtnPerfil.UseVisualStyleBackColor = true;
+            this.BtnPerfil.Click += new System.EventHandler(this.BtnPerfil_Click);
+            // 
+            // manduser
+            // 
+            this.manduser.AutoSize = true;
+            this.manduser.Location = new System.Drawing.Point(0, 471);
+            this.manduser.Name = "manduser";
+            this.manduser.Size = new System.Drawing.Size(35, 13);
+            this.manduser.TabIndex = 11;
+            this.manduser.Text = "label2";
+            this.manduser.Visible = false;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1037, 493);
+            this.Controls.Add(this.manduser);
+            this.Controls.Add(this.BtnPerfil);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BTNLeer);
@@ -248,5 +275,7 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button BtnPerfil;
+        public System.Windows.Forms.Label manduser;
     }
 }

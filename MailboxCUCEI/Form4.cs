@@ -165,5 +165,12 @@ namespace MailboxCUCEI
 			Nueva.Show();
             Nueva.ActUser = ActUser;
 		}
+
+        private void BtnPerfil_Click(object sender, EventArgs e)
+        {
+            Administrador op = new Administrador();
+            op.TxtCodigoPerfil.Text = manduser.Text;
+            op.Show();
+        }
     }
 }

@@ -22,83 +22,53 @@ namespace MailboxCUCEI
         {
             this.Hide();
         }
-
-        public void Cargar_data_grid()
-        {
-           
-        }
         public void Administrador_Load(object sender, EventArgs e)
         {
-            Cargar_data_grid();
+            //aqui se cargan los datos del usuario en su correspondiente textbox
+            MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM Usuarios WHERE Codigo = @ID",conexion);
+            comando.Parameters.AddWithValue("@ID", TxtCodigoPerfil.Text);
+            conexion.Open();
+            MySqlDataReader registro = comando.ExecuteReader();
+            if (registro.Read())
+            {
+                TxtNombrePerfil.Text = registro["Nombre"].ToString();
+                TxtCorreoPerfil.Text = registro["Correo"].ToString();
+                TxtPassPerfil.Text = registro["Password"].ToString();
+                FechaNac.Text = registro["F_Nacimiento"].ToString();
+            }
+            conexion.Close();
         }
 
-        private void BTNEliminar_Click(object sender, EventArgs e)
+        private void BTNEliminar_Click_1(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Seguro que deseas eliminar este usuario?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
-            {
-                MySqlConnection con = new MySqlConnection("server=127.0.0.1; database=mailbox; Uid=root; pdw=;");
-                con.Open();
-                string id = "";
-                if (DataGridAdmin.SelectedCells.Count > 0)
-                {
-                    id = DataGridAdmin.SelectedCells[0].Value.ToString();
-                }
-                MySqlCommand borrar = new MySqlCommand("DELETE FROM usuario where usuario_id=(@usuario);", con);
-                borrar.Parameters.AddWithValue("@usuario", id);
-                borrar.ExecuteNonQuery();
-                DataGridAdmin.DataSource = null;
-                Cargar_data_grid();
-                con.Close();
-                MessageBox.Show("Se ha eliminado con exito");
-            }
-            else
-            {
-                MessageBox.Show("No se ha eliminado nada");
-            }
+            //funcion de eliminar cuenta
+
         }
 
         private void BTNModificar_Click(object sender, EventArgs e)
         {
-            Form mody = new FRMWrite();
-            mody.Show();
+            //funcion de modificar los datos
+            MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+            conexion.Open();
+            string Query = "UPDATE Usuarios SET Codigo='" + TxtCodigoPerfil.Text +
+                "',Nombre='" + TxtNombrePerfil.Text +
+                "',Correo='" + TxtCorreoPerfil.Text +
+                "',Password='" + TxtPassPerfil.Text +
+                "',F_Nacimiento='" + FechaNac.Text +
+                "'WHERE Codigo='"+TxtCodigoPerfil.Text+
+                "';";
+            MySqlCommand comando = new MySqlCommand(Query, conexion);
+            comando.ExecuteNonQuery();
+            conexion.Close();
+            MessageBox.Show("Datos actualizados con éxito!");
+
+
         }
 
-        private void DataGridAdmin_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void BTNSalir_Click_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void BTNRefrescar_Click(object sender, EventArgs e)
-        {
-            Cargar_data_grid();
-        }
-
-        private void BTNRespaldo_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("¿Seguro que deseas realizar una copia de seguridad?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
-            {
-                string cnx = "server=127.0.0.1; database=mailbox; Uid=root; pdw=;";
-                cnx += "charset=utf8;convertzerodatetime=true";
-                string backup = "BackupMailboxCUCEI";
-                using (MySqlConnection con = new MySqlConnection(cnx))
-                {
-                    using (MySqlCommand cmd = new MySqlCommand())
-                    {
-                        using (MySqlBackup mb = new MySqlBackup(cmd))
-                        {
-                            cmd.Connection = con;
-                            con.Open();
-                            mb.ExportToFile(backup);
-                            con.Close();
-                        }
-                    }
-                }
-                MessageBox.Show("Se realizo una copia de seguridad con exito \nSe encuentra en C:/Users/PC/Source/repos/MailboxCUCEI/MailboxCUCEI/bin/Debug ");
-            }
-            else
-            {
-                MessageBox.Show("No se ha realizado nada");
-            }
+            this.Hide();
         }
     }
 }

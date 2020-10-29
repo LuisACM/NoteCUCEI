@@ -267,7 +267,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TxtUsuario;
         private System.Windows.Forms.TextBox TxtPassword;
         private System.Windows.Forms.Button BtnInicioSesion;
         private System.Windows.Forms.LinkLabel LinkLabel;
@@ -279,6 +278,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox TxtUsuario;
     }
 }
 
