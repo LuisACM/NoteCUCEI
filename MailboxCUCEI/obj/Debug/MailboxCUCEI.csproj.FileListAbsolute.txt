@@ -108,10 +108,11 @@ D:\Gith\NoteCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.WaitForm.resources
 D:\Gith\NoteCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.FRMPreWri.resources
 D:\Gith\NoteCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Administrador.resources
 D:\Gith\NoteCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.FRMWrite.resources
-D:\Gith\NoteCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Form8.resources
 D:\Gith\NoteCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.Properties.Resources.resources
 D:\Gith\NoteCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.csproj.GenerateResource.cache
 D:\Gith\NoteCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.csproj.CoreCompileInputs.cache
 D:\Gith\NoteCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.csproj.CopyComplete
 D:\Gith\NoteCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.exe
 D:\Gith\NoteCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.pdb
+D:\Gith\NoteCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.FRMReadZone.resources
+D:\Gith\NoteCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.FRMPreview.resources

@@ -59,7 +59,6 @@ namespace MailboxCUCEI
             }
             else
             {
-                //SELECT * FROM `Generos` WHERE `Nombre` = 'Policiaca' OR `Nombre`='Aventura' 
                 string[] generos = codes.Split('|');
                 string query = "SELECT * FROM `Generos` WHERE `ID_Genero` = " + generos [0]+ " OR `ID_Genero`=" + generos[1]+"";
                 string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
@@ -70,7 +69,7 @@ namespace MailboxCUCEI
                 lector = comando.ExecuteReader();
                 while (lector.Read())
                 {
-                    Generos = Generos +lector.GetString(1) + "";
+                    Generos = Generos +lector.GetString(1) + " ";
                 }
                 connetionBD.Close();
             }

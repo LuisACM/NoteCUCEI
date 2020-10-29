@@ -134,7 +134,6 @@ namespace MailboxCUCEI
 				Capitulo++;
 			}
 			connetionBD.Close();
-			MessageBox.Show(Capitulo.ToString());
 		}
 
         private void BTNPublish_Click(object sender, EventArgs e)
@@ -143,14 +142,15 @@ namespace MailboxCUCEI
             {
 				WaitForm Wait = new WaitForm();
 				Wait.Show();
-				RTBWriteZone.SaveFile(txtTitle.Text+ID_Historia+".rtf");
-				string query = "INSERT INTO `Capitulo` (`ID_Cap`, `Nombre`, `Numero`, `ID_Historia`, `Ubicacion`) VALUES (NULL, '"+txtTitle.Text+"', '"+ Capitulo +"', '"+ID_Historia+"', '" + txtTitle.Text + ID_Historia + ".rtf" + "')";
+				RTBWriteZone.SaveFile(txtTitle.Text+ID_Historia.ToString()+".rtf");
+				string query = "INSERT INTO `Capitulo` (`ID_Cap`, `Nombre`, `Numero`, `ID_Historia`, `Ubicacion`) VALUES (NULL, '"+txtTitle.Text+"', '"+ Capitulo +"', '"+ID_Historia+"', '" + txtTitle.Text + ID_Historia.ToString() + ".rtf" + "')";
 				MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
 				conectar.Open();
 				MySqlCommand comando = new MySqlCommand(query);
 				comando.Connection = conectar;
 				comando.ExecuteNonQuery();
 				UploadTEXT();
+				MessageBox.Show("Si entre");
 				conectar.Close();
 				MessageBox.Show("Capitulo subido.");
 				Wait.Dispose();
@@ -169,7 +169,7 @@ namespace MailboxCUCEI
 			{
 				WebClient client = new WebClient();
 				client.Credentials = CredentialCache.DefaultCredentials;
-				client.UploadFile(@"https://notecucei.000webhostapp.com/upload.php?namefile=" + txtTitle.Text + ID_Historia + ".rtf", "POST", txtTitle.Text + ID_Historia + ".rtf");
+				client.UploadFile(@"https://notecucei.000webhostapp.com/upload.php?namefile=" + txtTitle.Text + ID_Historia + ".rtf", "POST", txtTitle.Text + ID_Historia.ToString() + ".rtf");
 				client.Dispose();
 			}
 			catch (Exception err)

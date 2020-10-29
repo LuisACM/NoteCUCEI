@@ -25,13 +25,7 @@ namespace MailboxCUCEI
 
         public void Cargar_data_grid()
         {
-            MySqlConnection con = new MySqlConnection("server=127.0.0.1; database=mailbox; Uid=root; pdw=;");
-            MySqlCommand comando = new MySqlCommand("Select *FROM usuario", con);
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            adapter.SelectCommand = comando;
-            DataTable tabla = new DataTable();
-            adapter.Fill(tabla);
-            DataGridAdmin.DataSource = tabla;
+           
         }
         public void Administrador_Load(object sender, EventArgs e)
         {

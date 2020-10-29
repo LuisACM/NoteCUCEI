@@ -97,6 +97,7 @@ namespace MailboxCUCEI
             if(leer.Read())
             {
                 GenerateUser();
+                conectar.Close();
                 MessageBox.Show("Bienvenido");
                 Principal go = new Principal();
                 go.User = false;

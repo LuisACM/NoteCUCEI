@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace MailboxCUCEI
 {
-    class Historias
+    public class Historias
     {
         int ID, ID_User, Follows, Favs, Views;
-        string Name, Cover, Gender, Summary, Raiting, Status;
+        string Name, Cover, Gender, Summary, Raiting, Status, Usuario;
         public string GetName ()
         {
             return Name;
@@ -35,7 +35,7 @@ namespace MailboxCUCEI
             return Cover;
         }
 
-        public Historias(string name,int iD,string summary, string gender, string cover, string raiting, string status,int iD_User, int follows, int favs, int views)
+        public Historias(string name,int iD,string summary, string gender, string cover, string raiting, string status,int iD_User, int follows, int favs, int views, string User)
         {
             Cover = cover;
             ID = iD;
@@ -48,10 +48,15 @@ namespace MailboxCUCEI
             Summary = summary;
             Raiting = raiting;
             Status = status;
+            Usuario = User;
         }
         public int GetID ()
         {
             return ID;
+        }
+        public string GetNameUser ()
+        {
+            return Usuario;
         }
         public int GetID_User()
         {

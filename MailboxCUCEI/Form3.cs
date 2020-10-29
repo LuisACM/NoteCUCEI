@@ -41,6 +41,7 @@ namespace MailboxCUCEI
 				CBGender2.Items.Add(lector.GetString(1));
 			}
 			Esperar.Hide();
+			connetionBD.Close();
 		}
 		void TxtnombreTextChanged(object sender, EventArgs e)
 		{
@@ -64,11 +65,12 @@ namespace MailboxCUCEI
         {
 			try
 			{
+				MessageBox.Show("Start");
 				WebClient client = new WebClient();
 				client.Credentials = CredentialCache.DefaultCredentials;
 				client.UploadFile(@"https://notecucei.000webhostapp.com/upload.php?namefile=" + namefile, "POST", InPathImage);
 				client.Dispose();
-
+				MessageBox.Show("Imagen Subida con Exito");
 			}
 			catch (Exception err)
 			{
@@ -78,19 +80,19 @@ namespace MailboxCUCEI
 		string GenderCode="";
 		void GenerateGenderCode ()
         {
-		bool CtrlCB2 = true;
+				bool CtrlCB2 = true;
 						if (CBGender1.Text == CBGender2.Text)
 						{
 							CtrlCB2 = false;
 						}
 						string query = "SELECT * FROM `Generos` WHERE `Nombre` = '" + CBGender1.Text + "' ";
-						string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
-						MySqlConnection connetionBD = new MySqlConnection(conexion);
-						MySqlCommand comando = new MySqlCommand(query,connetionBD);
-						MySqlDataReader lector;
-						connetionBD.Open();
-						lector = comando.ExecuteReader();
-						if (lector.Read())
+			string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
+			MySqlConnection connetionBD = new MySqlConnection(conexion);
+			MySqlCommand comando = new MySqlCommand(query, connetionBD);
+			MySqlDataReader lector;
+			connetionBD.Open();
+			lector = comando.ExecuteReader();
+			if (lector.Read())
 						{
 							GenderCode = lector.GetString(0);
 						}
@@ -98,14 +100,17 @@ namespace MailboxCUCEI
 						{
 							GenderCode = GenderCode +"|"+ SecondGender();
 						}
+			
 						else { GenderCode = GenderCode + "|NONE"; }
-        }
+						connetionBD.Close();
+		}
         private void BTNSend_Click(object sender, EventArgs e)
         {
 			Esperar.Show();
 			try
 			{
 				GenerateGenderCode();
+				MessageBox.Show("Codigo Generado");
 				string query = "INSERT INTO `Historias` (`Nom_Historia`, `ID_Historia`, `Resumen`, `ID_Genero`, `Fo_Portada`, `Raiting`, `Estatus`, `ID_Usuario`, `Seguidores`, `Favoritos`, `Vistas`) VALUES ('"+txtnombre.Text+"', NULL, '"+TXTSummary.Text+"', '"+GenderCode+"', '"+namefile+"', '"+CBRaiting.Text+"', '"+CBEstatus.Text+"', '"+ActUser.GetID().ToString()+"', '0', '0', '0')";
 				MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
 				conectar.Open();
@@ -139,7 +144,7 @@ namespace MailboxCUCEI
 			string query = "SELECT * FROM `Generos` WHERE `Nombre` = '" + CBGender2.Text + "' ";
 			string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
 			MySqlConnection connetionBD = new MySqlConnection(conexion);
-			MySqlCommand comando = new MySqlCommand();
+			MySqlCommand comando = new MySqlCommand(query, connetionBD);
 			MySqlDataReader lector;
 			connetionBD.Open();
 			lector = comando.ExecuteReader();
@@ -147,6 +152,7 @@ namespace MailboxCUCEI
 			{
 				gender = lector.GetString(0);
 			}
+			connetionBD.Close();
 			return gender;
         }
 

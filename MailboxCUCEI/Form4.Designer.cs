@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.BTNAdministracion = new System.Windows.Forms.Button();
             this.BTNCerrarSesion = new System.Windows.Forms.Button();
             this.BTNAprobar = new System.Windows.Forms.Button();
@@ -36,8 +37,16 @@
             this.BTNLeer = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.PanelTopStories = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
+            this.PanelTopStories.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BTNAdministracion
@@ -123,9 +132,9 @@
             this.groupBox1.Controls.Add(this.PanelTopStories);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.groupBox1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox1.Location = new System.Drawing.Point(221, 181);
+            this.groupBox1.Location = new System.Drawing.Point(221, 259);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(794, 287);
+            this.groupBox1.Size = new System.Drawing.Size(794, 209);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Top 10 Historias mas vistas";
@@ -134,10 +143,56 @@
             // 
             this.PanelTopStories.AutoScroll = true;
             this.PanelTopStories.BackColor = System.Drawing.Color.Black;
+            this.PanelTopStories.Controls.Add(this.button2);
+            this.PanelTopStories.Controls.Add(this.pictureBox2);
+            this.PanelTopStories.Controls.Add(this.pictureBox1);
+            this.PanelTopStories.Controls.Add(this.button1);
             this.PanelTopStories.Location = new System.Drawing.Point(7, 23);
             this.PanelTopStories.Name = "PanelTopStories";
-            this.PanelTopStories.Size = new System.Drawing.Size(781, 258);
+            this.PanelTopStories.Size = new System.Drawing.Size(781, 176);
             this.PanelTopStories.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(209, 140);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(191, 28);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(209, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(194, 138);
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(194, 138);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(0, 140);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(191, 28);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             // 
             // label1
             // 
@@ -169,6 +224,9 @@
             this.Text = "MailboxCUCEI";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.groupBox1.ResumeLayout(false);
+            this.PanelTopStories.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,5 +243,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel PanelTopStories;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -221,7 +221,9 @@
             // 
             // RTBWriteZone
             // 
+            this.RTBWriteZone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.RTBWriteZone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RTBWriteZone.ForeColor = System.Drawing.Color.DodgerBlue;
             this.RTBWriteZone.Location = new System.Drawing.Point(335, 121);
             this.RTBWriteZone.Name = "RTBWriteZone";
             this.RTBWriteZone.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;

@@ -71,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Capitulos.cs" />
     <Compile Include="conexionbd.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -95,6 +96,18 @@
     </Compile>
     <Compile Include="Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMReadZone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMReadZone.Designer.cs">
+      <DependentUpon>FRMReadZone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMPreview.Designer.cs">
+      <DependentUpon>FRMPreview.cs</DependentUpon>
     </Compile>
     <Compile Include="FRMInbox.cs">
       <SubType>Form</SubType>
@@ -134,12 +147,6 @@
     <Compile Include="Form7.Designer.cs">
       <DependentUpon>Form7.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form8.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form8.Designer.cs">
-      <DependentUpon>Form8.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -153,6 +160,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMReadZone.resx">
+      <DependentUpon>FRMReadZone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMPreview.resx">
+      <DependentUpon>FRMPreview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRMInbox.resx">
       <DependentUpon>FRMInbox.cs</DependentUpon>
@@ -171,9 +184,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form7.resx">
       <DependentUpon>Form7.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form8.resx">
-      <DependentUpon>Form8.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
