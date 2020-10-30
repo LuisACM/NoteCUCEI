@@ -79,7 +79,6 @@ namespace MailboxCUCEI
          }
         private void FRMWrite_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(ActUser.GetID().ToString());
             LBLTitle.Text = Story.GetName();
             LBLGenero.Text = Generos(Story.GetGender());
             lblraiting.Text = Story.GetRaiting();
@@ -98,12 +97,31 @@ namespace MailboxCUCEI
 
         private void btnRead_Click(object sender, EventArgs e)
         {
+
+            string query = "SELECT *FROM Capitulo WHERE ID_Historia= " + Story.GetID() + "  ";
+            string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
+            MySqlConnection connetionBD = new MySqlConnection(conexion);
+            MySqlCommand comando = new MySqlCommand(query, connetionBD);
+            MySqlDataReader lector;
+            connetionBD.Open();
+            lector = comando.ExecuteReader();
+            
+            if (!lector.Read())
+            {
+                MessageBox.Show("Esta historia aún no tiene capitulos publicados.");
+                connetionBD.Close();
+            }
+            else
+            {
+            connetionBD.Close();
             FRMReadZone Leer = new FRMReadZone();
             Leer.Ventana = Ventana;
             Leer.ActUser = Ventana.ActUser;
             Leer.MainStory = Story;
             this.Dispose();
             Leer.Show();
+            }
+            
         }
     }
 }

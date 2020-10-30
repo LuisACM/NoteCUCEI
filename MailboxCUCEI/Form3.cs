@@ -65,7 +65,6 @@ namespace MailboxCUCEI
         {
 			try
 			{
-				MessageBox.Show("Start");
 				WebClient client = new WebClient();
 				client.Credentials = CredentialCache.DefaultCredentials;
 				client.UploadFile(@"https://notecucei.000webhostapp.com/upload.php?namefile=" + namefile, "POST", InPathImage);

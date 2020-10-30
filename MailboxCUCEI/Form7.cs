@@ -26,10 +26,9 @@ namespace MailboxCUCEI
 		public int ID_Historia = 0;
         public void BTNSalir_Click(object sender, EventArgs e)
         {
-            Administrador refresh = new Administrador();
-            //refresh.Cargar_data_grid();
-            this.Hide();
-
+			Ventana.Show();
+			Ventana.Reload();
+            this.Dispose();
         }
 
         
@@ -150,10 +149,10 @@ namespace MailboxCUCEI
 				comando.Connection = conectar;
 				comando.ExecuteNonQuery();
 				UploadTEXT();
-				MessageBox.Show("Si entre");
 				conectar.Close();
 				MessageBox.Show("Capitulo subido.");
 				Wait.Dispose();
+				Ventana.Reload();
 				Ventana.Show();
 				this.Dispose();
             }
@@ -169,7 +168,8 @@ namespace MailboxCUCEI
 			{
 				WebClient client = new WebClient();
 				client.Credentials = CredentialCache.DefaultCredentials;
-				client.UploadFile(@"https://notecucei.000webhostapp.com/upload.php?namefile=" + txtTitle.Text + ID_Historia + ".rtf", "POST", txtTitle.Text + ID_Historia.ToString() + ".rtf");
+
+				client.UploadFile(@"https://notecucei.000webhostapp.com/upload.php?namefile=" + txtTitle.Text + ID_Historia.ToString() + ".rtf", "POST", txtTitle.Text + ID_Historia.ToString() + ".rtf");
 				client.Dispose();
 			}
 			catch (Exception err)

@@ -71,7 +71,7 @@ namespace MailboxCUCEI
         void GenerateUser () //Función para generar ActUser de la clase Usuario
         {
             string query = "SELECT * FROM `Usuarios` WHERE `Codigo` = '" + TxtUsuario.Text + "' ";
-            MessageBox.Show(query);
+           
             string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
             MySqlConnection connetionBD = new MySqlConnection(conexion);
             MySqlCommand comando = new MySqlCommand(query,connetionBD);

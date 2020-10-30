@@ -8,11 +8,23 @@ namespace MailboxCUCEI
 {
     public class Historias
     {
-        int ID, ID_User, Follows, Favs, Views;
-        string Name, Cover, Gender, Summary, Raiting, Status, Usuario;
+        public int ID, ID_User, Follows, Favs, Views;
+        public string Name, Cover, Gender, Summary, Raiting, Status, Usuario;
         public string GetName ()
         {
             return Name;
+        }
+        public void IncreaseID()
+        {
+            Views++;
+        }
+        public void IncreaseFollows()
+        {
+            Follows++;
+        }
+        public void IncreaseFavs()
+        {
+            Favs++;
         }
         public string GetGender()
         {

@@ -121,16 +121,12 @@
     <value>                                                                                                                                                                                                                                                                                                                                                                                                                                               </value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="BTNAlignLeft.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BTNAlignCenter.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        bwAAAG8B8aLcQwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAE4SURBVDhPpZMx
-        S0JhFIbvYNGgk9GQDYINGSRBNhglnxWXxMTvl7j1f84vuBfJMPPChRLCRUGnbAgbcjK/P3DO2zc0qcvl
-        Ds/yDi+H55zjJBYSJOeC9EyQmQpyE0F+KCgMBMW+4CIUlHuC62eB2xZUW4KaL6h7goYngbOzRDY5h9r9
-        gjr4hDqcQB2NoE7foYpvUJchlOpB3Xag7h4tPtT9P9pH1gEQC2d7gePUD3T6G3r/Azo3hs6PoE8G0Gev
-        0KUQ+iqAvulCu13srRUkfqVlHRjrwFgHxjow1oGxDox1YKwDYx0Y68C4T3hYK1gNorIxjIKztUQzNWdK
-        z5gyU6bcmCk/ZCoMmM77TKWQqfzCVOkwuW2maoup5jPVPaaGh2b8gk1jRWFjGIX4a4x9SKtBVOI/U7x3
-        luAPaAK+azPIo1YAAAAASUVORK5CYII=
+        qgAAAKoBBgpwTwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAySURBVDhPY/j/
+        /z9FmIFh7asEhtUvG8jCIL0UG4DNWaRgrIKk4NEwGA0DEB7yYfCfAQA5VobPxQVCMAAAAABJRU5ErkJg
+        gg==
 </value>
   </data>
   <data name="BTNAlignRight.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -145,12 +141,16 @@
         yL13lAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="BTNAlignCenter.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="BTNAlignLeft.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qgAAAKoBBgpwTwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAySURBVDhPY/j/
-        /z9FmIFh7asEhtUvG8jCIL0UG4DNWaRgrIKk4NEwGA0DEB7yYfCfAQA5VobPxQVCMAAAAABJRU5ErkJg
-        gg==
+        bwAAAG8B8aLcQwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAE4SURBVDhPpZMx
+        S0JhFIbvYNGgk9GQDYINGSRBNhglnxWXxMTvl7j1f84vuBfJMPPChRLCRUGnbAgbcjK/P3DO2zc0qcvl
+        Ds/yDi+H55zjJBYSJOeC9EyQmQpyE0F+KCgMBMW+4CIUlHuC62eB2xZUW4KaL6h7goYngbOzRDY5h9r9
+        gjr4hDqcQB2NoE7foYpvUJchlOpB3Xag7h4tPtT9P9pH1gEQC2d7gePUD3T6G3r/Azo3hs6PoE8G0Gev
+        0KUQ+iqAvulCu13srRUkfqVlHRjrwFgHxjow1oGxDox1YKwDYx0Y68C4T3hYK1gNorIxjIKztUQzNWdK
+        z5gyU6bcmCk/ZCoMmM77TKWQqfzCVOkwuW2maoup5jPVPaaGh2b8gk1jRWFjGIX4a4x9SKtBVOI/U7x3
+        luAPaAK+azPIo1YAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

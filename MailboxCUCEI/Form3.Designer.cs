@@ -78,13 +78,16 @@
             this.TXTSummary.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TXTSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXTSummary.ForeColor = System.Drawing.Color.DimGray;
+            this.TXTSummary.HideSelection = false;
             this.TXTSummary.Location = new System.Drawing.Point(278, 175);
-            this.TXTSummary.MaximumSize = new System.Drawing.Size(433, 0);
+            this.TXTSummary.MaximumSize = new System.Drawing.Size(433, 184);
             this.TXTSummary.Multiline = true;
             this.TXTSummary.Name = "TXTSummary";
+            this.TXTSummary.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.TXTSummary.Size = new System.Drawing.Size(433, 184);
             this.TXTSummary.TabIndex = 2;
             this.TXTSummary.Text = "Escribe aqui una pequeña descripción de tu obra.";
+            this.TXTSummary.Click += new System.EventHandler(this.TXTSummaryTextChanged);
             this.TXTSummary.TextChanged += new System.EventHandler(this.TXTSummaryTextChanged);
             // 
             // BTNSalir
@@ -131,6 +134,7 @@
             this.txtnombre.Size = new System.Drawing.Size(319, 19);
             this.txtnombre.TabIndex = 7;
             this.txtnombre.Text = "Nombre";
+            this.txtnombre.Click += new System.EventHandler(this.TxtnombreTextChanged);
             this.txtnombre.TextChanged += new System.EventHandler(this.TxtnombreTextChanged);
             // 
             // label4
