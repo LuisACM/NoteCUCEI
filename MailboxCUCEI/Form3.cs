@@ -110,7 +110,6 @@ namespace MailboxCUCEI
 			try
 			{
 				GenerateGenderCode();
-				MessageBox.Show("Codigo Generado");
 				string query = "INSERT INTO `Historias` (`Nom_Historia`, `ID_Historia`, `Resumen`, `ID_Genero`, `Fo_Portada`, `Raiting`, `Estatus`, `ID_Usuario`, `Seguidores`, `Favoritos`, `Vistas`) VALUES ('"+txtnombre.Text+"', NULL, '"+TXTSummary.Text+"', '"+GenderCode+"', '"+namefile+"', '"+CBRaiting.Text+"', '"+CBEstatus.Text+"', '"+ActUser.GetID().ToString()+"', '0', '0', '0')";
 				MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
 				conectar.Open();

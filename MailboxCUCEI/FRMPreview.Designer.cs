@@ -39,7 +39,7 @@
             this.lblSummary = new System.Windows.Forms.Label();
             this.LBLTitle = new System.Windows.Forms.Label();
             this.PBCover = new System.Windows.Forms.PictureBox();
-            this.lblStoryName = new System.Windows.Forms.Label();
+            this.LBLAuthor = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblstatus = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -87,7 +87,7 @@
             this.GBDetails.Controls.Add(this.lblSummary);
             this.GBDetails.Controls.Add(this.LBLTitle);
             this.GBDetails.Controls.Add(this.PBCover);
-            this.GBDetails.Controls.Add(this.lblStoryName);
+            this.GBDetails.Controls.Add(this.LBLAuthor);
             this.GBDetails.Controls.Add(this.label4);
             this.GBDetails.Controls.Add(this.lblstatus);
             this.GBDetails.Controls.Add(this.label1);
@@ -189,17 +189,17 @@
             this.PBCover.TabIndex = 17;
             this.PBCover.TabStop = false;
             // 
-            // lblStoryName
+            // LBLAuthor
             // 
-            this.lblStoryName.AutoSize = true;
-            this.lblStoryName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStoryName.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblStoryName.Location = new System.Drawing.Point(84, 331);
-            this.lblStoryName.Name = "lblStoryName";
-            this.lblStoryName.Size = new System.Drawing.Size(61, 20);
-            this.lblStoryName.TabIndex = 16;
-            this.lblStoryName.Text = "Historia";
-            this.lblStoryName.UseMnemonic = false;
+            this.LBLAuthor.AutoSize = true;
+            this.LBLAuthor.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLAuthor.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.LBLAuthor.Location = new System.Drawing.Point(84, 331);
+            this.LBLAuthor.Name = "LBLAuthor";
+            this.LBLAuthor.Size = new System.Drawing.Size(61, 20);
+            this.LBLAuthor.TabIndex = 16;
+            this.LBLAuthor.Text = "Historia";
+            this.LBLAuthor.UseMnemonic = false;
             // 
             // label4
             // 
@@ -281,9 +281,9 @@
             this.LBLQuest.ForeColor = System.Drawing.Color.DodgerBlue;
             this.LBLQuest.Location = new System.Drawing.Point(6, 331);
             this.LBLQuest.Name = "LBLQuest";
-            this.LBLQuest.Size = new System.Drawing.Size(61, 20);
+            this.LBLQuest.Size = new System.Drawing.Size(49, 20);
             this.LBLQuest.TabIndex = 8;
-            this.LBLQuest.Text = "Historía";
+            this.LBLQuest.Text = "Autor";
             this.LBLQuest.UseMnemonic = false;
             // 
             // FRMPreview
@@ -318,7 +318,7 @@
         public System.Windows.Forms.Label lblstatus;
         public System.Windows.Forms.Label lblraiting;
         public System.Windows.Forms.Label LBLGenero;
-        public System.Windows.Forms.Label lblStoryName;
+        public System.Windows.Forms.Label LBLAuthor;
         private System.Windows.Forms.Button btnRead;
         private System.Windows.Forms.Label lblSummary;
         private System.Windows.Forms.Label LBLTitle;

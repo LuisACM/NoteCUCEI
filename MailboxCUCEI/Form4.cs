@@ -69,7 +69,7 @@ namespace MailboxCUCEI
         }
         private void Principal_Load(object sender, EventArgs e)
         {
-
+            
             if (User)
             {
                 BTNEscribir.Enabled = false;
@@ -117,6 +117,7 @@ namespace MailboxCUCEI
                 if (((Button)sender).Text== temp.GetName())
                 {
                     FRMPreview Prev = new FRMPreview();
+                    Prev.ActUser = ActUser;
                     Prev.Ventana = this;
                     Prev.Story = temp;
                     Prev.Show();

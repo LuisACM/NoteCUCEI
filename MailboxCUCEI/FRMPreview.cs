@@ -79,12 +79,14 @@ namespace MailboxCUCEI
          }
         private void FRMWrite_Load(object sender, EventArgs e)
         {
+            MessageBox.Show(ActUser.GetID().ToString());
             LBLTitle.Text = Story.GetName();
             LBLGenero.Text = Generos(Story.GetGender());
             lblraiting.Text = Story.GetRaiting();
             lblstatus.Text = Story.GetStatus();
             lblSummary.Text = Story.GetSummary();
             PBCover.Image = Image.FromFile(Story.GetCover());
+            LBLAuthor.Text = Story.GetNameUser();
 
 
         }
@@ -98,7 +100,7 @@ namespace MailboxCUCEI
         {
             FRMReadZone Leer = new FRMReadZone();
             Leer.Ventana = Ventana;
-            Leer.Ventana.ActUser = Ventana.ActUser;
+            Leer.ActUser = Ventana.ActUser;
             Leer.MainStory = Story;
             this.Dispose();
             Leer.Show();

@@ -41,8 +41,7 @@
             this.BTNSendComment = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtcomments = new System.Windows.Forms.TextBox();
             this.GBDetails.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -158,7 +157,6 @@
             // 
             // txtComment
             // 
-            this.txtComment.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtComment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.txtComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtComment.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -173,6 +171,7 @@
             this.txtComment.TabIndex = 25;
             this.txtComment.Text = "¡Dejale un comentario al autor!";
             this.txtComment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtComment.Click += new System.EventHandler(this.txtComment_Click);
             // 
             // BTNSendComment
             // 
@@ -185,12 +184,12 @@
             this.BTNSendComment.TabIndex = 26;
             this.BTNSendComment.Text = "Enviar";
             this.BTNSendComment.UseVisualStyleBackColor = true;
+            this.BTNSendComment.Click += new System.EventHandler(this.BTNSendComment_Click);
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtcomments);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(854, 99);
             this.panel1.Name = "panel1";
@@ -209,27 +208,19 @@
             this.label2.UseMnemonic = false;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label1
+            // txtcomments
             // 
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(3, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 24);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Zona de comentarios";
-            this.label1.UseMnemonic = false;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(3, 64);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(244, 24);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Zona de comentarios";
-            this.label3.UseMnemonic = false;
+            this.txtcomments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtcomments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtcomments.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.txtcomments.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.txtcomments.Location = new System.Drawing.Point(4, 33);
+            this.txtcomments.Multiline = true;
+            this.txtcomments.Name = "txtcomments";
+            this.txtcomments.ReadOnly = true;
+            this.txtcomments.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtcomments.Size = new System.Drawing.Size(243, 380);
+            this.txtcomments.TabIndex = 18;
             // 
             // FRMReadZone
             // 
@@ -251,6 +242,7 @@
             this.GBDetails.ResumeLayout(false);
             this.GBDetails.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,7 +261,6 @@
         private System.Windows.Forms.Button BTNSendComment;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtcomments;
     }
 }

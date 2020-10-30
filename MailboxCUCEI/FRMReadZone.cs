@@ -135,8 +135,14 @@ namespace MailboxCUCEI
 		{
 	
 		}
+		
 		private void FRMWrite_Load(object sender, EventArgs e)
 		{
+			if (Ventana.User)
+            {
+				txtComment.Visible = false;
+				BTNSendComment.Visible = false;
+            }
 			LoadComments();
 			CreateChapterList();
 			Capitulos temp;
@@ -152,7 +158,7 @@ namespace MailboxCUCEI
 		}
 		void LoadComments()
         {
-			string query = "SELECT * FROM `Comentarios` WHERE `ID_Historia` =" + MainStory.GetID() + "";
+			string query = "SELECT  Usuarios.Nombre, Capitulo.Numero, Comentarios.Comentario FROM Comentarios INNER JOIN Usuarios ON Usuarios.Codigo = Comentarios.ID_Usuario INNER JOIN Capitulo ON Capitulo.ID_Cap = Comentarios.ID_Cap WHERE Comentarios.ID_Historia = "+MainStory.GetID();
 			string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
 			MySqlConnection connetionBD = new MySqlConnection(conexion);
 			MySqlCommand comando = new MySqlCommand(query, connetionBD);
@@ -161,35 +167,22 @@ namespace MailboxCUCEI
 			lector = comando.ExecuteReader();
 			if (!lector.Read())
             {
-				Label lblPlateNOBAR = new Label();
-				lblPlateNOBAR.Text = "No hay comentarios. ¡Se el primero en dejar un comentario!";
-				lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
-				lblPlateNOBAR.Font = new Font("Arial Narrow", 12);
-				lblPlateNOBAR.Size = new Size(194, 30);
-				lblPlateNOBAR.AutoSize = true;
-				lblPlateNOBAR.MaximumSize = new Size(250, 0);
-				lblPlateNOBAR.ForeColor = Color.DodgerBlue;
-				lblPlateNOBAR.Location = new Point(6, 254);
-				panel1.Controls.Add(lblPlateNOBAR);
+				txtcomments.Text = "No hay comentarios, ¡Se el primero en comentar la obra!";
+				connetionBD.Close();
 			}
 			else
             {
 				connetionBD.Close();
 				connetionBD.Open();
 				lector = comando.ExecuteReader();
+				String aux="";
 				while (lector.Read())
                 {
-					Label lblPlateNOBAR = new Label();
-					lblPlateNOBAR.Text = "No hay comentarios. ¡Se el primero en dejar un comentario!";
-					lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
-					lblPlateNOBAR.Font = new Font("Arial Narrow", 12);
-					lblPlateNOBAR.Size = new Size(194, 30);
-					lblPlateNOBAR.AutoSize = true;
-					lblPlateNOBAR.MaximumSize = new Size(250, 0);
-					lblPlateNOBAR.ForeColor = Color.DodgerBlue;
-					lblPlateNOBAR.Location = new Point(6, 254);
-					panel1.Controls.Add(lblPlateNOBAR);
+					aux = aux+ lector.GetString(0)+"(Capitulo " + lector.GetString(1) + ")"+ Environment.NewLine + lector.GetString(2) + Environment.NewLine;
+
 				}
+				txtcomments.Text=aux;
+				connetionBD.Close();
 			}
 			
 		}
@@ -234,5 +227,37 @@ namespace MailboxCUCEI
         {
 
         }
+
+        private void txtComment_Click(object sender, EventArgs e)
+        {
+			if (txtComment.Text== "¡Dejale un comentario al autor!")
+            {
+				txtComment.Text = "";
+            }
+        }
+
+        private void BTNSendComment_Click(object sender, EventArgs e)
+        {
+			if (txtComment.Text=="")
+            {
+				MessageBox.Show("Ingresa un comentario primero");
+            }
+			else
+            {
+			string query = "INSERT INTO `Comentarios` (`ID_Comentario`, `ID_Cap`, `ID_Usuario`, `Comentario`, `ID_Historia`) VALUES(NULL, '"+ListChapters[ActualChapter].GetID().ToString()+"', '"+ActUser.GetID()+ "', '"+txtComment.Text+"', '"+MainStory.GetID().ToString() + "')";
+			MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+			conectar.Open();
+			MySqlCommand comando = new MySqlCommand(query);
+			comando.Connection = conectar;
+			comando.ExecuteNonQuery();
+			conectar.Close();
+			txtcomments.Text = "";
+			LoadComments();
+				txtComment.Text ="";
+				MessageBox.Show("Mensaje enviado, gracias por aportar tu opinion");
+            }
+			
+			
+		}
     }
 }
