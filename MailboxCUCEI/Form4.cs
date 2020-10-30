@@ -79,6 +79,7 @@ namespace MailboxCUCEI
         }
         public void Reload ()
         {
+            PanelTopStories.Controls.Clear();
             TopStoriesAlready = false;
             CreateStoryList();
             CreateTopStorie();

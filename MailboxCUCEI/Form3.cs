@@ -84,7 +84,12 @@ namespace MailboxCUCEI
 						{
 							CtrlCB2 = false;
 						}
-						string query = "SELECT * FROM `Generos` WHERE `Nombre` = '" + CBGender1.Text + "' ";
+			if (CBGender2.Text=="")
+			{
+				CtrlCB2 = false;
+			}
+
+			string query = "SELECT * FROM `Generos` WHERE `Nombre` = '" + CBGender1.Text + "' ";
 			string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
 			MySqlConnection connetionBD = new MySqlConnection(conexion);
 			MySqlCommand comando = new MySqlCommand(query, connetionBD);
@@ -118,13 +123,14 @@ namespace MailboxCUCEI
 				UploadImage();
 				conectar.Close();
 				MessageBox.Show("Historia subida con exito, ahora pasaras al area de escritura");
-			FRMWrite NewWindows = new FRMWrite();
-			NewWindows.Ventana = Base;
-			NewWindows.ActUser = ActUser;
-			NewWindows.lblraiting.Text = CBRaiting.Text;
-			NewWindows.LBLGenero.Text = CBGender1.Text + " " + CBGender2.Text;
-			NewWindows.lblstatus.Text = CBEstatus.Text;
-			NewWindows.Show();
+
+				FRMWrite NewWindows = new FRMWrite();
+				NewWindows.Ventana = Base;
+				NewWindows.ActUser = ActUser;
+				NewWindows.lblraiting.Text = CBRaiting.Text;
+				NewWindows.LBLGenero.Text = CBGender1.Text + " " + CBGender2.Text;
+				NewWindows.lblstatus.Text = CBEstatus.Text;
+				NewWindows.Show();
 				NewWindows.lblStoryName.Text = txtnombre.Text;
 				this.Dispose();
 			}
