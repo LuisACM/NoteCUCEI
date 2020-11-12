@@ -231,7 +231,6 @@
             // 
             // BTNEliminar
             // 
-            this.BTNEliminar.Enabled = false;
             this.BTNEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNEliminar.ForeColor = System.Drawing.Color.Red;
             this.BTNEliminar.Location = new System.Drawing.Point(23, 505);
