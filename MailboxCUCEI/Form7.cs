@@ -133,8 +133,24 @@ namespace MailboxCUCEI
 				Capitulo++;
 			}
 			connetionBD.Close();
+			LoadID();
+			
 		}
-
+		void LoadID ()
+        {
+			string query = "SELECT ID_Historia FROM `Historias` WHERE `Nom_Historia` = '" + lblStoryName.Text + "' ";
+			string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
+			MySqlConnection connetionBD = new MySqlConnection(conexion);
+			MySqlCommand comando = new MySqlCommand(query, connetionBD);
+			MySqlDataReader lector;
+			connetionBD.Open();
+			lector = comando.ExecuteReader();
+			while (lector.Read())
+			{
+				ID_Historia = lector.GetInt32(0);
+			}
+			connetionBD.Close();
+		}
         private void BTNPublish_Click(object sender, EventArgs e)
         {
 			try
