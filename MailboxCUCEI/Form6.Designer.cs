@@ -46,13 +46,16 @@
             this.BTNSalir = new System.Windows.Forms.Button();
             this.BTNModificar = new System.Windows.Forms.Button();
             this.BTNEliminar = new System.Windows.Forms.Button();
+            this.FotoPerfil = new System.Windows.Forms.PictureBox();
+            this.BTNFotoPerfil = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.FotoPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // FechaNac
             // 
             this.FechaNac.CustomFormat = "yyyy-MM-dd";
             this.FechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaNac.Location = new System.Drawing.Point(536, 395);
+            this.FechaNac.Location = new System.Drawing.Point(324, 398);
             this.FechaNac.Name = "FechaNac";
             this.FechaNac.Size = new System.Drawing.Size(86, 20);
             this.FechaNac.TabIndex = 58;
@@ -62,7 +65,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label9.Location = new System.Drawing.Point(268, 395);
+            this.label9.Location = new System.Drawing.Point(56, 398);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(213, 20);
             this.label9.TabIndex = 57;
@@ -73,7 +76,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label7.Location = new System.Drawing.Point(267, 296);
+            this.label7.Location = new System.Drawing.Point(55, 299);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(129, 20);
             this.label7.TabIndex = 56;
@@ -85,7 +88,7 @@
             this.TxtPassPerfil.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPassPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPassPerfil.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.TxtPassPerfil.Location = new System.Drawing.Point(419, 296);
+            this.TxtPassPerfil.Location = new System.Drawing.Point(207, 299);
             this.TxtPassPerfil.Name = "TxtPassPerfil";
             this.TxtPassPerfil.Size = new System.Drawing.Size(433, 19);
             this.TxtPassPerfil.TabIndex = 54;
@@ -96,7 +99,7 @@
             this.label8.BackColor = System.Drawing.Color.Black;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label8.Location = new System.Drawing.Point(418, 318);
+            this.label8.Location = new System.Drawing.Point(206, 321);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(433, 2);
             this.label8.TabIndex = 55;
@@ -107,7 +110,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label6.Location = new System.Drawing.Point(265, 203);
+            this.label6.Location = new System.Drawing.Point(53, 206);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 20);
             this.label6.TabIndex = 53;
@@ -118,7 +121,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label5.Location = new System.Drawing.Point(265, 44);
+            this.label5.Location = new System.Drawing.Point(53, 47);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 20);
             this.label5.TabIndex = 52;
@@ -129,7 +132,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(268, 124);
+            this.label1.Location = new System.Drawing.Point(56, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 20);
             this.label1.TabIndex = 51;
@@ -141,7 +144,7 @@
             this.TxtCorreoPerfil.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCorreoPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCorreoPerfil.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.TxtCorreoPerfil.Location = new System.Drawing.Point(418, 204);
+            this.TxtCorreoPerfil.Location = new System.Drawing.Point(206, 207);
             this.TxtCorreoPerfil.Name = "TxtCorreoPerfil";
             this.TxtCorreoPerfil.Size = new System.Drawing.Size(433, 19);
             this.TxtCorreoPerfil.TabIndex = 45;
@@ -153,7 +156,7 @@
             this.TxtCodigoPerfil.Enabled = false;
             this.TxtCodigoPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCodigoPerfil.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.TxtCodigoPerfil.Location = new System.Drawing.Point(416, 45);
+            this.TxtCodigoPerfil.Location = new System.Drawing.Point(204, 48);
             this.TxtCodigoPerfil.Name = "TxtCodigoPerfil";
             this.TxtCodigoPerfil.Size = new System.Drawing.Size(433, 19);
             this.TxtCodigoPerfil.TabIndex = 46;
@@ -164,7 +167,7 @@
             this.TxtNombrePerfil.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtNombrePerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNombrePerfil.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.TxtNombrePerfil.Location = new System.Drawing.Point(418, 125);
+            this.TxtNombrePerfil.Location = new System.Drawing.Point(206, 128);
             this.TxtNombrePerfil.Name = "TxtNombrePerfil";
             this.TxtNombrePerfil.Size = new System.Drawing.Size(433, 19);
             this.TxtNombrePerfil.TabIndex = 48;
@@ -175,7 +178,7 @@
             this.label4.BackColor = System.Drawing.Color.Black;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label4.Location = new System.Drawing.Point(417, 226);
+            this.label4.Location = new System.Drawing.Point(205, 229);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(433, 2);
             this.label4.TabIndex = 50;
@@ -187,7 +190,7 @@
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label3.Location = new System.Drawing.Point(417, 67);
+            this.label3.Location = new System.Drawing.Point(205, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(433, 2);
             this.label3.TabIndex = 49;
@@ -199,7 +202,7 @@
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label2.Location = new System.Drawing.Point(418, 148);
+            this.label2.Location = new System.Drawing.Point(206, 151);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(433, 2);
             this.label2.TabIndex = 47;
@@ -209,7 +212,7 @@
             // 
             this.BTNSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNSalir.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.BTNSalir.Location = new System.Drawing.Point(23, 572);
+            this.BTNSalir.Location = new System.Drawing.Point(131, 620);
             this.BTNSalir.Name = "BTNSalir";
             this.BTNSalir.Size = new System.Drawing.Size(180, 50);
             this.BTNSalir.TabIndex = 44;
@@ -221,11 +224,11 @@
             // 
             this.BTNModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNModificar.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.BTNModificar.Location = new System.Drawing.Point(23, 27);
+            this.BTNModificar.Location = new System.Drawing.Point(421, 623);
             this.BTNModificar.Name = "BTNModificar";
             this.BTNModificar.Size = new System.Drawing.Size(180, 45);
             this.BTNModificar.TabIndex = 43;
-            this.BTNModificar.Text = "MODIFICAR";
+            this.BTNModificar.Text = "GUARDAR CAMBIOS";
             this.BTNModificar.UseVisualStyleBackColor = true;
             this.BTNModificar.Click += new System.EventHandler(this.BTNModificar_Click);
             // 
@@ -233,7 +236,7 @@
             // 
             this.BTNEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNEliminar.ForeColor = System.Drawing.Color.Red;
-            this.BTNEliminar.Location = new System.Drawing.Point(23, 505);
+            this.BTNEliminar.Location = new System.Drawing.Point(724, 618);
             this.BTNEliminar.Name = "BTNEliminar";
             this.BTNEliminar.Size = new System.Drawing.Size(180, 50);
             this.BTNEliminar.TabIndex = 42;
@@ -241,12 +244,36 @@
             this.BTNEliminar.UseVisualStyleBackColor = true;
             this.BTNEliminar.Click += new System.EventHandler(this.BTNEliminar_Click_1);
             // 
+            // FotoPerfil
+            // 
+            this.FotoPerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FotoPerfil.Location = new System.Drawing.Point(770, 47);
+            this.FotoPerfil.Name = "FotoPerfil";
+            this.FotoPerfil.Size = new System.Drawing.Size(278, 242);
+            this.FotoPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.FotoPerfil.TabIndex = 59;
+            this.FotoPerfil.TabStop = false;
+            // 
+            // BTNFotoPerfil
+            // 
+            this.BTNFotoPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNFotoPerfil.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.BTNFotoPerfil.Location = new System.Drawing.Point(817, 309);
+            this.BTNFotoPerfil.Name = "BTNFotoPerfil";
+            this.BTNFotoPerfil.Size = new System.Drawing.Size(180, 45);
+            this.BTNFotoPerfil.TabIndex = 60;
+            this.BTNFotoPerfil.Text = "CARGAR FOTO DE PERFIL";
+            this.BTNFotoPerfil.UseVisualStyleBackColor = true;
+            this.BTNFotoPerfil.Click += new System.EventHandler(this.BTNFotoPerfil_Click);
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(947, 695);
+            this.ClientSize = new System.Drawing.Size(1098, 696);
+            this.Controls.Add(this.BTNFotoPerfil);
+            this.Controls.Add(this.FotoPerfil);
             this.Controls.Add(this.FechaNac);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
@@ -269,6 +296,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.Administrador_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.FotoPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,5 +321,7 @@
         private System.Windows.Forms.Button BTNModificar;
         private System.Windows.Forms.Button BTNEliminar;
         public System.Windows.Forms.TextBox TxtCodigoPerfil;
+        private System.Windows.Forms.PictureBox FotoPerfil;
+        private System.Windows.Forms.Button BTNFotoPerfil;
     }
 }

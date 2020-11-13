@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace MailboxCUCEI
 {
@@ -50,6 +52,7 @@ namespace MailboxCUCEI
         private void BTNModificar_Click(object sender, EventArgs e)
         {
             //funcion de modificar los datos
+            
             MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
             conexion.Open();
             string Query = "UPDATE Usuarios SET Codigo='" + TxtCodigoPerfil.Text +
@@ -59,10 +62,11 @@ namespace MailboxCUCEI
                 "',F_Nacimiento='" + FechaNac.Text +
                 "'WHERE Codigo='"+TxtCodigoPerfil.Text+
                 "';";
+
             MySqlCommand comando = new MySqlCommand(Query, conexion);
             comando.ExecuteNonQuery();
             conexion.Close();
-            MessageBox.Show("Datos actualizados con éxito!");
+            MessageBox.Show("Datos guardados con éxito!");
 
 
         }
@@ -70,6 +74,21 @@ namespace MailboxCUCEI
         private void BTNSalir_Click_1(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void BTNFotoPerfil_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog GetImage = new OpenFileDialog();
+            GetImage.InitialDirectory = "c:\\";
+            GetImage.Filter = "JPG files (*.jpg)|*.jpg|PNG files (*.png*)|*.png*";
+            if (GetImage.ShowDialog() == DialogResult.OK)
+            {
+                FotoPerfil.ImageLocation = GetImage.FileName;
+            }
+            else
+            {
+                MessageBox.Show("No se selecciono imagen","",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

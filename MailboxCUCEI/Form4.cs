@@ -34,11 +34,7 @@ namespace MailboxCUCEI
                 Cliente.DownloadFile(new Uri(URL), Name);
             }
         }
-        private void BTNAdministracion_Click(object sender, EventArgs e)
-        {
-            Form acceso = new FRMPreWri();
-            acceso.Show();
-        }
+        
 
         private void BTNCerrarSesion_Click(object sender, EventArgs e)
         {
@@ -181,10 +177,7 @@ namespace MailboxCUCEI
                
             }
         }
-        private void BTNAprobar_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         
 
@@ -198,16 +191,9 @@ namespace MailboxCUCEI
             
         }
 
-        private void BTNRefrescar_Click_1(object sender, EventArgs e)
-        {
-           
-            
-        }
+        
 
-        private void BTNLeer_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void BTNRespaldo_Click(object sender, EventArgs e)
         {
@@ -440,6 +426,21 @@ namespace MailboxCUCEI
             }
         }
         private void CBSort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }
