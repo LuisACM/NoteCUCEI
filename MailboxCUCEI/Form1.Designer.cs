@@ -169,7 +169,7 @@
             this.BTNMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("BTNMinimizar.Image")));
             this.BTNMinimizar.Location = new System.Drawing.Point(722, 0);
             this.BTNMinimizar.Name = "BTNMinimizar";
-            this.BTNMinimizar.Size = new System.Drawing.Size(26, 50);
+            this.BTNMinimizar.Size = new System.Drawing.Size(26, 34);
             this.BTNMinimizar.TabIndex = 9;
             this.BTNMinimizar.TabStop = false;
             this.BTNMinimizar.Click += new System.EventHandler(this.BTNMinimizar_Click);
@@ -232,7 +232,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(780, 389);
+            this.ClientSize = new System.Drawing.Size(791, 389);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);

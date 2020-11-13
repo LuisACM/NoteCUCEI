@@ -118,23 +118,28 @@ namespace MailboxCUCEI
 		{
 	
 		}
-		int Capitulo = 1;
-        private void FRMWrite_Load(object sender, EventArgs e)
+		int Capitulo;
+		//
+		// 
+		private void FRMWrite_Load(object sender, EventArgs e)
         {
-			string query = "SELECT * FROM `Capitulo` WHERE `ID_Historia` = " + ID_Historia + " ";
+			LoadID();
+			string query = "SELECT COUNT(*) FROM Historias_Capitulos WHERE ID_Historia = "+ID_Historia+" ";
 			string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
 			MySqlConnection connetionBD = new MySqlConnection(conexion);
 			MySqlCommand comando = new MySqlCommand(query, connetionBD);
 			MySqlDataReader lector;
 			connetionBD.Open();
 			lector = comando.ExecuteReader();
-			while (lector.Read())
+			if (lector.Read())
 			{
-				Capitulo++;
+				Capitulo = lector.GetInt32(0);
 			}
 			connetionBD.Close();
-			LoadID();
-			
+			if (Capitulo == 0)
+            {
+				Capitulo = 1;
+            }
 		}
 		void LoadID ()
         {
@@ -151,6 +156,34 @@ namespace MailboxCUCEI
 			}
 			connetionBD.Close();
 		}
+		int LoadIDCap ()
+        {
+			int ID = 0;
+			string query = "SELECT ID_Cap FROM `Capitulo` WHERE `Ubicacion` = '" + txtTitle.Text + ID_Historia.ToString() + ".rtf '";
+			string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
+			MySqlConnection connetionBD = new MySqlConnection(conexion);
+			MySqlCommand comando = new MySqlCommand(query, connetionBD);
+			MySqlDataReader lector;
+			connetionBD.Open();
+			lector = comando.ExecuteReader();
+			while (lector.Read())
+			{
+				ID = lector.GetInt32(0);
+			}
+			connetionBD.Close();
+			return ID;
+        }
+		void InsertRelation() //Insertando en la tabla Historias-Capitulos
+        {
+			
+			string query = "INSERT INTO `Historias_Capitulos` (`ID_Historia`, `ID_Capitulo`) VALUES ("+ID_Historia+","+LoadIDCap()+");";
+			MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+			conectar.Open();
+			MySqlCommand comando = new MySqlCommand(query);
+			comando.Connection = conectar;
+			comando.ExecuteNonQuery();
+			conectar.Close();
+		}
         private void BTNPublish_Click(object sender, EventArgs e)
         {
 			try
@@ -158,7 +191,7 @@ namespace MailboxCUCEI
 				WaitForm Wait = new WaitForm();
 				Wait.Show();
 				RTBWriteZone.SaveFile(txtTitle.Text+ID_Historia.ToString()+".rtf");
-				string query = "INSERT INTO `Capitulo` (`ID_Cap`, `Nombre`, `Numero`, `ID_Historia`, `Ubicacion`) VALUES (NULL, '"+txtTitle.Text+"', '"+ Capitulo +"', '"+ID_Historia+"', '" + txtTitle.Text + ID_Historia.ToString() + ".rtf" + "')";
+				string query = "INSERT INTO `Capitulo` (`ID_Cap`, `Nombre`, `Numero`, `Ubicacion`) VALUES (NULL, '"+txtTitle.Text+"', '"+ Capitulo +"', '" + txtTitle.Text + ID_Historia.ToString() + ".rtf ')";
 				MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
 				conectar.Open();
 				MySqlCommand comando = new MySqlCommand(query);
@@ -167,6 +200,7 @@ namespace MailboxCUCEI
 				UploadTEXT();
 				conectar.Close();
 				MessageBox.Show("Capitulo subido.");
+				InsertRelation();
 				Wait.Dispose();
 				Ventana.Reload();
 				Ventana.Show();
@@ -193,5 +227,54 @@ namespace MailboxCUCEI
 				MessageBox.Show(err.Message);
 			}
 		}
-	}
+
+        private void RTBWriteZone_Click(object sender, EventArgs e)
+        {
+			if (RTBWriteZone.Text == "¡Escribe aquí!")
+            {
+				RTBWriteZone.Text = "";
+
+			}
+        }
+
+        private void BTNLoadWord_Click(object sender, EventArgs e)
+        {
+			OpenFileDialog WindownForWord = new OpenFileDialog();
+			WindownForWord.InitialDirectory = "c:\\";
+			WindownForWord.Filter = "DOCX files (*.docx)|*.docx|DOC files (*.doc*)|*.doc*";
+			WindownForWord.FilterIndex = 2;
+			WindownForWord.RestoreDirectory = false;
+			if (WindownForWord.ShowDialog() == DialogResult.OK)
+			{
+				object readOnly = false;
+				object visible = true;
+				object Filename = WindownForWord.FileName;
+				object newTemplate = false;
+				object docType = 0;
+				object missing = Type.Missing;
+				Microsoft.Office.Interop.Word._Document oDoc = null;
+				Microsoft.Office.Interop.Word._Application oWord = new Microsoft.Office.Interop.Word.Application() { Visible = false };
+				oDoc = oWord.Documents.Open(
+						ref Filename, ref missing, ref readOnly, ref missing,
+						ref missing, ref missing, ref missing, ref missing,
+						ref missing, ref missing, ref missing, ref visible,
+						ref missing, ref missing, ref missing, ref missing);
+				oDoc.ActiveWindow.Selection.WholeStory();
+				oDoc.ActiveWindow.Selection.Copy();
+				IDataObject data = Clipboard.GetDataObject();
+				RTBWriteZone.Rtf = data.GetData(DataFormats.Rtf).ToString();
+				oWord.Quit(ref missing, ref missing, ref missing);
+				RTBWriteZone.SelectAll();
+				RTBWriteZone.ForeColor = Color.DodgerBlue;
+				RTBWriteZone.SelectionColor = Color.DodgerBlue;
+				RTBWriteZone.DeselectAll();
+			}
+		}
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+			RTBWriteZone.SelectionColor = Color.DodgerBlue;
+			RTBWriteZone.ForeColor = Color.DodgerBlue;
+		}
+    }
 }

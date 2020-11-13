@@ -114,7 +114,7 @@ namespace MailboxCUCEI
 			try
 			{
 				GenerateGenderCode();
-				string query = "INSERT INTO `Historias` (`Nom_Historia`, `ID_Historia`, `Resumen`, `ID_Genero`, `Fo_Portada`, `Raiting`, `Estatus`, `ID_Usuario`, `Seguidores`, `Favoritos`, `Vistas`) VALUES ('"+txtnombre.Text+"', NULL, '"+TXTSummary.Text+"', '"+GenderCode+"', '"+namefile+"', '"+CBRaiting.Text+"', '"+CBEstatus.Text+"', '"+ActUser.GetID().ToString()+"', '0', '0', '0')";
+				string query = "INSERT INTO `Historias` (`Nom_Historia`, `ID_Historia`, `Resumen`, `ID_Genero`, `Fo_Portada`, `Raiting`, `Estatus`, `Seguidores`, `Favoritos`, `Vistas`) VALUES ('"+txtnombre.Text+"', NULL, '"+TXTSummary.Text+"', '"+GenderCode+"', '"+namefile+"', '"+CBRaiting.Text+"', '"+CBEstatus.Text+"', '0', '0', '0')";
 				MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
 				conectar.Open();
 				MySqlCommand comando = new MySqlCommand(query);
@@ -123,7 +123,7 @@ namespace MailboxCUCEI
 				UploadImage();
 				conectar.Close();
 				MessageBox.Show("Historia subida con exito, ahora pasaras al area de escritura");
-
+				InsertRelation();
 				FRMWrite NewWindows = new FRMWrite();
 				NewWindows.Ventana = Base;
 				NewWindows.ActUser = ActUser;
@@ -160,12 +160,38 @@ namespace MailboxCUCEI
 			return gender;
         }
 
+		void InsertRelation() //Inserta la relación Historia-Usuario
+        {
+			string query = "INSERT INTO `Usuarios_Historias` (`ID_Usuario`, `ID_Historia`) VALUES ('"+ActUser.GetID()+"', '"+ LoadID().ToString()+"');";
+			MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+			conectar.Open();
+			MySqlCommand comando = new MySqlCommand(query);
+			comando.Connection = conectar;
+			comando.ExecuteNonQuery();
+			conectar.Close();
+        }
         private void CBGender1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
-        void BtnImageClick(object sender, EventArgs e)
+		int LoadID()  //Función para conseguir el ID de la historia.
+		{
+			int ID_Historia = 0;
+			string query = "SELECT ID_Historia FROM `Historias` WHERE `Nom_Historia` = '" + txtnombre.Text + "' ";
+			string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
+			MySqlConnection connetionBD = new MySqlConnection(conexion);
+			MySqlCommand comando = new MySqlCommand(query, connetionBD);
+			MySqlDataReader lector;
+			connetionBD.Open();
+			lector = comando.ExecuteReader();
+			while (lector.Read())
+			{
+				ID_Historia = lector.GetInt32(0);
+			}
+			connetionBD.Close();
+			return ID_Historia;
+		}
+		void BtnImageClick(object sender, EventArgs e)
 		{
 			
 			OpenFileDialog WindownForCover = new OpenFileDialog();

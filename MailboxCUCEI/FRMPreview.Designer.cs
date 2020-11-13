@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMPreview));
             this.BTNSalir = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.GBDetails = new System.Windows.Forms.GroupBox();
             this.CBFollow = new System.Windows.Forms.CheckBox();
             this.CBDowload = new System.Windows.Forms.CheckBox();
@@ -64,19 +62,6 @@
             this.BTNSalir.UseVisualStyleBackColor = true;
             this.BTNSalir.Click += new System.EventHandler(this.BTNSalir_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Gray;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label3.Location = new System.Drawing.Point(334, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(433, 2);
-            this.label3.TabIndex = 13;
-            this.label3.Text = resources.GetString("label3.Text");
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
             // GBDetails
             // 
             this.GBDetails.Controls.Add(this.CBFollow);
@@ -95,12 +80,14 @@
             this.GBDetails.Controls.Add(this.label2);
             this.GBDetails.Controls.Add(this.LBLGenero);
             this.GBDetails.Controls.Add(this.LBLQuest);
+            this.GBDetails.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.GBDetails.ForeColor = System.Drawing.Color.DodgerBlue;
             this.GBDetails.Location = new System.Drawing.Point(13, 13);
             this.GBDetails.Name = "GBDetails";
             this.GBDetails.Size = new System.Drawing.Size(389, 425);
             this.GBDetails.TabIndex = 16;
             this.GBDetails.TabStop = false;
-            this.GBDetails.Text = "groupBox1";
+            this.GBDetails.Text = "Preview";
             // 
             // CBFollow
             // 
@@ -293,7 +280,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(420, 450);
             this.Controls.Add(this.GBDetails);
-            this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRMPreview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -303,13 +289,11 @@
             this.GBDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBCover)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Button BTNSalir;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox GBDetails;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;

@@ -35,7 +35,7 @@ namespace MailboxCUCEI
         }
 		void CreateChapterList ()
         {
-			string query = "SELECT * FROM `Capitulo` WHERE `ID_Historia` ="+MainStory.GetID()+"";
+			string query = "SELECT C.*, Base.`ID_Historia` FROM `Historias_Capitulos` AS Base INNER JOIN Capitulo AS C ON Base.ID_Capitulo = C.ID_Cap ` WHERE `ID_Historia` =" + MainStory.GetID()+"";
 			string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
 			MySqlConnection connetionBD = new MySqlConnection(conexion);
 			MySqlCommand comando = new MySqlCommand(query, connetionBD);
@@ -44,7 +44,7 @@ namespace MailboxCUCEI
 			lector = comando.ExecuteReader();
 			while (lector.Read())
 			{
-				Capitulos temp = new Capitulos(lector.GetInt16(0),lector.GetString(1),lector.GetInt16(3),lector.GetString(4));
+				Capitulos temp = new Capitulos(lector.GetInt16(0),lector.GetString(1),lector.GetInt16(2),lector.GetString(3));
 				ListChapters.Add(temp);
 			}
 			connetionBD.Close();
@@ -256,8 +256,6 @@ namespace MailboxCUCEI
 				txtComment.Text ="";
 				MessageBox.Show("Mensaje enviado, gracias por aportar tu opinion");
             }
-			
-			
 		}
     }
 }
