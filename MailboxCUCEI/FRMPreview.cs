@@ -98,7 +98,7 @@ namespace MailboxCUCEI
         private void btnRead_Click(object sender, EventArgs e)
         {
 
-            string query = "SELECT *FROM Capitulo WHERE ID_Historia= " + Story.GetID() + "  ";
+            string query = "SELECT *FROM Usuarios_Historias WHERE ID_Historia= " + Story.GetID() + "  ";
             string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
             MySqlConnection connetionBD = new MySqlConnection(conexion);
             MySqlCommand comando = new MySqlCommand(query, connetionBD);

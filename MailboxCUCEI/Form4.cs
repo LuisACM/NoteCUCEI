@@ -48,7 +48,7 @@ namespace MailboxCUCEI
         
         void CreateStoryList ()
         {
-            string query = "SELECT Historias.*, Usuarios.Nombre From Historias INNER JOIN Usuarios ON Historias.ID_Usuario = Usuarios.Codigo";
+            string query = "SELECT h.Nom_Historia,h.ID_Historia,h.Resumen,h.ID_Genero,h.Fo_Portada,h.Raiting,h.Estatus,Base.ID_Usuario,h.Seguidores,h.Favoritos,h.Vistas,u.Nombre From Usuarios_Historias AS Base INNER JOIN Usuarios AS u ON u.Codigo = Base.ID_Usuario INNER JOIN Historias AS h ON h.ID_Historia = Base.ID_Historia  ORDER BY h.Vistas DESC LIMIT 10 ";
             string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
             MySqlConnection connetionBD = new MySqlConnection(conexion);
             MySqlCommand comando = new MySqlCommand(query, connetionBD);
@@ -225,7 +225,7 @@ namespace MailboxCUCEI
 
         private void btnSearch_Click(object sender, EventArgs e)
         {   
-            string query = "SELECT Historias.*, Usuarios.Nombre FROM Historias INNER JOIN Usuarios ON Usuarios.Codigo = Historias.ID_Usuario WHERE MATCH(Nom_Historia,Resumen) AGAINST ('"+txtsearch.Text+"')";
+            string query = "SELECT h.Nom_Historia,h.ID_Historia,h.Resumen,h.ID_Genero,h.Fo_Portada,h.Raiting,h.Estatus,Base.ID_Usuario,h.Seguidores,h.Favoritos,h.Vistas,u.Nombre From Usuarios_Historias AS Base INNER JOIN Usuarios AS u ON u.Codigo = Base.ID_Usuario INNER JOIN Historias AS h ON h.ID_Historia = Base.ID_Historia  WHERE MATCH(Nom_Historia,Resumen) AGAINST ('" + txtsearch.Text+"')";
             string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
             MySqlConnection connetionBD = new MySqlConnection(conexion);
             MySqlCommand comando = new MySqlCommand(query, connetionBD);
@@ -331,7 +331,7 @@ namespace MailboxCUCEI
             }
 
 
-            string query = "SELECT Historias.*, Usuarios.Nombre FROM Historias INNER JOIN Usuarios ON Usuarios.Codigo = Historias.ID_Usuario WHERE `ID_Genero` LIKE '" + IDGenero[0] + "' UNION SELECT Historias.*, Usuarios.Nombre FROM Historias INNER JOIN Usuarios ON Usuarios.Codigo = Historias.ID_Usuario WHERE ID_Genero LIKE '" + IDGenero[1] + "' ";
+            string query = "SELECT h.Nom_Historia,h.ID_Historia,h.Resumen,h.ID_Genero,h.Fo_Portada,h.Raiting,h.Estatus,Base.ID_Usuario,h.Seguidores,h.Favoritos,h.Vistas,u.Nombre From Usuarios_Historias AS Base INNER JOIN Usuarios AS u ON u.Codigo = Base.ID_Usuario INNER JOIN Historias AS h ON h.ID_Historia = Base.ID_Historia  WHERE `ID_Genero` LIKE '" + IDGenero[0] + "' UNION SELECT Historias.*, Usuarios.Nombre FROM Historias INNER JOIN Usuarios ON Usuarios.Codigo = Historias.ID_Usuario WHERE ID_Genero LIKE '" + IDGenero[1] + "' ";
             string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
             MySqlConnection connetionBD = new MySqlConnection(conexion);
             MySqlCommand comando = new MySqlCommand(query, connetionBD);

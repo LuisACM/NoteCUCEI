@@ -136,13 +136,16 @@ namespace MailboxCUCEI
 
         private void Login_Load(object sender, EventArgs e)
         {
-            if (File.Exists(@"\Image"))
+           
+
+            if (File.Exists(@"Images"))
             {
 
             }
             else
             {
-                System.IO.Directory.CreateDirectory(@"\Image");
+                System.IO.Directory.CreateDirectory(@"Images");
+                System.IO.Directory.CreateDirectory(@"Chapters");
             }
             
         }
