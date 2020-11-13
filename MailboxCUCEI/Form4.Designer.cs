@@ -102,6 +102,7 @@
             this.BTNAprobar.TabIndex = 2;
             this.BTNAprobar.Text = "Aprobar reporte";
             this.BTNAprobar.UseVisualStyleBackColor = true;
+            this.BTNAprobar.Visible = false;
             this.BTNAprobar.Click += new System.EventHandler(this.BTNAprobar_Click);
             // 
             // BTNEscribir
@@ -218,6 +219,7 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "label1";
+            this.label1.Visible = false;
             // 
             // BtnPerfil
             // 

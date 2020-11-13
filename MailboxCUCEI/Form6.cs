@@ -44,6 +44,7 @@ namespace MailboxCUCEI
         {
             //funcion de eliminar cuenta
 
+
         }
 
         private void BTNModificar_Click(object sender, EventArgs e)
