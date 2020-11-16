@@ -45,8 +45,20 @@ namespace MailboxCUCEI
         private void BTNEliminar_Click_1(object sender, EventArgs e)
         {
             //funcion de eliminar cuenta
+         
+            MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+            conexion.Open();
+            string query = "DELETE FROM Usuarios WHERE Codigo='"+TxtCodigoPerfil.Text+"'";
+            MySqlCommand comando = new MySqlCommand(query, conexion);
+            comando.ExecuteNonQuery();
+            
+                MessageBox.Show("Se ha eliminado con exito");
 
-
+                conexion.Close();
+                this.Hide();
+                Login inicio = new Login();
+                inicio.Show();
+           
         }
 
         private void BTNModificar_Click(object sender, EventArgs e)

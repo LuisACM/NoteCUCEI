@@ -212,6 +212,7 @@ namespace MailboxCUCEI
         {
             Administrador op = new Administrador();
             op.TxtCodigoPerfil.Text = manduser.Text;
+            this.Hide();
             op.Show();
         }
 
