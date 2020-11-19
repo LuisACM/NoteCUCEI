@@ -26,9 +26,22 @@ namespace MailboxCUCEI
 		public int ID_Historia = 0;
         public void BTNSalir_Click(object sender, EventArgs e)
         {
-			Ventana.Show();
-			Ventana.Reload();
-            this.Dispose();
+
+			DialogResult result = MessageBox.Show("¿Seguro que quieres salir?", "Confirmation", MessageBoxButtons.YesNoCancel);
+			if (result == DialogResult.Yes)
+			{
+				Principal go = new Principal();
+				go.User = Ventana.User;
+				go.ActUser = Ventana.ActUser;
+				go.manduser.Text = Ventana.manduser.Text;
+				go.Show();
+				this.Dispose();
+			}
+			else if (result == DialogResult.No)
+			{
+				//... Do Nothing
+			}
+			
         }
 
         
@@ -188,23 +201,31 @@ namespace MailboxCUCEI
         {
 			try
             {
-				WaitForm Wait = new WaitForm();
-				Wait.Show();
-				RTBWriteZone.SaveFile(txtTitle.Text+ID_Historia.ToString()+".rtf");
-				string query = "INSERT INTO `Capitulo` (`ID_Cap`, `Nombre`, `Numero`, `Ubicacion`) VALUES (NULL, '"+txtTitle.Text+"', '"+ Capitulo +"', '" + txtTitle.Text + ID_Historia.ToString() + ".rtf ')";
-				MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
-				conectar.Open();
-				MySqlCommand comando = new MySqlCommand(query);
-				comando.Connection = conectar;
-				comando.ExecuteNonQuery();
-				UploadTEXT();
-				conectar.Close();
-				MessageBox.Show("Capitulo subido.");
-				InsertRelation();
-				Wait.Dispose();
-				Ventana.Reload();
-				Ventana.Show();
-				this.Dispose();
+				if (txtTitle.Text == "Título")
+				{
+					MessageBox.Show("Por favor, asigna un nombre a tu capitulo");
+				}
+				else
+                {
+					WaitForm Wait = new WaitForm();
+					Wait.Show();
+					RTBWriteZone.SaveFile(txtTitle.Text+ID_Historia.ToString()+".rtf");
+					string query = "INSERT INTO `Capitulo` (`ID_Cap`, `Nombre`, `Numero`, `Ubicacion`) VALUES (NULL, '"+txtTitle.Text+"', '"+ Capitulo +"', '" + txtTitle.Text + ID_Historia.ToString() + ".rtf ')";
+					MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+					conectar.Open();
+					MySqlCommand comando = new MySqlCommand(query);
+					comando.Connection = conectar;
+					comando.ExecuteNonQuery();
+					UploadTEXT();
+					conectar.Close();
+					MessageBox.Show("Capitulo subido.");
+					InsertRelation();
+					Wait.Dispose();
+					Ventana.Reload();
+					Ventana.Show();
+					this.Dispose();
+                }
+				
             }
 			catch (Exception err)
 			{
@@ -276,5 +297,13 @@ namespace MailboxCUCEI
 			RTBWriteZone.SelectionColor = Color.DodgerBlue;
 			RTBWriteZone.ForeColor = Color.DodgerBlue;
 		}
+
+        private void txtTitle_Click(object sender, EventArgs e)
+        {
+			 if (txtTitle.Text == "Título")
+            {
+				txtTitle.Text = "";
+            }
+        }
     }
 }

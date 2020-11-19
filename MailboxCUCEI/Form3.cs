@@ -191,7 +191,14 @@ namespace MailboxCUCEI
 			connetionBD.Close();
 			return ID_Historia;
 		}
-		void BtnImageClick(object sender, EventArgs e)
+
+        private void BTNSalir_Click(object sender, EventArgs e)
+        {
+			Base.Show();
+			this.Dispose();
+        }
+
+        void BtnImageClick(object sender, EventArgs e)
 		{
 			
 			OpenFileDialog WindownForCover = new OpenFileDialog();

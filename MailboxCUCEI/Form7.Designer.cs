@@ -53,7 +53,6 @@
             this.LBLQuest = new System.Windows.Forms.Label();
             this.BTNAlignLeft = new System.Windows.Forms.Button();
             this.RTBWriteZone = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.GBDetails.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,11 +105,11 @@
             this.txtTitle.Size = new System.Drawing.Size(945, 20);
             this.txtTitle.TabIndex = 8;
             this.txtTitle.Text = "Título";
+            this.txtTitle.Click += new System.EventHandler(this.txtTitle_Click);
             this.txtTitle.TextChanged += new System.EventHandler(this.TxtCodigoModificarTextChanged);
             // 
             // GBDetails
             // 
-            this.GBDetails.Controls.Add(this.button1);
             this.GBDetails.Controls.Add(this.BTNLoadWord);
             this.GBDetails.Controls.Add(this.label5);
             this.GBDetails.Controls.Add(this.BTNDecreaseLetters);
@@ -379,20 +378,6 @@
             this.RTBWriteZone.Text = "¡Escribe aquí!";
             this.RTBWriteZone.Click += new System.EventHandler(this.RTBWriteZone_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Location = new System.Drawing.Point(822, 52);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 25);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "A+";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FRMWrite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,6 +428,5 @@
         public System.Windows.Forms.Label lblStoryName;
         private System.Windows.Forms.Button BTNLoadWord;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
     }
 }

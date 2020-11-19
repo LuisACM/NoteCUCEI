@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Net;
 
 namespace MailboxCUCEI
 {
@@ -18,6 +19,7 @@ namespace MailboxCUCEI
         {
             InitializeComponent();
         }
+        bool Offline = false;
 
         private void TxtUsuario_Enter(object sender, EventArgs e)
         {
@@ -85,32 +87,42 @@ namespace MailboxCUCEI
         }
         private void BtnInicioSesion_Click(object sender, EventArgs e)
         {
-            Esperar.Show();
-            MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
-            conectar.Open();
-            MySqlCommand checkin = new MySqlCommand();
-            MySqlConnection conectarya = new MySqlConnection();
-            checkin.Connection = conectar;
-            checkin.CommandText = ("SELECT *From Usuarios WHERE Codigo='"+TxtUsuario.Text+"'and Password ='"+TxtPassword.Text+"'");
-            MySqlDataReader leer = checkin.ExecuteReader();
-            if(leer.Read())
+            if (Offline)
             {
-                GenerateUser();
-                conectar.Close();
-                MessageBox.Show("Bienvenido");
-                Principal go = new Principal();
-                go.User = false;
-                go.ActUser = ActUser;
-                go.manduser.Text = TxtUsuario.Text;
-                go.Show();
+                FRMOffline NuevaVentana = new FRMOffline();
+                NuevaVentana.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Codigo o contraseña erroneos");
+                Esperar.Show();
+                MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+                conectar.Open();
+                MySqlCommand checkin = new MySqlCommand();
+                MySqlConnection conectarya = new MySqlConnection();
+                checkin.Connection = conectar;
+                checkin.CommandText = ("SELECT *From Usuarios WHERE Codigo='" + TxtUsuario.Text + "'and Password ='" + TxtPassword.Text + "'");
+                MySqlDataReader leer = checkin.ExecuteReader();
+                if (leer.Read())
+                {
+                    GenerateUser();
+                    conectar.Close();
+                    MessageBox.Show("Bienvenido");
+                    Principal go = new Principal();
+                    go.User = false;
+                    go.ActUser = ActUser;
+                    go.manduser.Text = TxtUsuario.Text;
+                    go.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Codigo o contraseña erroneos");
+                }
+                conectar.Close();
+                Esperar.Hide();
             }
-            conectar.Close();
-            Esperar.Hide();
+
         }
 
         private void LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -133,21 +145,42 @@ namespace MailboxCUCEI
             directo.Show();
             this.Hide();
         }
-
-        private void Login_Load(object sender, EventArgs e)
+        bool Online ()
         {
-           
+            System.Uri Url = new System.Uri("https://www.google.com/");
 
-            if (File.Exists(@"Images"))
+            System.Net.WebRequest WebRequest;
+            WebRequest = System.Net.WebRequest.Create(Url);
+            System.Net.WebResponse objetoResp;
+
+            try
             {
-
+                objetoResp = WebRequest.GetResponse();
+                return true;
+                objetoResp.Close();
+                WebRequest = null;
             }
-            else
+            catch (Exception ex)
             {
-                System.IO.Directory.CreateDirectory(@"Images");
-                System.IO.Directory.CreateDirectory(@"Chapters");
+                return false;
+                WebRequest = null;
             }
             
+        }
+        private void Login_Load(object sender, EventArgs e)
+        {
+            if (!Online())
+            {
+                TxtPassword.Enabled = false;
+                TxtUsuario.Enabled = false;
+                label3.Visible = false;
+                label5.Visible = false;
+                label6.Visible = false;
+                BTNINVITADO.Visible = false;
+                LinkLabel.Visible = false;
+                BtnInicioSesion.Text = "LEER TUS HISTORIAS DESCARGADAS";
+                Offline = true;
+            }
         }
     }
 }

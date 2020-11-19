@@ -29,7 +29,6 @@ namespace MailboxCUCEI
         {
             Ventana.Show();
             this.Dispose();
-
         }
 		void Label5Click(object sender, EventArgs e)
 		{
@@ -79,6 +78,12 @@ namespace MailboxCUCEI
          }
         private void FRMWrite_Load(object sender, EventArgs e)
         {
+            if (Ventana.User)
+            {
+                CBDowload.Enabled = false;
+                CBFav.Enabled = false;
+                CBFollow.Enabled = false;
+            }
             LBLTitle.Text = Story.GetName();
             LBLGenero.Text = Generos(Story.GetGender());
             lblraiting.Text = Story.GetRaiting();
@@ -86,10 +91,36 @@ namespace MailboxCUCEI
             lblSummary.Text = Story.GetSummary();
             PBCover.Image = Image.FromFile(Story.GetCover());
             LBLAuthor.Text = Story.GetNameUser();
-
-
+            AlreadyDownload();
         }
-
+        void AlreadyDownload ()
+        {
+            if (File.Exists("DataDownload.ntf"))
+            {
+                string line;
+                StreamReader sr = new StreamReader("DataDownload.ntf");
+                //Read the first line of text
+                line = sr.ReadLine();
+                //Continue to read until you reach end of file
+                while (line != null)
+                {
+                    string[] name = line.Split('?');
+                    if (name[0]==Story.GetName())
+                    {   
+                        CBDowload.Enabled = false;
+                        CBDowload.Checked = true;
+                    }
+                    line = sr.ReadLine();
+                }
+            //close the file
+            sr.Close();
+            }
+            else
+            {
+                // Do Nothing...
+            }
+            
+        }
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -97,7 +128,6 @@ namespace MailboxCUCEI
 
         private void btnRead_Click(object sender, EventArgs e)
         {
-
             string query = "SELECT *FROM Usuarios_Historias WHERE ID_Historia= " + Story.GetID() + "  ";
             string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
             MySqlConnection connetionBD = new MySqlConnection(conexion);
@@ -120,6 +150,35 @@ namespace MailboxCUCEI
             Leer.MainStory = Story;
             this.Dispose();
             Leer.Show();
+            }
+        }
+
+        private void CBDowload_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CBDowload.Enabled==false)
+            {
+                //Do Nothing...
+            }
+            else
+            {
+                StreamWriter sw = new StreamWriter("DataDownload.ntf");
+                string query = "SELECT C.Ubicacion FROM Historias_Capitulos as HC INNER JOIN Capitulo as C ON C.ID_Cap = HC.ID_Capitulo WHERE HC.ID_Historia = " + Story.GetID() + " ";
+                string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
+                MySqlConnection connetionBD = new MySqlConnection(conexion);
+                MySqlCommand comando = new MySqlCommand(query, connetionBD);
+                MySqlDataReader lector;
+                connetionBD.Open();
+                lector = comando.ExecuteReader();
+                string line = "";
+                line = Story.GetName() + "?";
+                line = line + Story.GetCover() + "#";
+                while (lector.Read())
+                {
+                    line = line + lector.GetString(0) + "|";
+                }
+                sw.WriteLine(line);
+                connetionBD.Close();
+                sw.Close();
             }
             
         }

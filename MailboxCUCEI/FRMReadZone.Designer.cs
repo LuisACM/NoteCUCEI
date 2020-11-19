@@ -40,8 +40,9 @@
             this.txtComment = new System.Windows.Forms.TextBox();
             this.BTNSendComment = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtcomments = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.BTNBack = new System.Windows.Forms.Button();
             this.GBDetails.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +75,7 @@
             // 
             // GBDetails
             // 
+            this.GBDetails.Controls.Add(this.BTNBack);
             this.GBDetails.Controls.Add(this.lblCapitulo);
             this.GBDetails.Controls.Add(this.lblStoryName);
             this.GBDetails.Controls.Add(this.BTNDecreaseLetters);
@@ -196,18 +198,6 @@
             this.panel1.Size = new System.Drawing.Size(250, 416);
             this.panel1.TabIndex = 27;
             // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(43, 1);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 20);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Zona de comentarios";
-            this.label2.UseMnemonic = false;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // txtcomments
             // 
             this.txtcomments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
@@ -221,6 +211,32 @@
             this.txtcomments.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtcomments.Size = new System.Drawing.Size(243, 380);
             this.txtcomments.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label2.Location = new System.Drawing.Point(43, 1);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(164, 20);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Zona de comentarios";
+            this.label2.UseMnemonic = false;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // BTNBack
+            // 
+            this.BTNBack.Enabled = false;
+            this.BTNBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNBack.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.BTNBack.Location = new System.Drawing.Point(149, 20);
+            this.BTNBack.Name = "BTNBack";
+            this.BTNBack.Size = new System.Drawing.Size(137, 26);
+            this.BTNBack.TabIndex = 26;
+            this.BTNBack.Text = "Anterior Capitulo";
+            this.BTNBack.UseVisualStyleBackColor = true;
+            this.BTNBack.Click += new System.EventHandler(this.BTNBack_Click);
             // 
             // FRMReadZone
             // 
@@ -262,5 +278,6 @@
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtcomments;
+        private System.Windows.Forms.Button BTNBack;
     }
 }

@@ -100,6 +100,7 @@
             this.BTNSalir.TabIndex = 1;
             this.BTNSalir.Text = "CANCELAR";
             this.BTNSalir.UseVisualStyleBackColor = true;
+            this.BTNSalir.Click += new System.EventHandler(this.BTNSalir_Click);
             // 
             // BTNSend
             // 

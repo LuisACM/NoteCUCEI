@@ -20,7 +20,7 @@ namespace MailboxCUCEI
         }
         private void FRMSelectStory_Load(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM `Historias` WHERE `ID_Usuario` = " +NueaVentana.ActUser.GetID()+" ";
+            string query = "SELECT H.Nom_Historia FROM Historias AS H INNER JOIN Usuarios_Historias AS UH ON UH.ID_Historia= H.ID_Historia WHERE UH.ID_Usuario = " +NueaVentana.ActUser.GetID()+" ";
             string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
             MySqlConnection connetionBD = new MySqlConnection(conexion);
             MySqlCommand comando = new MySqlCommand(query, connetionBD);

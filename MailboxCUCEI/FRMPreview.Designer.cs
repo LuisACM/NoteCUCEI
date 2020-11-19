@@ -112,6 +112,7 @@
             this.CBDowload.TabIndex = 20;
             this.CBDowload.Text = "Descargar";
             this.CBDowload.UseVisualStyleBackColor = true;
+            this.CBDowload.CheckedChanged += new System.EventHandler(this.CBDowload_CheckedChanged);
             // 
             // CBFav
             // 

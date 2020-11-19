@@ -22,6 +22,9 @@ namespace MailboxCUCEI
 		List<Capitulos> ListChapters = new List<Capitulos>();
 		int ActualChapter;
 		private WebClient Cliente = new WebClient();
+		public bool Offline = false;
+		public string ChaptersOffline;
+		public string StoryName;
 		public FRMReadZone()
         {
             InitializeComponent();
@@ -30,12 +33,26 @@ namespace MailboxCUCEI
 		public int ID_Historia = 0;
         public void BTNSalir_Click(object sender, EventArgs e)
         {
-			Ventana.Show();
-			this.Dispose();
+			if (Offline)
+            {
+				FRMOffline Venta = new FRMOffline();
+				Venta.Show();
+				this.Dispose();
+            }
+			else
+            {
+				Principal go = new Principal();
+				go.User = Ventana.User;
+				go.ActUser = Ventana.ActUser;
+				go.manduser.Text = Ventana.manduser.Text;
+				go.Show();
+				this.Dispose();
+            }
+			
         }
 		void CreateChapterList ()
         {
-			string query = "SELECT C.*, Base.`ID_Historia` FROM `Historias_Capitulos` AS Base INNER JOIN Capitulo AS C ON Base.ID_Capitulo = C.ID_Cap ` WHERE `ID_Historia` =" + MainStory.GetID()+"";
+			string query = "SELECT C.*, Base.`ID_Historia` FROM `Historias_Capitulos` AS Base INNER JOIN Capitulo AS C ON Base.ID_Capitulo = C.ID_Cap  WHERE ID_Historia =" + MainStory.GetID()+"";
 			string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
 			MySqlConnection connetionBD = new MySqlConnection(conexion);
 			MySqlCommand comando = new MySqlCommand(query, connetionBD);
@@ -122,7 +139,6 @@ namespace MailboxCUCEI
 		void BTNDecreaseLettersClick(object sender, EventArgs e)
 		{
 			System.Drawing.Font currentFont = RTBWriteZone.SelectionFont;
-			MessageBox.Show("I can´t :c");
 				  float ActualLeght = currentFont.Size;
 				  ActualLeght = ActualLeght - 1;
 				  RTBWriteZone.Font = new Font(
@@ -135,27 +151,48 @@ namespace MailboxCUCEI
 		{
 	
 		}
-		
+		string[] OfflineChaptersList;
 		private void FRMWrite_Load(object sender, EventArgs e)
 		{
-			if (Ventana.User)
+
+			if (Offline)
             {
 				txtComment.Visible = false;
+				panel1.Visible = false;
 				BTNSendComment.Visible = false;
-            }
-			LoadComments();
-			CreateChapterList();
-			Capitulos temp;
-			temp = ListChapters[ActualChapter];
-			lblCapitulo.Text = temp.GetName();
-			lblStoryName.Text = MainStory.GetName();
-			DownloadStory("https://notecucei.000webhostapp.com/", temp.GetFilename());
-			RTBWriteZone.LoadFile(temp.GetFilename());
-			if (!MoreChapter())
+				lblCapitulo.Visible = false;
+				lblStoryName.Text = StoryName;
+				OfflineChaptersList = ChaptersOffline.Split('|');
+				ActualChapter = 0;
+				RTBWriteZone.LoadFile(OfflineChaptersList[ActualChapter]);
+				if (!MoreChapterOff())
+				{
+					BTNNextChapter.Enabled = false;
+				}
+			}
+			else
             {
-				BTNNextChapter.Enabled = false;
+				if (Ventana.User)
+				{
+					txtComment.Visible = false;
+					BTNSendComment.Visible = false;
+				}
+				LoadComments();
+				CreateChapterList();
+				Capitulos temp;
+				temp = ListChapters[ActualChapter];
+				lblCapitulo.Text = temp.GetName();
+				lblStoryName.Text = MainStory.GetName();
+				DownloadStory("https://notecucei.000webhostapp.com/", temp.GetFilename());
+				RTBWriteZone.LoadFile(temp.GetFilename());
+					if (!MoreChapter())
+				{
+					BTNNextChapter.Enabled = false;
+				}
             }
+			
 		}
+		
 		void LoadComments()
         {
 			string query = "SELECT  Usuarios.Nombre, Capitulo.Numero, Comentarios.Comentario FROM Comentarios INNER JOIN Usuarios ON Usuarios.Codigo = Comentarios.ID_Usuario INNER JOIN Capitulo ON Capitulo.ID_Cap = Comentarios.ID_Cap WHERE Comentarios.ID_Historia = "+MainStory.GetID();
@@ -186,6 +223,18 @@ namespace MailboxCUCEI
 			}
 			
 		}
+		
+		bool MoreChapterOff()
+		{
+			if (ActualChapter + 1 < OfflineChaptersList.Length)
+			{
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
 		bool MoreChapter()
 		{
 			if (ListChapters.Count() > ActualChapter + 1)
@@ -199,17 +248,31 @@ namespace MailboxCUCEI
         }
         private void BTNPublish_Click(object sender, EventArgs e)
         {
+			BTNBack.Enabled = true;
 			ActualChapter++;
-			Capitulos temp;
-			temp = ListChapters[ActualChapter];
-			lblCapitulo.Text = temp.GetName();
-			lblStoryName.Text = MainStory.GetName();
-			DownloadStory("https://notecucei.000webhostapp.com/", temp.GetFilename());
-			RTBWriteZone.LoadFile(temp.GetFilename());
-			if (!MoreChapter())
-			{
-				BTNNextChapter.Enabled = false;
+			if (Offline)
+            {
+				RTBWriteZone.LoadFile(OfflineChaptersList[ActualChapter]);
+				if (!MoreChapterOff())
+				{
+					BTNNextChapter.Enabled = false;
+				}
+
 			}
+			else
+            {
+				Capitulos temp;
+				temp = ListChapters[ActualChapter];
+				lblCapitulo.Text = temp.GetName();
+				lblStoryName.Text = MainStory.GetName();
+				DownloadStory("https://notecucei.000webhostapp.com/", temp.GetFilename());
+				RTBWriteZone.LoadFile(temp.GetFilename());
+				if (!MoreChapter())
+				{
+					BTNNextChapter.Enabled = false;
+				}
+            }
+			
 		}
 		void DownloadStory(string URL, String Name)
 		{
@@ -256,6 +319,35 @@ namespace MailboxCUCEI
 				txtComment.Text ="";
 				MessageBox.Show("Mensaje enviado, gracias por aportar tu opinion");
             }
+		}
+
+        private void BTNBack_Click(object sender, EventArgs e)
+        {
+			ActualChapter--;
+			if (Offline)
+			{
+				RTBWriteZone.LoadFile(OfflineChaptersList[ActualChapter]);
+				BTNNextChapter.Enabled = true;
+				if (ActualChapter == 0)
+				{
+					BTNBack.Enabled = false;
+				}
+
+			}
+			else
+			{
+				Capitulos temp;
+				BTNNextChapter.Enabled = true;
+				temp = ListChapters[ActualChapter];
+				lblCapitulo.Text = temp.GetName();
+				lblStoryName.Text = MainStory.GetName();
+				DownloadStory("https://notecucei.000webhostapp.com/", temp.GetFilename());
+				RTBWriteZone.LoadFile(temp.GetFilename());
+				if (ActualChapter == 0)
+				{
+					BTNBack.Enabled = false;
+				}
+			}
 		}
     }
 }
