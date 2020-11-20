@@ -175,12 +175,14 @@ namespace MailboxCUCEI
                     TXTSummary.Text = temp.GetSummary();
                     PBCover.Image = Image.FromFile(temp.GetCover());
                     Generos(temp.GetGender());
+                    SelectedStoryID = temp.GetID();
                     LoadChapters(temp.GetID());
                     ActStory = temp;
                 }
 
             }
         }
+        int SelectedStoryID;
         void LoadChapters(int ID)
         {
             capitulos.Clear();
@@ -225,7 +227,7 @@ namespace MailboxCUCEI
                 comando.ExecuteNonQuery();
                 conexion.Close();
                 panel1.Controls.Clear();
-                LoadChapters();
+                LoadChapters(SelectedStoryID);
             }
             else if (result == DialogResult.No)
             {

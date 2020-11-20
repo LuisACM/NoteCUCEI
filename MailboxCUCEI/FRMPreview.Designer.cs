@@ -100,6 +100,7 @@
             this.CBFollow.TabIndex = 22;
             this.CBFollow.Text = "Follow";
             this.CBFollow.UseVisualStyleBackColor = true;
+            this.CBFollow.CheckedChanged += new System.EventHandler(this.CBFollow_CheckedChanged);
             // 
             // CBDowload
             // 
@@ -125,6 +126,7 @@
             this.CBFav.TabIndex = 21;
             this.CBFav.Text = "Fav";
             this.CBFav.UseVisualStyleBackColor = true;
+            this.CBFav.CheckedChanged += new System.EventHandler(this.CBFav_CheckedChanged);
             // 
             // btnRead
             // 
@@ -279,7 +281,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(420, 450);
+            this.ClientSize = new System.Drawing.Size(418, 450);
             this.Controls.Add(this.GBDetails);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRMPreview";

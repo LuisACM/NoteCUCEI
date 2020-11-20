@@ -84,6 +84,10 @@ namespace MailboxCUCEI
                 CBFav.Enabled = false;
                 CBFollow.Enabled = false;
             }
+            ControlForCheck = false;
+            CBFav.Checked = CheckFF("Favoritos");
+            CBFollow.Checked = CheckFF("Seguidores");
+            ControlForCheck = true;
             LBLTitle.Text = Story.GetName();
             LBLGenero.Text = Generos(Story.GetGender());
             lblraiting.Text = Story.GetRaiting();
@@ -92,6 +96,27 @@ namespace MailboxCUCEI
             PBCover.Image = Image.FromFile(Story.GetCover());
             LBLAuthor.Text = Story.GetNameUser();
             AlreadyDownload();
+        }
+        bool CheckFF (string Tabla)
+        {
+            MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+            conectar.Open();
+            MySqlCommand checkin = new MySqlCommand();
+            MySqlConnection conectarya = new MySqlConnection();
+            checkin.Connection = conectar;
+            checkin.CommandText = ("SELECT *From "+ Tabla +" WHERE ID_Usuario='" + Ventana.ActUser.GetID() + "'and ID_Historia ='" + Story.GetID() + "'");
+            MySqlDataReader leer = checkin.ExecuteReader();
+            if (leer.Read())
+            {
+                conectar.Close();
+                return true;
+            }
+            else
+            {
+                conectar.Close();
+                return false;
+            }
+
         }
         void AlreadyDownload ()
         {
@@ -181,6 +206,65 @@ namespace MailboxCUCEI
                 sw.Close();
             }
             
+        }
+        bool ControlForCheck;
+        private void CBFav_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ControlForCheck)
+            {
+                if (CBFav.Checked == false)
+                {
+                    string query = "DELETE FROM Favoritoss WHERE ID_Usuario = " + Ventana.ActUser.GetID() + " AND ID_Historia = " + Story.GetID();
+                    MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+                    conectar.Open();
+                    MySqlCommand comando = new MySqlCommand(query);
+                    comando.Connection = conectar;
+                    comando.ExecuteNonQuery();
+                    conectar.Close();
+                    MessageBox.Show("Historia eliminada de tus favoritos");
+                }
+                else
+                {
+                    String query = "INSERT INTO `Favoritos` (`ID_Usuario`, `ID_Historia`) VALUES ('" + Ventana.ActUser.GetID() + "', '" + Story.GetID() + "');";
+                    MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+                    conectar.Open();
+                    MySqlCommand comando = new MySqlCommand(query);
+                    comando.Connection = conectar;
+                    comando.ExecuteNonQuery();
+                    conectar.Close();
+                    MessageBox.Show("Historia agregada a tus favoritos");
+                }
+            }
+            
+        }
+
+        private void CBFollow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ControlForCheck)
+            {
+                if (CBFav.Checked == false)
+                {
+                    string query = "DELETE FROM Seguidores WHERE ID_Usuario = " + Ventana.ActUser.GetID() + " AND ID_Historia = " + Story.GetID();
+                    MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+                    conectar.Open();
+                    MySqlCommand comando = new MySqlCommand(query);
+                    comando.Connection = conectar;
+                    comando.ExecuteNonQuery();
+                    conectar.Close();
+                    MessageBox.Show("Ya no sigues esta historia");
+                }
+                else
+                {
+                    String query = "INSERT INTO `Seguidores` (`ID_Usuario`, `ID_Historia`) VALUES ('" + Ventana.ActUser.GetID() + "', '" + Story.GetID() + "');";
+                    MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+                    conectar.Open();
+                    MySqlCommand comando = new MySqlCommand(query);
+                    comando.Connection = conectar;
+                    comando.ExecuteNonQuery();
+                    conectar.Close();
+                    MessageBox.Show("Ahora sigues esta historia");
+                }
+            }
         }
     }
 }

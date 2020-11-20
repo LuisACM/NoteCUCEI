@@ -77,6 +77,17 @@
             this.label14 = new System.Windows.Forms.Label();
             this.RBYes = new System.Windows.Forms.RadioButton();
             this.RBNo = new System.Windows.Forms.RadioButton();
+            this.BTNFF = new System.Windows.Forms.Button();
+            this.BTNNot = new System.Windows.Forms.Button();
+            this.GBFv = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.FotoPerfil)).BeginInit();
             this.GBStories.SuspendLayout();
             this.GBDetails.SuspendLayout();
@@ -85,6 +96,13 @@
             this.groupBox3.SuspendLayout();
             this.PNResults.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.GBFv.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // FechaNac
@@ -303,12 +321,12 @@
             this.GBStories.Controls.Add(this.GBDetails);
             this.GBStories.Controls.Add(this.groupBox3);
             this.GBStories.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.GBStories.Location = new System.Drawing.Point(236, 12);
+            this.GBStories.Location = new System.Drawing.Point(167, 81);
             this.GBStories.Name = "GBStories";
-            this.GBStories.Size = new System.Drawing.Size(699, 647);
+            this.GBStories.Size = new System.Drawing.Size(81, 282);
             this.GBStories.TabIndex = 62;
             this.GBStories.TabStop = false;
-            this.GBStories.Tag = "699, 647";
+            this.GBStories.Tag = "699, 647 Location  236, 12";
             this.GBStories.Text = "Información ";
             this.GBStories.Visible = false;
             // 
@@ -678,7 +696,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.label14.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label14.Location = new System.Drawing.Point(617, 255);
+            this.label14.Location = new System.Drawing.Point(622, 240);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(80, 18);
             this.label14.TabIndex = 65;
@@ -689,7 +707,7 @@
             this.RBYes.AutoSize = true;
             this.RBYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.RBYes.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.RBYes.Location = new System.Drawing.Point(778, 253);
+            this.RBYes.Location = new System.Drawing.Point(723, 238);
             this.RBYes.Name = "RBYes";
             this.RBYes.Size = new System.Drawing.Size(39, 22);
             this.RBYes.TabIndex = 66;
@@ -702,7 +720,7 @@
             this.RBNo.AutoSize = true;
             this.RBNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.RBNo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.RBNo.Location = new System.Drawing.Point(832, 252);
+            this.RBNo.Location = new System.Drawing.Point(778, 236);
             this.RBNo.Name = "RBNo";
             this.RBNo.Size = new System.Drawing.Size(46, 22);
             this.RBNo.TabIndex = 67;
@@ -710,15 +728,141 @@
             this.RBNo.UseVisualStyleBackColor = true;
             this.RBNo.CheckedChanged += new System.EventHandler(this.RBNo_CheckedChanged);
             // 
+            // BTNFF
+            // 
+            this.BTNFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNFF.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.BTNFF.Location = new System.Drawing.Point(12, 142);
+            this.BTNFF.Name = "BTNFF";
+            this.BTNFF.Size = new System.Drawing.Size(131, 45);
+            this.BTNFF.TabIndex = 68;
+            this.BTNFF.Text = "Follows y Favs";
+            this.BTNFF.UseVisualStyleBackColor = true;
+            // 
+            // BTNNot
+            // 
+            this.BTNNot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNNot.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.BTNNot.Location = new System.Drawing.Point(12, 202);
+            this.BTNNot.Name = "BTNNot";
+            this.BTNNot.Size = new System.Drawing.Size(131, 45);
+            this.BTNNot.TabIndex = 69;
+            this.BTNNot.Text = "Notificaciones";
+            this.BTNNot.UseVisualStyleBackColor = true;
+            // 
+            // GBFv
+            // 
+            this.GBFv.Controls.Add(this.groupBox2);
+            this.GBFv.Controls.Add(this.groupBox4);
+            this.GBFv.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.GBFv.Location = new System.Drawing.Point(236, 12);
+            this.GBFv.Name = "GBFv";
+            this.GBFv.Size = new System.Drawing.Size(706, 472);
+            this.GBFv.TabIndex = 70;
+            this.GBFv.TabStop = false;
+            this.GBFv.Tag = "699, 647 Location  236, 12";
+            this.GBFv.Text = "Follows y Favs";
+            this.GBFv.Visible = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Black;
+            this.groupBox2.Controls.Add(this.panel2);
+            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.groupBox2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.groupBox2.Location = new System.Drawing.Point(6, 237);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(687, 225);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Historias Seguidas";
+            this.groupBox2.Visible = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.panel3);
+            this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.groupBox4.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.groupBox4.Location = new System.Drawing.Point(6, 26);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(687, 205);
+            this.groupBox4.TabIndex = 14;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Historias Favoritas";
+            // 
+            // panel3
+            // 
+            this.panel3.AutoScroll = true;
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.button10);
+            this.panel3.Location = new System.Drawing.Point(7, 23);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(674, 176);
+            this.panel3.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(194, 138);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Black;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Location = new System.Drawing.Point(0, 140);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(191, 28);
+            this.button10.TabIndex = 0;
+            this.button10.Text = "button10";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.AutoScroll = true;
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.button5);
+            this.panel2.Location = new System.Drawing.Point(6, 26);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(674, 193);
+            this.panel2.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(194, 138);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Black;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(0, 140);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(191, 28);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Visible = false;
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(947, 673);
-            this.Controls.Add(this.RBNo);
-            this.Controls.Add(this.RBYes);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.GBFv);
+            this.Controls.Add(this.BTNNot);
+            this.Controls.Add(this.BTNFF);
             this.Controls.Add(this.BTNMyInfo);
             this.Controls.Add(this.BTNMyStories);
             this.Controls.Add(this.GBStories);
@@ -741,6 +885,9 @@
             this.Controls.Add(this.BTNSalir);
             this.Controls.Add(this.BTNModificar);
             this.Controls.Add(this.BTNEliminar);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.RBYes);
+            this.Controls.Add(this.RBNo);
             this.ForeColor = System.Drawing.Color.Chocolate;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Administrador";
@@ -756,6 +903,13 @@
             this.groupBox3.ResumeLayout(false);
             this.PNResults.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.GBFv.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -811,5 +965,16 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.RadioButton RBYes;
         private System.Windows.Forms.RadioButton RBNo;
+        private System.Windows.Forms.Button BTNFF;
+        private System.Windows.Forms.Button BTNNot;
+        private System.Windows.Forms.GroupBox GBFv;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button10;
     }
 }
