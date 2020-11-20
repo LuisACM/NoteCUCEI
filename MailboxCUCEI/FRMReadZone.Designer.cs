@@ -47,8 +47,18 @@
             this.calificarlabel = new System.Windows.Forms.Label();
             this.calificarbtn = new System.Windows.Forms.Button();
             this.flagLabel = new System.Windows.Forms.Label();
+            this.GBRecommend = new System.Windows.Forms.GroupBox();
+            this.PNRecommends = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.GBDetails.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.GBRecommend.SuspendLayout();
+            this.PNRecommends.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BTNSalir
@@ -171,7 +181,7 @@
             this.RTBWriteZone.Name = "RTBWriteZone";
             this.RTBWriteZone.ReadOnly = true;
             this.RTBWriteZone.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.RTBWriteZone.Size = new System.Drawing.Size(816, 549);
+            this.RTBWriteZone.Size = new System.Drawing.Size(878, 419);
             this.RTBWriteZone.TabIndex = 17;
             this.RTBWriteZone.Text = "";
             // 
@@ -198,7 +208,7 @@
             this.BTNSendComment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNSendComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNSendComment.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.BTNSendComment.Location = new System.Drawing.Point(934, 66);
+            this.BTNSendComment.Location = new System.Drawing.Point(925, 66);
             this.BTNSendComment.Name = "BTNSendComment";
             this.BTNSendComment.Size = new System.Drawing.Size(68, 26);
             this.BTNSendComment.TabIndex = 26;
@@ -211,7 +221,7 @@
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.txtcomments);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(854, 99);
+            this.panel1.Location = new System.Drawing.Point(899, 98);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 309);
             this.panel1.TabIndex = 27;
@@ -256,7 +266,7 @@
             "3",
             "4",
             "5"});
-            this.CalificacionCB.Location = new System.Drawing.Point(1011, 450);
+            this.CalificacionCB.Location = new System.Drawing.Point(937, 447);
             this.CalificacionCB.Name = "CalificacionCB";
             this.CalificacionCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CalificacionCB.Size = new System.Drawing.Size(114, 28);
@@ -268,7 +278,7 @@
             this.calificarlabel.AutoSize = true;
             this.calificarlabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calificarlabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.calificarlabel.Location = new System.Drawing.Point(837, 453);
+            this.calificarlabel.Location = new System.Drawing.Point(921, 410);
             this.calificarlabel.Name = "calificarlabel";
             this.calificarlabel.Size = new System.Drawing.Size(163, 20);
             this.calificarlabel.TabIndex = 28;
@@ -280,7 +290,7 @@
             this.calificarbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calificarbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calificarbtn.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.calificarbtn.Location = new System.Drawing.Point(925, 495);
+            this.calificarbtn.Location = new System.Drawing.Point(948, 491);
             this.calificarbtn.Name = "calificarbtn";
             this.calificarbtn.Size = new System.Drawing.Size(136, 26);
             this.calificarbtn.TabIndex = 30;
@@ -293,19 +303,87 @@
             this.flagLabel.AutoSize = true;
             this.flagLabel.BackColor = System.Drawing.Color.Transparent;
             this.flagLabel.ForeColor = System.Drawing.Color.Black;
-            this.flagLabel.Location = new System.Drawing.Point(858, 437);
+            this.flagLabel.Location = new System.Drawing.Point(918, 462);
             this.flagLabel.Name = "flagLabel";
             this.flagLabel.Size = new System.Drawing.Size(13, 13);
             this.flagLabel.TabIndex = 31;
             this.flagLabel.Text = "0";
             this.flagLabel.Visible = false;
             // 
+            // GBRecommend
+            // 
+            this.GBRecommend.Controls.Add(this.PNRecommends);
+            this.GBRecommend.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.GBRecommend.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.GBRecommend.Location = new System.Drawing.Point(15, 539);
+            this.GBRecommend.Name = "GBRecommend";
+            this.GBRecommend.Size = new System.Drawing.Size(878, 237);
+            this.GBRecommend.TabIndex = 32;
+            this.GBRecommend.TabStop = false;
+            this.GBRecommend.Text = "Te recomendamos";
+            // 
+            // PNRecommends
+            // 
+            this.PNRecommends.AutoScroll = true;
+            this.PNRecommends.BackColor = System.Drawing.Color.Black;
+            this.PNRecommends.Controls.Add(this.button2);
+            this.PNRecommends.Controls.Add(this.pictureBox2);
+            this.PNRecommends.Controls.Add(this.pictureBox1);
+            this.PNRecommends.Controls.Add(this.button1);
+            this.PNRecommends.Location = new System.Drawing.Point(8, 25);
+            this.PNRecommends.Name = "PNRecommends";
+            this.PNRecommends.Size = new System.Drawing.Size(781, 198);
+            this.PNRecommends.TabIndex = 33;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(209, 140);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(191, 28);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(209, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(194, 138);
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(194, 138);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(0, 140);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(191, 28);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
+            // 
             // FRMReadZone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(1149, 659);
+            this.ClientSize = new System.Drawing.Size(1149, 788);
+            this.Controls.Add(this.GBRecommend);
             this.Controls.Add(this.flagLabel);
             this.Controls.Add(this.calificarbtn);
             this.Controls.Add(this.CalificacionCB);
@@ -325,6 +403,10 @@
             this.GBDetails.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.GBRecommend.ResumeLayout(false);
+            this.PNRecommends.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,5 +431,11 @@
         private System.Windows.Forms.Label calificarlabel;
         private System.Windows.Forms.Button calificarbtn;
         private System.Windows.Forms.Label flagLabel;
+        private System.Windows.Forms.GroupBox GBRecommend;
+        private System.Windows.Forms.Panel PNRecommends;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

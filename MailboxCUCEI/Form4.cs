@@ -11,6 +11,7 @@ using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 using System.Net;
 using System.IO;
+using System.Threading;
 
 namespace MailboxCUCEI
 {
@@ -38,6 +39,7 @@ namespace MailboxCUCEI
 
         private void BTNCerrarSesion_Click(object sender, EventArgs e)
         {
+            ControlThread = false;
             Form regreso = new Login();
             regreso.Show();
             Hide();
@@ -63,15 +65,43 @@ namespace MailboxCUCEI
             }
             connetionBD.Close();
         }
+        bool ControlThread = true;
         private void Principal_Load(object sender, EventArgs e)
         {
+            Control.CheckForIllegalCrossThreadCalls = false;
             if (User)
             {
+                BtnPerfil.Enabled = false;
                 BTNEscribir.Enabled = false;
+            }
+            else
+            {
+                Thread th = new Thread(function1);
+                th.Start();
             }
             CreateStoryList();
             CreateTopStorie();
-
+        }
+        int NotifyNumber = 0;
+        void function1()
+        {
+            while (ControlThread)
+            {
+                string query = "SELECT *From Notificaciones WHERE ID_Usuario = " + ActUser.GetID() + " AND Estatus = 1";
+                string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
+                MySqlConnection connetionBD = new MySqlConnection(conexion);
+                MySqlCommand comando = new MySqlCommand(query, connetionBD);
+                MySqlDataReader lector;
+                connetionBD.Open();
+                lector = comando.ExecuteReader();
+                while (lector.Read())
+                {
+                    NotifyNumber++;
+                    BtnPerfil.Text ="Mi Perfil(" + NotifyNumber.ToString() + ")" ;
+                }
+                connetionBD.Close();
+                Thread.Sleep(60000); // Esperar un minuto hasta la siguiente notificación
+            }
         }
         public void Reload ()
         {
@@ -168,6 +198,7 @@ namespace MailboxCUCEI
                         comando.ExecuteNonQuery();
                         conectar.Close();
                     }
+                    ControlThread = false;
                     Prev.ActUser = ActUser;
                     Prev.Ventana = this;
                     Prev.Story = temp;
@@ -201,7 +232,8 @@ namespace MailboxCUCEI
         }
 		void BTNEscribirClick(object sender, EventArgs e)
 		{
-			FRMPreWri Nueva = new FRMPreWri();
+            ControlThread = false;
+            FRMPreWri Nueva = new FRMPreWri();
 			Nueva.NueaVentana=this;
 			this.Hide();
 			Nueva.Show();
@@ -210,10 +242,13 @@ namespace MailboxCUCEI
 
         private void BtnPerfil_Click(object sender, EventArgs e)
         {
+            
+            ControlThread = false;
             Administrador op = new Administrador();
             op.TxtCodigoPerfil.Text = manduser.Text;
             this.Hide();
             op.ActUser = ActUser;
+            op.NotifyNumber = NotifyNumber;
             op.Base = this;
             op.Show();
         }
@@ -227,7 +262,7 @@ namespace MailboxCUCEI
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
-        {   
+        {
             string query = "SELECT h.Nom_Historia,h.ID_Historia,h.Resumen,h.ID_Genero,h.Fo_Portada,h.Raiting,h.Estatus,Base.ID_Usuario,h.Seguidores,h.Favoritos,h.Vistas,u.Nombre From Usuarios_Historias AS Base INNER JOIN Usuarios AS u ON u.Codigo = Base.ID_Usuario INNER JOIN Historias AS h ON h.ID_Historia = Base.ID_Historia  WHERE MATCH(Nom_Historia,Resumen) AGAINST ('" + txtsearch.Text+"')";
             string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
             MySqlConnection connetionBD = new MySqlConnection(conexion);
@@ -238,6 +273,7 @@ namespace MailboxCUCEI
 
             if (lector.Read())
             {
+                lblwarningsearch.Visible = false;
                 connetionBD.Close();
                 connetionBD.Open();
                 lector = comando.ExecuteReader();
@@ -255,7 +291,7 @@ namespace MailboxCUCEI
             }
             else
             {
-                MessageBox.Show("No se encontraron resultados");
+                lblwarningsearch.Visible = true;
                 connetionBD.Close();
             }
             

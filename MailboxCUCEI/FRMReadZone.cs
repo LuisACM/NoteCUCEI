@@ -154,7 +154,7 @@ namespace MailboxCUCEI
 		string[] OfflineChaptersList;
 		private void FRMWrite_Load(object sender, EventArgs e)
 		{
-
+			
             //luis'codigo
             string usuario = ActUser.GetID().ToString();
             MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
@@ -181,6 +181,7 @@ namespace MailboxCUCEI
             //pepe's codigo
             if (Offline)
             {
+				GBRecommend.Visible = false;
 				txtComment.Visible = false;
 				panel1.Visible = false;
 				BTNSendComment.Visible = false;
@@ -199,6 +200,7 @@ namespace MailboxCUCEI
             {
 				if (Ventana.User)
 				{
+					GBRecommend.Visible = false;
 					txtComment.Visible = false;
 					BTNSendComment.Visible = false;
                     //entra usuario no registrado añadir el no visible para combo box y boton

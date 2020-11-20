@@ -49,8 +49,7 @@
             this.txtsearch = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.PNResults = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.lblwarningsearch = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.PanelTopStories.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -58,7 +57,6 @@
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.PNResults.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // BTNCerrarSesion
@@ -317,34 +315,24 @@
             // 
             this.PNResults.AutoScroll = true;
             this.PNResults.BackColor = System.Drawing.Color.Black;
-            this.PNResults.Controls.Add(this.pictureBox4);
-            this.PNResults.Controls.Add(this.button4);
+            this.PNResults.Controls.Add(this.lblwarningsearch);
             this.PNResults.Location = new System.Drawing.Point(7, 23);
             this.PNResults.Name = "PNResults";
             this.PNResults.Size = new System.Drawing.Size(781, 176);
             this.PNResults.TabIndex = 0;
             // 
-            // pictureBox4
+            // lblwarningsearch
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(194, 138);
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Visible = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Black;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(0, 140);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(191, 28);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Visible = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.lblwarningsearch.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblwarningsearch.ForeColor = System.Drawing.Color.DimGray;
+            this.lblwarningsearch.Location = new System.Drawing.Point(223, 75);
+            this.lblwarningsearch.Name = "lblwarningsearch";
+            this.lblwarningsearch.Size = new System.Drawing.Size(335, 27);
+            this.lblwarningsearch.TabIndex = 74;
+            this.lblwarningsearch.Text = "¡Tu busqueda no dio resultados!";
+            this.lblwarningsearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblwarningsearch.UseMnemonic = false;
+            this.lblwarningsearch.Visible = false;
             // 
             // Principal
             // 
@@ -374,7 +362,6 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.PNResults.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,17 +378,16 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button BtnPerfil;
         public System.Windows.Forms.Label manduser;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Panel PNResults;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnSB;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtsearch;
         private System.Windows.Forms.ComboBox CBSort;
         private System.Windows.Forms.ComboBox CBGender;
+        public System.Windows.Forms.Button BtnPerfil;
+        private System.Windows.Forms.Label lblwarningsearch;
     }
 }

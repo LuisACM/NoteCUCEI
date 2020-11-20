@@ -68,6 +68,7 @@ namespace MailboxCUCEI
         {
             if (File.Exists("DataDownload.ntf"))
             {
+                LBLWarning.Visible = false;
                 string line;
                 StreamReader sr = new StreamReader("DataDownload.ntf");
                 //Read the first line of text
@@ -76,9 +77,11 @@ namespace MailboxCUCEI
                 //Continue to read until you reach end of file
                 while (line != null)
                 {
+                    
                     string nombre, cover;
                     string[] name = line.Split('?');
                     nombre = name[0];
+                    CBStory.Items.Add(nombre);
                     string[] aux = name[1].Split('#');
                     cover = aux[0];
                     //Llenar Panel
@@ -233,6 +236,60 @@ namespace MailboxCUCEI
             Form regreso = new Login();
             regreso.Show();
             Hide();
+        }
+
+        private void btnborrar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Seguro que quieres borrar esta historia de tu libreria?", "Confirmation", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
+            {
+                string line;
+                StreamReader sr = new StreamReader("DataDownload.ntf");
+                //Read the first line of text
+                line = sr.ReadLine();
+                int LocalX = 0;
+                //Continue to read until you reach end of file
+                while (line != null)
+                {
+
+                    string nombre;
+                    string[] name = line.Split('?');
+                    nombre = name[0];
+                    if (nombre == CBStory.Text)
+                    {
+
+                    }
+                    else
+                    {
+                        StreamWriter lw = new StreamWriter("Temp.ntf");
+                        lw.WriteLine(line);
+                        lw.Close();
+                    }
+                    line = sr.ReadLine();
+                    Principal_Load(sender, e);
+                }
+                //close the file
+                sr.Close();
+                File.Delete("DataDownload.ntf");
+                if (File.Exists("Temp.ntf"))
+                {
+                    System.IO.File.Move("Temp.ntf", "DataDownload.ntf");
+                } 
+                else
+                {
+
+                }
+                
+            }
+            else if (result == DialogResult.No)
+            {
+
+            }    
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.BTNSalir = new System.Windows.Forms.Button();
             this.GBDetails = new System.Windows.Forms.GroupBox();
             this.CBFollow = new System.Windows.Forms.CheckBox();
@@ -45,6 +46,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.LBLGenero = new System.Windows.Forms.Label();
             this.LBLQuest = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.GBDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBCover)).BeginInit();
             this.SuspendLayout();
@@ -88,6 +90,7 @@
             this.GBDetails.TabIndex = 16;
             this.GBDetails.TabStop = false;
             this.GBDetails.Text = "Preview";
+            this.GBDetails.Enter += new System.EventHandler(this.GBDetails_Enter);
             // 
             // CBFollow
             // 
@@ -313,5 +316,6 @@
         private System.Windows.Forms.CheckBox CBFollow;
         private System.Windows.Forms.CheckBox CBDowload;
         private System.Windows.Forms.CheckBox CBFav;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
