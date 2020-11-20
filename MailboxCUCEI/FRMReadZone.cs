@@ -155,12 +155,37 @@ namespace MailboxCUCEI
 		private void FRMWrite_Load(object sender, EventArgs e)
 		{
 
-			if (Offline)
+            //luis'codigo
+            string usuario = ActUser.GetID().ToString();
+            MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM Rating WHERE ID_Usuario = @ID", conexion);
+            comando.Parameters.AddWithValue("@ID", usuario);
+            conexion.Open();
+            MySqlDataReader registro = comando.ExecuteReader();
+            if (registro.Read())
+            {
+                flagLabel.Text = registro["Flag"].ToString();
+            }
+            conexion.Close();
+            //MessageBox.Show(flagLabel.Text);
+
+            if (flagLabel.Text == "1")
+            {
+                calificarbtn.Enabled = false;
+            }
+            else
+            {
+
+            }
+
+            //pepe's codigo
+            if (Offline)
             {
 				txtComment.Visible = false;
 				panel1.Visible = false;
 				BTNSendComment.Visible = false;
 				lblCapitulo.Visible = false;
+                //inabilitar aqui tambien
 				lblStoryName.Text = StoryName;
 				OfflineChaptersList = ChaptersOffline.Split('|');
 				ActualChapter = 0;
@@ -176,6 +201,7 @@ namespace MailboxCUCEI
 				{
 					txtComment.Visible = false;
 					BTNSendComment.Visible = false;
+                    //entra usuario no registrado añadir el no visible para combo box y boton
 				}
 				LoadComments();
 				CreateChapterList();
@@ -349,5 +375,49 @@ namespace MailboxCUCEI
 				}
 			}
 		}
+
+        void ObtenerFlag()
+        {
+            string usuario = ActUser.GetID().ToString();
+            MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM Rating WHERE ID_Usuario = @ID", conexion);
+            comando.Parameters.AddWithValue("@ID", usuario);
+            conexion.Open();
+            MySqlDataReader registro = comando.ExecuteReader();
+            if (registro.Read())
+            {
+                flagLabel.Text = registro["Flag"].ToString();
+            }
+            conexion.Close();
+            MessageBox.Show(flagLabel.Text);
+        }
+
+
+        private void calificarbtn_Click(object sender, EventArgs e)
+        {
+            int control = 1;
+            string usuario = ActUser.GetID().ToString();
+            string historia = MainStory.GetID().ToString();
+
+
+            if (CalificacionCB.Text == "0")
+            {
+                MessageBox.Show("Usted debe escojer un valor entre 1 y 5");
+            }
+            else
+            {
+                //meter todo esto en el else de cuando no ha calificado osease flag!=0 y hacer lo de que el usuario no registrado no tenga habilitado esto
+                string query = "INSERT INTO Rating (ID_Usuario,ID_Historia,Rating,Flag) VALUES('" + usuario + "','" + historia + "','" + CalificacionCB.Text + "','" + control + "')";
+                MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+                conectar.Open();
+                MySqlCommand comando = new MySqlCommand(query);
+                comando.Connection = conectar;
+                comando.ExecuteNonQuery();
+                conectar.Close();
+                MessageBox.Show("Gracias por tu calificación!");
+                calificarbtn.Enabled = false;
+            }
+            
+        }
     }
 }

@@ -32,6 +32,7 @@
             this.BTNSalir = new System.Windows.Forms.Button();
             this.BTNNextChapter = new System.Windows.Forms.Button();
             this.GBDetails = new System.Windows.Forms.GroupBox();
+            this.BTNBack = new System.Windows.Forms.Button();
             this.lblCapitulo = new System.Windows.Forms.Label();
             this.lblStoryName = new System.Windows.Forms.Label();
             this.BTNDecreaseLetters = new System.Windows.Forms.Button();
@@ -42,7 +43,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtcomments = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.BTNBack = new System.Windows.Forms.Button();
+            this.CalificacionCB = new System.Windows.Forms.ComboBox();
+            this.calificarlabel = new System.Windows.Forms.Label();
+            this.calificarbtn = new System.Windows.Forms.Button();
+            this.flagLabel = new System.Windows.Forms.Label();
             this.GBDetails.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -90,6 +94,20 @@
             this.GBDetails.TabIndex = 16;
             this.GBDetails.TabStop = false;
             this.GBDetails.Text = "Estas Leyendo";
+            // 
+            // BTNBack
+            // 
+            this.BTNBack.Enabled = false;
+            this.BTNBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNBack.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.BTNBack.Location = new System.Drawing.Point(149, 20);
+            this.BTNBack.Name = "BTNBack";
+            this.BTNBack.Size = new System.Drawing.Size(137, 26);
+            this.BTNBack.TabIndex = 26;
+            this.BTNBack.Text = "Anterior Capitulo";
+            this.BTNBack.UseVisualStyleBackColor = true;
+            this.BTNBack.Click += new System.EventHandler(this.BTNBack_Click);
             // 
             // lblCapitulo
             // 
@@ -153,7 +171,7 @@
             this.RTBWriteZone.Name = "RTBWriteZone";
             this.RTBWriteZone.ReadOnly = true;
             this.RTBWriteZone.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.RTBWriteZone.Size = new System.Drawing.Size(816, 417);
+            this.RTBWriteZone.Size = new System.Drawing.Size(816, 549);
             this.RTBWriteZone.TabIndex = 17;
             this.RTBWriteZone.Text = "";
             // 
@@ -195,7 +213,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(854, 99);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 416);
+            this.panel1.Size = new System.Drawing.Size(250, 309);
             this.panel1.TabIndex = 27;
             // 
             // txtcomments
@@ -209,7 +227,7 @@
             this.txtcomments.Name = "txtcomments";
             this.txtcomments.ReadOnly = true;
             this.txtcomments.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtcomments.Size = new System.Drawing.Size(243, 380);
+            this.txtcomments.Size = new System.Drawing.Size(243, 269);
             this.txtcomments.TabIndex = 18;
             // 
             // label2
@@ -224,26 +242,74 @@
             this.label2.UseMnemonic = false;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // BTNBack
+            // CalificacionCB
             // 
-            this.BTNBack.Enabled = false;
-            this.BTNBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNBack.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.BTNBack.Location = new System.Drawing.Point(149, 20);
-            this.BTNBack.Name = "BTNBack";
-            this.BTNBack.Size = new System.Drawing.Size(137, 26);
-            this.BTNBack.TabIndex = 26;
-            this.BTNBack.Text = "Anterior Capitulo";
-            this.BTNBack.UseVisualStyleBackColor = true;
-            this.BTNBack.Click += new System.EventHandler(this.BTNBack_Click);
+            this.CalificacionCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.CalificacionCB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CalificacionCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalificacionCB.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.CalificacionCB.FormattingEnabled = true;
+            this.CalificacionCB.ItemHeight = 20;
+            this.CalificacionCB.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.CalificacionCB.Location = new System.Drawing.Point(1011, 450);
+            this.CalificacionCB.Name = "CalificacionCB";
+            this.CalificacionCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CalificacionCB.Size = new System.Drawing.Size(114, 28);
+            this.CalificacionCB.TabIndex = 29;
+            this.CalificacionCB.Text = "0";
+            // 
+            // calificarlabel
+            // 
+            this.calificarlabel.AutoSize = true;
+            this.calificarlabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calificarlabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.calificarlabel.Location = new System.Drawing.Point(837, 453);
+            this.calificarlabel.Name = "calificarlabel";
+            this.calificarlabel.Size = new System.Drawing.Size(163, 20);
+            this.calificarlabel.TabIndex = 28;
+            this.calificarlabel.Text = "Califica esta historia: ";
+            this.calificarlabel.UseMnemonic = false;
+            // 
+            // calificarbtn
+            // 
+            this.calificarbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.calificarbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calificarbtn.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.calificarbtn.Location = new System.Drawing.Point(925, 495);
+            this.calificarbtn.Name = "calificarbtn";
+            this.calificarbtn.Size = new System.Drawing.Size(136, 26);
+            this.calificarbtn.TabIndex = 30;
+            this.calificarbtn.Text = "Calificar";
+            this.calificarbtn.UseVisualStyleBackColor = true;
+            this.calificarbtn.Click += new System.EventHandler(this.calificarbtn_Click);
+            // 
+            // flagLabel
+            // 
+            this.flagLabel.AutoSize = true;
+            this.flagLabel.BackColor = System.Drawing.Color.Transparent;
+            this.flagLabel.ForeColor = System.Drawing.Color.Black;
+            this.flagLabel.Location = new System.Drawing.Point(858, 437);
+            this.flagLabel.Name = "flagLabel";
+            this.flagLabel.Size = new System.Drawing.Size(13, 13);
+            this.flagLabel.TabIndex = 31;
+            this.flagLabel.Text = "0";
+            this.flagLabel.Visible = false;
             // 
             // FRMReadZone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(1115, 527);
+            this.ClientSize = new System.Drawing.Size(1149, 659);
+            this.Controls.Add(this.flagLabel);
+            this.Controls.Add(this.calificarbtn);
+            this.Controls.Add(this.CalificacionCB);
+            this.Controls.Add(this.calificarlabel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BTNSendComment);
             this.Controls.Add(this.txtComment);
@@ -279,5 +345,9 @@
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtcomments;
         private System.Windows.Forms.Button BTNBack;
+        private System.Windows.Forms.ComboBox CalificacionCB;
+        private System.Windows.Forms.Label calificarlabel;
+        private System.Windows.Forms.Button calificarbtn;
+        private System.Windows.Forms.Label flagLabel;
     }
 }

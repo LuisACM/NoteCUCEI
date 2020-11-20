@@ -149,3 +149,4 @@ C:\Users\PC\Desktop\MailboxCUCEI\NoteCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.c
 C:\Users\PC\Desktop\MailboxCUCEI\NoteCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.exe
 C:\Users\PC\Desktop\MailboxCUCEI\NoteCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.pdb
 D:\Gith\NoteCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.FRMOffline.resources
+C:\Users\PC\Desktop\MailboxCUCEI\NoteCUCEI\MailboxCUCEI\obj\Debug\MailboxCUCEI.FRMOffline.resources

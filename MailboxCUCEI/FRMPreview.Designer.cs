@@ -54,7 +54,7 @@
             this.BTNSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNSalir.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.BTNSalir.Location = new System.Drawing.Point(322, 391);
+            this.BTNSalir.Location = new System.Drawing.Point(322, 402);
             this.BTNSalir.Name = "BTNSalir";
             this.BTNSalir.Size = new System.Drawing.Size(53, 26);
             this.BTNSalir.TabIndex = 2;
@@ -84,7 +84,7 @@
             this.GBDetails.ForeColor = System.Drawing.Color.DodgerBlue;
             this.GBDetails.Location = new System.Drawing.Point(13, 13);
             this.GBDetails.Name = "GBDetails";
-            this.GBDetails.Size = new System.Drawing.Size(389, 425);
+            this.GBDetails.Size = new System.Drawing.Size(389, 440);
             this.GBDetails.TabIndex = 16;
             this.GBDetails.TabStop = false;
             this.GBDetails.Text = "Preview";
@@ -94,7 +94,7 @@
             this.CBFollow.AutoSize = true;
             this.CBFollow.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.CBFollow.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.CBFollow.Location = new System.Drawing.Point(244, 394);
+            this.CBFollow.Location = new System.Drawing.Point(244, 405);
             this.CBFollow.Name = "CBFollow";
             this.CBFollow.Size = new System.Drawing.Size(75, 24);
             this.CBFollow.TabIndex = 22;
@@ -107,7 +107,7 @@
             this.CBDowload.AutoSize = true;
             this.CBDowload.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.CBDowload.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.CBDowload.Location = new System.Drawing.Point(72, 393);
+            this.CBDowload.Location = new System.Drawing.Point(72, 404);
             this.CBDowload.Name = "CBDowload";
             this.CBDowload.Size = new System.Drawing.Size(105, 24);
             this.CBDowload.TabIndex = 20;
@@ -120,7 +120,7 @@
             this.CBFav.AutoSize = true;
             this.CBFav.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.CBFav.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.CBFav.Location = new System.Drawing.Point(183, 393);
+            this.CBFav.Location = new System.Drawing.Point(183, 404);
             this.CBFav.Name = "CBFav";
             this.CBFav.Size = new System.Drawing.Size(55, 24);
             this.CBFav.TabIndex = 21;
@@ -133,7 +133,7 @@
             this.btnRead.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRead.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRead.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnRead.Location = new System.Drawing.Point(13, 393);
+            this.btnRead.Location = new System.Drawing.Point(13, 404);
             this.btnRead.Name = "btnRead";
             this.btnRead.Size = new System.Drawing.Size(53, 26);
             this.btnRead.TabIndex = 17;
@@ -281,7 +281,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(418, 450);
+            this.ClientSize = new System.Drawing.Size(418, 465);
             this.Controls.Add(this.GBDetails);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRMPreview";
