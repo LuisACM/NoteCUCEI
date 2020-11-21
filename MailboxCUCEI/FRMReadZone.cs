@@ -152,14 +152,16 @@ namespace MailboxCUCEI
 	
 		}
 		string[] OfflineChaptersList;
-		private void FRMWrite_Load(object sender, EventArgs e)
-		{
+        private void FRMWrite_Load(object sender, EventArgs e)
+        {
 
             //luis'codigo
             string usuario = ActUser.GetID().ToString();
+            string historia = MainStory.GetID().ToString();
             MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
-            MySqlCommand comando = new MySqlCommand("SELECT * FROM Rating WHERE ID_Usuario = @ID", conexion);
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM Rating WHERE ID_Usuario = @ID AND ID_Historia = @IDHi", conexion);
             comando.Parameters.AddWithValue("@ID", usuario);
+            comando.Parameters.AddWithValue("@IDHi",historia);
             conexion.Open();
             MySqlDataReader registro = comando.ExecuteReader();
             if (registro.Read())
@@ -185,7 +187,8 @@ namespace MailboxCUCEI
 				panel1.Visible = false;
 				BTNSendComment.Visible = false;
 				lblCapitulo.Visible = false;
-                //inabilitar aqui tambien
+                CalificacionCB.Visible = false;
+                calificarbtn.Visible = false;
 				lblStoryName.Text = StoryName;
 				OfflineChaptersList = ChaptersOffline.Split('|');
 				ActualChapter = 0;
@@ -201,7 +204,8 @@ namespace MailboxCUCEI
 				{
 					txtComment.Visible = false;
 					BTNSendComment.Visible = false;
-                    //entra usuario no registrado añadir el no visible para combo box y boton
+                    calificarbtn.Visible = false;
+                    CalificacionCB.Visible = false;
 				}
 				LoadComments();
 				CreateChapterList();
@@ -406,7 +410,6 @@ namespace MailboxCUCEI
             }
             else
             {
-                //meter todo esto en el else de cuando no ha calificado osease flag!=0 y hacer lo de que el usuario no registrado no tenga habilitado esto
                 string query = "INSERT INTO Rating (ID_Usuario,ID_Historia,Rating,Flag) VALUES('" + usuario + "','" + historia + "','" + CalificacionCB.Text + "','" + control + "')";
                 MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
                 conectar.Open();
