@@ -220,6 +220,7 @@ namespace MailboxCUCEI
 					conectar.Close();
 					MessageBox.Show("Capitulo subido.");
 					InsertRelation();
+					StarNotify();
 					Wait.Dispose();
 					Ventana.Reload();
 					Ventana.Show();
@@ -232,6 +233,43 @@ namespace MailboxCUCEI
 				MessageBox.Show(err.Message);
 			}
 
+		}
+		void SendNotify(List<int> ListUsers)
+        {
+			foreach (int temporal in ListUsers)
+            {
+				string queryNotify = "INSERT INTO `Notificaciones` (`ID_Usuario`, `Mensaje`, `Estatus`) VALUES ('"+temporal.ToString()+"', 'Se ha publicado un nuevo capitulo de la historia que sigues \""+lblStoryName.Text+"\".', '1');";
+				MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+				conectar.Open();
+				MySqlCommand comando = new MySqlCommand(queryNotify);
+				comando.Connection = conectar;
+				comando.ExecuteNonQuery();
+				conectar.Close();
+			}
+        }
+		void StarNotify ()
+        {
+			try
+            {
+				List<int> ListUsers = new List<int>();
+				string query = "SELECT `ID_Usuario` FROM `Seguidores` WHERE `ID_Historia` = "+ID_Historia.ToString()+" UNION SELECT `ID_Usuario` FROM `Favoritos` WHERE `ID_Historia` = " + ID_Historia.ToString();
+				string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
+				MySqlConnection connetionBD = new MySqlConnection(conexion);
+				MySqlCommand comando = new MySqlCommand(query, connetionBD);
+				MySqlDataReader lector;
+				connetionBD.Open();
+				lector = comando.ExecuteReader();
+				while (lector.Read())
+				{
+					ListUsers.Add(lector.GetInt32(0));
+				}
+				connetionBD.Close();
+				SendNotify(ListUsers);
+			}
+			catch (Exception err)
+			{
+				MessageBox.Show(err.Message);
+			}
 		}
 		void UploadTEXT()
 		{

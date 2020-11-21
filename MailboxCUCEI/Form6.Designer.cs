@@ -66,12 +66,8 @@
             this.BTNImage = new System.Windows.Forms.Button();
             this.PBCover = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.PNResults = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.BTNMyInfo = new System.Windows.Forms.Button();
             this.BTNMyStories = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
@@ -80,14 +76,19 @@
             this.BTNFF = new System.Windows.Forms.Button();
             this.BTNNot = new System.Windows.Forms.Button();
             this.GBFv = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.GBFollows = new System.Windows.Forms.GroupBox();
+            this.PNFollows = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.PNFavs = new System.Windows.Forms.Panel();
+            this.GBNotify = new System.Windows.Forms.GroupBox();
+            this.PNNotify = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.LBLWarningStory = new System.Windows.Forms.Label();
+            this.lblwarningHurra = new System.Windows.Forms.Label();
+            this.lblwarningchapters = new System.Windows.Forms.Label();
+            this.lblWarningFavs = new System.Windows.Forms.Label();
+            this.lblWarningMyStory = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.FotoPerfil)).BeginInit();
             this.GBStories.SuspendLayout();
             this.GBDetails.SuspendLayout();
@@ -95,14 +96,13 @@
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.PNResults.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.GBFv.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.GBFollows.SuspendLayout();
+            this.PNFollows.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PNFavs.SuspendLayout();
+            this.GBNotify.SuspendLayout();
+            this.PNNotify.SuspendLayout();
             this.SuspendLayout();
             // 
             // FechaNac
@@ -321,9 +321,9 @@
             this.GBStories.Controls.Add(this.GBDetails);
             this.GBStories.Controls.Add(this.groupBox3);
             this.GBStories.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.GBStories.Location = new System.Drawing.Point(167, 81);
+            this.GBStories.Location = new System.Drawing.Point(236, 12);
             this.GBStories.Name = "GBStories";
-            this.GBStories.Size = new System.Drawing.Size(81, 282);
+            this.GBStories.Size = new System.Drawing.Size(699, 647);
             this.GBStories.TabIndex = 62;
             this.GBStories.TabStop = false;
             this.GBStories.Tag = "699, 647 Location  236, 12";
@@ -592,36 +592,11 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.lblwarningchapters);
             this.panel1.Location = new System.Drawing.Point(217, 280);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(464, 134);
             this.panel1.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(0, 35);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(464, 28);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Visible = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(0, 1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(464, 28);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Visible = false;
             // 
             // groupBox3
             // 
@@ -639,33 +614,11 @@
             // 
             this.PNResults.AutoScroll = true;
             this.PNResults.BackColor = System.Drawing.Color.Black;
-            this.PNResults.Controls.Add(this.pictureBox4);
-            this.PNResults.Controls.Add(this.button4);
+            this.PNResults.Controls.Add(this.lblWarningMyStory);
             this.PNResults.Location = new System.Drawing.Point(7, 23);
             this.PNResults.Name = "PNResults";
             this.PNResults.Size = new System.Drawing.Size(674, 176);
             this.PNResults.TabIndex = 0;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(194, 138);
-            this.pictureBox4.TabIndex = 1;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Visible = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Black;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(0, 140);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(191, 28);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Visible = false;
             // 
             // BTNMyInfo
             // 
@@ -738,6 +691,7 @@
             this.BTNFF.TabIndex = 68;
             this.BTNFF.Text = "Follows y Favs";
             this.BTNFF.UseVisualStyleBackColor = true;
+            this.BTNFF.Click += new System.EventHandler(this.BTNFF_Click);
             // 
             // BTNNot
             // 
@@ -749,10 +703,11 @@
             this.BTNNot.TabIndex = 69;
             this.BTNNot.Text = "Notificaciones";
             this.BTNNot.UseVisualStyleBackColor = true;
+            this.BTNNot.Click += new System.EventHandler(this.BTNNot_Click);
             // 
             // GBFv
             // 
-            this.GBFv.Controls.Add(this.groupBox2);
+            this.GBFv.Controls.Add(this.GBFollows);
             this.GBFv.Controls.Add(this.groupBox4);
             this.GBFv.ForeColor = System.Drawing.Color.DodgerBlue;
             this.GBFv.Location = new System.Drawing.Point(236, 12);
@@ -760,27 +715,37 @@
             this.GBFv.Size = new System.Drawing.Size(706, 472);
             this.GBFv.TabIndex = 70;
             this.GBFv.TabStop = false;
-            this.GBFv.Tag = "699, 647 Location  236, 12";
+            this.GBFv.Tag = "706, 472 Location  236, 12";
             this.GBFv.Text = "Follows y Favs";
             this.GBFv.Visible = false;
             // 
-            // groupBox2
+            // GBFollows
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Black;
-            this.groupBox2.Controls.Add(this.panel2);
-            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.groupBox2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox2.Location = new System.Drawing.Point(6, 237);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(687, 225);
-            this.groupBox2.TabIndex = 15;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Historias Seguidas";
-            this.groupBox2.Visible = false;
+            this.GBFollows.BackColor = System.Drawing.Color.Black;
+            this.GBFollows.Controls.Add(this.PNFollows);
+            this.GBFollows.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.GBFollows.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.GBFollows.Location = new System.Drawing.Point(6, 237);
+            this.GBFollows.Name = "GBFollows";
+            this.GBFollows.Size = new System.Drawing.Size(687, 225);
+            this.GBFollows.TabIndex = 15;
+            this.GBFollows.TabStop = false;
+            this.GBFollows.Text = "Historias Seguidas";
+            this.GBFollows.Visible = false;
+            // 
+            // PNFollows
+            // 
+            this.PNFollows.AutoScroll = true;
+            this.PNFollows.BackColor = System.Drawing.Color.Black;
+            this.PNFollows.Controls.Add(this.LBLWarningStory);
+            this.PNFollows.Location = new System.Drawing.Point(6, 26);
+            this.PNFollows.Name = "PNFollows";
+            this.PNFollows.Size = new System.Drawing.Size(674, 193);
+            this.PNFollows.TabIndex = 1;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.panel3);
+            this.groupBox4.Controls.Add(this.PNFavs);
             this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.groupBox4.ForeColor = System.Drawing.Color.DodgerBlue;
             this.groupBox4.Location = new System.Drawing.Point(6, 26);
@@ -790,69 +755,123 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Historias Favoritas";
             // 
-            // panel3
+            // PNFavs
             // 
-            this.panel3.AutoScroll = true;
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.button10);
-            this.panel3.Location = new System.Drawing.Point(7, 23);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(674, 176);
-            this.panel3.TabIndex = 0;
+            this.PNFavs.AutoScroll = true;
+            this.PNFavs.BackColor = System.Drawing.Color.Black;
+            this.PNFavs.Controls.Add(this.lblWarningFavs);
+            this.PNFavs.Location = new System.Drawing.Point(7, 23);
+            this.PNFavs.Name = "PNFavs";
+            this.PNFavs.Size = new System.Drawing.Size(674, 176);
+            this.PNFavs.TabIndex = 0;
             // 
-            // pictureBox2
+            // GBNotify
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(194, 138);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
+            this.GBNotify.Controls.Add(this.button6);
+            this.GBNotify.Controls.Add(this.PNNotify);
+            this.GBNotify.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.GBNotify.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.GBNotify.Location = new System.Drawing.Point(236, 12);
+            this.GBNotify.Name = "GBNotify";
+            this.GBNotify.Size = new System.Drawing.Size(699, 647);
+            this.GBNotify.TabIndex = 0;
+            this.GBNotify.TabStop = false;
+            this.GBNotify.Tag = "699, 647 Location  236, 12";
+            this.GBNotify.Text = "Notificaciones";
+            this.GBNotify.Visible = false;
             // 
-            // button10
+            // PNNotify
             // 
-            this.button10.BackColor = System.Drawing.Color.Black;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(0, 140);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(191, 28);
-            this.button10.TabIndex = 0;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Visible = false;
+            this.PNNotify.Controls.Add(this.lblwarningHurra);
+            this.PNNotify.Controls.Add(this.label15);
+            this.PNNotify.Location = new System.Drawing.Point(17, 35);
+            this.PNNotify.Name = "PNNotify";
+            this.PNNotify.Size = new System.Drawing.Size(663, 502);
+            this.PNNotify.TabIndex = 0;
             // 
-            // panel2
+            // button6
             // 
-            this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Location = new System.Drawing.Point(6, 26);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(674, 193);
-            this.panel2.TabIndex = 1;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button6.Location = new System.Drawing.Point(272, 549);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(131, 50);
+            this.button6.TabIndex = 45;
+            this.button6.Text = "Limpiar bandeja";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // pictureBox1
+            // label15
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(194, 138);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
+            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label15.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.label15.Location = new System.Drawing.Point(4, 4);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(656, 45);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Se ha publicado un nuevo capitulo de una historia que sigues \"Migala\"";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label15.Visible = false;
             // 
-            // button5
+            // LBLWarningStory
             // 
-            this.button5.BackColor = System.Drawing.Color.Black;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(0, 140);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(191, 28);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Visible = false;
+            this.LBLWarningStory.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLWarningStory.ForeColor = System.Drawing.Color.DimGray;
+            this.LBLWarningStory.Location = new System.Drawing.Point(188, 77);
+            this.LBLWarningStory.Name = "LBLWarningStory";
+            this.LBLWarningStory.Size = new System.Drawing.Size(301, 27);
+            this.LBLWarningStory.TabIndex = 71;
+            this.LBLWarningStory.Text = "¡Aun no sigues ninguna historia!";
+            this.LBLWarningStory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBLWarningStory.UseMnemonic = false;
+            // 
+            // lblwarningHurra
+            // 
+            this.lblwarningHurra.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblwarningHurra.ForeColor = System.Drawing.Color.DimGray;
+            this.lblwarningHurra.Location = new System.Drawing.Point(4, 238);
+            this.lblwarningHurra.Name = "lblwarningHurra";
+            this.lblwarningHurra.Size = new System.Drawing.Size(656, 27);
+            this.lblwarningHurra.TabIndex = 72;
+            this.lblwarningHurra.Text = "No tienes ninguna notificación pendiente ¡Hurra!";
+            this.lblwarningHurra.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblwarningHurra.UseMnemonic = false;
+            // 
+            // lblwarningchapters
+            // 
+            this.lblwarningchapters.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblwarningchapters.ForeColor = System.Drawing.Color.DimGray;
+            this.lblwarningchapters.Location = new System.Drawing.Point(3, 58);
+            this.lblwarningchapters.Name = "lblwarningchapters";
+            this.lblwarningchapters.Size = new System.Drawing.Size(451, 27);
+            this.lblwarningchapters.TabIndex = 72;
+            this.lblwarningchapters.Text = "¡Aún no has publicado ningun capitulo!";
+            this.lblwarningchapters.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblwarningchapters.UseMnemonic = false;
+            // 
+            // lblWarningFavs
+            // 
+            this.lblWarningFavs.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWarningFavs.ForeColor = System.Drawing.Color.DimGray;
+            this.lblWarningFavs.Location = new System.Drawing.Point(106, 69);
+            this.lblWarningFavs.Name = "lblWarningFavs";
+            this.lblWarningFavs.Size = new System.Drawing.Size(471, 27);
+            this.lblWarningFavs.TabIndex = 73;
+            this.lblWarningFavs.Text = "¡No has agregado ninguna historia a tus favoritos!";
+            this.lblWarningFavs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblWarningFavs.UseMnemonic = false;
+            // 
+            // lblWarningMyStory
+            // 
+            this.lblWarningMyStory.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWarningMyStory.ForeColor = System.Drawing.Color.DimGray;
+            this.lblWarningMyStory.Location = new System.Drawing.Point(178, 75);
+            this.lblWarningMyStory.Name = "lblWarningMyStory";
+            this.lblWarningMyStory.Size = new System.Drawing.Size(335, 27);
+            this.lblWarningMyStory.TabIndex = 73;
+            this.lblWarningMyStory.Text = "¡Aún no escribes ninguna historia!";
+            this.lblWarningMyStory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblWarningMyStory.UseMnemonic = false;
             // 
             // Administrador
             // 
@@ -860,12 +879,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(947, 673);
+            this.Controls.Add(this.GBStories);
             this.Controls.Add(this.GBFv);
+            this.Controls.Add(this.GBNotify);
             this.Controls.Add(this.BTNNot);
             this.Controls.Add(this.BTNFF);
             this.Controls.Add(this.BTNMyInfo);
             this.Controls.Add(this.BTNMyStories);
-            this.Controls.Add(this.GBStories);
             this.Controls.Add(this.BTNFotoPerfil);
             this.Controls.Add(this.FotoPerfil);
             this.Controls.Add(this.FechaNac);
@@ -902,14 +922,13 @@
             this.panel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.PNResults.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.GBFv.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
+            this.GBFollows.ResumeLayout(false);
+            this.PNFollows.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.PNFavs.ResumeLayout(false);
+            this.GBNotify.ResumeLayout(false);
+            this.PNNotify.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -954,12 +973,8 @@
         private System.Windows.Forms.Button BTNImage;
         private System.Windows.Forms.PictureBox PBCover;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Panel PNResults;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button BTNMyInfo;
         private System.Windows.Forms.Button BTNMyStories;
         private System.Windows.Forms.Label label14;
@@ -968,13 +983,18 @@
         private System.Windows.Forms.Button BTNFF;
         private System.Windows.Forms.Button BTNNot;
         private System.Windows.Forms.GroupBox GBFv;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.GroupBox GBFollows;
+        private System.Windows.Forms.Panel PNFollows;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Panel PNFavs;
+        private System.Windows.Forms.GroupBox GBNotify;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel PNNotify;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblwarningHurra;
+        private System.Windows.Forms.Label LBLWarningStory;
+        private System.Windows.Forms.Label lblWarningFavs;
+        private System.Windows.Forms.Label lblwarningchapters;
+        private System.Windows.Forms.Label lblWarningMyStory;
     }
 }

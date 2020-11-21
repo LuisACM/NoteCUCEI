@@ -29,17 +29,25 @@ namespace MailboxCUCEI
         string InPathImage, nameFile;
         public Principal Base;
         List<Historias> ListStories = new List<Historias>(); //Lista de las historias del usuario
+        List<Historias> ListStoriesEX = new List<Historias>(); //Lista de las historias de seguidores del usuario
         List<Capitulos> capitulos = new List<Capitulos>(); //Lista de los capitulos
         string Descargar;
         private void BTNSalir_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
+        
+        public int NotifyNumber;
         public void Administrador_Load(object sender, EventArgs e)
         {
+            string cover = "";
+            if (NotifyNumber!=0)
+            {
+                BTNNot.Text = "Notificaciones("+NotifyNumber.ToString()+ ")";
+            }
             //aqui se cargan los datos del usuario en su correspondiente textbox
             MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
-            MySqlCommand comando = new MySqlCommand("SELECT * FROM Usuarios WHERE Codigo = @ID",conexion);
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM Usuarios WHERE Codigo = @ID", conexion);
             comando.Parameters.AddWithValue("@ID", TxtCodigoPerfil.Text);
             conexion.Open();
             MySqlDataReader registro = comando.ExecuteReader();
@@ -50,7 +58,8 @@ namespace MailboxCUCEI
                 TxtPassPerfil.Text = registro["Password"].ToString();
                 FechaNac.Text = registro["F_Nacimiento"].ToString();
                 Descargar = registro["Descargar"].ToString();
-                if (Descargar=="True")
+                cover = registro["Fo_Perfil"].ToString();
+                if (Descargar == "True")
                 {
                     RBYes.Checked = true;
                     RBNo.Checked = false;
@@ -62,7 +71,9 @@ namespace MailboxCUCEI
                 }
             }
             conexion.Close();
-
+            //Cargar Imagen
+            DownloadImage("https://notecucei.000webhostapp.com/" + cover, cover);
+            FotoPerfil.Image = Image.FromFile(cover);
             //carga del diccionario de datos
             Genero.Add(1, "Aventura");
             Genero.Add(2, "Romance");
@@ -94,37 +105,42 @@ namespace MailboxCUCEI
         private void BTNEliminar_Click_1(object sender, EventArgs e)
         {
             //funcion de eliminar cuenta
-         
-            MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
-            conexion.Open();
-            string query = "DELETE FROM Usuarios WHERE Codigo='"+TxtCodigoPerfil.Text+"'";
-            MySqlCommand comando = new MySqlCommand(query, conexion);
-            comando.ExecuteNonQuery();
-            
+            DialogResult result = MessageBox.Show("¿Seguro que quieres borrar tu cuenta? Si lo haces no la prodras recuperar nunca (y eso es mucho tiempo)", "Confirmation", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
+            {
+                MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+                conexion.Open();
+                string query = "DELETE FROM Usuarios WHERE Codigo='" + TxtCodigoPerfil.Text + "'";
+                MySqlCommand comando = new MySqlCommand(query, conexion);
+                comando.ExecuteNonQuery();
                 MessageBox.Show("Se ha eliminado con exito");
-
                 conexion.Close();
-                this.Hide();
+                this.Dispose();
                 Login inicio = new Login();
                 inicio.Show();
-           
+            }
+            else if (result == DialogResult.No)
+            {
+                //... Do Nothing
+            }
         }
 
         private void BTNModificar_Click(object sender, EventArgs e)
         {
             //funcion de modificar los datos
-            
+
             MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
             conexion.Open();
             string Query = "UPDATE Usuarios SET Codigo='" + TxtCodigoPerfil.Text +
                 "',Nombre='" + TxtNombrePerfil.Text +
                 "',Correo='" + TxtCorreoPerfil.Text +
                 "',Password='" + TxtPassPerfil.Text +
-                "',F_Nacimiento='" + FechaNac.Text  +
-                "',Descargar='"+ Descargar      +
-                "'WHERE Codigo='"+TxtCodigoPerfil.Text+
+                "',F_Nacimiento='" + FechaNac.Text +
+                "',Fo_Perfil ='" + namefile +
+                "',Descargar='" + Descargar +
+                "'WHERE Codigo='" + TxtCodigoPerfil.Text +
                 "';";
-
+            UploadImage();
             MySqlCommand comando = new MySqlCommand(Query, conexion);
             comando.ExecuteNonQuery();
             conexion.Close();
@@ -142,7 +158,7 @@ namespace MailboxCUCEI
             go.Show();
             this.Dispose();
         }
-
+        string namefile;
         private void BTNFotoPerfil_Click(object sender, EventArgs e)
         {
             OpenFileDialog GetImage = new OpenFileDialog();
@@ -150,11 +166,13 @@ namespace MailboxCUCEI
             GetImage.Filter = "JPG files (*.jpg)|*.jpg|PNG files (*.png*)|*.png*";
             if (GetImage.ShowDialog() == DialogResult.OK)
             {
+                InPathImage = GetImage.FileName;
+                namefile = GetImage.SafeFileName;
                 FotoPerfil.ImageLocation = GetImage.FileName;
             }
             else
             {
-                MessageBox.Show("No se selecciono imagen","",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("No se selecciono imagen", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -169,6 +187,7 @@ namespace MailboxCUCEI
 
                 if (((Button)sender).Text == temp.GetName())
                 {
+                    lblwarningchapters.Visible = false;
                     txtnombre.Text = temp.GetName();
                     CBRaiting.Text = temp.GetRaiting();
                     CBEstatus.Text = temp.GetStatus();
@@ -220,7 +239,7 @@ namespace MailboxCUCEI
             DialogResult result = MessageBox.Show("¿Seguro que quieres borrar este capitulo?", "Confirmation", MessageBoxButtons.YesNoCancel);
             if (result == DialogResult.Yes)
             {
-                string Query = "DELETE FROM `Capitulo` WHERE `Capitulo`.`ID_Cap` = " + ((Button)sender).Tag.ToString()+";";
+                string Query = "DELETE FROM `Capitulo` WHERE `Capitulo`.`ID_Cap` = " + ((Button)sender).Tag.ToString() + ";";
                 MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
                 conexion.Open();
                 MySqlCommand comando = new MySqlCommand(Query, conexion);
@@ -236,6 +255,7 @@ namespace MailboxCUCEI
         }
         void LoadStories()
         {
+            ListStories.Clear();
             string query = "SELECT * FROM Usuarios_Historias AS Base INNER JOIN Historias AS H ON H.ID_Historia = Base.ID_Historia WHERE ID_Usuario = " + ActUser.GetID();
             string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
             MySqlConnection connetionBD = new MySqlConnection(conexion);
@@ -297,7 +317,7 @@ namespace MailboxCUCEI
             {
                 WebClient client = new WebClient();
                 client.Credentials = CredentialCache.DefaultCredentials;
-                client.UploadFile(@"https://notecucei.000webhostapp.com/upload.php?namefile=" + nameFile, "POST", InPathImage);
+                client.UploadFile(@"https://notecucei.000webhostapp.com/upload.php?namefile=" + namefile, "POST", InPathImage);
                 client.Dispose();
                 MessageBox.Show("Imagen Subida con Exito");
             }
@@ -378,12 +398,15 @@ namespace MailboxCUCEI
 
         private void BTNMyInfo_Click(object sender, EventArgs e)
         {
+            GBNotify.Visible = false;
+            GBFv.Visible = false;
             GBStories.Visible = false;
             BTNEliminar.Visible = true;
         }
 
         private void BTNMyStories_Click(object sender, EventArgs e)
         {
+            GBNotify.Visible = false;
             GBStories.Visible = true;
             BTNEliminar.Visible = false;
             WaitForm Wait = new WaitForm();
@@ -401,6 +424,7 @@ namespace MailboxCUCEI
                 int LocalX = 1;
                 foreach (Historias elements in ListStories)
                 {
+                    lblWarningMyStory.Visible = false;
                     Historias tempelement = ListStories[0];
                     PictureBox pbox = new PictureBox();
                     pbox.Size = new Size(194, 138);
@@ -428,7 +452,7 @@ namespace MailboxCUCEI
 
         private void txtnombre_Click(object sender, EventArgs e)
         {
-            if(txtnombre.Text== "Nombre")
+            if (txtnombre.Text == "Nombre")
             {
                 txtnombre.Text = "";
             }
@@ -436,7 +460,7 @@ namespace MailboxCUCEI
 
         private void TXTSummary_Click(object sender, EventArgs e)
         {
-            if(TXTSummary.Text== "Escribe aqui una pequeña descripción de tu obra.")
+            if (TXTSummary.Text == "Escribe aqui una pequeña descripción de tu obra.")
             {
                 TXTSummary.Text = "";
             }
@@ -457,6 +481,222 @@ namespace MailboxCUCEI
             {
                 Descargar = "false";
                 RBYes.Checked = false;
+            }
+        }
+
+        private void BTNFF_Click(object sender, EventArgs e)
+        {
+            GBNotify.Visible = false;
+            ListStories.Clear();
+            GBFv.Visible = true;
+            GBFollows.Visible = true;
+            GBStories.Visible = false;
+            BTNEliminar.Visible = false;
+            LoadStoriesEX("Favoritos");
+            //Llenar Panel de Favoritos
+            PNFavs.Controls.Clear();
+            int LocalX = 1;
+            foreach (Historias elements in ListStories)
+            {
+                lblWarningFavs.Visible = false;
+                Historias tempelement = ListStories[0];
+                PictureBox pbox = new PictureBox();
+                pbox.Size = new Size(194, 138);
+                pbox.SizeMode = PictureBoxSizeMode.StretchImage;
+                pbox.Location = new Point(LocalX, 0);
+                pbox.Image = Image.FromFile(elements.GetCover());
+                //Crear Boton
+                Button lblPlateNOBAR = new Button();
+                lblPlateNOBAR.Tag =elements.GetID();
+                lblPlateNOBAR.Text = elements.GetName();
+                lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
+                lblPlateNOBAR.Font = new Font("Arial Narrow", 12);
+                lblPlateNOBAR.Size = new Size(194, 30);
+                lblPlateNOBAR.ForeColor = Color.DodgerBlue;
+                lblPlateNOBAR.Location = new Point(LocalX, 140);
+                lblPlateNOBAR.Click += new EventHandler(NewhandlerComunEX_Click);
+                PNFavs.Controls.Add(pbox);
+                PNFavs.Controls.Add(lblPlateNOBAR);
+                LocalX = LocalX + 209;
+            }
+            //Fin
+            //
+            ListStoriesEX.Clear();
+            LoadStoriesEX("Seguidores");
+            //Llenas Panel de Seguidores
+            PNFollows.Controls.Clear();
+            LocalX = 1;
+            foreach (Historias elements in ListStoriesEX)
+            {
+                LBLWarningStory.Visible = false;
+                Historias tempelement = ListStories[0];
+                PictureBox pbox = new PictureBox();
+                pbox.Size = new Size(194, 138);
+                pbox.SizeMode = PictureBoxSizeMode.StretchImage;
+                pbox.Location = new Point(LocalX, 0);
+                pbox.Image = Image.FromFile(elements.GetCover());
+                //Crear Boton
+                Button lblPlateNOBAR = new Button();
+                lblPlateNOBAR.Tag = elements.GetID();
+                lblPlateNOBAR.Text = elements.GetName();
+                lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
+                lblPlateNOBAR.Font = new Font("Arial Narrow", 12);
+                lblPlateNOBAR.Size = new Size(194, 30);
+                lblPlateNOBAR.ForeColor = Color.DodgerBlue;
+                lblPlateNOBAR.Location = new Point(LocalX, 140);
+                lblPlateNOBAR.Click += new EventHandler(NewhandlerComunEX_Click);
+                PNFollows.Controls.Add(pbox);
+                PNFollows.Controls.Add(lblPlateNOBAR);
+                LocalX = LocalX + 209;
+            }
+            //Fin
+        }
+        private void NewhandlerComunEX_Click(object sender, EventArgs e)
+        {
+            bool Control = false;
+            foreach (Historias temp in ListStories)
+            {
+                if (((Button)sender).Text == temp.GetName())
+                {
+                    MessageBox.Show("Iras a Favoritos");
+                    FRMPreview Prev = new FRMPreview();
+                    Prev.ActUser = ActUser;
+                    Prev.Ventana = this.Base;
+                    Prev.Story = temp;
+                    Prev.Show();
+                    Control = true;
+                    this.Dispose();
+                }
+            }
+            if (Control)
+            {
+                return;
+            }
+            else
+            {
+            foreach (Historias temp in ListStoriesEX)
+                {
+                    if (((Button)sender).Text == temp.GetName())
+                    {
+                        MessageBox.Show("Iras a Seguidores");
+                        FRMPreview Prev = new FRMPreview();
+                        Prev.ActUser = ActUser;
+                        Prev.Ventana = this.Base;
+                        Prev.Story = temp;
+                        Prev.Show();
+                        this.Dispose();
+                    }
+                }
+            }
+            
+        }
+        void LoadStoriesEX(string tabla)
+        {
+            if (tabla == "Favoritos")
+            {
+                string query = "SELECT * FROM "+tabla+" AS S INNER JOIN Historias AS H ON S.ID_Historia=H.ID_Historia WHERE S.ID_Usuario = " + Base.ActUser.GetID();
+                string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
+                MySqlConnection connetionBD = new MySqlConnection(conexion);
+                MySqlCommand comando = new MySqlCommand(query, connetionBD);
+                MySqlDataReader lector;
+                connetionBD.Open();
+                lector = comando.ExecuteReader();
+                while (lector.Read())
+                {
+                    Historias element = new Historias(lector.GetString(3), lector.GetInt32(2), lector.GetString(5), lector.GetString(6), lector.GetString(7), lector.GetString(8), lector.GetString(9), ActUser.GetID(), lector.GetInt32(10), lector.GetInt32(11), lector.GetInt32(12), ActUser.GetNombre());
+                    DownloadImage("https://notecucei.000webhostapp.com/" + element.GetCover(), element.GetCover());
+                    ListStories.Add(element);
+                }
+                connetionBD.Close();
+            }
+            else
+            {
+                string query = "SELECT * FROM " + tabla + " AS S INNER JOIN Historias AS H ON S.ID_Historia=H.ID_Historia WHERE S.ID_Usuario = " + ActUser.GetID();
+                string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
+                MySqlConnection connetionBD = new MySqlConnection(conexion);
+                MySqlCommand comando = new MySqlCommand(query, connetionBD);
+                MySqlDataReader lector;
+                connetionBD.Open();
+                lector = comando.ExecuteReader();
+                while (lector.Read())
+                {
+                    Historias element = new Historias(lector.GetString(2), lector.GetInt32(1), lector.GetString(4), lector.GetString(5), lector.GetString(6), lector.GetString(7), lector.GetString(8), ActUser.GetID(), lector.GetInt32(9), lector.GetInt32(10), lector.GetInt32(11), ActUser.GetNombre());
+                    DownloadImage("https://notecucei.000webhostapp.com/" + element.GetCover(), element.GetCover());
+                    ListStoriesEX.Add(element);
+                }
+                connetionBD.Close();
+            }
+        }
+
+        private void BTNNot_Click(object sender, EventArgs e)
+        {
+            BTNEliminar.Visible = false;
+            GBNotify.Visible = true;
+            GBStories.Visible = false;
+            GBFv.Visible = false;
+            PNNotify.Controls.Clear();
+            string query = "SELECT *From Notificaciones WHERE ID_Usuario = " + ActUser.GetID();
+            string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
+            MySqlConnection connetionBD = new MySqlConnection(conexion);
+            MySqlCommand comando = new MySqlCommand(query, connetionBD);
+            MySqlDataReader lector;
+            connetionBD.Open();
+            lector = comando.ExecuteReader();
+            int LocalX = 4;
+            while (lector.Read())
+            {
+                lblwarningHurra.Visible = false;
+                Label lblPlateNOBAR = new Label();
+                lblPlateNOBAR.Text = lector.GetString(1);
+                lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
+                lblPlateNOBAR.BorderStyle = BorderStyle.FixedSingle;
+                if (lector.GetInt32(2)== 0)
+                {
+                    lblPlateNOBAR.Font = new Font("Arial Narrow", 10,FontStyle.Regular);
+                }
+                else
+                {
+                    lblPlateNOBAR.Font = new Font("Arial Narrow", 10, FontStyle.Bold);
+                }
+                lblPlateNOBAR.Size = new Size(656, 45);
+                lblPlateNOBAR.ForeColor = Color.DodgerBlue;
+                lblPlateNOBAR.MouseHover += new EventHandler(handlerComun_MouseHover);
+                lblPlateNOBAR.Location = new Point(4,LocalX);
+                LocalX = LocalX + 50;
+                PNNotify.Controls.Add(lblPlateNOBAR);
+            }
+            connetionBD.Close();
+            BTNNot.Text = "Notificaciones";
+            query = "UPDATE Notificaciones SET Estatus = 0 WHERE ID_Usuario = " + ActUser.GetID();
+            MySqlConnection conexion2 = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+            conexion2.Open();
+            MySqlCommand comando2 = new MySqlCommand(query, conexion2);
+            comando.ExecuteNonQuery();
+            conexion2.Close();
+
+        }
+        private void handlerComun_MouseHover(object sender, EventArgs e)
+        {
+            ((Label)sender).Font = new Font(((Label)sender).Font, FontStyle.Regular);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Seguro que quieres borrar limpiar tu bandeja de notificaciones?", "Confirmation", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
+            {
+                MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+                conexion.Open();
+                string query = "DELETE FROM Notificaciones WHERE ID_Usuario='" + ActUser.GetID() + "'";
+                MySqlCommand comando = new MySqlCommand(query, conexion);
+                comando.ExecuteNonQuery();
+                conexion.Close();
+                PNNotify.Controls.Clear();
+                lblwarningHurra.Visible = true;
+            }
+            else if (result == DialogResult.No)
+            {
+                //... Do Nothing
             }
         }
 
