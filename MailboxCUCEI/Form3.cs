@@ -125,11 +125,13 @@ namespace MailboxCUCEI
 				MessageBox.Show("Historia subida con exito, ahora pasaras al area de escritura");
 				InsertRelation();
 				FRMWrite NewWindows = new FRMWrite();
+				
 				NewWindows.Ventana = Base;
 				NewWindows.ActUser = ActUser;
 				NewWindows.lblraiting.Text = CBRaiting.Text;
 				NewWindows.LBLGenero.Text = CBGender1.Text + " " + CBGender2.Text;
 				NewWindows.lblstatus.Text = CBEstatus.Text;
+				NewWindows.ID_Historia = CreateStory();
 				NewWindows.Show();
 				NewWindows.lblStoryName.Text = txtnombre.Text;
 				this.Dispose();
@@ -141,7 +143,24 @@ namespace MailboxCUCEI
 			Esperar.Hide();
 			
 		}
-		
+		Historias ActualStory;
+		 int CreateStory ()
+        {
+			int ID = 0;
+			string query = "SELECT ID_Historia FROM `Historias` WHERE `Nom_Historia` = '"+txtnombre.Text+"' AND Resumen = '"+TXTSummary.Text+"' ";
+			string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
+			MySqlConnection connetionBD = new MySqlConnection(conexion);
+			MySqlCommand comando = new MySqlCommand(query, connetionBD);
+			MySqlDataReader lector;
+			connetionBD.Open();
+			lector = comando.ExecuteReader();
+			if (lector.Read())
+			{
+				ID = lector.GetInt32(0);
+			}
+			connetionBD.Close();
+			return ID;
+		}
 		string SecondGender ()
         {
 			string gender="";

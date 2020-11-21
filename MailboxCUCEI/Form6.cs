@@ -233,6 +233,7 @@ namespace MailboxCUCEI
                 panel1.Controls.Add(lblPlateNOBAR);
                 LocalX = LocalX + 35;
             }
+            connetionBD.Close();
         }
         private void NewhandlerComun_Click(object sender, EventArgs e)
         {
@@ -389,6 +390,9 @@ namespace MailboxCUCEI
                 MySqlCommand comando = new MySqlCommand(Query, conexion);
                 comando.ExecuteNonQuery();
                 conexion.Close();
+                GBDetails.Visible = false;
+                PBCover.Image = null;
+                BTNMyStories_Click(sender, e);
             }
             else if (result == DialogResult.No)
             {

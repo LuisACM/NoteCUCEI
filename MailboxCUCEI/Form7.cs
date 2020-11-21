@@ -190,6 +190,7 @@ namespace MailboxCUCEI
         {
 			
 			string query = "INSERT INTO `Historias_Capitulos` (`ID_Historia`, `ID_Capitulo`) VALUES ("+ID_Historia+","+LoadIDCap()+");";
+			
 			MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
 			conectar.Open();
 			MySqlCommand comando = new MySqlCommand(query);
@@ -251,6 +252,7 @@ namespace MailboxCUCEI
         {
 			try
             {
+				bool AntiBug = false;
 				List<int> ListUsers = new List<int>();
 				string query = "SELECT `ID_Usuario` FROM `Seguidores` WHERE `ID_Historia` = "+ID_Historia.ToString()+" UNION SELECT `ID_Usuario` FROM `Favoritos` WHERE `ID_Historia` = " + ID_Historia.ToString();
 				string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
@@ -261,10 +263,15 @@ namespace MailboxCUCEI
 				lector = comando.ExecuteReader();
 				while (lector.Read())
 				{
+					AntiBug = true;
 					ListUsers.Add(lector.GetInt32(0));
 				}
 				connetionBD.Close();
-				SendNotify(ListUsers);
+				if (AntiBug)
+                {
+					SendNotify(ListUsers);
+                }
+				
 			}
 			catch (Exception err)
 			{

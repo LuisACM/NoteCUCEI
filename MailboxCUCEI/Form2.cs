@@ -120,21 +120,48 @@ namespace MailboxCUCEI
             }
             else
             {
-                MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
-                conectar.Open();
-                MySqlCommand comando = new MySqlCommand("INSERT INTO Usuarios (Codigo,Nombre,Password,Correo,F_Nacimiento) VALUES ('" + TxtCodigoRegistro.Text + "', '" + TxtNombre.Text + "','" + TxtPasswordRegistro.Text + "','" + TxtCorreo.Text + "','"+txtFecha.Text+"');");
-                comando.Connection = conectar;
-                comando.ExecuteNonQuery();
-                conectar.Close();
-                MessageBox.Show("Usuario creado con exito");
-                TxtNombre.Text = "NOMBRE";
-                TxtPasswordRegistro.Text = "CONTRASEÑA";
-                TxtPasswordRegistro.UseSystemPasswordChar = false;
-                TxtCodigoRegistro.Text = "CODIGO";
-                TxtCorreo.Text = "CORREO";
+                if (AlreadyExist("Codigo",TxtCodigoRegistro.Text))
+                {
+                    MessageBox.Show("El codigo que escribiste ya existe");
+                }
+                else if (AlreadyExist("Correo",TxtCodigoRegistro.Text))
+                {
+                    MessageBox.Show("El correo que escribiste ya existe");
+                }
+                else
+                {
+                    MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+                    conectar.Open();
+                    MySqlCommand comando = new MySqlCommand("INSERT INTO Usuarios (Codigo,Nombre,Password,Correo,F_Nacimiento) VALUES ('" + TxtCodigoRegistro.Text + "', '" + TxtNombre.Text + "','" + TxtPasswordRegistro.Text + "','" + TxtCorreo.Text + "','"+txtFecha.Text+"');");
+                    comando.Connection = conectar;
+                    comando.ExecuteNonQuery();
+                    conectar.Close();
+                    MessageBox.Show("Usuario creado con exito");
+                    TxtNombre.Text = "NOMBRE";
+                    TxtPasswordRegistro.Text = "CONTRASEÑA";
+                    TxtPasswordRegistro.UseSystemPasswordChar = false;
+                    TxtCodigoRegistro.Text = "CODIGO";
+                    TxtCorreo.Text = "CORREO";
+                }
+               
             }
         }
-
+        bool AlreadyExist (string campo, string valor)
+        {
+            string query = "SELECT * FROM `Usuarios` WHERE `"+campo+"` = '" + valor + "' ";
+            string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
+            MySqlConnection connetionBD = new MySqlConnection(conexion);
+            MySqlCommand comando = new MySqlCommand(query, connetionBD);
+            MySqlDataReader lector;
+            connetionBD.Open();
+            lector = comando.ExecuteReader();
+            if (lector.Read())
+            {
+                return true;
+            }
+            connetionBD.Close();
+            return false;
+        }
         private void Registro_Load(object sender, EventArgs e)
         {
 
