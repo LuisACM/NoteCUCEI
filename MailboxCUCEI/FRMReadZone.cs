@@ -156,30 +156,33 @@ namespace MailboxCUCEI
         {
 
             //luis'codigo
-            string usuario = ActUser.GetID().ToString();
-            string historia = MainStory.GetID().ToString();
-            MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
-            MySqlCommand comando = new MySqlCommand("SELECT * FROM Rating WHERE ID_Usuario = @ID AND ID_Historia = @IDHi", conexion);
-            comando.Parameters.AddWithValue("@ID", usuario);
-            comando.Parameters.AddWithValue("@IDHi",historia);
-            conexion.Open();
-            MySqlDataReader registro = comando.ExecuteReader();
-            if (registro.Read())
+			if (Ventana.User == false)
             {
-                flagLabel.Text = registro["Flag"].ToString();
-            }
-            conexion.Close();
-            //MessageBox.Show(flagLabel.Text);
+				string usuario = ActUser.GetID().ToString();
+				string historia = MainStory.GetID().ToString();
+				MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+				MySqlCommand comando = new MySqlCommand("SELECT * FROM Rating WHERE ID_Usuario = @ID AND ID_Historia = @IDHi", conexion);
+				comando.Parameters.AddWithValue("@ID", usuario);
+				comando.Parameters.AddWithValue("@IDHi",historia);
+				conexion.Open();
+				MySqlDataReader registro = comando.ExecuteReader();
+				if (registro.Read())
+				{
+					flagLabel.Text = registro["Flag"].ToString();
+				}
+				conexion.Close();
+				//MessageBox.Show(flagLabel.Text);
 
-            if (flagLabel.Text == "1")
-            {
-                calificarbtn.Enabled = false;
-            }
-            else
-            {
+				if (flagLabel.Text == "1")
+				{
+					calificarbtn.Enabled = false;
+				}
+				else
+				{
 
+				}
             }
-
+            
             //pepe's codigo
             if (Offline)
             {
