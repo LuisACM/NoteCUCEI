@@ -66,8 +66,10 @@
             this.BTNImage = new System.Windows.Forms.Button();
             this.PBCover = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblwarningchapters = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.PNResults = new System.Windows.Forms.Panel();
+            this.lblWarningMyStory = new System.Windows.Forms.Label();
             this.BTNMyInfo = new System.Windows.Forms.Button();
             this.BTNMyStories = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
@@ -78,17 +80,16 @@
             this.GBFv = new System.Windows.Forms.GroupBox();
             this.GBFollows = new System.Windows.Forms.GroupBox();
             this.PNFollows = new System.Windows.Forms.Panel();
+            this.LBLWarningStory = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.PNFavs = new System.Windows.Forms.Panel();
-            this.GBNotify = new System.Windows.Forms.GroupBox();
-            this.PNNotify = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.LBLWarningStory = new System.Windows.Forms.Label();
-            this.lblwarningHurra = new System.Windows.Forms.Label();
-            this.lblwarningchapters = new System.Windows.Forms.Label();
             this.lblWarningFavs = new System.Windows.Forms.Label();
-            this.lblWarningMyStory = new System.Windows.Forms.Label();
+            this.GBNotify = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.PNNotify = new System.Windows.Forms.Panel();
+            this.lblwarningHurra = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.verCB = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.FotoPerfil)).BeginInit();
             this.GBStories.SuspendLayout();
             this.GBDetails.SuspendLayout();
@@ -144,6 +145,7 @@
             this.TxtPassPerfil.ForeColor = System.Drawing.Color.DodgerBlue;
             this.TxtPassPerfil.Location = new System.Drawing.Point(734, 158);
             this.TxtPassPerfil.Name = "TxtPassPerfil";
+            this.TxtPassPerfil.PasswordChar = '*';
             this.TxtPassPerfil.Size = new System.Drawing.Size(210, 19);
             this.TxtPassPerfil.TabIndex = 54;
             // 
@@ -321,9 +323,9 @@
             this.GBStories.Controls.Add(this.GBDetails);
             this.GBStories.Controls.Add(this.groupBox3);
             this.GBStories.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.GBStories.Location = new System.Drawing.Point(236, 12);
+            this.GBStories.Location = new System.Drawing.Point(0, 16);
             this.GBStories.Name = "GBStories";
-            this.GBStories.Size = new System.Drawing.Size(699, 647);
+            this.GBStories.Size = new System.Drawing.Size(780, 653);
             this.GBStories.TabIndex = 62;
             this.GBStories.TabStop = false;
             this.GBStories.Tag = "699, 647 Location  236, 12";
@@ -351,9 +353,9 @@
             this.GBDetails.Controls.Add(this.panel1);
             this.GBDetails.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.GBDetails.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.GBDetails.Location = new System.Drawing.Point(6, 221);
+            this.GBDetails.Location = new System.Drawing.Point(6, 220);
             this.GBDetails.Name = "GBDetails";
-            this.GBDetails.Size = new System.Drawing.Size(687, 420);
+            this.GBDetails.Size = new System.Drawing.Size(687, 485);
             this.GBDetails.TabIndex = 15;
             this.GBDetails.TabStop = false;
             this.GBDetails.Text = "Mis Obras";
@@ -598,12 +600,24 @@
             this.panel1.Size = new System.Drawing.Size(464, 134);
             this.panel1.TabIndex = 0;
             // 
+            // lblwarningchapters
+            // 
+            this.lblwarningchapters.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblwarningchapters.ForeColor = System.Drawing.Color.DimGray;
+            this.lblwarningchapters.Location = new System.Drawing.Point(3, 58);
+            this.lblwarningchapters.Name = "lblwarningchapters";
+            this.lblwarningchapters.Size = new System.Drawing.Size(451, 27);
+            this.lblwarningchapters.TabIndex = 72;
+            this.lblwarningchapters.Text = "¡Aún no has publicado ningun capitulo!";
+            this.lblwarningchapters.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblwarningchapters.UseMnemonic = false;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.PNResults);
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.groupBox3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox3.Location = new System.Drawing.Point(6, 26);
+            this.groupBox3.Location = new System.Drawing.Point(6, 15);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(687, 205);
             this.groupBox3.TabIndex = 14;
@@ -619,6 +633,18 @@
             this.PNResults.Name = "PNResults";
             this.PNResults.Size = new System.Drawing.Size(674, 176);
             this.PNResults.TabIndex = 0;
+            // 
+            // lblWarningMyStory
+            // 
+            this.lblWarningMyStory.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWarningMyStory.ForeColor = System.Drawing.Color.DimGray;
+            this.lblWarningMyStory.Location = new System.Drawing.Point(178, 75);
+            this.lblWarningMyStory.Name = "lblWarningMyStory";
+            this.lblWarningMyStory.Size = new System.Drawing.Size(335, 27);
+            this.lblWarningMyStory.TabIndex = 73;
+            this.lblWarningMyStory.Text = "¡Aún no escribes ninguna historia!";
+            this.lblWarningMyStory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblWarningMyStory.UseMnemonic = false;
             // 
             // BTNMyInfo
             // 
@@ -708,11 +734,12 @@
             // GBFv
             // 
             this.GBFv.Controls.Add(this.GBFollows);
+            this.GBFv.Controls.Add(this.GBStories);
             this.GBFv.Controls.Add(this.groupBox4);
             this.GBFv.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.GBFv.Location = new System.Drawing.Point(236, 12);
+            this.GBFv.Location = new System.Drawing.Point(229, 22);
             this.GBFv.Name = "GBFv";
-            this.GBFv.Size = new System.Drawing.Size(706, 472);
+            this.GBFv.Size = new System.Drawing.Size(783, 615);
             this.GBFv.TabIndex = 70;
             this.GBFv.TabStop = false;
             this.GBFv.Tag = "706, 472 Location  236, 12";
@@ -743,6 +770,18 @@
             this.PNFollows.Size = new System.Drawing.Size(674, 193);
             this.PNFollows.TabIndex = 1;
             // 
+            // LBLWarningStory
+            // 
+            this.LBLWarningStory.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLWarningStory.ForeColor = System.Drawing.Color.DimGray;
+            this.LBLWarningStory.Location = new System.Drawing.Point(188, 77);
+            this.LBLWarningStory.Name = "LBLWarningStory";
+            this.LBLWarningStory.Size = new System.Drawing.Size(301, 27);
+            this.LBLWarningStory.TabIndex = 71;
+            this.LBLWarningStory.Text = "¡Aun no sigues ninguna historia!";
+            this.LBLWarningStory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBLWarningStory.UseMnemonic = false;
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.PNFavs);
@@ -765,29 +804,32 @@
             this.PNFavs.Size = new System.Drawing.Size(674, 176);
             this.PNFavs.TabIndex = 0;
             // 
+            // lblWarningFavs
+            // 
+            this.lblWarningFavs.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWarningFavs.ForeColor = System.Drawing.Color.DimGray;
+            this.lblWarningFavs.Location = new System.Drawing.Point(106, 69);
+            this.lblWarningFavs.Name = "lblWarningFavs";
+            this.lblWarningFavs.Size = new System.Drawing.Size(471, 27);
+            this.lblWarningFavs.TabIndex = 73;
+            this.lblWarningFavs.Text = "¡No has agregado ninguna historia a tus favoritos!";
+            this.lblWarningFavs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblWarningFavs.UseMnemonic = false;
+            // 
             // GBNotify
             // 
             this.GBNotify.Controls.Add(this.button6);
             this.GBNotify.Controls.Add(this.PNNotify);
             this.GBNotify.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.GBNotify.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.GBNotify.Location = new System.Drawing.Point(236, 12);
+            this.GBNotify.Location = new System.Drawing.Point(229, 5);
             this.GBNotify.Name = "GBNotify";
-            this.GBNotify.Size = new System.Drawing.Size(699, 647);
+            this.GBNotify.Size = new System.Drawing.Size(789, 732);
             this.GBNotify.TabIndex = 0;
             this.GBNotify.TabStop = false;
             this.GBNotify.Tag = "699, 647 Location  236, 12";
             this.GBNotify.Text = "Notificaciones";
             this.GBNotify.Visible = false;
-            // 
-            // PNNotify
-            // 
-            this.PNNotify.Controls.Add(this.lblwarningHurra);
-            this.PNNotify.Controls.Add(this.label15);
-            this.PNNotify.Location = new System.Drawing.Point(17, 35);
-            this.PNNotify.Name = "PNNotify";
-            this.PNNotify.Size = new System.Drawing.Size(663, 502);
-            this.PNNotify.TabIndex = 0;
             // 
             // button6
             // 
@@ -801,29 +843,14 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // label15
+            // PNNotify
             // 
-            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label15.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(4, 4);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(656, 45);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Se ha publicado un nuevo capitulo de una historia que sigues \"Migala\"";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label15.Visible = false;
-            // 
-            // LBLWarningStory
-            // 
-            this.LBLWarningStory.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLWarningStory.ForeColor = System.Drawing.Color.DimGray;
-            this.LBLWarningStory.Location = new System.Drawing.Point(188, 77);
-            this.LBLWarningStory.Name = "LBLWarningStory";
-            this.LBLWarningStory.Size = new System.Drawing.Size(301, 27);
-            this.LBLWarningStory.TabIndex = 71;
-            this.LBLWarningStory.Text = "¡Aun no sigues ninguna historia!";
-            this.LBLWarningStory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LBLWarningStory.UseMnemonic = false;
+            this.PNNotify.Controls.Add(this.lblwarningHurra);
+            this.PNNotify.Controls.Add(this.label15);
+            this.PNNotify.Location = new System.Drawing.Point(17, 35);
+            this.PNNotify.Name = "PNNotify";
+            this.PNNotify.Size = new System.Drawing.Size(663, 502);
+            this.PNNotify.TabIndex = 0;
             // 
             // lblwarningHurra
             // 
@@ -837,49 +864,37 @@
             this.lblwarningHurra.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblwarningHurra.UseMnemonic = false;
             // 
-            // lblwarningchapters
+            // label15
             // 
-            this.lblwarningchapters.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblwarningchapters.ForeColor = System.Drawing.Color.DimGray;
-            this.lblwarningchapters.Location = new System.Drawing.Point(3, 58);
-            this.lblwarningchapters.Name = "lblwarningchapters";
-            this.lblwarningchapters.Size = new System.Drawing.Size(451, 27);
-            this.lblwarningchapters.TabIndex = 72;
-            this.lblwarningchapters.Text = "¡Aún no has publicado ningun capitulo!";
-            this.lblwarningchapters.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblwarningchapters.UseMnemonic = false;
+            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label15.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.label15.Location = new System.Drawing.Point(4, 4);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(656, 45);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Se ha publicado un nuevo capitulo de una historia que sigues \"Migala\"";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label15.Visible = false;
             // 
-            // lblWarningFavs
+            // verCB
             // 
-            this.lblWarningFavs.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWarningFavs.ForeColor = System.Drawing.Color.DimGray;
-            this.lblWarningFavs.Location = new System.Drawing.Point(106, 69);
-            this.lblWarningFavs.Name = "lblWarningFavs";
-            this.lblWarningFavs.Size = new System.Drawing.Size(471, 27);
-            this.lblWarningFavs.TabIndex = 73;
-            this.lblWarningFavs.Text = "¡No has agregado ninguna historia a tus favoritos!";
-            this.lblWarningFavs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblWarningFavs.UseMnemonic = false;
-            // 
-            // lblWarningMyStory
-            // 
-            this.lblWarningMyStory.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWarningMyStory.ForeColor = System.Drawing.Color.DimGray;
-            this.lblWarningMyStory.Location = new System.Drawing.Point(178, 75);
-            this.lblWarningMyStory.Name = "lblWarningMyStory";
-            this.lblWarningMyStory.Size = new System.Drawing.Size(335, 27);
-            this.lblWarningMyStory.TabIndex = 73;
-            this.lblWarningMyStory.Text = "¡Aún no escribes ninguna historia!";
-            this.lblWarningMyStory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblWarningMyStory.UseMnemonic = false;
+            this.verCB.AutoSize = true;
+            this.verCB.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.verCB.Location = new System.Drawing.Point(967, 164);
+            this.verCB.Name = "verCB";
+            this.verCB.Size = new System.Drawing.Size(42, 17);
+            this.verCB.TabIndex = 71;
+            this.verCB.Text = "Ver";
+            this.verCB.UseVisualStyleBackColor = true;
+            this.verCB.CheckedChanged += new System.EventHandler(this.verCB_CheckedChanged);
             // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(947, 673);
-            this.Controls.Add(this.GBStories);
+            this.ClientSize = new System.Drawing.Size(1060, 755);
+            this.Controls.Add(this.verCB);
             this.Controls.Add(this.GBFv);
             this.Controls.Add(this.GBNotify);
             this.Controls.Add(this.BTNNot);
@@ -996,5 +1011,6 @@
         private System.Windows.Forms.Label lblWarningFavs;
         private System.Windows.Forms.Label lblwarningchapters;
         private System.Windows.Forms.Label lblWarningMyStory;
+        private System.Windows.Forms.CheckBox verCB;
     }
 }

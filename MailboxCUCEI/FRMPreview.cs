@@ -246,7 +246,7 @@ namespace MailboxCUCEI
                 {
                     if (CBFav.Checked == false)
                     {
-                        string query = "DELETE FROM Favoritoss WHERE ID_Usuario = " + Ventana.ActUser.GetID() + " AND ID_Historia = " + Story.GetID();
+                        string query = "DELETE FROM Favoritos WHERE ID_Usuario = " + Ventana.ActUser.GetID() + " AND ID_Historia = " + Story.GetID();
                         MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
                         conectar.Open();
                         MySqlCommand comando = new MySqlCommand(query);

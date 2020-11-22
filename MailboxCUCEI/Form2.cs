@@ -43,7 +43,7 @@ namespace MailboxCUCEI
             {
                 TxtPasswordRegistro.Text = "";
                 TxtPasswordRegistro.ForeColor = Color.Black;
-                TxtPasswordRegistro.UseSystemPasswordChar = true;
+                TxtPasswordRegistro.PasswordChar = '*';
             }
         }
 
@@ -53,7 +53,7 @@ namespace MailboxCUCEI
             {
                 TxtPasswordRegistro.Text = "CONTRASEÑA";
                 TxtPasswordRegistro.ForeColor = Color.Black;
-                TxtPasswordRegistro.UseSystemPasswordChar = false;
+                TxtPasswordRegistro.PasswordChar = '*';
             }
         }
 
@@ -165,6 +165,21 @@ namespace MailboxCUCEI
         private void Registro_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void passCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if(passCB.Checked==true)
+            {
+                if (TxtPasswordRegistro.PasswordChar=='*')
+                {
+                    TxtPasswordRegistro.PasswordChar = '\0';
+                }
+            }
+            else
+            {
+                TxtPasswordRegistro.PasswordChar = '*';
+            }
         }
     }
 }

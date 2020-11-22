@@ -704,6 +704,21 @@ namespace MailboxCUCEI
             }
         }
 
+        private void verCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if (verCB.Checked == true)
+            {
+                if (TxtPassPerfil.PasswordChar == '*')
+                {
+                    TxtPassPerfil.PasswordChar = '\0';
+                }
+            }
+            else
+            {
+                TxtPassPerfil.PasswordChar = '*';
+            }
+        }
+
         void Reload()
         {
             panel1.Controls.Clear();

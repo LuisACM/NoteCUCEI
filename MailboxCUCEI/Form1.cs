@@ -84,6 +84,7 @@ namespace MailboxCUCEI
             {
                 ActUser = new Usuario(lector.GetInt32(0),lector.GetString(1), lector.GetString(2), lector.GetString(3), lector.GetString(4),lector.GetString(5)); 
             }
+            connetionBD.Close();
         }
         private void BtnInicioSesion_Click(object sender, EventArgs e)
         {

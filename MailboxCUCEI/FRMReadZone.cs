@@ -192,6 +192,7 @@ namespace MailboxCUCEI
 				lblCapitulo.Visible = false;
                 CalificacionCB.Visible = false;
                 calificarbtn.Visible = false;
+                calificarlabel.Visible = false;
 				lblStoryName.Text = StoryName;
 				OfflineChaptersList = ChaptersOffline.Split('|');
 				ActualChapter = 0;
@@ -209,6 +210,7 @@ namespace MailboxCUCEI
 					BTNSendComment.Visible = false;
                     calificarbtn.Visible = false;
                     CalificacionCB.Visible = false;
+                    calificarlabel.Visible = false;
 				}
 				LoadComments();
 				CreateChapterList();

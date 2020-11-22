@@ -41,6 +41,7 @@
             this.BTNRegresar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.DateTimePicker();
+            this.passCB = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label2
@@ -198,12 +199,25 @@
             this.txtFecha.Size = new System.Drawing.Size(121, 20);
             this.txtFecha.TabIndex = 10;
             // 
+            // passCB
+            // 
+            this.passCB.AutoSize = true;
+            this.passCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passCB.Location = new System.Drawing.Point(649, 127);
+            this.passCB.Name = "passCB";
+            this.passCB.Size = new System.Drawing.Size(52, 22);
+            this.passCB.TabIndex = 11;
+            this.passCB.Text = "Ver";
+            this.passCB.UseVisualStyleBackColor = true;
+            this.passCB.CheckedChanged += new System.EventHandler(this.passCB_CheckedChanged);
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(793, 626);
+            this.Controls.Add(this.passCB);
             this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.BTNRegresar);
@@ -241,5 +255,6 @@
         private System.Windows.Forms.Button BTNRegresar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker txtFecha;
+        private System.Windows.Forms.CheckBox passCB;
     }
 }
