@@ -177,6 +177,7 @@ namespace MailboxCUCEI
 
         private void btnRead_Click(object sender, EventArgs e)
         {
+            //El pull llegó bien
             string query = "SELECT *FROM Historias_Capitulos WHERE ID_Historia= " + Story.GetID() + "  ";
             string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
             MySqlConnection connetionBD = new MySqlConnection(conexion);
