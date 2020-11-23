@@ -223,10 +223,13 @@ namespace MailboxCUCEI
 					InsertRelation();
 					StarNotify();
 					Wait.Dispose();
-					Ventana.Reload();
-					Ventana.Show();
+					Principal go = new Principal();
+					go.User = Ventana.User;
+					go.ActUser = Ventana.ActUser;
+					go.manduser.Text = Ventana.manduser.Text;
+					go.Show();
 					this.Dispose();
-                }
+				}
 				
             }
 			catch (Exception err)

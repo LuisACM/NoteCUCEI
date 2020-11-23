@@ -284,7 +284,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(418, 465);
+            this.ClientSize = new System.Drawing.Size(419, 465);
             this.Controls.Add(this.GBDetails);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRMPreview";

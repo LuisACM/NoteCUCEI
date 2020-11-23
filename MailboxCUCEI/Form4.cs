@@ -144,6 +144,7 @@ namespace MailboxCUCEI
                 int LocalX = 0;
                 foreach (Historias elements in ListStories)
                 {
+                   
                     Historias tempelement = ListStories[0];
                     PictureBox pbox = new PictureBox();
                     pbox.Size = new Size(194, 138);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMCreateStory));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.PBCover = new System.Windows.Forms.PictureBox();
             this.btnImage = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PBCover)).BeginInit();
             this.SuspendLayout();
             // 
@@ -325,5 +327,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox PBCover;
         private System.Windows.Forms.Button btnImage;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

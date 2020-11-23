@@ -323,9 +323,9 @@
             this.GBStories.Controls.Add(this.GBDetails);
             this.GBStories.Controls.Add(this.groupBox3);
             this.GBStories.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.GBStories.Location = new System.Drawing.Point(0, 16);
+            this.GBStories.Location = new System.Drawing.Point(236, 12);
             this.GBStories.Name = "GBStories";
-            this.GBStories.Size = new System.Drawing.Size(780, 653);
+            this.GBStories.Size = new System.Drawing.Size(789, 662);
             this.GBStories.TabIndex = 62;
             this.GBStories.TabStop = false;
             this.GBStories.Tag = "699, 647 Location  236, 12";
@@ -355,7 +355,7 @@
             this.GBDetails.ForeColor = System.Drawing.Color.DodgerBlue;
             this.GBDetails.Location = new System.Drawing.Point(6, 220);
             this.GBDetails.Name = "GBDetails";
-            this.GBDetails.Size = new System.Drawing.Size(687, 485);
+            this.GBDetails.Size = new System.Drawing.Size(687, 430);
             this.GBDetails.TabIndex = 15;
             this.GBDetails.TabStop = false;
             this.GBDetails.Text = "Mis Obras";
@@ -734,12 +734,11 @@
             // GBFv
             // 
             this.GBFv.Controls.Add(this.GBFollows);
-            this.GBFv.Controls.Add(this.GBStories);
             this.GBFv.Controls.Add(this.groupBox4);
             this.GBFv.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.GBFv.Location = new System.Drawing.Point(229, 22);
+            this.GBFv.Location = new System.Drawing.Point(236, 12);
             this.GBFv.Name = "GBFv";
-            this.GBFv.Size = new System.Drawing.Size(783, 615);
+            this.GBFv.Size = new System.Drawing.Size(789, 476);
             this.GBFv.TabIndex = 70;
             this.GBFv.TabStop = false;
             this.GBFv.Tag = "706, 472 Location  236, 12";
@@ -754,7 +753,7 @@
             this.GBFollows.ForeColor = System.Drawing.Color.DodgerBlue;
             this.GBFollows.Location = new System.Drawing.Point(6, 237);
             this.GBFollows.Name = "GBFollows";
-            this.GBFollows.Size = new System.Drawing.Size(687, 225);
+            this.GBFollows.Size = new System.Drawing.Size(777, 225);
             this.GBFollows.TabIndex = 15;
             this.GBFollows.TabStop = false;
             this.GBFollows.Text = "Historias Seguidas";
@@ -767,7 +766,7 @@
             this.PNFollows.Controls.Add(this.LBLWarningStory);
             this.PNFollows.Location = new System.Drawing.Point(6, 26);
             this.PNFollows.Name = "PNFollows";
-            this.PNFollows.Size = new System.Drawing.Size(674, 193);
+            this.PNFollows.Size = new System.Drawing.Size(758, 193);
             this.PNFollows.TabIndex = 1;
             // 
             // LBLWarningStory
@@ -789,7 +788,7 @@
             this.groupBox4.ForeColor = System.Drawing.Color.DodgerBlue;
             this.groupBox4.Location = new System.Drawing.Point(6, 26);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(687, 205);
+            this.groupBox4.Size = new System.Drawing.Size(777, 205);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Historias Favoritas";
@@ -801,7 +800,7 @@
             this.PNFavs.Controls.Add(this.lblWarningFavs);
             this.PNFavs.Location = new System.Drawing.Point(7, 23);
             this.PNFavs.Name = "PNFavs";
-            this.PNFavs.Size = new System.Drawing.Size(674, 176);
+            this.PNFavs.Size = new System.Drawing.Size(760, 176);
             this.PNFavs.TabIndex = 0;
             // 
             // lblWarningFavs
@@ -822,9 +821,9 @@
             this.GBNotify.Controls.Add(this.PNNotify);
             this.GBNotify.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.GBNotify.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.GBNotify.Location = new System.Drawing.Point(229, 5);
+            this.GBNotify.Location = new System.Drawing.Point(236, 12);
             this.GBNotify.Name = "GBNotify";
-            this.GBNotify.Size = new System.Drawing.Size(789, 732);
+            this.GBNotify.Size = new System.Drawing.Size(789, 613);
             this.GBNotify.TabIndex = 0;
             this.GBNotify.TabStop = false;
             this.GBNotify.Tag = "699, 647 Location  236, 12";
@@ -835,7 +834,7 @@
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button6.Location = new System.Drawing.Point(272, 549);
+            this.button6.Location = new System.Drawing.Point(349, 549);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(131, 50);
             this.button6.TabIndex = 45;
@@ -849,7 +848,7 @@
             this.PNNotify.Controls.Add(this.label15);
             this.PNNotify.Location = new System.Drawing.Point(17, 35);
             this.PNNotify.Name = "PNNotify";
-            this.PNNotify.Size = new System.Drawing.Size(663, 502);
+            this.PNNotify.Size = new System.Drawing.Size(756, 502);
             this.PNNotify.TabIndex = 0;
             // 
             // lblwarningHurra
@@ -870,7 +869,7 @@
             this.label15.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
             this.label15.Location = new System.Drawing.Point(4, 4);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(656, 45);
+            this.label15.Size = new System.Drawing.Size(749, 45);
             this.label15.TabIndex = 0;
             this.label15.Text = "Se ha publicado un nuevo capitulo de una historia que sigues \"Migala\"";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -894,8 +893,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(1060, 755);
-            this.Controls.Add(this.verCB);
             this.Controls.Add(this.GBFv);
+            this.Controls.Add(this.GBStories);
             this.Controls.Add(this.GBNotify);
             this.Controls.Add(this.BTNNot);
             this.Controls.Add(this.BTNFF);
@@ -923,6 +922,7 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.RBYes);
             this.Controls.Add(this.RBNo);
+            this.Controls.Add(this.verCB);
             this.ForeColor = System.Drawing.Color.Chocolate;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Administrador";

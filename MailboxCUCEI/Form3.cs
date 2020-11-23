@@ -27,7 +27,7 @@ namespace MailboxCUCEI
 		void InicioAdminLoad(object sender, EventArgs e)
 		{
 			Esperar.Show();
-										
+			this.toolTip1.SetToolTip(this.CBRaiting, "K: Apto para todo publico" + Environment.NewLine + "K+: Apto para mayores de 8 años" + Environment.NewLine + "T: Apto para adolecentes" + Environment.NewLine + "M: Apto para mayores de 18 años");
 			string query = "SELECT * FROM Generos";
 			string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
 			MySqlConnection connetionBD = new MySqlConnection(conexion);

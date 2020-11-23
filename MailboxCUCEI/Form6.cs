@@ -206,6 +206,7 @@ namespace MailboxCUCEI
         {
             capitulos.Clear();
             panel1.Controls.Clear();
+            panel1.Controls.Add(lblwarningchapters);
             string query = "SELECT * FROM Historias_Capitulos AS Base  INNER JOIN Capitulo AS C ON C.ID_Cap = Base.ID_Capitulo WHERE ID_Historia = " + ID;
             string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
             MySqlConnection connetionBD = new MySqlConnection(conexion);
@@ -221,6 +222,7 @@ namespace MailboxCUCEI
             int LocalX = 3;
             foreach (Capitulos temp in capitulos)
             {
+                lblwarningchapters.Visible = false;
                 Button lblPlateNOBAR = new Button();
                 lblPlateNOBAR.Tag = temp.GetID();
                 lblPlateNOBAR.Text = temp.GetName();
@@ -412,6 +414,7 @@ namespace MailboxCUCEI
         {
             GBNotify.Visible = false;
             GBStories.Visible = true;
+            GBFv.Visible = false;
             BTNEliminar.Visible = false;
             WaitForm Wait = new WaitForm();
             Wait.Show();
@@ -499,6 +502,7 @@ namespace MailboxCUCEI
             LoadStoriesEX("Favoritos");
             //Llenar Panel de Favoritos
             PNFavs.Controls.Clear();
+            PNFavs.Controls.Add(lblWarningFavs);
             int LocalX = 1;
             foreach (Historias elements in ListStories)
             {
@@ -529,6 +533,7 @@ namespace MailboxCUCEI
             LoadStoriesEX("Seguidores");
             //Llenas Panel de Seguidores
             PNFollows.Controls.Clear();
+            PNFollows.Controls.Add(LBLWarningStory);
             LocalX = 1;
             foreach (Historias elements in ListStoriesEX)
             {
@@ -639,6 +644,7 @@ namespace MailboxCUCEI
             GBStories.Visible = false;
             GBFv.Visible = false;
             PNNotify.Controls.Clear();
+            PNNotify.Controls.Add(lblwarningHurra);
             string query = "SELECT *From Notificaciones WHERE ID_Usuario = " + ActUser.GetID();
             string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
             MySqlConnection connetionBD = new MySqlConnection(conexion);
@@ -662,7 +668,7 @@ namespace MailboxCUCEI
                 {
                     lblPlateNOBAR.Font = new Font("Arial Narrow", 10, FontStyle.Bold);
                 }
-                lblPlateNOBAR.Size = new Size(656, 45);
+                lblPlateNOBAR.Size = new Size(749, 45);
                 lblPlateNOBAR.ForeColor = Color.DodgerBlue;
                 lblPlateNOBAR.MouseHover += new EventHandler(handlerComun_MouseHover);
                 lblPlateNOBAR.Location = new Point(4,LocalX);
@@ -675,7 +681,7 @@ namespace MailboxCUCEI
             MySqlConnection conexion2 = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
             conexion2.Open();
             MySqlCommand comando2 = new MySqlCommand(query, conexion2);
-            comando.ExecuteNonQuery();
+            comando2.ExecuteNonQuery();
             conexion2.Close();
 
         }
