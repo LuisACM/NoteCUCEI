@@ -228,6 +228,34 @@ namespace MailboxCUCEI
 				}
 			}
 
+			//Sistema de recomendación
+			MLContext mlContext = new MLContext();
+			(IDataView trainingDataView, IDataView testDataView) = LoadData(mlContext);
+			ITransformer model = BuildAndTrainModel(mlContext, trainingDataView);
+			EvaluateModel(mlContext, testDataView, model);
+
+			//Sacar lista de ID
+			string query = "SELECT DISTINCT ID_Historia From Rating";
+			string conexionAlt = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
+			MySqlConnection connetionBD = new MySqlConnection(conexionAlt);
+			MySqlCommand comandoAlt = new MySqlCommand(query, connetionBD);
+			MySqlDataReader lector;
+			connetionBD.Open();
+			lector = comandoAlt.ExecuteReader();
+			while (lector.Read())
+            {
+				if (UseModelForSinglePrediction(mlContext, model,ActUser.GetID(),lector.GetInt32(0)))
+                {
+					if (lector.GetInt32(0) != MainStory.GetID())
+					{
+						CreateObjectStory(lector.GetInt32(0));
+					}
+				}
+			}
+			connetionBD.Close();
+			CreateObjects();
+			SaveModel(mlContext, trainingDataView.Schema, model);
+
 		}
 
 		void LoadComments()
@@ -325,7 +353,6 @@ namespace MailboxCUCEI
 
 		private void label2_Click(object sender, EventArgs e)
 		{
-
 		}
 
 		private void txtComment_Click(object sender, EventArgs e)
@@ -335,7 +362,6 @@ namespace MailboxCUCEI
 				txtComment.Text = "";
 			}
 		}
-
 		private void BTNSendComment_Click(object sender, EventArgs e)
 		{
 			if (txtComment.Text == "")
@@ -369,7 +395,6 @@ namespace MailboxCUCEI
 				{
 					BTNBack.Enabled = false;
 				}
-
 			}
 			else
 			{
@@ -409,37 +434,37 @@ namespace MailboxCUCEI
 			int control = 1;
 			string usuario = ActUser.GetID().ToString();
 			string historia = MainStory.GetID().ToString();
-
-
 			if (CalificacionCB.Text == "0")
 			{
 				MessageBox.Show("Usted debe escojer un valor entre 1 y 5");
 			}
-			else
-			{
-				string query = "INSERT INTO Rating (ID_Usuario,ID_Historia,Rating,Flag) VALUES('" + usuario + "','" + historia + "','" + CalificacionCB.Text + "','" + control + "')";
-				MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
-				conectar.Open();
-				MySqlCommand comando = new MySqlCommand(query);
-				comando.Connection = conectar;
-				comando.ExecuteNonQuery();
-				conectar.Close();
-				MessageBox.Show("Gracias por tu calificación!");
-				calificarbtn.Enabled = false;
+				else
+				{
+					string query = "INSERT INTO Rating (ID_Usuario,ID_Historia,Rating,Flag) VALUES('" + usuario + "','" + historia + "','" + CalificacionCB.Text + "','" + control + "')";
+					MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+					conectar.Open();
+					MySqlCommand comando = new MySqlCommand(query);
+					comando.Connection = conectar;
+					comando.ExecuteNonQuery();
+					conectar.Close();
+					MessageBox.Show("Gracias por tu calificación!");
+					calificarbtn.Enabled = false;
+
+				//Actualizar csv
+				string  raiting = CalificacionCB.Text;
+				var trainingDataPath = Path.Combine(Environment.CurrentDirectory, "Datos", "Rating.csv");
+				string separador = ",";
+				StringBuilder salida = new StringBuilder();
+				string cadena = ActUser.GetID().ToString() + "," + MainStory.GetID().ToString() + "," + raiting.ToString() + ",1";
+				salida.AppendLine(string.Join(separador, cadena));
+				File.AppendAllText(trainingDataPath, salida.ToString());
 			}
-			//Recomendar historias
-			/*
-			MLContext mlContext = new MLContext();
-			(IDataView trainingDataView, IDataView testDataView) = LoadData(mlContext);
-			ITransformer model = BuildAndTrainModel(mlContext, trainingDataView);
-			EvaluateModel(mlContext, testDataView, model);
-			UseModelForSinglePrediction(mlContext, model);
-			SaveModel(mlContext, trainingDataView.Schema, model); */
+
 		}
 		public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 		{
-			var trainingDataPath = Path.Combine(Environment.CurrentDirectory, "Datos", "recommendation-ratings-train.csv");
-			var testDataPath = Path.Combine(Environment.CurrentDirectory, "Datos", "recommendation-ratings-test.csv");
+			var trainingDataPath = Path.Combine(Environment.CurrentDirectory, "Datos", "Rating.csv");
+			var testDataPath = Path.Combine(Environment.CurrentDirectory, "Datos", "Rating-Test.csv");
 
 			IDataView trainingDataView = mlContext.Data.LoadFromTextFile<StoryRating>(trainingDataPath, hasHeader: true, separatorChar: ',');
 			IDataView testDataView = mlContext.Data.LoadFromTextFile<StoryRating>(testDataPath, hasHeader: true, separatorChar: ',');
@@ -460,39 +485,142 @@ namespace MailboxCUCEI
 			};
 
 			var trainerEstimator = estimator.Append(mlContext.Recommendation().Trainers.MatrixFactorization(options));
-			MessageBox.Show("Training the model");
 			ITransformer model = trainerEstimator.Fit(trainingDataView);
 
 			return model;
 		}
 		public static void EvaluateModel(MLContext mlContext, IDataView testDataView, ITransformer model)
 		{
-			MessageBox.Show("Entrenado modelo");
 			var prediction = model.Transform(testDataView);
 			var metrics = mlContext.Regression.Evaluate(prediction, labelColumnName: "Label", scoreColumnName: "Score");
-			MessageBox.Show("Root Mean Squared Error : " + metrics.RootMeanSquaredError.ToString());
-			MessageBox.Show("RSquared: " + metrics.RSquared.ToString());
+			//MessageBox.Show("Root Mean Squared Error : " + metrics.RootMeanSquaredError.ToString());
+			//MessageBox.Show("RSquared: " + metrics.RSquared.ToString());
 		}
-		public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer model)
+		public static bool UseModelForSinglePrediction(MLContext mlContext, ITransformer model, int ID, int StoryID)
 		{
-			MessageBox.Show("=============== Making a prediction ===============");
+			
 			var predictionEngine = mlContext.Model.CreatePredictionEngine<StoryRating, StoryRatingPrediction>(model);
-			var testInput = new StoryRating { userId = 6, storyId = 10 };
+			var testInput = new StoryRating { userId = ID, storyId = StoryID };
 
 			var storyRatingPrediction = predictionEngine.Predict(testInput);
-			if (Math.Round(storyRatingPrediction.Score, 1) > 3.5)
+			if (Math.Round(storyRatingPrediction.Score, 1) > 3.8)
 			{
-				MessageBox.Show("Movie " + testInput.storyId + " is recommended for user " + testInput.userId);
+				return true;
 			}
 			else
 			{
-				MessageBox.Show("Movie " + testInput.storyId + " is not recommended for user " + testInput.userId);
+				return false;
+			}
+		}
+		List<Historias> ListStories = new List<Historias>();
+		void CreateObjects ()
+        {
+			
+			int LocalX = 0;
+			foreach (Historias elements in ListStories)
+			{
+
+				Historias tempelement = ListStories[0];
+				PictureBox pbox = new PictureBox();
+				pbox.Size = new Size(194, 138);
+				pbox.SizeMode = PictureBoxSizeMode.StretchImage;
+				pbox.Location = new Point(LocalX, 0);
+				pbox.Image = Image.FromFile(elements.GetCover());
+				//Crear Boton
+				Button lblPlateNOBAR = new Button();
+				lblPlateNOBAR.Text = elements.GetName();
+				lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
+				lblPlateNOBAR.Font = new Font("Consola", 9, FontStyle.Bold);
+				lblPlateNOBAR.Size = new Size(194, 30);
+				lblPlateNOBAR.ForeColor = Color.Black;
+				lblPlateNOBAR.Location = new Point(LocalX, 140);
+				lblPlateNOBAR.Click += new EventHandler(handlerComun_Click);
+				PNRecommends.Controls.Add(pbox);
+				PNRecommends.Controls.Add(lblPlateNOBAR);
+				LocalX = LocalX + 209;
+			}
+		}
+		void GenerateView(Historias temp)
+		{
+			temp.IncreaseID();
+			string query = "INSERT INTO `Vistas` (`ID_Vista`, `ID_Historia`, `ID_Usuario`) VALUES (NULL, '" + temp.GetID() + "', '" + ActUser.GetID() + "');";
+			MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+			conectar.Open();
+			MySqlCommand comando = new MySqlCommand(query);
+			comando.Connection = conectar;
+			comando.ExecuteNonQuery();
+			conectar.Close();
+		}
+		private void handlerComun_Click(object sender, EventArgs e)
+		{
+			foreach (Historias temp in ListStories)
+			{
+
+				if (((Button)sender).Text == temp.GetName())
+				{
+					FRMPreview Prev = new FRMPreview();
+					
+						GenerateView(temp);
+						string query = "UPDATE `Historias` SET `Vistas` = '" + temp.GetViews() + "' WHERE `Historias`.`ID_Historia` = " + temp.GetID() + "";
+						MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+						conectar.Open();
+						MySqlCommand comando = new MySqlCommand(query);
+						comando.Connection = conectar;
+						comando.ExecuteNonQuery();
+						conectar.Close();
+					
+					Prev.ActUser = ActUser;
+					Prev.Ventana = Ventana;
+					Prev.Story = temp;
+					Prev.Show();
+					this.Dispose();
+				}
+
+			}
+		}
+		public  void  CreateObjectStory (int ID)
+        {
+			string query = "SELECT h.Nom_Historia,h.ID_Historia,h.Resumen,h.ID_Genero,h.Fo_Portada,h.Raiting,h.Estatus,Base.ID_Usuario,h.Seguidores,h.Favoritos,h.Vistas,u.Nombre From Usuarios_Historias AS Base INNER JOIN Usuarios AS u ON u.Codigo = Base.ID_Usuario INNER JOIN Historias AS h ON h.ID_Historia = Base.ID_Historia  WHERE h.ID_Historia ="+ID;
+			string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
+			MySqlConnection connetionBD = new MySqlConnection(conexion);
+			MySqlCommand comando = new MySqlCommand(query, connetionBD);
+			MySqlDataReader lector;
+			connetionBD.Open();
+			lector = comando.ExecuteReader();
+			while (lector.Read())
+			{
+				Historias element = new Historias(lector.GetString(0), lector.GetInt32(1), lector.GetString(2), lector.GetString(3), lector.GetString(4), lector.GetString(5), lector.GetString(6), lector.GetInt32(7), lector.GetInt32(8), lector.GetInt32(8), lector.GetInt32(10), lector.GetString(11));
+				DownloadImage("https://notecucei.000webhostapp.com/" + element.GetCover(), element.GetCover());
+				ListStories.Add(element);
+			}
+			connetionBD.Close();
+
+		}
+		void DownloadImage(string URL, String Name)
+		{
+			if (File.Exists(Name))
+			{
+				return;
+			}
+			else
+			{
+				Cliente.DownloadFile(new Uri(URL), Name);
 			}
 		}
 		public static void SaveModel(MLContext mlContext, DataViewSchema trainingDataViewSchema, ITransformer model)
 		{
-			var modelPath = Path.Combine(Environment.CurrentDirectory, "Data", "StoryRecommenderModel.zip");
+			var modelPath = Path.Combine(Environment.CurrentDirectory, "Datos", "StoryRecommenderModel.zip");
 			mlContext.Model.Save(model, trainingDataViewSchema, modelPath);
 		}
-	}
+
+        private void RTBWriteZone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GBRecommend_Enter(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

@@ -44,6 +44,7 @@
             this.passCB = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnOwo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -245,12 +246,32 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btnOwo
+            // 
+            this.btnOwo.BackColor = System.Drawing.Color.SaddleBrown;
+            this.btnOwo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOwo.FlatAppearance.BorderSize = 0;
+            this.btnOwo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnOwo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnOwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOwo.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOwo.ForeColor = System.Drawing.Color.Black;
+            this.btnOwo.Location = new System.Drawing.Point(648, 591);
+            this.btnOwo.Name = "btnOwo";
+            this.btnOwo.Size = new System.Drawing.Size(25, 28);
+            this.btnOwo.TabIndex = 13;
+            this.btnOwo.Text = "Registrarme";
+            this.btnOwo.UseVisualStyleBackColor = false;
+            this.btnOwo.Visible = false;
+            this.btnOwo.Click += new System.EventHandler(this.btnOwo_Click);
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(685, 626);
+            this.Controls.Add(this.btnOwo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.passCB);
             this.Controls.Add(this.txtFecha);
@@ -295,5 +316,6 @@
         private System.Windows.Forms.CheckBox passCB;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnOwo;
     }
 }

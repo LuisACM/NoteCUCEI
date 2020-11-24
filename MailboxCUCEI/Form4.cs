@@ -112,8 +112,8 @@ namespace MailboxCUCEI
         }
         void CreateResults ()
         {
-            
-                int LocalX = 0;
+            //Consolas, 9.75pt, style=Bold
+            int LocalX = 0;
                 foreach (Historias elements in ResultSearch)
                 {
                     PictureBox pbox = new PictureBox();
@@ -125,9 +125,9 @@ namespace MailboxCUCEI
                     Button lblPlateNOBAR = new Button();
                     lblPlateNOBAR.Text = elements.GetName();
                     lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
-                    lblPlateNOBAR.Font = new Font("Arial Narrow", 12);
+                    lblPlateNOBAR.Font = new Font("Consolas", 9,FontStyle.Bold);
                     lblPlateNOBAR.Size = new Size(194, 30);
-                    lblPlateNOBAR.ForeColor = Color.DodgerBlue;
+                    lblPlateNOBAR.ForeColor = Color.Black;
                     lblPlateNOBAR.Location = new Point(LocalX, 140);
                     this.toolTip1.SetToolTip(lblPlateNOBAR, elements.GetSummary());
                     lblPlateNOBAR.Click += new EventHandler(handlerComun_Click);
@@ -155,9 +155,9 @@ namespace MailboxCUCEI
                     Button lblPlateNOBAR = new Button();
                     lblPlateNOBAR.Text = elements.GetName();
                     lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
-                    lblPlateNOBAR.Font = new Font("Arial Narrow", 12);
+                    lblPlateNOBAR.Font = new Font("Consola", 9,FontStyle.Bold);
                     lblPlateNOBAR.Size = new Size(194, 30);
-                    lblPlateNOBAR.ForeColor = Color.DodgerBlue;
+                    lblPlateNOBAR.ForeColor  = Color.Black;
                     lblPlateNOBAR.Location = new Point(LocalX, 140);
                     this.toolTip1.SetToolTip(lblPlateNOBAR, elements.GetSummary());
                     lblPlateNOBAR.Click += new EventHandler(handlerComun_Click);
@@ -454,9 +454,9 @@ namespace MailboxCUCEI
                 Button lblPlateNOBAR = new Button();
                 lblPlateNOBAR.Text = elements.GetName();
                 lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
-                lblPlateNOBAR.Font = new Font("Arial Narrow", 12);
+                lblPlateNOBAR.Font = new Font("Consolas", 9,FontStyle.Bold);
                 lblPlateNOBAR.Size = new Size(194, 30);
-                lblPlateNOBAR.ForeColor = Color.DodgerBlue;
+                lblPlateNOBAR.ForeColor = Color.Black;
                 lblPlateNOBAR.Location = new Point(LocalX, 140);
                 this.toolTip1.SetToolTip(lblPlateNOBAR, elements.GetSummary());
                 lblPlateNOBAR.Click += new EventHandler(handlerComun_Click);

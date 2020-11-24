@@ -99,5 +99,11 @@ namespace MailboxCUCEI
             NewWindows.Show();
             this.Hide();
         }
+
+        private void BTNBack_Click(object sender, EventArgs e)
+        {
+            NueaVentana.Show();
+            this.Dispose();
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace MailboxCUCEI
 {
-    partial class FRMOffline
+    partial class FRMChoose
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,6 @@
             this.LBLWarning = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnborrar = new System.Windows.Forms.Button();
-            this.CBStory = new System.Windows.Forms.ComboBox();
             this.calificarlabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3.SuspendLayout();
@@ -75,7 +74,7 @@
             this.groupBox3.Size = new System.Drawing.Size(794, 222);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tus Historias";
+            this.groupBox3.Text = "Elige al menos cinco historias";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // PNResults
@@ -99,6 +98,7 @@
             this.LBLWarning.Text = "¡Aún no has descargado ninguna historia!";
             this.LBLWarning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LBLWarning.UseMnemonic = false;
+            this.LBLWarning.Visible = false;
             // 
             // button1
             // 
@@ -110,9 +110,8 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(151, 36);
             this.button1.TabIndex = 14;
-            this.button1.Text = "Volver";
+            this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnborrar
@@ -126,27 +125,8 @@
             this.btnborrar.TabIndex = 33;
             this.btnborrar.Text = "Borrar";
             this.btnborrar.UseVisualStyleBackColor = true;
+            this.btnborrar.Visible = false;
             this.btnborrar.Click += new System.EventHandler(this.btnborrar_Click);
-            // 
-            // CBStory
-            // 
-            this.CBStory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.CBStory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CBStory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CBStory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.CBStory.FormattingEnabled = true;
-            this.CBStory.ItemHeight = 20;
-            this.CBStory.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.CBStory.Location = new System.Drawing.Point(176, 25);
-            this.CBStory.Name = "CBStory";
-            this.CBStory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CBStory.Size = new System.Drawing.Size(114, 28);
-            this.CBStory.TabIndex = 32;
             // 
             // calificarlabel
             // 
@@ -155,9 +135,9 @@
             this.calificarlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.calificarlabel.Location = new System.Drawing.Point(10, 27);
             this.calificarlabel.Name = "calificarlabel";
-            this.calificarlabel.Size = new System.Drawing.Size(160, 22);
+            this.calificarlabel.Size = new System.Drawing.Size(290, 22);
             this.calificarlabel.TabIndex = 31;
-            this.calificarlabel.Text = "Borrar historia";
+            this.calificarlabel.Text = "Haz seleccionado 0 historias";
             this.calificarlabel.UseMnemonic = false;
             // 
             // panel1
@@ -165,14 +145,13 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnborrar);
-            this.panel1.Controls.Add(this.CBStory);
             this.panel1.Controls.Add(this.calificarlabel);
             this.panel1.Location = new System.Drawing.Point(0, 255);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(825, 84);
             this.panel1.TabIndex = 34;
             // 
-            // FRMOffline
+            // FRMChoose
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -184,7 +163,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FRMOffline";
+            this.Name = "FRMChoose";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MailboxCUCEI";
@@ -206,7 +185,6 @@
         private System.Windows.Forms.Panel PNResults;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnborrar;
-        private System.Windows.Forms.ComboBox CBStory;
         private System.Windows.Forms.Label calificarlabel;
         private System.Windows.Forms.Label LBLWarning;
         private System.Windows.Forms.Panel panel1;

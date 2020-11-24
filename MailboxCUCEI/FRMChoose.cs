@@ -14,9 +14,9 @@ using System.IO;
 
 namespace MailboxCUCEI
 {
-    public partial class FRMOffline : Form
+    public partial class FRMChoose : Form
     {
-        public FRMOffline()
+        public FRMChoose()
         {
             InitializeComponent();
         }
@@ -34,7 +34,7 @@ namespace MailboxCUCEI
                 Cliente.DownloadFile(new Uri(URL), Name);
             }
         }
-        
+
 
         private void BTNCerrarSesion_Click(object sender, EventArgs e)
         {
@@ -45,8 +45,8 @@ namespace MailboxCUCEI
         bool TopStoriesAlready = false;
         public bool User;
         public Usuario ActUser; //Variable de los datos del usuario
-        
-        void CreateStoryList ()
+
+        void CreateStoryList()
         {
             string query = "SELECT h.Nom_Historia,h.ID_Historia,h.Resumen,h.ID_Genero,h.Fo_Portada,h.Raiting,h.Estatus,Base.ID_Usuario,h.Seguidores,h.Favoritos,h.Vistas,u.Nombre From Usuarios_Historias AS Base INNER JOIN Usuarios AS u ON u.Codigo = Base.ID_Usuario INNER JOIN Historias AS h ON h.ID_Historia = Base.ID_Historia  ORDER BY h.Vistas DESC LIMIT 10 ";
             string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
@@ -57,57 +57,93 @@ namespace MailboxCUCEI
             lector = comando.ExecuteReader();
             while (lector.Read())
             {
-                Historias element = new Historias(lector.GetString(0), lector.GetInt32(1), lector.GetString(2), lector.GetString(3), lector.GetString(4), lector.GetString(5), lector.GetString(6), lector.GetInt32(7), lector.GetInt32(8), lector.GetInt32(8), lector.GetInt32(10),lector.GetString(11));
-                DownloadImage("https://notecucei.000webhostapp.com/"+element.GetCover(),element.GetCover());
+                Historias element = new Historias(lector.GetString(0), lector.GetInt32(1), lector.GetString(2), lector.GetString(3), lector.GetString(4), lector.GetString(5), lector.GetString(6), lector.GetInt32(7), lector.GetInt32(8), lector.GetInt32(8), lector.GetInt32(10), lector.GetString(11));
+                DownloadImage("https://notecucei.000webhostapp.com/" + element.GetCover(), element.GetCover());
                 ListStories.Add(element);
             }
             connetionBD.Close();
         }
         string ChaptersList;
+        int ID;
+        public string code;
+       
         private void Principal_Load(object sender, EventArgs e)
         {
-            if (File.Exists("DataDownload.ntf"))
+           
+            string query = "SELECT h.Nom_Historia,h.ID_Historia,h.Resumen,h.ID_Genero,h.Fo_Portada,h.Raiting,h.Estatus,Base.ID_Usuario,h.Seguidores,h.Favoritos,h.Vistas,u.Nombre From Usuarios_Historias AS Base INNER JOIN Usuarios AS u ON u.Codigo = Base.ID_Usuario INNER JOIN Historias AS h ON h.ID_Historia = Base.ID_Historia  ORDER BY h.Vistas DESC LIMIT 10 ";
+            string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
+            MySqlConnection connetionBD = new MySqlConnection(conexion);
+            MySqlCommand comando = new MySqlCommand(query, connetionBD);
+            MySqlDataReader lector;
+            connetionBD.Open();
+            lector = comando.ExecuteReader();
+            int LocalX = 0;
+            while (lector.Read())
             {
-                LBLWarning.Visible = false;
-                string line;
-                StreamReader sr = new StreamReader("DataDownload.ntf");
-                //Read the first line of text
-                line = sr.ReadLine();
-                int LocalX = 0;
-                //Continue to read until you reach end of file
-                while (line != null)
+                Historias element = new Historias(lector.GetString(0), lector.GetInt32(1), lector.GetString(2), lector.GetString(3), lector.GetString(4), lector.GetString(5), lector.GetString(6), lector.GetInt32(7), lector.GetInt32(8), lector.GetInt32(8), lector.GetInt32(10), lector.GetString(11));
+                DownloadImage("https://notecucei.000webhostapp.com/" + element.GetCover(), element.GetCover());
+                PictureBox pbox = new PictureBox();
+                pbox.Size = new Size(194, 138);
+                pbox.SizeMode = PictureBoxSizeMode.StretchImage;
+                pbox.Location = new Point(LocalX, 0);
+                pbox.Image = Image.FromFile(element.GetCover());
+                //Crear Boton
+                Button lblPlateNOBAR = new Button();
+                lblPlateNOBAR.Text = "Escoger";
+                lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
+                lblPlateNOBAR.Font = new Font("Consolas", 9, FontStyle.Bold);
+                lblPlateNOBAR.Size = new Size(194, 30);
+                lblPlateNOBAR.ForeColor = Color.Black;
+                lblPlateNOBAR.Location = new Point(LocalX, 140);
+                lblPlateNOBAR.Tag = element.GetID().ToString();
+                lblPlateNOBAR.Click += new EventHandler(Choose_Click);
+                PNResults.Controls.Add(pbox);
+                PNResults.Controls.Add(lblPlateNOBAR);
+                LocalX = LocalX + 209;
+                ListStories.Add(element);
+            }
+            connetionBD.Close();
+        }
+        int SelectedStories = 0;
+        List<String> ListChoose = new List<string>();
+        private void Choose_Click(object sender, EventArgs e)
+        {
+            if (((Button)sender).Text== "Escoger")
+            {
+                SelectedStories++;
+                calificarlabel.Text = "Haz seleccionado " + SelectedStories.ToString() + " historias.";
+                ((Button)sender).Text = "Escogido";
+                string temp = ((Button)sender).Tag.ToString();
+                ListChoose.Add(temp);
+                
+                if (SelectedStories == 5)
+                {
+                    button1.Enabled = true;
+                }
+            }
+            else
+            {
+                SelectedStories--;
+                calificarlabel.Text = "Haz seleccionado " + SelectedStories.ToString() + " historias.";
+                ((Button)sender).Text = "Escoger";
+                List<string> Temporally = new List<string>();
+                foreach (String aux in ListChoose)
                 {
                     
-                    string nombre, cover;
-                    string[] name = line.Split('?');
-                    nombre = name[0];
-                    CBStory.Items.Add(nombre);
-                    string[] aux = name[1].Split('#');
-                    cover = aux[0];
-                    //Llenar Panel
-                    PictureBox pbox = new PictureBox();
-                    pbox.Size = new Size(194, 138);
-                    pbox.SizeMode = PictureBoxSizeMode.StretchImage;
-                    pbox.Location = new Point(LocalX, 0);
-                    pbox.Image = Image.FromFile(cover);
-                    //Crear Boton
-                    Button lblPlateNOBAR = new Button();
-                    lblPlateNOBAR.Text = nombre;
-                    lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
-                    lblPlateNOBAR.Font = new Font("Consolas",9,FontStyle.Bold);
-                    lblPlateNOBAR.Size = new Size(194, 30);
-                    lblPlateNOBAR.ForeColor = Color.Black;
-                    lblPlateNOBAR.Location = new Point(LocalX, 140);
-                    lblPlateNOBAR.Click += new EventHandler(handlerComun_Click);
-                    PNResults.Controls.Add(pbox);
-                    PNResults.Controls.Add(lblPlateNOBAR);
-                    LocalX = LocalX + 209;
-                    //Finalizar
+                    if (((Button)sender).Tag.ToString()==aux)
+                    {
 
-                    line = sr.ReadLine();
+                    }
+                    else
+                    {
+                        Temporally.Add(aux);
+                    }
                 }
-                //close the file
-                sr.Close();
+                ListChoose = Temporally;
+                if (SelectedStories < 5)
+                {
+                    button1.Enabled = false;
+                }
             }
         }
         private void handlerComun_Click (object sender, EventArgs e)
@@ -233,14 +269,31 @@ namespace MailboxCUCEI
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Form regreso = new Login();
-            regreso.Show();
-            Hide();
+            DialogResult result = MessageBox.Show("¿Estas seguro de tu elección? (Esta información sera relevante para recomendarte mejores historias)","Confirmation", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
+            {
+                Random rnd = new Random();
+                foreach (String aux in ListChoose)
+                {
+                    int raiting = rnd.Next(3, 5);
+                    var trainingDataPath = Path.Combine(Environment.CurrentDirectory, "Datos", "Rating.csv");
+                    string separador= ",";
+                    StringBuilder salida = new StringBuilder();
+                    string cadena = code +","+aux+","+raiting.ToString()+",1";
+                    salida.AppendLine(string.Join(separador, cadena));
+                    File.AppendAllText(trainingDataPath, salida.ToString());
+                   
+                }
+                MessageBox.Show("Gracias, ahora pasaras a la pantalla principal para que puedas iniciar sesion");
+                Form formulario1 = new Login();
+                formulario1.Show();
+                this.Dispose();
+            }
         }
 
         private void btnborrar_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("¿Seguro que quieres borrar esta historia de tu libreria?", "Confirmation", MessageBoxButtons.YesNoCancel);
+            DialogResult result = MessageBox.Show("¿Estas seguro de tu elección? (Esta información sera util para el futuo)", "Confirmation", MessageBoxButtons.YesNoCancel);
             if (result == DialogResult.Yes)
             {
                 string line;
@@ -252,21 +305,6 @@ namespace MailboxCUCEI
                 while (line != null)
                 {
 
-                    string nombre;
-                    string[] name = line.Split('?');
-                    nombre = name[0];
-                    if (nombre == CBStory.Text)
-                    {
-
-                    }
-                    else
-                    {
-                        StreamWriter lw = new StreamWriter("Temp.ntf");
-                        lw.WriteLine(line);
-                        lw.Close();
-                    }
-                    line = sr.ReadLine();
-                    Principal_Load(sender, e);
                 }
                 //close the file
                 sr.Close();

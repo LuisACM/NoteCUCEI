@@ -207,6 +207,7 @@
             this.RTBWriteZone.Size = new System.Drawing.Size(878, 532);
             this.RTBWriteZone.TabIndex = 17;
             this.RTBWriteZone.Text = "";
+            this.RTBWriteZone.TextChanged += new System.EventHandler(this.RTBWriteZone_TextChanged);
             // 
             // txtComment
             // 
@@ -234,7 +235,7 @@
             this.BTNSendComment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BTNSendComment.Location = new System.Drawing.Point(9, 203);
             this.BTNSendComment.Name = "BTNSendComment";
-            this.BTNSendComment.Size = new System.Drawing.Size(248, 39);
+            this.BTNSendComment.Size = new System.Drawing.Size(228, 39);
             this.BTNSendComment.TabIndex = 26;
             this.BTNSendComment.Text = "Enviar";
             this.BTNSendComment.UseVisualStyleBackColor = true;
@@ -317,7 +318,7 @@
             this.calificarbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.calificarbtn.Location = new System.Drawing.Point(21, 692);
             this.calificarbtn.Name = "calificarbtn";
-            this.calificarbtn.Size = new System.Drawing.Size(231, 50);
+            this.calificarbtn.Size = new System.Drawing.Size(215, 50);
             this.calificarbtn.TabIndex = 30;
             this.calificarbtn.Text = "Calificar";
             this.calificarbtn.UseVisualStyleBackColor = true;
@@ -346,11 +347,12 @@
             this.GBRecommend.TabIndex = 32;
             this.GBRecommend.TabStop = false;
             this.GBRecommend.Text = "Te recomendamos";
+            this.GBRecommend.Enter += new System.EventHandler(this.GBRecommend_Enter);
             // 
             // PNRecommends
             // 
             this.PNRecommends.AutoScroll = true;
-            this.PNRecommends.BackColor = System.Drawing.Color.Black;
+            this.PNRecommends.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.PNRecommends.Controls.Add(this.button2);
             this.PNRecommends.Controls.Add(this.pictureBox2);
             this.PNRecommends.Controls.Add(this.pictureBox1);
@@ -442,7 +444,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1407, 788);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.flagLabel);

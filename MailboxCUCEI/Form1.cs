@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Net;
+using System.Threading;
 
 namespace MailboxCUCEI
 {
@@ -121,6 +122,7 @@ namespace MailboxCUCEI
                     MessageBox.Show("Código o contraseña erroneos");
                 }
                 conectar.Close();
+                Thread.Sleep(3000);
                 Esperar.Hide();
             }
 

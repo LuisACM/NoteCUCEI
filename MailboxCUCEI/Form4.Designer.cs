@@ -93,8 +93,8 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.PanelTopStories);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.groupBox1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.groupBox1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(275, 272);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(794, 227);
@@ -105,7 +105,7 @@
             // PanelTopStories
             // 
             this.PanelTopStories.AutoScroll = true;
-            this.PanelTopStories.BackColor = System.Drawing.Color.Black;
+            this.PanelTopStories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.PanelTopStories.Controls.Add(this.button2);
             this.PanelTopStories.Controls.Add(this.pictureBox2);
             this.PanelTopStories.Controls.Add(this.pictureBox1);
@@ -148,8 +148,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.BackColor = System.Drawing.Color.BlueViolet;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button1.Location = new System.Drawing.Point(0, 140);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(191, 28);
@@ -199,8 +200,8 @@
             this.groupBox2.Controls.Add(this.btnSB);
             this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.txtsearch);
-            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.groupBox2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.groupBox2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold);
+            this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(275, 20);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(794, 51);
@@ -210,11 +211,12 @@
             // 
             // CBSort
             // 
-            this.CBSort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.CBSort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.CBSort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CBSort.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.CBSort.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold);
+            this.CBSort.ForeColor = System.Drawing.Color.Black;
             this.CBSort.FormattingEnabled = true;
-            this.CBSort.ItemHeight = 17;
+            this.CBSort.ItemHeight = 15;
             this.CBSort.Items.AddRange(new object[] {
             "Ordenar Por",
             "Mas Recientes",
@@ -228,19 +230,20 @@
             this.CBSort.Location = new System.Drawing.Point(590, 17);
             this.CBSort.Name = "CBSort";
             this.CBSort.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CBSort.Size = new System.Drawing.Size(151, 25);
+            this.CBSort.Size = new System.Drawing.Size(151, 23);
             this.CBSort.TabIndex = 29;
-            this.CBSort.Text = "Ordenar por";
+            this.CBSort.Text = "Ordenar Por";
             this.CBSort.SelectedIndexChanged += new System.EventHandler(this.CBSort_SelectedIndexChanged);
             this.CBSort.SelectedValueChanged += new System.EventHandler(this.CBSort_SelectedValueChanged);
             // 
             // CBGender
             // 
-            this.CBGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.CBGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.CBGender.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CBGender.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.CBGender.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold);
+            this.CBGender.ForeColor = System.Drawing.Color.Black;
             this.CBGender.FormattingEnabled = true;
-            this.CBGender.ItemHeight = 17;
+            this.CBGender.ItemHeight = 15;
             this.CBGender.Items.AddRange(new object[] {
             "Aventura",
             "Romance",
@@ -257,7 +260,7 @@
             this.CBGender.Location = new System.Drawing.Point(343, 17);
             this.CBGender.Name = "CBGender";
             this.CBGender.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CBGender.Size = new System.Drawing.Size(151, 25);
+            this.CBGender.Size = new System.Drawing.Size(151, 23);
             this.CBGender.TabIndex = 14;
             this.CBGender.Text = "Generos";
             // 
@@ -289,16 +292,16 @@
             // 
             // txtsearch
             // 
-            this.txtsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.txtsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.txtsearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtsearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtsearch.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.txtsearch.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.txtsearch.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtsearch.ForeColor = System.Drawing.Color.Black;
             this.txtsearch.Location = new System.Drawing.Point(7, 17);
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtsearch.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtsearch.Size = new System.Drawing.Size(257, 26);
+            this.txtsearch.Size = new System.Drawing.Size(257, 23);
             this.txtsearch.TabIndex = 26;
             this.txtsearch.Text = "Buscar";
             this.txtsearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -308,7 +311,7 @@
             // 
             this.groupBox3.Controls.Add(this.PNResults);
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.groupBox3.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(275, 67);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(794, 205);
@@ -319,7 +322,7 @@
             // PNResults
             // 
             this.PNResults.AutoScroll = true;
-            this.PNResults.BackColor = System.Drawing.Color.Black;
+            this.PNResults.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.PNResults.Controls.Add(this.lblwarningsearch);
             this.PNResults.Location = new System.Drawing.Point(7, 23);
             this.PNResults.Name = "PNResults";

@@ -323,13 +323,13 @@
             // 
             // BTNDecreaseLetters
             // 
-            this.BTNDecreaseLetters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.BTNDecreaseLetters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BTNDecreaseLetters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNDecreaseLetters.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNDecreaseLetters.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.BTNDecreaseLetters.Location = new System.Drawing.Point(758, 39);
+            this.BTNDecreaseLetters.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.BTNDecreaseLetters.ForeColor = System.Drawing.Color.Black;
+            this.BTNDecreaseLetters.Location = new System.Drawing.Point(774, 40);
             this.BTNDecreaseLetters.Name = "BTNDecreaseLetters";
-            this.BTNDecreaseLetters.Size = new System.Drawing.Size(25, 25);
+            this.BTNDecreaseLetters.Size = new System.Drawing.Size(39, 25);
             this.BTNDecreaseLetters.TabIndex = 24;
             this.BTNDecreaseLetters.Text = "A-";
             this.BTNDecreaseLetters.UseVisualStyleBackColor = false;
@@ -337,13 +337,13 @@
             // 
             // BTNIncreaseLetters
             // 
-            this.BTNIncreaseLetters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.BTNIncreaseLetters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BTNIncreaseLetters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNIncreaseLetters.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNIncreaseLetters.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.BTNIncreaseLetters.Location = new System.Drawing.Point(727, 39);
+            this.BTNIncreaseLetters.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.BTNIncreaseLetters.ForeColor = System.Drawing.Color.Black;
+            this.BTNIncreaseLetters.Location = new System.Drawing.Point(727, 40);
             this.BTNIncreaseLetters.Name = "BTNIncreaseLetters";
-            this.BTNIncreaseLetters.Size = new System.Drawing.Size(25, 25);
+            this.BTNIncreaseLetters.Size = new System.Drawing.Size(41, 25);
             this.BTNIncreaseLetters.TabIndex = 23;
             this.BTNIncreaseLetters.Text = "A+";
             this.BTNIncreaseLetters.UseVisualStyleBackColor = false;
@@ -351,9 +351,10 @@
             // 
             // BTNItalic
             // 
-            this.BTNItalic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.BTNItalic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BTNItalic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNItalic.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.BTNItalic.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.BTNItalic.ForeColor = System.Drawing.Color.Black;
             this.BTNItalic.Location = new System.Drawing.Point(696, 39);
             this.BTNItalic.Name = "BTNItalic";
             this.BTNItalic.Size = new System.Drawing.Size(25, 25);
@@ -364,9 +365,10 @@
             // 
             // BTNNegritas
             // 
-            this.BTNNegritas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.BTNNegritas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BTNNegritas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNNegritas.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.BTNNegritas.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNNegritas.ForeColor = System.Drawing.Color.Black;
             this.BTNNegritas.Location = new System.Drawing.Point(665, 39);
             this.BTNNegritas.Name = "BTNNegritas";
             this.BTNNegritas.Size = new System.Drawing.Size(25, 25);
@@ -377,22 +379,24 @@
             // 
             // BTNUnderline
             // 
-            this.BTNUnderline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.BTNUnderline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BTNUnderline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNUnderline.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.BTNUnderline.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNUnderline.ForeColor = System.Drawing.Color.Black;
             this.BTNUnderline.Location = new System.Drawing.Point(634, 39);
             this.BTNUnderline.Name = "BTNUnderline";
             this.BTNUnderline.Size = new System.Drawing.Size(25, 25);
             this.BTNUnderline.TabIndex = 20;
             this.BTNUnderline.Text = "U";
+            this.BTNUnderline.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BTNUnderline.UseVisualStyleBackColor = false;
             this.BTNUnderline.Click += new System.EventHandler(this.BTNUnderlineClick);
             // 
             // BTNAlignCenter
             // 
-            this.BTNAlignCenter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.BTNAlignCenter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BTNAlignCenter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNAlignCenter.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.BTNAlignCenter.ForeColor = System.Drawing.Color.Black;
             this.BTNAlignCenter.Image = ((System.Drawing.Image)(resources.GetObject("BTNAlignCenter.Image")));
             this.BTNAlignCenter.Location = new System.Drawing.Point(572, 39);
             this.BTNAlignCenter.Name = "BTNAlignCenter";
@@ -403,9 +407,9 @@
             // 
             // BTNAlignRight
             // 
-            this.BTNAlignRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.BTNAlignRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BTNAlignRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNAlignRight.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.BTNAlignRight.ForeColor = System.Drawing.Color.Black;
             this.BTNAlignRight.Image = ((System.Drawing.Image)(resources.GetObject("BTNAlignRight.Image")));
             this.BTNAlignRight.Location = new System.Drawing.Point(603, 39);
             this.BTNAlignRight.Name = "BTNAlignRight";
@@ -416,9 +420,9 @@
             // 
             // BTNAlignLeft
             // 
-            this.BTNAlignLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.BTNAlignLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BTNAlignLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNAlignLeft.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.BTNAlignLeft.ForeColor = System.Drawing.Color.Black;
             this.BTNAlignLeft.Image = ((System.Drawing.Image)(resources.GetObject("BTNAlignLeft.Image")));
             this.BTNAlignLeft.Location = new System.Drawing.Point(541, 39);
             this.BTNAlignLeft.Name = "BTNAlignLeft";

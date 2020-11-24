@@ -142,6 +142,11 @@ namespace MailboxCUCEI
                     TxtPasswordRegistro.UseSystemPasswordChar = false;
                     TxtCodigoRegistro.Text = "Código";
                     TxtCorreo.Text = "Correo";
+                    MessageBox.Show("Te has registrado exitosamente");
+                    FRMChoose vent = new FRMChoose();
+                    vent.Show();
+                    vent.code = TxtCodigoRegistro.Text;
+                    this.Hide();
                 }
                
             }
@@ -180,6 +185,14 @@ namespace MailboxCUCEI
             {
                 TxtPasswordRegistro.PasswordChar = '*';
             }
+        }
+
+        private void btnOwo_Click(object sender, EventArgs e)
+        {
+            FRMChoose vent = new FRMChoose();
+            vent.Show();
+            vent.code = TxtCodigoRegistro.Text;
+            this.Hide();
         }
     }
 }

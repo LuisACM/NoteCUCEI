@@ -73,6 +73,7 @@
             this.BTNBack.TabIndex = 14;
             this.BTNBack.Text = "Volver";
             this.BTNBack.UseVisualStyleBackColor = true;
+            this.BTNBack.Click += new System.EventHandler(this.BTNBack_Click);
             // 
             // BTNOk
             // 

@@ -227,9 +227,9 @@ namespace MailboxCUCEI
                 lblPlateNOBAR.Tag = temp.GetID();
                 lblPlateNOBAR.Text = temp.GetName();
                 lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
-                lblPlateNOBAR.Font = new Font("Arial Narrow", 12);
+                lblPlateNOBAR.Font = new Font("Consolas", 9,FontStyle.Bold);
                 lblPlateNOBAR.Size = new Size(464, 28);
-                lblPlateNOBAR.ForeColor = Color.DodgerBlue;
+                lblPlateNOBAR.ForeColor = Color.Black;
                 lblPlateNOBAR.Location = new Point(0, LocalX);
                 lblPlateNOBAR.Click += new EventHandler(NewhandlerComun_Click);
                 panel1.Controls.Add(lblPlateNOBAR);
@@ -442,9 +442,9 @@ namespace MailboxCUCEI
                     Button lblPlateNOBAR = new Button();
                     lblPlateNOBAR.Text = elements.GetName();
                     lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
-                    lblPlateNOBAR.Font = new Font("Arial Narrow", 12);
+                    lblPlateNOBAR.Font = new Font("Consolas", 9,FontStyle.Bold);
                     lblPlateNOBAR.Size = new Size(194, 30);
-                    lblPlateNOBAR.ForeColor = Color.DodgerBlue;
+                    lblPlateNOBAR.ForeColor = Color.Black;
                     lblPlateNOBAR.Location = new Point(LocalX, 140);
                     lblPlateNOBAR.Click += new EventHandler(handlerComun_Click);
                     PNResults.Controls.Add(pbox);
@@ -518,9 +518,9 @@ namespace MailboxCUCEI
                 lblPlateNOBAR.Tag =elements.GetID();
                 lblPlateNOBAR.Text = elements.GetName();
                 lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
-                lblPlateNOBAR.Font = new Font("Arial Narrow", 12);
+                lblPlateNOBAR.Font = new Font("Consolas", 9, FontStyle.Bold);
                 lblPlateNOBAR.Size = new Size(194, 30);
-                lblPlateNOBAR.ForeColor = Color.DodgerBlue;
+                lblPlateNOBAR.ForeColor = Color.Black;
                 lblPlateNOBAR.Location = new Point(LocalX, 140);
                 lblPlateNOBAR.Click += new EventHandler(NewhandlerComunEX_Click);
                 PNFavs.Controls.Add(pbox);
@@ -549,9 +549,9 @@ namespace MailboxCUCEI
                 lblPlateNOBAR.Tag = elements.GetID();
                 lblPlateNOBAR.Text = elements.GetName();
                 lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
-                lblPlateNOBAR.Font = new Font("Arial Narrow", 12);
+                lblPlateNOBAR.Font = new Font("Consolas", 9,FontStyle.Bold);
                 lblPlateNOBAR.Size = new Size(194, 30);
-                lblPlateNOBAR.ForeColor = Color.DodgerBlue;
+                lblPlateNOBAR.ForeColor = Color.Black;
                 lblPlateNOBAR.Location = new Point(LocalX, 140);
                 lblPlateNOBAR.Click += new EventHandler(NewhandlerComunEX_Click);
                 PNFollows.Controls.Add(pbox);
@@ -662,14 +662,14 @@ namespace MailboxCUCEI
                 lblPlateNOBAR.BorderStyle = BorderStyle.FixedSingle;
                 if (lector.GetInt32(2)== 0)
                 {
-                    lblPlateNOBAR.Font = new Font("Arial Narrow", 10,FontStyle.Regular);
+                    lblPlateNOBAR.Font = new Font("Consolas", 9,FontStyle.Regular);
                 }
                 else
                 {
-                    lblPlateNOBAR.Font = new Font("Arial Narrow", 10, FontStyle.Bold);
+                    lblPlateNOBAR.Font = new Font("Consolas", 9, FontStyle.Bold);
                 }
                 lblPlateNOBAR.Size = new Size(749, 45);
-                lblPlateNOBAR.ForeColor = Color.DodgerBlue;
+                lblPlateNOBAR.ForeColor = Color.Black;
                 lblPlateNOBAR.MouseHover += new EventHandler(handlerComun_MouseHover);
                 lblPlateNOBAR.Location = new Point(4,LocalX);
                 LocalX = LocalX + 50;
