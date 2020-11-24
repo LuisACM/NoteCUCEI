@@ -37,11 +37,11 @@
             // LBLQuest
             // 
             this.LBLQuest.AutoSize = true;
-            this.LBLQuest.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLQuest.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.LBLQuest.Location = new System.Drawing.Point(45, 9);
+            this.LBLQuest.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLQuest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.LBLQuest.Location = new System.Drawing.Point(12, 9);
             this.LBLQuest.Name = "LBLQuest";
-            this.LBLQuest.Size = new System.Drawing.Size(144, 20);
+            this.LBLQuest.Size = new System.Drawing.Size(238, 24);
             this.LBLQuest.TabIndex = 7;
             this.LBLQuest.Text = "Por favor espere...";
             this.LBLQuest.Click += new System.EventHandler(this.Label1Click);
@@ -51,7 +51,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(38, 43);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(175, 120);
+            this.pictureBox1.Size = new System.Drawing.Size(203, 153);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -61,8 +61,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(249, 175);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(266, 208);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LBLQuest);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

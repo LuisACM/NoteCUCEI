@@ -42,6 +42,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.DateTimePicker();
             this.passCB = new System.Windows.Forms.CheckBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -50,7 +54,7 @@
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label2.Location = new System.Drawing.Point(185, 76);
+            this.label2.Location = new System.Drawing.Point(134, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(433, 2);
             this.label2.TabIndex = 3;
@@ -62,7 +66,7 @@
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label1.Location = new System.Drawing.Point(185, 147);
+            this.label1.Location = new System.Drawing.Point(134, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(433, 2);
             this.label1.TabIndex = 4;
@@ -74,7 +78,7 @@
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label3.Location = new System.Drawing.Point(185, 220);
+            this.label3.Location = new System.Drawing.Point(134, 195);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(433, 2);
             this.label3.TabIndex = 5;
@@ -86,7 +90,7 @@
             this.label4.BackColor = System.Drawing.Color.Black;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label4.Location = new System.Drawing.Point(185, 298);
+            this.label4.Location = new System.Drawing.Point(134, 273);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(433, 2);
             this.label4.TabIndex = 6;
@@ -96,13 +100,13 @@
             // 
             this.TxtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.TxtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNombre.ForeColor = System.Drawing.Color.Black;
-            this.TxtNombre.Location = new System.Drawing.Point(185, 53);
+            this.TxtNombre.Location = new System.Drawing.Point(134, 28);
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(433, 19);
+            this.TxtNombre.Size = new System.Drawing.Size(433, 23);
             this.TxtNombre.TabIndex = 4;
-            this.TxtNombre.Text = "NOMBRE";
+            this.TxtNombre.Text = "Nombre";
             this.TxtNombre.Enter += new System.EventHandler(this.TxtNombre_Enter);
             this.TxtNombre.Leave += new System.EventHandler(this.TxtNombre_Leave);
             // 
@@ -110,13 +114,13 @@
             // 
             this.TxtPasswordRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.TxtPasswordRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtPasswordRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPasswordRegistro.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPasswordRegistro.ForeColor = System.Drawing.Color.Black;
-            this.TxtPasswordRegistro.Location = new System.Drawing.Point(185, 124);
+            this.TxtPasswordRegistro.Location = new System.Drawing.Point(134, 99);
             this.TxtPasswordRegistro.Name = "TxtPasswordRegistro";
-            this.TxtPasswordRegistro.Size = new System.Drawing.Size(433, 19);
+            this.TxtPasswordRegistro.Size = new System.Drawing.Size(433, 23);
             this.TxtPasswordRegistro.TabIndex = 3;
-            this.TxtPasswordRegistro.Text = "CONTRASEÑA";
+            this.TxtPasswordRegistro.Text = "Contraseña";
             this.TxtPasswordRegistro.Enter += new System.EventHandler(this.TxtPasswordRegistro_Enter);
             this.TxtPasswordRegistro.Leave += new System.EventHandler(this.TxtPasswordRegistro_Leave);
             // 
@@ -124,13 +128,13 @@
             // 
             this.TxtCodigoRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.TxtCodigoRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtCodigoRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCodigoRegistro.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCodigoRegistro.ForeColor = System.Drawing.Color.Black;
-            this.TxtCodigoRegistro.Location = new System.Drawing.Point(186, 197);
+            this.TxtCodigoRegistro.Location = new System.Drawing.Point(135, 172);
             this.TxtCodigoRegistro.Name = "TxtCodigoRegistro";
-            this.TxtCodigoRegistro.Size = new System.Drawing.Size(433, 19);
+            this.TxtCodigoRegistro.Size = new System.Drawing.Size(433, 23);
             this.TxtCodigoRegistro.TabIndex = 2;
-            this.TxtCodigoRegistro.Text = "CODIGO";
+            this.TxtCodigoRegistro.Text = "Código";
             this.TxtCodigoRegistro.Enter += new System.EventHandler(this.TxtCodigoRegistro_Enter);
             this.TxtCodigoRegistro.Leave += new System.EventHandler(this.TxtCodigoRegistro_Leave);
             // 
@@ -138,85 +142,116 @@
             // 
             this.TxtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.TxtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCorreo.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCorreo.ForeColor = System.Drawing.Color.Black;
-            this.TxtCorreo.Location = new System.Drawing.Point(186, 275);
+            this.TxtCorreo.Location = new System.Drawing.Point(135, 250);
             this.TxtCorreo.Name = "TxtCorreo";
-            this.TxtCorreo.Size = new System.Drawing.Size(433, 19);
+            this.TxtCorreo.Size = new System.Drawing.Size(433, 23);
             this.TxtCorreo.TabIndex = 1;
-            this.TxtCorreo.Text = "CORREO";
+            this.TxtCorreo.Text = "Correo";
             this.TxtCorreo.Enter += new System.EventHandler(this.TxtCorreo_Enter);
             this.TxtCorreo.Leave += new System.EventHandler(this.TxtCorreo_Leave);
             // 
             // BTNRegistro
             // 
             this.BTNRegistro.BackColor = System.Drawing.Color.SaddleBrown;
+            this.BTNRegistro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNRegistro.FlatAppearance.BorderSize = 0;
             this.BTNRegistro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.BTNRegistro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNRegistro.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNRegistro.ForeColor = System.Drawing.Color.Black;
-            this.BTNRegistro.Location = new System.Drawing.Point(411, 569);
+            this.BTNRegistro.Location = new System.Drawing.Point(393, 581);
             this.BTNRegistro.Name = "BTNRegistro";
-            this.BTNRegistro.Size = new System.Drawing.Size(343, 27);
+            this.BTNRegistro.Size = new System.Drawing.Size(213, 38);
             this.BTNRegistro.TabIndex = 0;
-            this.BTNRegistro.Text = "OK";
+            this.BTNRegistro.Text = "Registrarme";
             this.BTNRegistro.UseVisualStyleBackColor = false;
             this.BTNRegistro.Click += new System.EventHandler(this.BTNRegistro_Click);
             // 
             // BTNRegresar
             // 
             this.BTNRegresar.BackColor = System.Drawing.Color.SaddleBrown;
+            this.BTNRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNRegresar.FlatAppearance.BorderSize = 0;
             this.BTNRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.BTNRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNRegresar.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNRegresar.ForeColor = System.Drawing.Color.Black;
-            this.BTNRegresar.Location = new System.Drawing.Point(28, 569);
+            this.BTNRegresar.Location = new System.Drawing.Point(134, 581);
             this.BTNRegresar.Name = "BTNRegresar";
-            this.BTNRegresar.Size = new System.Drawing.Size(343, 27);
+            this.BTNRegresar.Size = new System.Drawing.Size(214, 38);
             this.BTNRegresar.TabIndex = 7;
-            this.BTNRegresar.Text = "CANCELAR";
+            this.BTNRegresar.Text = "Cancelar";
             this.BTNRegresar.UseVisualStyleBackColor = false;
             this.BTNRegresar.Click += new System.EventHandler(this.BTNRegresar_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(181, 359);
+            this.label5.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(130, 334);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(157, 20);
+            this.label5.Size = new System.Drawing.Size(200, 22);
             this.label5.TabIndex = 9;
             this.label5.Text = "Fecha de nacimiento";
             // 
             // txtFecha
             // 
+            this.txtFecha.CalendarFont = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFecha.CalendarMonthBackground = System.Drawing.Color.Transparent;
+            this.txtFecha.CalendarTitleBackColor = System.Drawing.Color.Transparent;
+            this.txtFecha.CalendarTitleForeColor = System.Drawing.Color.Transparent;
+            this.txtFecha.CalendarTrailingForeColor = System.Drawing.Color.Maroon;
+            this.txtFecha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtFecha.CustomFormat = "yyyy-MM-dd";
+            this.txtFecha.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txtFecha.Location = new System.Drawing.Point(444, 360);
+            this.txtFecha.Location = new System.Drawing.Point(353, 335);
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(121, 20);
+            this.txtFecha.Size = new System.Drawing.Size(215, 25);
             this.txtFecha.TabIndex = 10;
             // 
             // passCB
             // 
             this.passCB.AutoSize = true;
-            this.passCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passCB.Location = new System.Drawing.Point(649, 127);
+            this.passCB.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passCB.Location = new System.Drawing.Point(598, 102);
             this.passCB.Name = "passCB";
-            this.passCB.Size = new System.Drawing.Size(52, 22);
+            this.passCB.Size = new System.Drawing.Size(59, 26);
             this.passCB.TabIndex = 11;
             this.passCB.Text = "Ver";
             this.passCB.UseVisualStyleBackColor = true;
             this.passCB.CheckedChanged += new System.EventHandler(this.passCB_CheckedChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(116, 625);
+            this.panel1.TabIndex = 12;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(13, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 131);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(793, 626);
+            this.ClientSize = new System.Drawing.Size(685, 626);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.passCB);
             this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.label5);
@@ -236,6 +271,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
             this.Load += new System.EventHandler(this.Registro_Load);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +293,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker txtFecha;
         private System.Windows.Forms.CheckBox passCB;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -20,7 +20,7 @@ namespace MailboxCUCEI
 
         private void TxtNombre_Enter(object sender, EventArgs e)
         {
-            if(TxtNombre.Text=="NOMBRE")
+            if(TxtNombre.Text=="Nombre")
             {
                 TxtNombre.Text = "";
                 TxtNombre.ForeColor = Color.Black;
@@ -32,14 +32,14 @@ namespace MailboxCUCEI
         {
             if(TxtNombre.Text=="")
             {
-                TxtNombre.Text = "NOMBRE";
+                TxtNombre.Text = "Nombre";
                 TxtNombre.ForeColor = Color.Black;
             }
         }
 
         private void TxtPasswordRegistro_Enter(object sender, EventArgs e)
         {
-            if (TxtPasswordRegistro.Text == "CONTRASEÑA")
+            if (TxtPasswordRegistro.Text == "Contraseña")
             {
                 TxtPasswordRegistro.Text = "";
                 TxtPasswordRegistro.ForeColor = Color.Black;
@@ -51,7 +51,7 @@ namespace MailboxCUCEI
         {
             if (TxtPasswordRegistro.Text == "")
             {
-                TxtPasswordRegistro.Text = "CONTRASEÑA";
+                TxtPasswordRegistro.Text = "Contraseña";
                 TxtPasswordRegistro.ForeColor = Color.Black;
                 TxtPasswordRegistro.PasswordChar = '*';
             }
@@ -59,7 +59,7 @@ namespace MailboxCUCEI
 
         private void TxtCodigoRegistro_Enter(object sender, EventArgs e)
         {
-            if (TxtCodigoRegistro.Text == "CODIGO")
+            if (TxtCodigoRegistro.Text == "Código")
             {
                 TxtCodigoRegistro.Text = "";
                 TxtCodigoRegistro.ForeColor = Color.Black;
@@ -70,14 +70,14 @@ namespace MailboxCUCEI
         {
             if (TxtCodigoRegistro.Text == "")
             {
-                TxtCodigoRegistro.Text = "CODIGO";
+                TxtCodigoRegistro.Text = "Código";
                 TxtCodigoRegistro.ForeColor = Color.Black;
             }
         }
 
         private void TxtCorreo_Enter(object sender, EventArgs e)
         {
-            if (TxtCorreo.Text == "CORREO")
+            if (TxtCorreo.Text == "Correo")
             {
                 TxtCorreo.Text = "";
                 TxtCorreo.ForeColor = Color.Black;
@@ -88,7 +88,7 @@ namespace MailboxCUCEI
         {
             if (TxtCorreo.Text == "")
             {
-                TxtCorreo.Text = "CORREO";
+                TxtCorreo.Text = "Correo";
                 TxtCorreo.ForeColor = Color.Black;
             }
         }
@@ -102,19 +102,19 @@ namespace MailboxCUCEI
 
         private void BTNRegistro_Click(object sender, EventArgs e)
         {
-            if(TxtNombre.Text=="NOMBRE" || TxtNombre.Text=="")
+            if(TxtNombre.Text=="Nombre" || TxtNombre.Text=="")
             {
                 MessageBox.Show("Porfavor introduzca su nombre");
             }
-            else if (TxtPasswordRegistro.Text == "CONTRASEÑA" || TxtPasswordRegistro.Text=="")
+            else if (TxtPasswordRegistro.Text == "Contraseña" || TxtPasswordRegistro.Text=="")
             {
                 MessageBox.Show("Porfavor introduzca su contraseña");
             }
-            else if (TxtCodigoRegistro.Text == "CODIGO" || TxtCodigoRegistro.Text=="")
+            else if (TxtCodigoRegistro.Text == "Código" || TxtCodigoRegistro.Text=="")
             {
                 MessageBox.Show("Porfavor introduzca su codigo");
             }
-            else if (TxtCorreo.Text == "CORREO" || TxtCorreo.Text=="")
+            else if (TxtCorreo.Text == "Correo" || TxtCorreo.Text=="")
             {
                 MessageBox.Show("Porfavor introduzca su correo");
             }
@@ -137,11 +137,11 @@ namespace MailboxCUCEI
                     comando.ExecuteNonQuery();
                     conectar.Close();
                     MessageBox.Show("Usuario creado con exito");
-                    TxtNombre.Text = "NOMBRE";
-                    TxtPasswordRegistro.Text = "CONTRASEÑA";
+                    TxtNombre.Text = "Nombre";
+                    TxtPasswordRegistro.Text = "Contraseña";
                     TxtPasswordRegistro.UseSystemPasswordChar = false;
-                    TxtCodigoRegistro.Text = "CODIGO";
-                    TxtCorreo.Text = "CORREO";
+                    TxtCodigoRegistro.Text = "Código";
+                    TxtCorreo.Text = "Correo";
                 }
                
             }

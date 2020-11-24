@@ -90,6 +90,8 @@
             this.lblwarningHurra = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.verCB = new System.Windows.Forms.CheckBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.FotoPerfil)).BeginInit();
             this.GBStories.SuspendLayout();
             this.GBDetails.SuspendLayout();
@@ -104,6 +106,8 @@
             this.PNFavs.SuspendLayout();
             this.GBNotify.SuspendLayout();
             this.PNNotify.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // FechaNac
@@ -262,11 +266,13 @@
             // 
             // BTNSalir
             // 
+            this.BTNSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNSalir.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.BTNSalir.Location = new System.Drawing.Point(12, 322);
+            this.BTNSalir.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNSalir.Location = new System.Drawing.Point(12, 682);
             this.BTNSalir.Name = "BTNSalir";
-            this.BTNSalir.Size = new System.Drawing.Size(131, 50);
+            this.BTNSalir.Size = new System.Drawing.Size(163, 50);
             this.BTNSalir.TabIndex = 44;
             this.BTNSalir.Text = "Salir";
             this.BTNSalir.UseVisualStyleBackColor = true;
@@ -286,11 +292,13 @@
             // 
             // BTNEliminar
             // 
+            this.BTNEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNEliminar.ForeColor = System.Drawing.Color.Red;
-            this.BTNEliminar.Location = new System.Drawing.Point(12, 262);
+            this.BTNEliminar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNEliminar.ForeColor = System.Drawing.Color.OrangeRed;
+            this.BTNEliminar.Location = new System.Drawing.Point(12, 470);
             this.BTNEliminar.Name = "BTNEliminar";
-            this.BTNEliminar.Size = new System.Drawing.Size(131, 50);
+            this.BTNEliminar.Size = new System.Drawing.Size(163, 50);
             this.BTNEliminar.TabIndex = 42;
             this.BTNEliminar.Text = "Eliminar mi cuenta";
             this.BTNEliminar.UseVisualStyleBackColor = true;
@@ -648,11 +656,13 @@
             // 
             // BTNMyInfo
             // 
+            this.BTNMyInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNMyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNMyInfo.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.BTNMyInfo.Location = new System.Drawing.Point(12, 22);
+            this.BTNMyInfo.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNMyInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNMyInfo.Location = new System.Drawing.Point(12, 230);
             this.BTNMyInfo.Name = "BTNMyInfo";
-            this.BTNMyInfo.Size = new System.Drawing.Size(131, 45);
+            this.BTNMyInfo.Size = new System.Drawing.Size(163, 45);
             this.BTNMyInfo.TabIndex = 64;
             this.BTNMyInfo.Text = "Mi Información";
             this.BTNMyInfo.UseVisualStyleBackColor = true;
@@ -660,11 +670,13 @@
             // 
             // BTNMyStories
             // 
+            this.BTNMyStories.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNMyStories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNMyStories.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.BTNMyStories.Location = new System.Drawing.Point(12, 82);
+            this.BTNMyStories.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNMyStories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNMyStories.Location = new System.Drawing.Point(12, 290);
             this.BTNMyStories.Name = "BTNMyStories";
-            this.BTNMyStories.Size = new System.Drawing.Size(131, 45);
+            this.BTNMyStories.Size = new System.Drawing.Size(163, 45);
             this.BTNMyStories.TabIndex = 63;
             this.BTNMyStories.Text = "Mis Historias";
             this.BTNMyStories.UseVisualStyleBackColor = true;
@@ -709,11 +721,13 @@
             // 
             // BTNFF
             // 
+            this.BTNFF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNFF.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.BTNFF.Location = new System.Drawing.Point(12, 142);
+            this.BTNFF.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNFF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNFF.Location = new System.Drawing.Point(12, 350);
             this.BTNFF.Name = "BTNFF";
-            this.BTNFF.Size = new System.Drawing.Size(131, 45);
+            this.BTNFF.Size = new System.Drawing.Size(163, 45);
             this.BTNFF.TabIndex = 68;
             this.BTNFF.Text = "Follows y Favs";
             this.BTNFF.UseVisualStyleBackColor = true;
@@ -721,11 +735,13 @@
             // 
             // BTNNot
             // 
+            this.BTNNot.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNNot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNNot.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.BTNNot.Location = new System.Drawing.Point(12, 202);
+            this.BTNNot.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNNot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNNot.Location = new System.Drawing.Point(12, 410);
             this.BTNNot.Name = "BTNNot";
-            this.BTNNot.Size = new System.Drawing.Size(131, 45);
+            this.BTNNot.Size = new System.Drawing.Size(163, 45);
             this.BTNNot.TabIndex = 69;
             this.BTNNot.Text = "Notificaciones";
             this.BTNNot.UseVisualStyleBackColor = true;
@@ -887,19 +903,41 @@
             this.verCB.UseVisualStyleBackColor = true;
             this.verCB.CheckedChanged += new System.EventHandler(this.verCB_CheckedChanged);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.BTNMyInfo);
+            this.panel2.Controls.Add(this.BTNEliminar);
+            this.panel2.Controls.Add(this.BTNSalir);
+            this.panel2.Controls.Add(this.BTNMyStories);
+            this.panel2.Controls.Add(this.BTNNot);
+            this.panel2.Controls.Add(this.BTNFF);
+            this.panel2.Location = new System.Drawing.Point(0, -4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(195, 757);
+            this.panel2.TabIndex = 72;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(28, 29);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(131, 170);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 70;
+            this.pictureBox1.TabStop = false;
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(1060, 755);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(1316, 755);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.GBFv);
             this.Controls.Add(this.GBStories);
             this.Controls.Add(this.GBNotify);
-            this.Controls.Add(this.BTNNot);
-            this.Controls.Add(this.BTNFF);
-            this.Controls.Add(this.BTNMyInfo);
-            this.Controls.Add(this.BTNMyStories);
             this.Controls.Add(this.BTNFotoPerfil);
             this.Controls.Add(this.FotoPerfil);
             this.Controls.Add(this.FechaNac);
@@ -916,9 +954,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.BTNSalir);
             this.Controls.Add(this.BTNModificar);
-            this.Controls.Add(this.BTNEliminar);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.RBYes);
             this.Controls.Add(this.RBNo);
@@ -944,6 +980,8 @@
             this.PNFavs.ResumeLayout(false);
             this.GBNotify.ResumeLayout(false);
             this.PNNotify.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1012,5 +1050,7 @@
         private System.Windows.Forms.Label lblwarningchapters;
         private System.Windows.Forms.Label lblWarningMyStory;
         private System.Windows.Forms.CheckBox verCB;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

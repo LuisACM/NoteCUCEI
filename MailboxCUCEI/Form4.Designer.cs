@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.BTNCerrarSesion = new System.Windows.Forms.Button();
             this.BTNEscribir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -50,6 +51,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.PNResults = new System.Windows.Forms.Panel();
             this.lblwarningsearch = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.PanelTopStories.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -57,16 +60,18 @@
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.PNResults.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // BTNCerrarSesion
             // 
             this.BTNCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNCerrarSesion.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.BTNCerrarSesion.Location = new System.Drawing.Point(12, 427);
+            this.BTNCerrarSesion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNCerrarSesion.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BTNCerrarSesion.Location = new System.Drawing.Point(10, 435);
             this.BTNCerrarSesion.Name = "BTNCerrarSesion";
-            this.BTNCerrarSesion.Size = new System.Drawing.Size(129, 41);
+            this.BTNCerrarSesion.Size = new System.Drawing.Size(190, 41);
             this.BTNCerrarSesion.TabIndex = 1;
             this.BTNCerrarSesion.Text = "Cerrar Sesión";
             this.BTNCerrarSesion.UseVisualStyleBackColor = true;
@@ -75,11 +80,11 @@
             // BTNEscribir
             // 
             this.BTNEscribir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNEscribir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNEscribir.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.BTNEscribir.Location = new System.Drawing.Point(12, 33);
+            this.BTNEscribir.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNEscribir.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BTNEscribir.Location = new System.Drawing.Point(10, 204);
             this.BTNEscribir.Name = "BTNEscribir";
-            this.BTNEscribir.Size = new System.Drawing.Size(129, 41);
+            this.BTNEscribir.Size = new System.Drawing.Size(190, 41);
             this.BTNEscribir.TabIndex = 3;
             this.BTNEscribir.Text = "Escribe tu historia";
             this.BTNEscribir.UseVisualStyleBackColor = true;
@@ -90,7 +95,7 @@
             this.groupBox1.Controls.Add(this.PanelTopStories);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.groupBox1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox1.Location = new System.Drawing.Point(221, 277);
+            this.groupBox1.Location = new System.Drawing.Point(275, 272);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(794, 227);
             this.groupBox1.TabIndex = 8;
@@ -157,7 +162,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 491);
+            this.label1.Location = new System.Drawing.Point(1075, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 9;
@@ -167,11 +172,11 @@
             // BtnPerfil
             // 
             this.BtnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPerfil.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPerfil.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.BtnPerfil.Location = new System.Drawing.Point(12, 95);
+            this.BtnPerfil.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPerfil.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BtnPerfil.Location = new System.Drawing.Point(10, 266);
             this.BtnPerfil.Name = "BtnPerfil";
-            this.BtnPerfil.Size = new System.Drawing.Size(129, 41);
+            this.BtnPerfil.Size = new System.Drawing.Size(190, 41);
             this.BtnPerfil.TabIndex = 10;
             this.BtnPerfil.Text = "Mi Perfil";
             this.BtnPerfil.UseVisualStyleBackColor = true;
@@ -180,7 +185,7 @@
             // manduser
             // 
             this.manduser.AutoSize = true;
-            this.manduser.Location = new System.Drawing.Point(0, 471);
+            this.manduser.Location = new System.Drawing.Point(1075, 0);
             this.manduser.Name = "manduser";
             this.manduser.Size = new System.Drawing.Size(35, 13);
             this.manduser.TabIndex = 11;
@@ -196,7 +201,7 @@
             this.groupBox2.Controls.Add(this.txtsearch);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.groupBox2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox2.Location = new System.Drawing.Point(221, 25);
+            this.groupBox2.Location = new System.Drawing.Point(275, 20);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(794, 51);
             this.groupBox2.TabIndex = 12;
@@ -258,9 +263,9 @@
             // 
             // btnSB
             // 
-            this.btnSB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSB.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSB.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnSB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSB.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSB.ForeColor = System.Drawing.Color.Black;
             this.btnSB.Location = new System.Drawing.Point(500, 17);
             this.btnSB.Name = "btnSB";
             this.btnSB.Size = new System.Drawing.Size(67, 26);
@@ -271,9 +276,9 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.Black;
             this.btnSearch.Location = new System.Drawing.Point(270, 17);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(67, 26);
@@ -304,7 +309,7 @@
             this.groupBox3.Controls.Add(this.PNResults);
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.groupBox3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox3.Location = new System.Drawing.Point(221, 72);
+            this.groupBox3.Location = new System.Drawing.Point(275, 67);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(794, 205);
             this.groupBox3.TabIndex = 13;
@@ -334,23 +339,42 @@
             this.lblwarningsearch.UseMnemonic = false;
             this.lblwarningsearch.Visible = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.BTNCerrarSesion);
+            this.panel1.Controls.Add(this.BTNEscribir);
+            this.panel1.Controls.Add(this.BtnPerfil);
+            this.panel1.Location = new System.Drawing.Point(2, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(214, 535);
+            this.panel1.TabIndex = 14;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(28, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(151, 180);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(1037, 516);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(1114, 535);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.manduser);
-            this.Controls.Add(this.BtnPerfil);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.BTNEscribir);
-            this.Controls.Add(this.BTNCerrarSesion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Principal";
-            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MailboxCUCEI";
             this.Load += new System.EventHandler(this.Principal_Load);
@@ -362,6 +386,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.PNResults.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,5 +415,7 @@
         private System.Windows.Forms.ComboBox CBGender;
         public System.Windows.Forms.Button BtnPerfil;
         private System.Windows.Forms.Label lblwarningsearch;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

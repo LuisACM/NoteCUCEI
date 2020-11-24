@@ -42,8 +42,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.BTNINVITADO = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTNCerrar)).BeginInit();
@@ -98,13 +98,13 @@
             // 
             this.TxtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUsuario.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUsuario.ForeColor = System.Drawing.Color.Black;
             this.TxtUsuario.Location = new System.Drawing.Point(299, 75);
             this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(433, 20);
+            this.TxtUsuario.Size = new System.Drawing.Size(433, 23);
             this.TxtUsuario.TabIndex = 1;
-            this.TxtUsuario.Text = "CODIGO";
+            this.TxtUsuario.Text = "Código";
             this.TxtUsuario.Enter += new System.EventHandler(this.TxtUsuario_Enter);
             this.TxtUsuario.Leave += new System.EventHandler(this.TxtUsuario_Leave);
             // 
@@ -112,13 +112,13 @@
             // 
             this.TxtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPassword.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPassword.ForeColor = System.Drawing.Color.Black;
             this.TxtPassword.Location = new System.Drawing.Point(299, 122);
             this.TxtPassword.Name = "TxtPassword";
-            this.TxtPassword.Size = new System.Drawing.Size(433, 20);
+            this.TxtPassword.Size = new System.Drawing.Size(433, 23);
             this.TxtPassword.TabIndex = 2;
-            this.TxtPassword.Text = "CONTRASEÑA";
+            this.TxtPassword.Text = "Contraseña";
             this.TxtPassword.TextChanged += new System.EventHandler(this.TxtPassword_TextChanged);
             this.TxtPassword.Enter += new System.EventHandler(this.TxtPassword_Enter);
             this.TxtPassword.Leave += new System.EventHandler(this.TxtPassword_Leave);
@@ -126,16 +126,18 @@
             // BtnInicioSesion
             // 
             this.BtnInicioSesion.BackColor = System.Drawing.Color.SaddleBrown;
+            this.BtnInicioSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnInicioSesion.FlatAppearance.BorderSize = 0;
             this.BtnInicioSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.BtnInicioSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnInicioSesion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnInicioSesion.ForeColor = System.Drawing.Color.Black;
             this.BtnInicioSesion.Location = new System.Drawing.Point(299, 195);
             this.BtnInicioSesion.Name = "BtnInicioSesion";
             this.BtnInicioSesion.Size = new System.Drawing.Size(432, 40);
             this.BtnInicioSesion.TabIndex = 3;
-            this.BtnInicioSesion.Text = "ENTRAR";
+            this.BtnInicioSesion.Text = "Entrar";
             this.BtnInicioSesion.UseVisualStyleBackColor = false;
             this.BtnInicioSesion.Click += new System.EventHandler(this.BtnInicioSesion_Click);
             // 
@@ -143,12 +145,12 @@
             // 
             this.LinkLabel.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.LinkLabel.AutoSize = true;
-            this.LinkLabel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinkLabel.ForeColor = System.Drawing.Color.Black;
             this.LinkLabel.LinkColor = System.Drawing.Color.Black;
-            this.LinkLabel.Location = new System.Drawing.Point(442, 351);
+            this.LinkLabel.Location = new System.Drawing.Point(415, 351);
             this.LinkLabel.Name = "LinkLabel";
-            this.LinkLabel.Size = new System.Drawing.Size(158, 17);
+            this.LinkLabel.Size = new System.Drawing.Size(216, 19);
             this.LinkLabel.TabIndex = 0;
             this.LinkLabel.TabStop = true;
             this.LinkLabel.Text = "Registrar nuevo usuario";
@@ -156,6 +158,7 @@
             // 
             // BTNCerrar
             // 
+            this.BTNCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BTNCerrar.Image")));
             this.BTNCerrar.Location = new System.Drawing.Point(754, 0);
             this.BTNCerrar.Name = "BTNCerrar";
@@ -166,6 +169,7 @@
             // 
             // BTNMinimizar
             // 
+            this.BTNMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("BTNMinimizar.Image")));
             this.BTNMinimizar.Location = new System.Drawing.Point(722, 0);
             this.BTNMinimizar.Name = "BTNMinimizar";
@@ -187,45 +191,46 @@
             // BTNINVITADO
             // 
             this.BTNINVITADO.BackColor = System.Drawing.Color.SaddleBrown;
+            this.BTNINVITADO.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNINVITADO.FlatAppearance.BorderSize = 0;
             this.BTNINVITADO.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.BTNINVITADO.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BTNINVITADO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNINVITADO.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BTNINVITADO.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNINVITADO.ForeColor = System.Drawing.Color.Black;
             this.BTNINVITADO.Location = new System.Drawing.Point(299, 287);
             this.BTNINVITADO.Name = "BTNINVITADO";
             this.BTNINVITADO.Size = new System.Drawing.Size(432, 40);
             this.BTNINVITADO.TabIndex = 10;
-            this.BTNINVITADO.Text = "ENTRAR COMO INVITADO";
+            this.BTNINVITADO.Text = "Entrar como invitado";
             this.BTNINVITADO.UseVisualStyleBackColor = false;
             this.BTNINVITADO.Click += new System.EventHandler(this.BTNINVITADO_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(508, 256);
+            this.label5.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(508, 257);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(15, 13);
+            this.label5.Size = new System.Drawing.Size(16, 18);
             this.label5.TabIndex = 12;
             this.label5.Text = "O";
             // 
-            // label6
+            // panel2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(527, 257);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(208, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "-------------------------------------------------------------------";
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(299, 265);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(203, 5);
+            this.panel2.TabIndex = 13;
             // 
-            // label3
+            // panel3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(293, 256);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "-------------------------------------------------------------------";
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Location = new System.Drawing.Point(530, 265);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(203, 5);
+            this.panel3.TabIndex = 14;
             // 
             // Login
             // 
@@ -233,8 +238,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(791, 389);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.BTNINVITADO);
             this.Controls.Add(this.label4);
@@ -248,8 +253,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
-            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenido";
             this.Load += new System.EventHandler(this.Login_Load);
@@ -276,9 +281,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button BTNINVITADO;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label3;
         public System.Windows.Forms.TextBox TxtUsuario;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 

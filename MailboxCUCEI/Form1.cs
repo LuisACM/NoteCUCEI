@@ -23,7 +23,7 @@ namespace MailboxCUCEI
 
         private void TxtUsuario_Enter(object sender, EventArgs e)
         {
-            if(TxtUsuario.Text=="CODIGO")
+            if(TxtUsuario.Text=="Código")
             {
                 TxtUsuario.Text = "";
                 TxtUsuario.ForeColor = Color.Black;
@@ -35,14 +35,14 @@ namespace MailboxCUCEI
         {
             if(TxtUsuario.Text=="")
             {
-                TxtUsuario.Text = "CODIGO";
+                TxtUsuario.Text = "Código";
                 TxtUsuario.ForeColor = Color.Black;
             }
         }
 
         private void TxtPassword_Enter(object sender, EventArgs e)
         {
-            if (TxtPassword.Text == "CONTRASEÑA")
+            if (TxtPassword.Text == "Contraseña")
             {
                 TxtPassword.Text = "";
                 TxtPassword.ForeColor = Color.Black;
@@ -54,7 +54,7 @@ namespace MailboxCUCEI
         {
             if (TxtPassword.Text == "")
             {
-                TxtPassword.Text = "CONTRASEÑA";
+                TxtPassword.Text = "Contraseña";
                 TxtPassword.ForeColor = Color.Black;
                 TxtPassword.UseSystemPasswordChar = false;
             }
@@ -118,7 +118,7 @@ namespace MailboxCUCEI
                 }
                 else
                 {
-                    MessageBox.Show("Codigo o contraseña erroneos");
+                    MessageBox.Show("Código o contraseña erroneos");
                 }
                 conectar.Close();
                 Esperar.Hide();
@@ -140,7 +140,7 @@ namespace MailboxCUCEI
 
         private void BTNINVITADO_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bienvenido");
+            MessageBox.Show("Bienvenido!");
             Principal directo = new Principal();
             directo.User = true;
             directo.Show();
@@ -174,9 +174,9 @@ namespace MailboxCUCEI
             {
                 TxtPassword.Enabled = false;
                 TxtUsuario.Enabled = false;
-                label3.Visible = false;
-                label5.Visible = false;
-                label6.Visible = false;
+                //label3.Visible = false;
+                //label5.Visible = false;
+                //label6.Visible = false;
                 BTNINVITADO.Visible = false;
                 LinkLabel.Visible = false;
                 BtnInicioSesion.Text = "LEER TUS HISTORIAS DESCARGADAS";

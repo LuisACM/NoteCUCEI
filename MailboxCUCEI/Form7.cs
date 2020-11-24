@@ -353,5 +353,10 @@ namespace MailboxCUCEI
 				txtTitle.Text = "";
             }
         }
+
+        private void lblraiting_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

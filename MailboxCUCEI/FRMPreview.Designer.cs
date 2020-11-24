@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMPreview));
             this.BTNSalir = new System.Windows.Forms.Button();
             this.GBDetails = new System.Windows.Forms.GroupBox();
             this.CBFollow = new System.Windows.Forms.CheckBox();
@@ -47,18 +48,22 @@
             this.LBLGenero = new System.Windows.Forms.Label();
             this.LBLQuest = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GBDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBCover)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BTNSalir
             // 
             this.BTNSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNSalir.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.BTNSalir.Location = new System.Drawing.Point(322, 402);
+            this.BTNSalir.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNSalir.Location = new System.Drawing.Point(11, 395);
             this.BTNSalir.Name = "BTNSalir";
-            this.BTNSalir.Size = new System.Drawing.Size(53, 26);
+            this.BTNSalir.Size = new System.Drawing.Size(149, 57);
             this.BTNSalir.TabIndex = 2;
             this.BTNSalir.Text = "Salir";
             this.BTNSalir.UseVisualStyleBackColor = true;
@@ -66,11 +71,6 @@
             // 
             // GBDetails
             // 
-            this.GBDetails.Controls.Add(this.CBFollow);
-            this.GBDetails.Controls.Add(this.CBDowload);
-            this.GBDetails.Controls.Add(this.BTNSalir);
-            this.GBDetails.Controls.Add(this.CBFav);
-            this.GBDetails.Controls.Add(this.btnRead);
             this.GBDetails.Controls.Add(this.lblSummary);
             this.GBDetails.Controls.Add(this.LBLTitle);
             this.GBDetails.Controls.Add(this.PBCover);
@@ -83,25 +83,25 @@
             this.GBDetails.Controls.Add(this.LBLGenero);
             this.GBDetails.Controls.Add(this.LBLQuest);
             this.GBDetails.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.GBDetails.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.GBDetails.Location = new System.Drawing.Point(13, 13);
+            this.GBDetails.ForeColor = System.Drawing.Color.Black;
+            this.GBDetails.Location = new System.Drawing.Point(200, 12);
             this.GBDetails.Name = "GBDetails";
             this.GBDetails.Size = new System.Drawing.Size(389, 440);
             this.GBDetails.TabIndex = 16;
             this.GBDetails.TabStop = false;
-            this.GBDetails.Text = "Preview";
+            this.GBDetails.Text = "Información";
             this.GBDetails.Enter += new System.EventHandler(this.GBDetails_Enter);
             // 
             // CBFollow
             // 
             this.CBFollow.AutoSize = true;
             this.CBFollow.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.CBFollow.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.CBFollow.Location = new System.Drawing.Point(244, 405);
+            this.CBFollow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CBFollow.Location = new System.Drawing.Point(11, 267);
             this.CBFollow.Name = "CBFollow";
-            this.CBFollow.Size = new System.Drawing.Size(75, 24);
+            this.CBFollow.Size = new System.Drawing.Size(72, 24);
             this.CBFollow.TabIndex = 22;
-            this.CBFollow.Text = "Follow";
+            this.CBFollow.Text = "Seguir";
             this.CBFollow.UseVisualStyleBackColor = true;
             this.CBFollow.CheckedChanged += new System.EventHandler(this.CBFollow_CheckedChanged);
             // 
@@ -109,8 +109,8 @@
             // 
             this.CBDowload.AutoSize = true;
             this.CBDowload.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.CBDowload.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.CBDowload.Location = new System.Drawing.Point(72, 404);
+            this.CBDowload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CBDowload.Location = new System.Drawing.Point(11, 172);
             this.CBDowload.Name = "CBDowload";
             this.CBDowload.Size = new System.Drawing.Size(105, 24);
             this.CBDowload.TabIndex = 20;
@@ -122,23 +122,23 @@
             // 
             this.CBFav.AutoSize = true;
             this.CBFav.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.CBFav.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.CBFav.Location = new System.Drawing.Point(183, 404);
+            this.CBFav.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CBFav.Location = new System.Drawing.Point(11, 219);
             this.CBFav.Name = "CBFav";
-            this.CBFav.Size = new System.Drawing.Size(55, 24);
+            this.CBFav.Size = new System.Drawing.Size(94, 24);
             this.CBFav.TabIndex = 21;
-            this.CBFav.Text = "Fav";
+            this.CBFav.Text = "Favoritos";
             this.CBFav.UseVisualStyleBackColor = true;
             this.CBFav.CheckedChanged += new System.EventHandler(this.CBFav_CheckedChanged);
             // 
             // btnRead
             // 
             this.btnRead.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRead.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRead.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnRead.Location = new System.Drawing.Point(13, 404);
+            this.btnRead.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRead.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnRead.Location = new System.Drawing.Point(11, 318);
             this.btnRead.Name = "btnRead";
-            this.btnRead.Size = new System.Drawing.Size(53, 26);
+            this.btnRead.Size = new System.Drawing.Size(149, 53);
             this.btnRead.TabIndex = 17;
             this.btnRead.Text = "Leer";
             this.btnRead.UseCompatibleTextRendering = true;
@@ -148,13 +148,13 @@
             // lblSummary
             // 
             this.lblSummary.AutoSize = true;
-            this.lblSummary.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSummary.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblSummary.Location = new System.Drawing.Point(9, 214);
+            this.lblSummary.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSummary.ForeColor = System.Drawing.Color.Black;
+            this.lblSummary.Location = new System.Drawing.Point(9, 310);
             this.lblSummary.MaximumSize = new System.Drawing.Size(366, 108);
             this.lblSummary.Name = "lblSummary";
             this.lblSummary.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblSummary.Size = new System.Drawing.Size(78, 20);
+            this.lblSummary.Size = new System.Drawing.Size(90, 22);
             this.lblSummary.TabIndex = 19;
             this.lblSummary.Text = "[Nombre]";
             this.lblSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -163,11 +163,11 @@
             // LBLTitle
             // 
             this.LBLTitle.AutoSize = true;
-            this.LBLTitle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLTitle.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.LBLTitle.Location = new System.Drawing.Point(9, 194);
+            this.LBLTitle.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLTitle.ForeColor = System.Drawing.Color.Black;
+            this.LBLTitle.Location = new System.Drawing.Point(9, 277);
             this.LBLTitle.Name = "LBLTitle";
-            this.LBLTitle.Size = new System.Drawing.Size(78, 20);
+            this.LBLTitle.Size = new System.Drawing.Size(90, 22);
             this.LBLTitle.TabIndex = 18;
             this.LBLTitle.Text = "[Nombre]";
             this.LBLTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -177,7 +177,7 @@
             // 
             this.PBCover.Location = new System.Drawing.Point(6, 19);
             this.PBCover.Name = "PBCover";
-            this.PBCover.Size = new System.Drawing.Size(369, 172);
+            this.PBCover.Size = new System.Drawing.Size(377, 241);
             this.PBCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PBCover.TabIndex = 17;
             this.PBCover.TabStop = false;
@@ -185,11 +185,11 @@
             // LBLAuthor
             // 
             this.LBLAuthor.AutoSize = true;
-            this.LBLAuthor.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLAuthor.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.LBLAuthor.Location = new System.Drawing.Point(84, 331);
+            this.LBLAuthor.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLAuthor.ForeColor = System.Drawing.Color.Black;
+            this.LBLAuthor.Location = new System.Drawing.Point(89, 364);
             this.LBLAuthor.Name = "LBLAuthor";
-            this.LBLAuthor.Size = new System.Drawing.Size(61, 20);
+            this.LBLAuthor.Size = new System.Drawing.Size(81, 19);
             this.LBLAuthor.TabIndex = 16;
             this.LBLAuthor.Text = "Historia";
             this.LBLAuthor.UseMnemonic = false;
@@ -197,11 +197,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(154, 360);
+            this.label4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(175, 393);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 20);
+            this.label4.Size = new System.Drawing.Size(72, 19);
             this.label4.TabIndex = 15;
             this.label4.Text = "Estatus";
             this.label4.UseMnemonic = false;
@@ -209,11 +209,11 @@
             // lblstatus
             // 
             this.lblstatus.AutoSize = true;
-            this.lblstatus.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblstatus.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblstatus.Location = new System.Drawing.Point(229, 360);
+            this.lblstatus.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblstatus.ForeColor = System.Drawing.Color.Black;
+            this.lblstatus.Location = new System.Drawing.Point(250, 393);
             this.lblstatus.Name = "lblstatus";
-            this.lblstatus.Size = new System.Drawing.Size(82, 20);
+            this.lblstatus.Size = new System.Drawing.Size(81, 19);
             this.lblstatus.TabIndex = 14;
             this.lblstatus.Text = "Completo";
             this.lblstatus.UseMnemonic = false;
@@ -222,11 +222,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(9, 360);
+            this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(14, 393);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 20);
+            this.label1.Size = new System.Drawing.Size(72, 19);
             this.label1.TabIndex = 13;
             this.label1.Text = "Raiting";
             this.label1.UseMnemonic = false;
@@ -234,11 +234,11 @@
             // lblraiting
             // 
             this.lblraiting.AutoSize = true;
-            this.lblraiting.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblraiting.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblraiting.Location = new System.Drawing.Point(87, 360);
+            this.lblraiting.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblraiting.ForeColor = System.Drawing.Color.Black;
+            this.lblraiting.Location = new System.Drawing.Point(92, 393);
             this.lblraiting.Name = "lblraiting";
-            this.lblraiting.Size = new System.Drawing.Size(24, 20);
+            this.lblraiting.Size = new System.Drawing.Size(18, 19);
             this.lblraiting.TabIndex = 12;
             this.lblraiting.Text = "M";
             this.lblraiting.UseMnemonic = false;
@@ -246,11 +246,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(151, 331);
+            this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(172, 364);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 20);
+            this.label2.Size = new System.Drawing.Size(72, 19);
             this.label2.TabIndex = 11;
             this.label2.Text = "Generos";
             this.label2.UseMnemonic = false;
@@ -258,11 +258,11 @@
             // LBLGenero
             // 
             this.LBLGenero.AutoSize = true;
-            this.LBLGenero.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLGenero.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.LBLGenero.Location = new System.Drawing.Point(229, 331);
+            this.LBLGenero.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLGenero.ForeColor = System.Drawing.Color.Black;
+            this.LBLGenero.Location = new System.Drawing.Point(250, 364);
             this.LBLGenero.Name = "LBLGenero";
-            this.LBLGenero.Size = new System.Drawing.Size(72, 20);
+            this.LBLGenero.Size = new System.Drawing.Size(72, 19);
             this.LBLGenero.TabIndex = 10;
             this.LBLGenero.Text = "Generos";
             this.LBLGenero.UseMnemonic = false;
@@ -270,22 +270,48 @@
             // LBLQuest
             // 
             this.LBLQuest.AutoSize = true;
-            this.LBLQuest.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLQuest.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.LBLQuest.Location = new System.Drawing.Point(6, 331);
+            this.LBLQuest.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLQuest.ForeColor = System.Drawing.Color.Black;
+            this.LBLQuest.Location = new System.Drawing.Point(11, 364);
             this.LBLQuest.Name = "LBLQuest";
-            this.LBLQuest.Size = new System.Drawing.Size(49, 20);
+            this.LBLQuest.Size = new System.Drawing.Size(54, 19);
             this.LBLQuest.TabIndex = 8;
             this.LBLQuest.Text = "Autor";
             this.LBLQuest.UseMnemonic = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.BTNSalir);
+            this.panel1.Controls.Add(this.CBFollow);
+            this.panel1.Controls.Add(this.btnRead);
+            this.panel1.Controls.Add(this.CBFav);
+            this.panel1.Controls.Add(this.CBDowload);
+            this.panel1.Location = new System.Drawing.Point(1, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(184, 464);
+            this.panel1.TabIndex = 23;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(27, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(124, 140);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
             // 
             // FRMPreview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(419, 465);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.ClientSize = new System.Drawing.Size(615, 465);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.GBDetails);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRMPreview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -294,6 +320,9 @@
             this.GBDetails.ResumeLayout(false);
             this.GBDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBCover)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -317,5 +346,7 @@
         private System.Windows.Forms.CheckBox CBDowload;
         private System.Windows.Forms.CheckBox CBFav;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
