@@ -32,10 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMPreview));
             this.BTNSalir = new System.Windows.Forms.Button();
             this.GBDetails = new System.Windows.Forms.GroupBox();
-            this.CBFollow = new System.Windows.Forms.CheckBox();
-            this.CBDowload = new System.Windows.Forms.CheckBox();
-            this.CBFav = new System.Windows.Forms.CheckBox();
-            this.btnRead = new System.Windows.Forms.Button();
             this.lblSummary = new System.Windows.Forms.Label();
             this.LBLTitle = new System.Windows.Forms.Label();
             this.PBCover = new System.Windows.Forms.PictureBox();
@@ -47,6 +43,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.LBLGenero = new System.Windows.Forms.Label();
             this.LBLQuest = new System.Windows.Forms.Label();
+            this.CBFollow = new System.Windows.Forms.CheckBox();
+            this.CBDowload = new System.Windows.Forms.CheckBox();
+            this.CBFav = new System.Windows.Forms.CheckBox();
+            this.btnRead = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -58,12 +58,13 @@
             // 
             // BTNSalir
             // 
+            this.BTNSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNSalir.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BTNSalir.Location = new System.Drawing.Point(11, 395);
             this.BTNSalir.Name = "BTNSalir";
-            this.BTNSalir.Size = new System.Drawing.Size(149, 57);
+            this.BTNSalir.Size = new System.Drawing.Size(149, 47);
             this.BTNSalir.TabIndex = 2;
             this.BTNSalir.Text = "Salir";
             this.BTNSalir.UseVisualStyleBackColor = true;
@@ -82,15 +83,151 @@
             this.GBDetails.Controls.Add(this.label2);
             this.GBDetails.Controls.Add(this.LBLGenero);
             this.GBDetails.Controls.Add(this.LBLQuest);
-            this.GBDetails.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.GBDetails.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBDetails.ForeColor = System.Drawing.Color.Black;
             this.GBDetails.Location = new System.Drawing.Point(200, 12);
             this.GBDetails.Name = "GBDetails";
-            this.GBDetails.Size = new System.Drawing.Size(389, 440);
+            this.GBDetails.Size = new System.Drawing.Size(434, 440);
             this.GBDetails.TabIndex = 16;
             this.GBDetails.TabStop = false;
             this.GBDetails.Text = "Información";
             this.GBDetails.Enter += new System.EventHandler(this.GBDetails_Enter);
+            // 
+            // lblSummary
+            // 
+            this.lblSummary.AutoSize = true;
+            this.lblSummary.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSummary.ForeColor = System.Drawing.Color.Black;
+            this.lblSummary.Location = new System.Drawing.Point(6, 296);
+            this.lblSummary.MaximumSize = new System.Drawing.Size(366, 108);
+            this.lblSummary.Name = "lblSummary";
+            this.lblSummary.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblSummary.Size = new System.Drawing.Size(72, 18);
+            this.lblSummary.TabIndex = 19;
+            this.lblSummary.Text = "[Nombre]";
+            this.lblSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSummary.UseMnemonic = false;
+            this.lblSummary.Click += new System.EventHandler(this.lblSummary_Click);
+            // 
+            // LBLTitle
+            // 
+            this.LBLTitle.AutoSize = true;
+            this.LBLTitle.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLTitle.ForeColor = System.Drawing.Color.Black;
+            this.LBLTitle.Location = new System.Drawing.Point(6, 263);
+            this.LBLTitle.Name = "LBLTitle";
+            this.LBLTitle.Size = new System.Drawing.Size(72, 18);
+            this.LBLTitle.TabIndex = 18;
+            this.LBLTitle.Text = "[Nombre]";
+            this.LBLTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBLTitle.UseMnemonic = false;
+            this.LBLTitle.Click += new System.EventHandler(this.LBLTitle_Click);
+            // 
+            // PBCover
+            // 
+            this.PBCover.Location = new System.Drawing.Point(35, 19);
+            this.PBCover.Name = "PBCover";
+            this.PBCover.Size = new System.Drawing.Size(377, 241);
+            this.PBCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PBCover.TabIndex = 17;
+            this.PBCover.TabStop = false;
+            // 
+            // LBLAuthor
+            // 
+            this.LBLAuthor.AutoSize = true;
+            this.LBLAuthor.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLAuthor.ForeColor = System.Drawing.Color.Black;
+            this.LBLAuthor.Location = new System.Drawing.Point(81, 384);
+            this.LBLAuthor.Name = "LBLAuthor";
+            this.LBLAuthor.Size = new System.Drawing.Size(72, 18);
+            this.LBLAuthor.TabIndex = 16;
+            this.LBLAuthor.Text = "Historia";
+            this.LBLAuthor.UseMnemonic = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(186, 413);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 18);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Estatus";
+            this.label4.UseMnemonic = false;
+            // 
+            // lblstatus
+            // 
+            this.lblstatus.AutoSize = true;
+            this.lblstatus.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblstatus.ForeColor = System.Drawing.Color.Black;
+            this.lblstatus.Location = new System.Drawing.Point(261, 413);
+            this.lblstatus.Name = "lblstatus";
+            this.lblstatus.Size = new System.Drawing.Size(72, 18);
+            this.lblstatus.TabIndex = 14;
+            this.lblstatus.Text = "Completo";
+            this.lblstatus.UseMnemonic = false;
+            this.lblstatus.Click += new System.EventHandler(this.Label5Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(13, 413);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 18);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Raiting";
+            this.label1.UseMnemonic = false;
+            // 
+            // lblraiting
+            // 
+            this.lblraiting.AutoSize = true;
+            this.lblraiting.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblraiting.ForeColor = System.Drawing.Color.Black;
+            this.lblraiting.Location = new System.Drawing.Point(91, 413);
+            this.lblraiting.Name = "lblraiting";
+            this.lblraiting.Size = new System.Drawing.Size(16, 18);
+            this.lblraiting.TabIndex = 12;
+            this.lblraiting.Text = "M";
+            this.lblraiting.UseMnemonic = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(183, 384);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 18);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Generos";
+            this.label2.UseMnemonic = false;
+            // 
+            // LBLGenero
+            // 
+            this.LBLGenero.AutoSize = true;
+            this.LBLGenero.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLGenero.ForeColor = System.Drawing.Color.Black;
+            this.LBLGenero.Location = new System.Drawing.Point(261, 384);
+            this.LBLGenero.Name = "LBLGenero";
+            this.LBLGenero.Size = new System.Drawing.Size(64, 18);
+            this.LBLGenero.TabIndex = 10;
+            this.LBLGenero.Text = "Generos";
+            this.LBLGenero.UseMnemonic = false;
+            // 
+            // LBLQuest
+            // 
+            this.LBLQuest.AutoSize = true;
+            this.LBLQuest.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLQuest.ForeColor = System.Drawing.Color.Black;
+            this.LBLQuest.Location = new System.Drawing.Point(10, 384);
+            this.LBLQuest.Name = "LBLQuest";
+            this.LBLQuest.Size = new System.Drawing.Size(48, 18);
+            this.LBLQuest.TabIndex = 8;
+            this.LBLQuest.Text = "Autor";
+            this.LBLQuest.UseMnemonic = false;
             // 
             // CBFollow
             // 
@@ -133,6 +270,7 @@
             // 
             // btnRead
             // 
+            this.btnRead.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRead.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRead.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRead.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -144,140 +282,6 @@
             this.btnRead.UseCompatibleTextRendering = true;
             this.btnRead.UseVisualStyleBackColor = true;
             this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
-            // 
-            // lblSummary
-            // 
-            this.lblSummary.AutoSize = true;
-            this.lblSummary.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSummary.ForeColor = System.Drawing.Color.Black;
-            this.lblSummary.Location = new System.Drawing.Point(9, 310);
-            this.lblSummary.MaximumSize = new System.Drawing.Size(366, 108);
-            this.lblSummary.Name = "lblSummary";
-            this.lblSummary.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblSummary.Size = new System.Drawing.Size(90, 22);
-            this.lblSummary.TabIndex = 19;
-            this.lblSummary.Text = "[Nombre]";
-            this.lblSummary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblSummary.UseMnemonic = false;
-            // 
-            // LBLTitle
-            // 
-            this.LBLTitle.AutoSize = true;
-            this.LBLTitle.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLTitle.ForeColor = System.Drawing.Color.Black;
-            this.LBLTitle.Location = new System.Drawing.Point(9, 277);
-            this.LBLTitle.Name = "LBLTitle";
-            this.LBLTitle.Size = new System.Drawing.Size(90, 22);
-            this.LBLTitle.TabIndex = 18;
-            this.LBLTitle.Text = "[Nombre]";
-            this.LBLTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.LBLTitle.UseMnemonic = false;
-            // 
-            // PBCover
-            // 
-            this.PBCover.Location = new System.Drawing.Point(6, 19);
-            this.PBCover.Name = "PBCover";
-            this.PBCover.Size = new System.Drawing.Size(377, 241);
-            this.PBCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PBCover.TabIndex = 17;
-            this.PBCover.TabStop = false;
-            // 
-            // LBLAuthor
-            // 
-            this.LBLAuthor.AutoSize = true;
-            this.LBLAuthor.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLAuthor.ForeColor = System.Drawing.Color.Black;
-            this.LBLAuthor.Location = new System.Drawing.Point(89, 364);
-            this.LBLAuthor.Name = "LBLAuthor";
-            this.LBLAuthor.Size = new System.Drawing.Size(81, 19);
-            this.LBLAuthor.TabIndex = 16;
-            this.LBLAuthor.Text = "Historia";
-            this.LBLAuthor.UseMnemonic = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(175, 393);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 19);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Estatus";
-            this.label4.UseMnemonic = false;
-            // 
-            // lblstatus
-            // 
-            this.lblstatus.AutoSize = true;
-            this.lblstatus.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblstatus.ForeColor = System.Drawing.Color.Black;
-            this.lblstatus.Location = new System.Drawing.Point(250, 393);
-            this.lblstatus.Name = "lblstatus";
-            this.lblstatus.Size = new System.Drawing.Size(81, 19);
-            this.lblstatus.TabIndex = 14;
-            this.lblstatus.Text = "Completo";
-            this.lblstatus.UseMnemonic = false;
-            this.lblstatus.Click += new System.EventHandler(this.Label5Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(14, 393);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 19);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Raiting";
-            this.label1.UseMnemonic = false;
-            // 
-            // lblraiting
-            // 
-            this.lblraiting.AutoSize = true;
-            this.lblraiting.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblraiting.ForeColor = System.Drawing.Color.Black;
-            this.lblraiting.Location = new System.Drawing.Point(92, 393);
-            this.lblraiting.Name = "lblraiting";
-            this.lblraiting.Size = new System.Drawing.Size(18, 19);
-            this.lblraiting.TabIndex = 12;
-            this.lblraiting.Text = "M";
-            this.lblraiting.UseMnemonic = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(172, 364);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 19);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Generos";
-            this.label2.UseMnemonic = false;
-            // 
-            // LBLGenero
-            // 
-            this.LBLGenero.AutoSize = true;
-            this.LBLGenero.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLGenero.ForeColor = System.Drawing.Color.Black;
-            this.LBLGenero.Location = new System.Drawing.Point(250, 364);
-            this.LBLGenero.Name = "LBLGenero";
-            this.LBLGenero.Size = new System.Drawing.Size(72, 19);
-            this.LBLGenero.TabIndex = 10;
-            this.LBLGenero.Text = "Generos";
-            this.LBLGenero.UseMnemonic = false;
-            // 
-            // LBLQuest
-            // 
-            this.LBLQuest.AutoSize = true;
-            this.LBLQuest.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLQuest.ForeColor = System.Drawing.Color.Black;
-            this.LBLQuest.Location = new System.Drawing.Point(11, 364);
-            this.LBLQuest.Name = "LBLQuest";
-            this.LBLQuest.Size = new System.Drawing.Size(54, 19);
-            this.LBLQuest.TabIndex = 8;
-            this.LBLQuest.Text = "Autor";
-            this.LBLQuest.UseMnemonic = false;
             // 
             // panel1
             // 
@@ -308,7 +312,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(615, 465);
+            this.ClientSize = new System.Drawing.Size(648, 465);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.GBDetails);
             this.ForeColor = System.Drawing.SystemColors.ControlText;

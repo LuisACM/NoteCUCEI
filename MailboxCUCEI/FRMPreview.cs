@@ -313,5 +313,15 @@ namespace MailboxCUCEI
         {
 
         }
+
+        private void LBLTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSummary_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -143,11 +143,11 @@
             // lblCapitulo
             // 
             this.lblCapitulo.AutoSize = true;
-            this.lblCapitulo.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCapitulo.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCapitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblCapitulo.Location = new System.Drawing.Point(46, 101);
+            this.lblCapitulo.Location = new System.Drawing.Point(6, 97);
             this.lblCapitulo.Name = "lblCapitulo";
-            this.lblCapitulo.Size = new System.Drawing.Size(90, 22);
+            this.lblCapitulo.Size = new System.Drawing.Size(81, 19);
             this.lblCapitulo.TabIndex = 25;
             this.lblCapitulo.Text = "Capitulo";
             this.lblCapitulo.UseMnemonic = false;
@@ -155,11 +155,11 @@
             // lblStoryName
             // 
             this.lblStoryName.AutoSize = true;
-            this.lblStoryName.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStoryName.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStoryName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblStoryName.Location = new System.Drawing.Point(48, 46);
+            this.lblStoryName.Location = new System.Drawing.Point(8, 42);
             this.lblStoryName.Name = "lblStoryName";
-            this.lblStoryName.Size = new System.Drawing.Size(90, 22);
+            this.lblStoryName.Size = new System.Drawing.Size(81, 19);
             this.lblStoryName.TabIndex = 16;
             this.lblStoryName.Text = "Historia";
             this.lblStoryName.UseMnemonic = false;
@@ -199,7 +199,7 @@
             this.RTBWriteZone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.RTBWriteZone.EnableAutoDragDrop = true;
             this.RTBWriteZone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RTBWriteZone.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.RTBWriteZone.ForeColor = System.Drawing.Color.Black;
             this.RTBWriteZone.Location = new System.Drawing.Point(254, 1);
             this.RTBWriteZone.Name = "RTBWriteZone";
             this.RTBWriteZone.ReadOnly = true;
@@ -232,9 +232,9 @@
             this.BTNSendComment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNSendComment.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNSendComment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.BTNSendComment.Location = new System.Drawing.Point(6, 203);
+            this.BTNSendComment.Location = new System.Drawing.Point(9, 203);
             this.BTNSendComment.Name = "BTNSendComment";
-            this.BTNSendComment.Size = new System.Drawing.Size(264, 39);
+            this.BTNSendComment.Size = new System.Drawing.Size(248, 39);
             this.BTNSendComment.TabIndex = 26;
             this.BTNSendComment.Text = "Enviar";
             this.BTNSendComment.UseVisualStyleBackColor = true;
@@ -315,7 +315,7 @@
             this.calificarbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calificarbtn.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calificarbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.calificarbtn.Location = new System.Drawing.Point(21, 661);
+            this.calificarbtn.Location = new System.Drawing.Point(21, 692);
             this.calificarbtn.Name = "calificarbtn";
             this.calificarbtn.Size = new System.Drawing.Size(231, 50);
             this.calificarbtn.TabIndex = 30;
@@ -442,7 +442,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1425, 788);
+            this.ClientSize = new System.Drawing.Size(1407, 788);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.flagLabel);

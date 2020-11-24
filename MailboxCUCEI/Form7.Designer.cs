@@ -34,39 +34,39 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.GBDetails = new System.Windows.Forms.GroupBox();
-            this.BTNLoadWord = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.BTNDecreaseLetters = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.lblStoryName = new System.Windows.Forms.Label();
-            this.BTNIncreaseLetters = new System.Windows.Forms.Button();
-            this.BTNItalic = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.BTNNegritas = new System.Windows.Forms.Button();
             this.lblstatus = new System.Windows.Forms.Label();
-            this.BTNUnderline = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.BTNAlignCenter = new System.Windows.Forms.Button();
             this.lblraiting = new System.Windows.Forms.Label();
-            this.BTNAlignRight = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.LBLGenero = new System.Windows.Forms.Label();
             this.LBLQuest = new System.Windows.Forms.Label();
+            this.BTNLoadWord = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.BTNDecreaseLetters = new System.Windows.Forms.Button();
+            this.BTNIncreaseLetters = new System.Windows.Forms.Button();
+            this.BTNItalic = new System.Windows.Forms.Button();
+            this.BTNNegritas = new System.Windows.Forms.Button();
+            this.BTNUnderline = new System.Windows.Forms.Button();
+            this.BTNAlignCenter = new System.Windows.Forms.Button();
+            this.BTNAlignRight = new System.Windows.Forms.Button();
             this.BTNAlignLeft = new System.Windows.Forms.Button();
             this.RTBWriteZone = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GBDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BTNSalir
@@ -147,6 +147,154 @@
             this.GBDetails.TabStop = false;
             this.GBDetails.Text = "Información";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(67, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(192, 221);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel7.Location = new System.Drawing.Point(0, 605);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(325, 22);
+            this.panel7.TabIndex = 19;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel4.Location = new System.Drawing.Point(1, 360);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(325, 22);
+            this.panel4.TabIndex = 18;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel2.Location = new System.Drawing.Point(0, 523);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(325, 22);
+            this.panel2.TabIndex = 17;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel6.Location = new System.Drawing.Point(0, 278);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(325, 22);
+            this.panel6.TabIndex = 18;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel3.Location = new System.Drawing.Point(0, 442);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(325, 22);
+            this.panel3.TabIndex = 18;
+            // 
+            // lblStoryName
+            // 
+            this.lblStoryName.AutoSize = true;
+            this.lblStoryName.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStoryName.ForeColor = System.Drawing.Color.Black;
+            this.lblStoryName.Location = new System.Drawing.Point(107, 321);
+            this.lblStoryName.Name = "lblStoryName";
+            this.lblStoryName.Size = new System.Drawing.Size(90, 22);
+            this.lblStoryName.TabIndex = 16;
+            this.lblStoryName.Text = "Historia";
+            this.lblStoryName.UseMnemonic = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(0, 562);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 22);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Estatus";
+            this.label4.UseMnemonic = false;
+            // 
+            // lblstatus
+            // 
+            this.lblstatus.AutoSize = true;
+            this.lblstatus.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblstatus.ForeColor = System.Drawing.Color.Black;
+            this.lblstatus.Location = new System.Drawing.Point(107, 562);
+            this.lblstatus.Name = "lblstatus";
+            this.lblstatus.Size = new System.Drawing.Size(90, 22);
+            this.lblstatus.TabIndex = 14;
+            this.lblstatus.Text = "Completo";
+            this.lblstatus.UseMnemonic = false;
+            this.lblstatus.Click += new System.EventHandler(this.Label5Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(0, 402);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 22);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Raiting";
+            this.label1.UseMnemonic = false;
+            // 
+            // lblraiting
+            // 
+            this.lblraiting.AutoSize = true;
+            this.lblraiting.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblraiting.ForeColor = System.Drawing.Color.Black;
+            this.lblraiting.Location = new System.Drawing.Point(107, 402);
+            this.lblraiting.Name = "lblraiting";
+            this.lblraiting.Size = new System.Drawing.Size(20, 22);
+            this.lblraiting.TabIndex = 12;
+            this.lblraiting.Text = "M";
+            this.lblraiting.UseMnemonic = false;
+            this.lblraiting.Click += new System.EventHandler(this.lblraiting_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(0, 481);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 22);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Generos";
+            this.label2.UseMnemonic = false;
+            // 
+            // LBLGenero
+            // 
+            this.LBLGenero.AutoSize = true;
+            this.LBLGenero.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLGenero.ForeColor = System.Drawing.Color.Black;
+            this.LBLGenero.Location = new System.Drawing.Point(107, 481);
+            this.LBLGenero.Name = "LBLGenero";
+            this.LBLGenero.Size = new System.Drawing.Size(80, 22);
+            this.LBLGenero.TabIndex = 10;
+            this.LBLGenero.Text = "Generos";
+            this.LBLGenero.UseMnemonic = false;
+            // 
+            // LBLQuest
+            // 
+            this.LBLQuest.AutoSize = true;
+            this.LBLQuest.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLQuest.ForeColor = System.Drawing.Color.Black;
+            this.LBLQuest.Location = new System.Drawing.Point(0, 321);
+            this.LBLQuest.Name = "LBLQuest";
+            this.LBLQuest.Size = new System.Drawing.Size(90, 22);
+            this.LBLQuest.TabIndex = 8;
+            this.LBLQuest.Text = "Historía";
+            this.LBLQuest.UseMnemonic = false;
+            // 
             // BTNLoadWord
             // 
             this.BTNLoadWord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -187,18 +335,6 @@
             this.BTNDecreaseLetters.UseVisualStyleBackColor = false;
             this.BTNDecreaseLetters.Click += new System.EventHandler(this.BTNDecreaseLettersClick);
             // 
-            // lblStoryName
-            // 
-            this.lblStoryName.AutoSize = true;
-            this.lblStoryName.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStoryName.ForeColor = System.Drawing.Color.Black;
-            this.lblStoryName.Location = new System.Drawing.Point(153, 314);
-            this.lblStoryName.Name = "lblStoryName";
-            this.lblStoryName.Size = new System.Drawing.Size(106, 24);
-            this.lblStoryName.TabIndex = 16;
-            this.lblStoryName.Text = "Historia";
-            this.lblStoryName.UseMnemonic = false;
-            // 
             // BTNIncreaseLetters
             // 
             this.BTNIncreaseLetters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
@@ -226,18 +362,6 @@
             this.BTNItalic.UseVisualStyleBackColor = false;
             this.BTNItalic.Click += new System.EventHandler(this.BTNItalicClick);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(28, 565);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 24);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Estatus";
-            this.label4.UseMnemonic = false;
-            // 
             // BTNNegritas
             // 
             this.BTNNegritas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
@@ -250,19 +374,6 @@
             this.BTNNegritas.Text = "B";
             this.BTNNegritas.UseVisualStyleBackColor = false;
             this.BTNNegritas.Click += new System.EventHandler(this.BTNNegritasClick);
-            // 
-            // lblstatus
-            // 
-            this.lblstatus.AutoSize = true;
-            this.lblstatus.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblstatus.ForeColor = System.Drawing.Color.Black;
-            this.lblstatus.Location = new System.Drawing.Point(153, 565);
-            this.lblstatus.Name = "lblstatus";
-            this.lblstatus.Size = new System.Drawing.Size(106, 24);
-            this.lblstatus.TabIndex = 14;
-            this.lblstatus.Text = "Completo";
-            this.lblstatus.UseMnemonic = false;
-            this.lblstatus.Click += new System.EventHandler(this.Label5Click);
             // 
             // BTNUnderline
             // 
@@ -277,18 +388,6 @@
             this.BTNUnderline.UseVisualStyleBackColor = false;
             this.BTNUnderline.Click += new System.EventHandler(this.BTNUnderlineClick);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(24, 400);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 24);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Raiting";
-            this.label1.UseMnemonic = false;
-            // 
             // BTNAlignCenter
             // 
             this.BTNAlignCenter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
@@ -302,19 +401,6 @@
             this.BTNAlignCenter.UseVisualStyleBackColor = false;
             this.BTNAlignCenter.Click += new System.EventHandler(this.BTNAlignCenterClick);
             // 
-            // lblraiting
-            // 
-            this.lblraiting.AutoSize = true;
-            this.lblraiting.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblraiting.ForeColor = System.Drawing.Color.Black;
-            this.lblraiting.Location = new System.Drawing.Point(153, 400);
-            this.lblraiting.Name = "lblraiting";
-            this.lblraiting.Size = new System.Drawing.Size(22, 24);
-            this.lblraiting.TabIndex = 12;
-            this.lblraiting.Text = "M";
-            this.lblraiting.UseMnemonic = false;
-            this.lblraiting.Click += new System.EventHandler(this.lblraiting_Click);
-            // 
             // BTNAlignRight
             // 
             this.BTNAlignRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
@@ -327,42 +413,6 @@
             this.BTNAlignRight.TabIndex = 18;
             this.BTNAlignRight.UseVisualStyleBackColor = false;
             this.BTNAlignRight.Click += new System.EventHandler(this.BTNAlignRightClick);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(24, 484);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 24);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Generos";
-            this.label2.UseMnemonic = false;
-            // 
-            // LBLGenero
-            // 
-            this.LBLGenero.AutoSize = true;
-            this.LBLGenero.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLGenero.ForeColor = System.Drawing.Color.Black;
-            this.LBLGenero.Location = new System.Drawing.Point(153, 484);
-            this.LBLGenero.Name = "LBLGenero";
-            this.LBLGenero.Size = new System.Drawing.Size(94, 24);
-            this.LBLGenero.TabIndex = 10;
-            this.LBLGenero.Text = "Generos";
-            this.LBLGenero.UseMnemonic = false;
-            // 
-            // LBLQuest
-            // 
-            this.LBLQuest.AutoSize = true;
-            this.LBLQuest.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLQuest.ForeColor = System.Drawing.Color.Black;
-            this.LBLQuest.Location = new System.Drawing.Point(24, 314);
-            this.LBLQuest.Name = "LBLQuest";
-            this.LBLQuest.Size = new System.Drawing.Size(106, 24);
-            this.LBLQuest.TabIndex = 8;
-            this.LBLQuest.Text = "Historía";
-            this.LBLQuest.UseMnemonic = false;
             // 
             // BTNAlignLeft
             // 
@@ -433,56 +483,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Herramientas";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel2.Location = new System.Drawing.Point(0, 523);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(325, 22);
-            this.panel2.TabIndex = 17;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel3.Location = new System.Drawing.Point(0, 442);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(325, 22);
-            this.panel3.TabIndex = 18;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel4.Location = new System.Drawing.Point(1, 360);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(325, 22);
-            this.panel4.TabIndex = 18;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel6.Location = new System.Drawing.Point(0, 278);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(325, 22);
-            this.panel6.TabIndex = 18;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel7.Location = new System.Drawing.Point(0, 605);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(325, 22);
-            this.panel7.TabIndex = 19;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(67, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(192, 221);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
             // FRMWrite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -502,12 +502,12 @@
             this.Load += new System.EventHandler(this.FRMWrite_Load);
             this.GBDetails.ResumeLayout(false);
             this.GBDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

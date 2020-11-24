@@ -164,7 +164,7 @@
             // 
             this.CBGender1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.CBGender1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CBGender1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.CBGender1.ForeColor = System.Drawing.Color.Black;
             this.CBGender1.FormattingEnabled = true;
             this.CBGender1.ItemHeight = 13;
             this.CBGender1.Location = new System.Drawing.Point(345, 85);
@@ -190,7 +190,7 @@
             // 
             this.CBGender2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.CBGender2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CBGender2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.CBGender2.ForeColor = System.Drawing.Color.Black;
             this.CBGender2.FormattingEnabled = true;
             this.CBGender2.ItemHeight = 13;
             this.CBGender2.Location = new System.Drawing.Point(533, 85);
@@ -212,7 +212,7 @@
             "K+",
             "M",
             "T"});
-            this.CBRaiting.Location = new System.Drawing.Point(345, 125);
+            this.CBRaiting.Location = new System.Drawing.Point(396, 124);
             this.CBRaiting.Name = "CBRaiting";
             this.CBRaiting.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CBRaiting.Size = new System.Drawing.Size(114, 27);
@@ -224,11 +224,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(278, 125);
+            this.label5.Location = new System.Drawing.Point(278, 129);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 18);
+            this.label5.Size = new System.Drawing.Size(112, 18);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Raiting";
+            this.label5.Text = "Clasificación";
             this.label5.UseMnemonic = false;
             // 
             // CBEstatus
