@@ -125,7 +125,6 @@
             // GBDetails
             // 
             this.GBDetails.Controls.Add(this.pictureBox1);
-            this.GBDetails.Controls.Add(this.panel7);
             this.GBDetails.Controls.Add(this.panel4);
             this.GBDetails.Controls.Add(this.panel2);
             this.GBDetails.Controls.Add(this.panel6);
@@ -160,7 +159,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel7.Location = new System.Drawing.Point(0, 605);
+            this.panel7.Location = new System.Drawing.Point(983, 552);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(325, 22);
             this.panel7.TabIndex = 19;
@@ -168,7 +167,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel4.Location = new System.Drawing.Point(1, 360);
+            this.panel4.Location = new System.Drawing.Point(0, 340);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(325, 22);
             this.panel4.TabIndex = 18;
@@ -176,7 +175,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel2.Location = new System.Drawing.Point(0, 523);
+            this.panel2.Location = new System.Drawing.Point(0, 475);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(325, 22);
             this.panel2.TabIndex = 17;
@@ -192,7 +191,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel3.Location = new System.Drawing.Point(0, 442);
+            this.panel3.Location = new System.Drawing.Point(0, 406);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(325, 22);
             this.panel3.TabIndex = 18;
@@ -200,11 +199,11 @@
             // lblStoryName
             // 
             this.lblStoryName.AutoSize = true;
-            this.lblStoryName.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStoryName.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStoryName.ForeColor = System.Drawing.Color.Black;
-            this.lblStoryName.Location = new System.Drawing.Point(107, 321);
+            this.lblStoryName.Location = new System.Drawing.Point(107, 312);
             this.lblStoryName.Name = "lblStoryName";
-            this.lblStoryName.Size = new System.Drawing.Size(90, 22);
+            this.lblStoryName.Size = new System.Drawing.Size(63, 15);
             this.lblStoryName.TabIndex = 16;
             this.lblStoryName.Text = "Historia";
             this.lblStoryName.UseMnemonic = false;
@@ -212,11 +211,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(0, 562);
+            this.label4.Location = new System.Drawing.Point(-3, 512);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 22);
+            this.label4.Size = new System.Drawing.Size(56, 15);
             this.label4.TabIndex = 15;
             this.label4.Text = "Estatus";
             this.label4.UseMnemonic = false;
@@ -224,11 +223,11 @@
             // lblstatus
             // 
             this.lblstatus.AutoSize = true;
-            this.lblstatus.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblstatus.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblstatus.ForeColor = System.Drawing.Color.Black;
-            this.lblstatus.Location = new System.Drawing.Point(107, 562);
+            this.lblstatus.Location = new System.Drawing.Point(104, 512);
             this.lblstatus.Name = "lblstatus";
-            this.lblstatus.Size = new System.Drawing.Size(90, 22);
+            this.lblstatus.Size = new System.Drawing.Size(63, 15);
             this.lblstatus.TabIndex = 14;
             this.lblstatus.Text = "Completo";
             this.lblstatus.UseMnemonic = false;
@@ -237,11 +236,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(0, 402);
+            this.label1.Location = new System.Drawing.Point(0, 376);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 22);
+            this.label1.Size = new System.Drawing.Size(56, 15);
             this.label1.TabIndex = 13;
             this.label1.Text = "Raiting";
             this.label1.UseMnemonic = false;
@@ -249,11 +248,11 @@
             // lblraiting
             // 
             this.lblraiting.AutoSize = true;
-            this.lblraiting.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblraiting.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblraiting.ForeColor = System.Drawing.Color.Black;
-            this.lblraiting.Location = new System.Drawing.Point(107, 402);
+            this.lblraiting.Location = new System.Drawing.Point(107, 376);
             this.lblraiting.Name = "lblraiting";
-            this.lblraiting.Size = new System.Drawing.Size(20, 22);
+            this.lblraiting.Size = new System.Drawing.Size(14, 15);
             this.lblraiting.TabIndex = 12;
             this.lblraiting.Text = "M";
             this.lblraiting.UseMnemonic = false;
@@ -262,11 +261,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(0, 481);
+            this.label2.Location = new System.Drawing.Point(0, 444);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 22);
+            this.label2.Size = new System.Drawing.Size(56, 15);
             this.label2.TabIndex = 11;
             this.label2.Text = "Generos";
             this.label2.UseMnemonic = false;
@@ -274,11 +273,11 @@
             // LBLGenero
             // 
             this.LBLGenero.AutoSize = true;
-            this.LBLGenero.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLGenero.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLGenero.ForeColor = System.Drawing.Color.Black;
-            this.LBLGenero.Location = new System.Drawing.Point(107, 481);
+            this.LBLGenero.Location = new System.Drawing.Point(107, 444);
             this.LBLGenero.Name = "LBLGenero";
-            this.LBLGenero.Size = new System.Drawing.Size(80, 22);
+            this.LBLGenero.Size = new System.Drawing.Size(56, 15);
             this.LBLGenero.TabIndex = 10;
             this.LBLGenero.Text = "Generos";
             this.LBLGenero.UseMnemonic = false;
@@ -286,11 +285,11 @@
             // LBLQuest
             // 
             this.LBLQuest.AutoSize = true;
-            this.LBLQuest.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLQuest.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLQuest.ForeColor = System.Drawing.Color.Black;
-            this.LBLQuest.Location = new System.Drawing.Point(0, 321);
+            this.LBLQuest.Location = new System.Drawing.Point(0, 312);
             this.LBLQuest.Name = "LBLQuest";
-            this.LBLQuest.Size = new System.Drawing.Size(90, 22);
+            this.LBLQuest.Size = new System.Drawing.Size(63, 15);
             this.LBLQuest.TabIndex = 8;
             this.LBLQuest.Text = "Historía";
             this.LBLQuest.UseMnemonic = false;
@@ -494,6 +493,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1321, 692);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.RTBWriteZone);

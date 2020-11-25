@@ -136,7 +136,7 @@ namespace MailboxCUCEI
 			   currentFont.FontFamily,
 			   ActualLeght, currentFont.Style
 			);
-			RTBWriteZone.ForeColor = Color.DodgerBlue;
+			RTBWriteZone.ForeColor = Color.Black;
 		}
 		void BTNDecreaseLettersClick(object sender, EventArgs e)
 		{
@@ -147,7 +147,7 @@ namespace MailboxCUCEI
 			   currentFont.FontFamily,
 			   ActualLeght, currentFont.Style
 			);
-			RTBWriteZone.ForeColor = Color.DodgerBlue;
+			RTBWriteZone.ForeColor = Color.Black;
 		}
 		void TxtCodigoModificarTextChanged(object sender, EventArgs e)
 		{

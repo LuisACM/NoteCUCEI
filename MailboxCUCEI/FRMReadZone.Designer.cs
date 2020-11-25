@@ -221,7 +221,7 @@
             this.txtComment.Name = "txtComment";
             this.txtComment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtComment.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtComment.Size = new System.Drawing.Size(264, 194);
+            this.txtComment.Size = new System.Drawing.Size(316, 194);
             this.txtComment.TabIndex = 25;
             this.txtComment.Text = "Déjale un comentario al autor";
             this.txtComment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -235,7 +235,7 @@
             this.BTNSendComment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BTNSendComment.Location = new System.Drawing.Point(9, 203);
             this.BTNSendComment.Name = "BTNSendComment";
-            this.BTNSendComment.Size = new System.Drawing.Size(228, 39);
+            this.BTNSendComment.Size = new System.Drawing.Size(310, 39);
             this.BTNSendComment.TabIndex = 26;
             this.BTNSendComment.Text = "Enviar";
             this.BTNSendComment.UseVisualStyleBackColor = true;
@@ -248,7 +248,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(6, 265);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 309);
+            this.panel1.Size = new System.Drawing.Size(313, 309);
             this.panel1.TabIndex = 27;
             // 
             // txtcomments
@@ -262,14 +262,14 @@
             this.txtcomments.Name = "txtcomments";
             this.txtcomments.ReadOnly = true;
             this.txtcomments.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtcomments.Size = new System.Drawing.Size(243, 269);
+            this.txtcomments.Size = new System.Drawing.Size(307, 269);
             this.txtcomments.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(31, 1);
+            this.label2.Location = new System.Drawing.Point(61, -1);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(200, 33);
             this.label2.TabIndex = 17;
@@ -291,7 +291,7 @@
             "3",
             "4",
             "5"});
-            this.CalificacionCB.Location = new System.Drawing.Point(53, 618);
+            this.CalificacionCB.Location = new System.Drawing.Point(82, 618);
             this.CalificacionCB.Name = "CalificacionCB";
             this.CalificacionCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CalificacionCB.Size = new System.Drawing.Size(154, 28);
@@ -303,7 +303,7 @@
             this.calificarlabel.AutoSize = true;
             this.calificarlabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calificarlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.calificarlabel.Location = new System.Drawing.Point(17, 581);
+            this.calificarlabel.Location = new System.Drawing.Point(39, 577);
             this.calificarlabel.Name = "calificarlabel";
             this.calificarlabel.Size = new System.Drawing.Size(250, 22);
             this.calificarlabel.TabIndex = 28;
@@ -318,7 +318,7 @@
             this.calificarbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.calificarbtn.Location = new System.Drawing.Point(21, 692);
             this.calificarbtn.Name = "calificarbtn";
-            this.calificarbtn.Size = new System.Drawing.Size(215, 50);
+            this.calificarbtn.Size = new System.Drawing.Size(295, 50);
             this.calificarbtn.TabIndex = 30;
             this.calificarbtn.Text = "Calificar";
             this.calificarbtn.UseVisualStyleBackColor = true;
@@ -436,7 +436,7 @@
             this.panel3.Controls.Add(this.calificarbtn);
             this.panel3.Location = new System.Drawing.Point(1138, 1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(273, 787);
+            this.panel3.Size = new System.Drawing.Size(334, 787);
             this.panel3.TabIndex = 34;
             // 
             // FRMReadZone
@@ -444,7 +444,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1469, 788);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.flagLabel);

@@ -63,6 +63,7 @@ namespace MailboxCUCEI
 
         private void BTNCerrar_Click(object sender, EventArgs e)
         {
+            this.Dispose();
             Application.Exit();
         }
 

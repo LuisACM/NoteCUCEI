@@ -105,15 +105,16 @@ namespace MailboxCUCEI
         private void BTNEliminar_Click_1(object sender, EventArgs e)
         {
             //funcion de eliminar cuenta
-            DialogResult result = MessageBox.Show("¿Seguro que quieres borrar tu cuenta? Si lo haces no la prodras recuperar nunca (y eso es mucho tiempo)", "Confirmation", MessageBoxButtons.YesNoCancel);
+            string idU = ActUser.GetID().ToString();
+            DialogResult result = MessageBox.Show("¿Seguro que quieres borrar tu cuenta? Si lo haces no la prodras recuperar nunca (y eso es mucho tiempo).", "Confirmation", MessageBoxButtons.YesNoCancel);
             if (result == DialogResult.Yes)
             {
                 MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
                 conexion.Open();
-                string query = "DELETE FROM Usuarios WHERE Codigo='" + TxtCodigoPerfil.Text + "'";
+                string query = "DELETE FROM Usuarios WHERE Codigo='" + idU + "'";
                 MySqlCommand comando = new MySqlCommand(query, conexion);
                 comando.ExecuteNonQuery();
-                MessageBox.Show("Se ha eliminado con exito");
+                MessageBox.Show("Eliminacion exitosa! Hasta pronto! :)");
                 conexion.Close();
                 this.Dispose();
                 Login inicio = new Login();
