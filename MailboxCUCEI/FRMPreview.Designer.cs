@@ -58,16 +58,17 @@
             // 
             // BTNSalir
             // 
+            this.BTNSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNSalir.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNSalir.ForeColor = System.Drawing.Color.Black;
             this.BTNSalir.Location = new System.Drawing.Point(11, 395);
             this.BTNSalir.Name = "BTNSalir";
             this.BTNSalir.Size = new System.Drawing.Size(149, 47);
             this.BTNSalir.TabIndex = 2;
             this.BTNSalir.Text = "Salir";
-            this.BTNSalir.UseVisualStyleBackColor = true;
+            this.BTNSalir.UseVisualStyleBackColor = false;
             this.BTNSalir.Click += new System.EventHandler(this.BTNSalir_Click);
             // 
             // GBDetails
@@ -232,55 +233,59 @@
             // CBFollow
             // 
             this.CBFollow.AutoSize = true;
+            this.CBFollow.BackColor = System.Drawing.Color.Transparent;
             this.CBFollow.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.CBFollow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CBFollow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.CBFollow.Location = new System.Drawing.Point(11, 267);
             this.CBFollow.Name = "CBFollow";
             this.CBFollow.Size = new System.Drawing.Size(72, 24);
             this.CBFollow.TabIndex = 22;
             this.CBFollow.Text = "Seguir";
-            this.CBFollow.UseVisualStyleBackColor = true;
+            this.CBFollow.UseVisualStyleBackColor = false;
             this.CBFollow.CheckedChanged += new System.EventHandler(this.CBFollow_CheckedChanged);
             // 
             // CBDowload
             // 
             this.CBDowload.AutoSize = true;
+            this.CBDowload.BackColor = System.Drawing.Color.Transparent;
             this.CBDowload.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.CBDowload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CBDowload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.CBDowload.Location = new System.Drawing.Point(11, 172);
             this.CBDowload.Name = "CBDowload";
             this.CBDowload.Size = new System.Drawing.Size(105, 24);
             this.CBDowload.TabIndex = 20;
             this.CBDowload.Text = "Descargar";
-            this.CBDowload.UseVisualStyleBackColor = true;
+            this.CBDowload.UseVisualStyleBackColor = false;
             this.CBDowload.CheckedChanged += new System.EventHandler(this.CBDowload_CheckedChanged);
             // 
             // CBFav
             // 
             this.CBFav.AutoSize = true;
+            this.CBFav.BackColor = System.Drawing.Color.Transparent;
             this.CBFav.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.CBFav.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CBFav.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.CBFav.Location = new System.Drawing.Point(11, 219);
             this.CBFav.Name = "CBFav";
             this.CBFav.Size = new System.Drawing.Size(94, 24);
             this.CBFav.TabIndex = 21;
             this.CBFav.Text = "Favoritos";
-            this.CBFav.UseVisualStyleBackColor = true;
+            this.CBFav.UseVisualStyleBackColor = false;
             this.CBFav.CheckedChanged += new System.EventHandler(this.CBFav_CheckedChanged);
             // 
             // btnRead
             // 
+            this.btnRead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRead.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRead.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRead.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRead.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnRead.ForeColor = System.Drawing.Color.Black;
             this.btnRead.Location = new System.Drawing.Point(11, 318);
             this.btnRead.Name = "btnRead";
             this.btnRead.Size = new System.Drawing.Size(149, 53);
             this.btnRead.TabIndex = 17;
             this.btnRead.Text = "Leer";
             this.btnRead.UseCompatibleTextRendering = true;
-            this.btnRead.UseVisualStyleBackColor = true;
+            this.btnRead.UseVisualStyleBackColor = false;
             this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
             // panel1
@@ -311,7 +316,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(648, 465);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.GBDetails);

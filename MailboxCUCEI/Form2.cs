@@ -118,6 +118,10 @@ namespace MailboxCUCEI
             {
                 MessageBox.Show("Porfavor introduzca su correo");
             }
+            else if (avisoCB.Checked==false)
+            {
+                MessageBox.Show("Porfavor lea y acepte el aviso de privacidad.");
+            }
             else
             {
                 if (AlreadyExist("Codigo",TxtCodigoRegistro.Text))
@@ -193,6 +197,12 @@ namespace MailboxCUCEI
             vent.Show();
             vent.code = TxtCodigoRegistro.Text;
             this.Hide();
+        }
+
+        private void avisoLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Avisodeprivacidad aviso = new Avisodeprivacidad();
+            aviso.Show();
         }
     }
 }

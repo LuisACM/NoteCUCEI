@@ -266,16 +266,17 @@
             // 
             // BTNSalir
             // 
+            this.BTNSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNSalir.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNSalir.ForeColor = System.Drawing.Color.Black;
             this.BTNSalir.Location = new System.Drawing.Point(12, 682);
             this.BTNSalir.Name = "BTNSalir";
             this.BTNSalir.Size = new System.Drawing.Size(163, 50);
             this.BTNSalir.TabIndex = 44;
             this.BTNSalir.Text = "Salir";
-            this.BTNSalir.UseVisualStyleBackColor = true;
+            this.BTNSalir.UseVisualStyleBackColor = false;
             this.BTNSalir.Click += new System.EventHandler(this.BTNSalir_Click_1);
             // 
             // BTNModificar
@@ -292,16 +293,17 @@
             // 
             // BTNEliminar
             // 
+            this.BTNEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNEliminar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNEliminar.ForeColor = System.Drawing.Color.OrangeRed;
+            this.BTNEliminar.ForeColor = System.Drawing.Color.Black;
             this.BTNEliminar.Location = new System.Drawing.Point(12, 470);
             this.BTNEliminar.Name = "BTNEliminar";
-            this.BTNEliminar.Size = new System.Drawing.Size(163, 50);
+            this.BTNEliminar.Size = new System.Drawing.Size(163, 49);
             this.BTNEliminar.TabIndex = 42;
             this.BTNEliminar.Text = "Eliminar mi cuenta";
-            this.BTNEliminar.UseVisualStyleBackColor = true;
+            this.BTNEliminar.UseVisualStyleBackColor = false;
             this.BTNEliminar.Click += new System.EventHandler(this.BTNEliminar_Click_1);
             // 
             // FotoPerfil
@@ -657,30 +659,32 @@
             // 
             // BTNMyInfo
             // 
+            this.BTNMyInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNMyInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNMyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNMyInfo.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNMyInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNMyInfo.ForeColor = System.Drawing.Color.Black;
             this.BTNMyInfo.Location = new System.Drawing.Point(12, 230);
             this.BTNMyInfo.Name = "BTNMyInfo";
             this.BTNMyInfo.Size = new System.Drawing.Size(163, 45);
             this.BTNMyInfo.TabIndex = 64;
             this.BTNMyInfo.Text = "Mi Información";
-            this.BTNMyInfo.UseVisualStyleBackColor = true;
+            this.BTNMyInfo.UseVisualStyleBackColor = false;
             this.BTNMyInfo.Click += new System.EventHandler(this.BTNMyInfo_Click);
             // 
             // BTNMyStories
             // 
+            this.BTNMyStories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNMyStories.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNMyStories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNMyStories.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNMyStories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNMyStories.ForeColor = System.Drawing.Color.Black;
             this.BTNMyStories.Location = new System.Drawing.Point(12, 290);
             this.BTNMyStories.Name = "BTNMyStories";
             this.BTNMyStories.Size = new System.Drawing.Size(163, 45);
             this.BTNMyStories.TabIndex = 63;
             this.BTNMyStories.Text = "Mis Historias";
-            this.BTNMyStories.UseVisualStyleBackColor = true;
+            this.BTNMyStories.UseVisualStyleBackColor = false;
             this.BTNMyStories.Click += new System.EventHandler(this.BTNMyStories_Click);
             // 
             // label14
@@ -722,30 +726,32 @@
             // 
             // BTNFF
             // 
+            this.BTNFF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNFF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNFF.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNFF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNFF.ForeColor = System.Drawing.Color.Black;
             this.BTNFF.Location = new System.Drawing.Point(12, 350);
             this.BTNFF.Name = "BTNFF";
             this.BTNFF.Size = new System.Drawing.Size(163, 45);
             this.BTNFF.TabIndex = 68;
             this.BTNFF.Text = "Follows y Favs";
-            this.BTNFF.UseVisualStyleBackColor = true;
+            this.BTNFF.UseVisualStyleBackColor = false;
             this.BTNFF.Click += new System.EventHandler(this.BTNFF_Click);
             // 
             // BTNNot
             // 
+            this.BTNNot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNNot.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNNot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNNot.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNNot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNNot.ForeColor = System.Drawing.Color.Black;
             this.BTNNot.Location = new System.Drawing.Point(12, 410);
             this.BTNNot.Name = "BTNNot";
             this.BTNNot.Size = new System.Drawing.Size(163, 45);
             this.BTNNot.TabIndex = 69;
             this.BTNNot.Text = "Notificaciones";
-            this.BTNNot.UseVisualStyleBackColor = true;
+            this.BTNNot.UseVisualStyleBackColor = false;
             this.BTNNot.Click += new System.EventHandler(this.BTNNot_Click);
             // 
             // GBFv
@@ -935,8 +941,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1060, 755);
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(1063, 755);
             this.Controls.Add(this.GBStories);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.GBFv);

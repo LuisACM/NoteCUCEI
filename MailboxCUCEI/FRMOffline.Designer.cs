@@ -102,10 +102,10 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(580, 20);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(151, 36);
@@ -117,15 +117,16 @@
             // 
             // btnborrar
             // 
+            this.btnborrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnborrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnborrar.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnborrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnborrar.ForeColor = System.Drawing.Color.Black;
             this.btnborrar.Location = new System.Drawing.Point(355, 20);
             this.btnborrar.Name = "btnborrar";
             this.btnborrar.Size = new System.Drawing.Size(151, 36);
             this.btnborrar.TabIndex = 33;
             this.btnborrar.Text = "Borrar";
-            this.btnborrar.UseVisualStyleBackColor = true;
+            this.btnborrar.UseVisualStyleBackColor = false;
             this.btnborrar.Click += new System.EventHandler(this.btnborrar_Click);
             // 
             // CBStory
@@ -133,7 +134,7 @@
             this.CBStory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CBStory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CBStory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CBStory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CBStory.ForeColor = System.Drawing.Color.Black;
             this.CBStory.FormattingEnabled = true;
             this.CBStory.ItemHeight = 20;
             this.CBStory.Items.AddRange(new object[] {
@@ -152,7 +153,7 @@
             // 
             this.calificarlabel.AutoSize = true;
             this.calificarlabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calificarlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.calificarlabel.ForeColor = System.Drawing.Color.Black;
             this.calificarlabel.Location = new System.Drawing.Point(10, 27);
             this.calificarlabel.Name = "calificarlabel";
             this.calificarlabel.Size = new System.Drawing.Size(160, 22);
@@ -176,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(819, 332);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox3);
@@ -204,11 +205,11 @@
         public System.Windows.Forms.Label manduser;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Panel PNResults;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnborrar;
         private System.Windows.Forms.ComboBox CBStory;
         private System.Windows.Forms.Label calificarlabel;
         private System.Windows.Forms.Label LBLWarning;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnborrar;
     }
 }

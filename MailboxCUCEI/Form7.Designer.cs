@@ -35,7 +35,6 @@
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.GBDetails = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -48,6 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.LBLGenero = new System.Windows.Forms.Label();
             this.LBLQuest = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.BTNLoadWord = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.BTNDecreaseLetters = new System.Windows.Forms.Button();
@@ -71,28 +71,30 @@
             // 
             // BTNSalir
             // 
+            this.BTNSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNSalir.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNSalir.ForeColor = System.Drawing.Color.Black;
             this.BTNSalir.Location = new System.Drawing.Point(250, 14);
             this.BTNSalir.Name = "BTNSalir";
             this.BTNSalir.Size = new System.Drawing.Size(151, 43);
             this.BTNSalir.TabIndex = 2;
             this.BTNSalir.Text = "Salir";
-            this.BTNSalir.UseVisualStyleBackColor = true;
+            this.BTNSalir.UseVisualStyleBackColor = false;
             this.BTNSalir.Click += new System.EventHandler(this.BTNSalir_Click);
             // 
             // BTNPublish
             // 
+            this.BTNPublish.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNPublish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNPublish.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNPublish.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNPublish.ForeColor = System.Drawing.Color.Black;
             this.BTNPublish.Location = new System.Drawing.Point(533, 14);
             this.BTNPublish.Name = "BTNPublish";
             this.BTNPublish.Size = new System.Drawing.Size(151, 43);
             this.BTNPublish.TabIndex = 15;
             this.BTNPublish.Text = "Publicar";
-            this.BTNPublish.UseVisualStyleBackColor = true;
+            this.BTNPublish.UseVisualStyleBackColor = false;
             this.BTNPublish.Click += new System.EventHandler(this.BTNPublish_Click);
             // 
             // label3
@@ -112,7 +114,7 @@
             this.txtTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.txtTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTitle.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtTitle.ForeColor = System.Drawing.Color.Gray;
             this.txtTitle.Location = new System.Drawing.Point(6, 19);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(936, 25);
@@ -155,14 +157,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel7.Location = new System.Drawing.Point(983, 552);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(325, 22);
-            this.panel7.TabIndex = 19;
             // 
             // panel4
             // 
@@ -294,6 +288,14 @@
             this.LBLQuest.Text = "Historía";
             this.LBLQuest.UseMnemonic = false;
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel7.Location = new System.Drawing.Point(983, 552);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(325, 22);
+            this.panel7.TabIndex = 19;
+            // 
             // BTNLoadWord
             // 
             this.BTNLoadWord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -322,7 +324,7 @@
             // 
             // BTNDecreaseLetters
             // 
-            this.BTNDecreaseLetters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNDecreaseLetters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNDecreaseLetters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNDecreaseLetters.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
             this.BTNDecreaseLetters.ForeColor = System.Drawing.Color.Black;
@@ -336,7 +338,7 @@
             // 
             // BTNIncreaseLetters
             // 
-            this.BTNIncreaseLetters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNIncreaseLetters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNIncreaseLetters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNIncreaseLetters.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
             this.BTNIncreaseLetters.ForeColor = System.Drawing.Color.Black;
@@ -350,7 +352,7 @@
             // 
             // BTNItalic
             // 
-            this.BTNItalic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNItalic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNItalic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNItalic.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
             this.BTNItalic.ForeColor = System.Drawing.Color.Black;
@@ -364,7 +366,7 @@
             // 
             // BTNNegritas
             // 
-            this.BTNNegritas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNNegritas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNNegritas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNNegritas.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNNegritas.ForeColor = System.Drawing.Color.Black;
@@ -378,7 +380,7 @@
             // 
             // BTNUnderline
             // 
-            this.BTNUnderline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNUnderline.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNUnderline.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNUnderline.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNUnderline.ForeColor = System.Drawing.Color.Black;
@@ -393,7 +395,7 @@
             // 
             // BTNAlignCenter
             // 
-            this.BTNAlignCenter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNAlignCenter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNAlignCenter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNAlignCenter.ForeColor = System.Drawing.Color.Black;
             this.BTNAlignCenter.Image = ((System.Drawing.Image)(resources.GetObject("BTNAlignCenter.Image")));
@@ -406,7 +408,7 @@
             // 
             // BTNAlignRight
             // 
-            this.BTNAlignRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNAlignRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNAlignRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNAlignRight.ForeColor = System.Drawing.Color.Black;
             this.BTNAlignRight.Image = ((System.Drawing.Image)(resources.GetObject("BTNAlignRight.Image")));
@@ -419,7 +421,7 @@
             // 
             // BTNAlignLeft
             // 
-            this.BTNAlignLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNAlignLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNAlignLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNAlignLeft.ForeColor = System.Drawing.Color.Black;
             this.BTNAlignLeft.Image = ((System.Drawing.Image)(resources.GetObject("BTNAlignLeft.Image")));
@@ -432,7 +434,7 @@
             // 
             // RTBWriteZone
             // 
-            this.RTBWriteZone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.RTBWriteZone.BackColor = System.Drawing.Color.Gray;
             this.RTBWriteZone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RTBWriteZone.ForeColor = System.Drawing.Color.Black;
             this.RTBWriteZone.Location = new System.Drawing.Point(12, 156);
@@ -490,7 +492,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1321, 692);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel7);

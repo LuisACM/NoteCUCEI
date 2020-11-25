@@ -74,7 +74,7 @@
             this.BTNSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNSalir.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNSalir.ForeColor = System.Drawing.Color.Gray;
             this.BTNSalir.Location = new System.Drawing.Point(19, 467);
             this.BTNSalir.Name = "BTNSalir";
             this.BTNSalir.Size = new System.Drawing.Size(164, 49);
@@ -88,7 +88,7 @@
             this.BTNNextChapter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNNextChapter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNNextChapter.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNNextChapter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNNextChapter.ForeColor = System.Drawing.Color.Gray;
             this.BTNNextChapter.Location = new System.Drawing.Point(19, 224);
             this.BTNNextChapter.Name = "BTNNextChapter";
             this.BTNNextChapter.Size = new System.Drawing.Size(164, 54);
@@ -108,7 +108,7 @@
             this.GBDetails.Controls.Add(this.BTNSalir);
             this.GBDetails.Controls.Add(this.BTNIncreaseLetters);
             this.GBDetails.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GBDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.GBDetails.ForeColor = System.Drawing.Color.Gray;
             this.GBDetails.Location = new System.Drawing.Point(11, 236);
             this.GBDetails.Name = "GBDetails";
             this.GBDetails.Size = new System.Drawing.Size(221, 530);
@@ -131,7 +131,7 @@
             this.BTNBack.Enabled = false;
             this.BTNBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNBack.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNBack.ForeColor = System.Drawing.Color.Gray;
             this.BTNBack.Location = new System.Drawing.Point(19, 154);
             this.BTNBack.Name = "BTNBack";
             this.BTNBack.Size = new System.Drawing.Size(164, 55);
@@ -144,7 +144,7 @@
             // 
             this.lblCapitulo.AutoSize = true;
             this.lblCapitulo.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCapitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblCapitulo.ForeColor = System.Drawing.Color.Gray;
             this.lblCapitulo.Location = new System.Drawing.Point(6, 97);
             this.lblCapitulo.Name = "lblCapitulo";
             this.lblCapitulo.Size = new System.Drawing.Size(81, 19);
@@ -156,7 +156,7 @@
             // 
             this.lblStoryName.AutoSize = true;
             this.lblStoryName.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStoryName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblStoryName.ForeColor = System.Drawing.Color.Gray;
             this.lblStoryName.Location = new System.Drawing.Point(8, 42);
             this.lblStoryName.Name = "lblStoryName";
             this.lblStoryName.Size = new System.Drawing.Size(81, 19);
@@ -170,7 +170,7 @@
             this.BTNDecreaseLetters.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNDecreaseLetters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNDecreaseLetters.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNDecreaseLetters.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNDecreaseLetters.ForeColor = System.Drawing.Color.Gray;
             this.BTNDecreaseLetters.Location = new System.Drawing.Point(30, 368);
             this.BTNDecreaseLetters.Name = "BTNDecreaseLetters";
             this.BTNDecreaseLetters.Size = new System.Drawing.Size(55, 42);
@@ -185,7 +185,7 @@
             this.BTNIncreaseLetters.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNIncreaseLetters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNIncreaseLetters.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNIncreaseLetters.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNIncreaseLetters.ForeColor = System.Drawing.Color.Gray;
             this.BTNIncreaseLetters.Location = new System.Drawing.Point(128, 368);
             this.BTNIncreaseLetters.Name = "BTNIncreaseLetters";
             this.BTNIncreaseLetters.Size = new System.Drawing.Size(55, 42);
@@ -196,7 +196,7 @@
             // 
             // RTBWriteZone
             // 
-            this.RTBWriteZone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.RTBWriteZone.BackColor = System.Drawing.Color.Gray;
             this.RTBWriteZone.EnableAutoDragDrop = true;
             this.RTBWriteZone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RTBWriteZone.ForeColor = System.Drawing.Color.Black;
@@ -215,7 +215,7 @@
             this.txtComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtComment.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtComment.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtComment.ForeColor = System.Drawing.Color.Gray;
             this.txtComment.Location = new System.Drawing.Point(3, 3);
             this.txtComment.Multiline = true;
             this.txtComment.Name = "txtComment";
@@ -232,7 +232,7 @@
             this.BTNSendComment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNSendComment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNSendComment.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNSendComment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNSendComment.ForeColor = System.Drawing.Color.Gray;
             this.BTNSendComment.Location = new System.Drawing.Point(9, 203);
             this.BTNSendComment.Name = "BTNSendComment";
             this.BTNSendComment.Size = new System.Drawing.Size(310, 39);
@@ -268,7 +268,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label2.ForeColor = System.Drawing.Color.Gray;
             this.label2.Location = new System.Drawing.Point(61, -1);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(200, 33);
@@ -282,7 +282,7 @@
             this.CalificacionCB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CalificacionCB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CalificacionCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CalificacionCB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CalificacionCB.ForeColor = System.Drawing.Color.Gray;
             this.CalificacionCB.FormattingEnabled = true;
             this.CalificacionCB.ItemHeight = 20;
             this.CalificacionCB.Items.AddRange(new object[] {
@@ -302,7 +302,7 @@
             // 
             this.calificarlabel.AutoSize = true;
             this.calificarlabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calificarlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.calificarlabel.ForeColor = System.Drawing.Color.Gray;
             this.calificarlabel.Location = new System.Drawing.Point(39, 577);
             this.calificarlabel.Name = "calificarlabel";
             this.calificarlabel.Size = new System.Drawing.Size(250, 22);
@@ -315,7 +315,7 @@
             this.calificarbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.calificarbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calificarbtn.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calificarbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.calificarbtn.ForeColor = System.Drawing.Color.Gray;
             this.calificarbtn.Location = new System.Drawing.Point(21, 692);
             this.calificarbtn.Name = "calificarbtn";
             this.calificarbtn.Size = new System.Drawing.Size(295, 50);
@@ -340,7 +340,7 @@
             // 
             this.GBRecommend.Controls.Add(this.PNRecommends);
             this.GBRecommend.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.GBRecommend.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.GBRecommend.ForeColor = System.Drawing.Color.MidnightBlue;
             this.GBRecommend.Location = new System.Drawing.Point(254, 539);
             this.GBRecommend.Name = "GBRecommend";
             this.GBRecommend.Size = new System.Drawing.Size(878, 237);
@@ -443,7 +443,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1469, 788);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

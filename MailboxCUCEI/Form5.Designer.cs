@@ -38,28 +38,32 @@
             // 
             // BTNNewSto
             // 
+            this.BTNNewSto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BTNNewSto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNNewSto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNNewSto.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNNewSto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNNewSto.ForeColor = System.Drawing.Color.Black;
             this.BTNNewSto.Location = new System.Drawing.Point(51, 16);
             this.BTNNewSto.Name = "BTNNewSto";
             this.BTNNewSto.Size = new System.Drawing.Size(150, 36);
             this.BTNNewSto.TabIndex = 0;
             this.BTNNewSto.Text = "Nueva historia";
-            this.BTNNewSto.UseVisualStyleBackColor = true;
+            this.BTNNewSto.UseVisualStyleBackColor = false;
             this.BTNNewSto.Click += new System.EventHandler(this.BTNNewStoClick);
             // 
             // BTNCont
             // 
+            this.BTNCont.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BTNCont.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNCont.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNCont.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNCont.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNCont.ForeColor = System.Drawing.Color.Black;
             this.BTNCont.Location = new System.Drawing.Point(270, 16);
             this.BTNCont.Name = "BTNCont";
             this.BTNCont.Size = new System.Drawing.Size(151, 36);
             this.BTNCont.TabIndex = 2;
             this.BTNCont.Text = "Continuar";
-            this.BTNCont.UseVisualStyleBackColor = true;
+            this.BTNCont.UseVisualStyleBackColor = false;
             this.BTNCont.Click += new System.EventHandler(this.BTNContClick);
             // 
             // LBLQuest
@@ -76,15 +80,17 @@
             // 
             // BtnBack
             // 
+            this.BtnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBack.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BtnBack.ForeColor = System.Drawing.Color.Black;
             this.BtnBack.Location = new System.Drawing.Point(509, 16);
             this.BtnBack.Name = "BtnBack";
             this.BtnBack.Size = new System.Drawing.Size(97, 36);
             this.BtnBack.TabIndex = 8;
             this.BtnBack.Text = "Volver";
-            this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.UseVisualStyleBackColor = false;
             this.BtnBack.Click += new System.EventHandler(this.BtnBackClick);
             // 
             // panel1
@@ -103,7 +109,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(650, 137);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.LBLQuest);

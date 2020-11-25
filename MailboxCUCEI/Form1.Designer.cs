@@ -96,7 +96,7 @@
             // 
             // TxtUsuario
             // 
-            this.TxtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.TxtUsuario.BackColor = System.Drawing.Color.DarkGray;
             this.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtUsuario.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUsuario.ForeColor = System.Drawing.Color.Black;
@@ -110,7 +110,7 @@
             // 
             // TxtPassword
             // 
-            this.TxtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.TxtPassword.BackColor = System.Drawing.Color.DarkGray;
             this.TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPassword.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPassword.ForeColor = System.Drawing.Color.Black;
@@ -125,7 +125,7 @@
             // 
             // BtnInicioSesion
             // 
-            this.BtnInicioSesion.BackColor = System.Drawing.Color.SaddleBrown;
+            this.BtnInicioSesion.BackColor = System.Drawing.Color.DimGray;
             this.BtnInicioSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnInicioSesion.FlatAppearance.BorderSize = 0;
             this.BtnInicioSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
@@ -143,7 +143,7 @@
             // 
             // LinkLabel
             // 
-            this.LinkLabel.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.LinkLabel.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.LinkLabel.AutoSize = true;
             this.LinkLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinkLabel.ForeColor = System.Drawing.Color.Black;
@@ -183,14 +183,14 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(279, 257);
+            this.label4.Location = new System.Drawing.Point(277, 253);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 13);
             this.label4.TabIndex = 0;
             // 
             // BTNINVITADO
             // 
-            this.BTNINVITADO.BackColor = System.Drawing.Color.SaddleBrown;
+            this.BTNINVITADO.BackColor = System.Drawing.Color.DimGray;
             this.BTNINVITADO.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNINVITADO.FlatAppearance.BorderSize = 0;
             this.BTNINVITADO.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
@@ -210,7 +210,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(508, 257);
+            this.label5.Location = new System.Drawing.Point(506, 253);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(16, 18);
             this.label5.TabIndex = 12;
@@ -219,7 +219,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(299, 265);
+            this.panel2.Location = new System.Drawing.Point(297, 261);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(203, 5);
             this.panel2.TabIndex = 13;
@@ -227,7 +227,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(530, 265);
+            this.panel3.Location = new System.Drawing.Point(528, 261);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(203, 5);
             this.panel3.TabIndex = 14;
@@ -236,7 +236,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(791, 389);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

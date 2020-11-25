@@ -38,7 +38,7 @@
             // 
             this.LBLQuest.AutoSize = true;
             this.LBLQuest.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLQuest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.LBLQuest.ForeColor = System.Drawing.Color.Black;
             this.LBLQuest.Location = new System.Drawing.Point(12, 9);
             this.LBLQuest.Name = "LBLQuest";
             this.LBLQuest.Size = new System.Drawing.Size(238, 24);
@@ -61,7 +61,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(266, 208);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LBLQuest);

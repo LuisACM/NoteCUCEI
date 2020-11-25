@@ -79,7 +79,7 @@
             // 
             // TXTSummary
             // 
-            this.TXTSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.TXTSummary.BackColor = System.Drawing.Color.Gray;
             this.TXTSummary.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TXTSummary.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXTSummary.ForeColor = System.Drawing.Color.Black;
@@ -97,7 +97,7 @@
             // 
             // BTNSalir
             // 
-            this.BTNSalir.BackColor = System.Drawing.Color.SaddleBrown;
+            this.BTNSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNSalir.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -112,7 +112,7 @@
             // 
             // BTNSend
             // 
-            this.BTNSend.BackColor = System.Drawing.Color.SaddleBrown;
+            this.BTNSend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNSend.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNSend.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -137,7 +137,7 @@
             // 
             // txtnombre
             // 
-            this.txtnombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtnombre.BackColor = System.Drawing.Color.Gray;
             this.txtnombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtnombre.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnombre.ForeColor = System.Drawing.Color.Black;
@@ -163,7 +163,7 @@
             // 
             // CBGender1
             // 
-            this.CBGender1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CBGender1.BackColor = System.Drawing.Color.Gray;
             this.CBGender1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CBGender1.ForeColor = System.Drawing.Color.Black;
             this.CBGender1.FormattingEnabled = true;
@@ -189,7 +189,7 @@
             // 
             // CBGender2
             // 
-            this.CBGender2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CBGender2.BackColor = System.Drawing.Color.Gray;
             this.CBGender2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CBGender2.ForeColor = System.Drawing.Color.Black;
             this.CBGender2.FormattingEnabled = true;
@@ -202,7 +202,7 @@
             // 
             // CBRaiting
             // 
-            this.CBRaiting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CBRaiting.BackColor = System.Drawing.Color.Gray;
             this.CBRaiting.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CBRaiting.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBRaiting.ForeColor = System.Drawing.Color.Black;
@@ -234,7 +234,7 @@
             // 
             // CBEstatus
             // 
-            this.CBEstatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CBEstatus.BackColor = System.Drawing.Color.Gray;
             this.CBEstatus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CBEstatus.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBEstatus.ForeColor = System.Drawing.Color.Black;
@@ -273,7 +273,7 @@
             // 
             // btnImage
             // 
-            this.btnImage.BackColor = System.Drawing.Color.SaddleBrown;
+            this.btnImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnImage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImage.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -301,7 +301,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(735, 449);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PBCover);

@@ -332,3 +332,4 @@ C:\Users\PC\Desktop\MailboxCUCEI\NoteCUCEI\MailboxCUCEI\obj\x64\Debug\MailboxCUC
 C:\Users\PC\Desktop\MailboxCUCEI\NoteCUCEI\MailboxCUCEI\obj\x64\Debug\MailboxCUCEI.pdb
 D:\Gith\NoteCUCEI\MailboxCUCEI\obj\x64\Debug\MailboxCUCEI.FRMChoose.resources
 C:\Users\PC\Desktop\MailboxCUCEI\NoteCUCEI\MailboxCUCEI\obj\x64\Debug\MailboxCUCEI.FRMChoose.resources
+C:\Users\PC\Desktop\MailboxCUCEI\NoteCUCEI\MailboxCUCEI\obj\x64\Debug\MailboxCUCEI.Avisodeprivacidad.resources

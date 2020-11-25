@@ -45,6 +45,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnOwo = new System.Windows.Forms.Button();
+            this.avisoLink = new System.Windows.Forms.LinkLabel();
+            this.avisoCB = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -99,7 +101,7 @@
             // 
             // TxtNombre
             // 
-            this.TxtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.TxtNombre.BackColor = System.Drawing.Color.Gray;
             this.TxtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtNombre.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNombre.ForeColor = System.Drawing.Color.Black;
@@ -113,7 +115,7 @@
             // 
             // TxtPasswordRegistro
             // 
-            this.TxtPasswordRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.TxtPasswordRegistro.BackColor = System.Drawing.Color.Gray;
             this.TxtPasswordRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPasswordRegistro.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPasswordRegistro.ForeColor = System.Drawing.Color.Black;
@@ -127,7 +129,7 @@
             // 
             // TxtCodigoRegistro
             // 
-            this.TxtCodigoRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.TxtCodigoRegistro.BackColor = System.Drawing.Color.Gray;
             this.TxtCodigoRegistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCodigoRegistro.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCodigoRegistro.ForeColor = System.Drawing.Color.Black;
@@ -141,7 +143,7 @@
             // 
             // TxtCorreo
             // 
-            this.TxtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.TxtCorreo.BackColor = System.Drawing.Color.Gray;
             this.TxtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCorreo.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCorreo.ForeColor = System.Drawing.Color.Black;
@@ -155,7 +157,7 @@
             // 
             // BTNRegistro
             // 
-            this.BTNRegistro.BackColor = System.Drawing.Color.SaddleBrown;
+            this.BTNRegistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNRegistro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNRegistro.FlatAppearance.BorderSize = 0;
             this.BTNRegistro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
@@ -173,7 +175,7 @@
             // 
             // BTNRegresar
             // 
-            this.BTNRegresar.BackColor = System.Drawing.Color.SaddleBrown;
+            this.BTNRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNRegresar.FlatAppearance.BorderSize = 0;
             this.BTNRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
@@ -265,12 +267,39 @@
             this.btnOwo.Visible = false;
             this.btnOwo.Click += new System.EventHandler(this.btnOwo_Click);
             // 
+            // avisoLink
+            // 
+            this.avisoLink.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.avisoLink.AutoSize = true;
+            this.avisoLink.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avisoLink.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.avisoLink.Location = new System.Drawing.Point(207, 554);
+            this.avisoLink.Name = "avisoLink";
+            this.avisoLink.Size = new System.Drawing.Size(189, 19);
+            this.avisoLink.TabIndex = 14;
+            this.avisoLink.TabStop = true;
+            this.avisoLink.Text = "Aviso de privacidad.";
+            this.avisoLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.avisoLink_LinkClicked);
+            // 
+            // avisoCB
+            // 
+            this.avisoCB.AutoSize = true;
+            this.avisoCB.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avisoCB.Location = new System.Drawing.Point(431, 557);
+            this.avisoCB.Name = "avisoCB";
+            this.avisoCB.Size = new System.Drawing.Size(75, 22);
+            this.avisoCB.TabIndex = 15;
+            this.avisoCB.Text = "Acepto";
+            this.avisoCB.UseVisualStyleBackColor = true;
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(685, 626);
+            this.Controls.Add(this.avisoCB);
+            this.Controls.Add(this.avisoLink);
             this.Controls.Add(this.btnOwo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.passCB);
@@ -316,5 +345,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnOwo;
+        private System.Windows.Forms.LinkLabel avisoLink;
+        private System.Windows.Forms.CheckBox avisoCB;
     }
 }
