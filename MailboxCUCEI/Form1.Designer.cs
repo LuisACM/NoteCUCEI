@@ -44,6 +44,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblComparacion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTNCerrar)).BeginInit();
@@ -53,6 +54,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.lblComparacion);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -232,6 +234,16 @@
             this.panel3.Size = new System.Drawing.Size(203, 5);
             this.panel3.TabIndex = 14;
             // 
+            // lblComparacion
+            // 
+            this.lblComparacion.AutoSize = true;
+            this.lblComparacion.Location = new System.Drawing.Point(13, 4);
+            this.lblComparacion.Name = "lblComparacion";
+            this.lblComparacion.Size = new System.Drawing.Size(35, 13);
+            this.lblComparacion.TabIndex = 1;
+            this.lblComparacion.Text = "label3";
+            this.lblComparacion.Visible = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,6 +271,7 @@
             this.Text = "Bienvenido";
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTNCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTNMinimizar)).EndInit();
@@ -284,6 +297,7 @@
         public System.Windows.Forms.TextBox TxtUsuario;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblComparacion;
     }
 }
 

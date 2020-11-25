@@ -8,11 +8,47 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Security.Cryptography;
 
 namespace MailboxCUCEI
 {
+    
+
     public partial class Registro : Form
     {
+        public static string Llave = "jwey89e09ewhfo24";
+
+        public string Encriptar(string dato, string llave)
+        {
+            byte[] keyArray;
+            byte[] encriptar = Encoding.UTF8.GetBytes(dato);
+            keyArray = Encoding.UTF8.GetBytes(llave);
+            var tdes = new TripleDESCryptoServiceProvider();
+            tdes.Key = keyArray;
+            tdes.Mode = CipherMode.ECB;
+            tdes.Padding = PaddingMode.PKCS7;
+            ICryptoTransform cTransform = tdes.CreateEncryptor();
+            byte[] resultado = cTransform.TransformFinalBlock(encriptar,0,encriptar.Length);
+            tdes.Clear();
+            return Convert.ToBase64String(resultado,0,resultado.Length);
+        }
+
+        public string Decriptar(string dato, string llave)
+        {
+            byte[] keyArray;
+            byte[] decriptar = Convert.FromBase64String(dato);
+            keyArray = Encoding.UTF8.GetBytes(llave);
+            var tdes = new TripleDESCryptoServiceProvider();
+            tdes.Key = keyArray;
+            tdes.Mode = CipherMode.ECB;
+            tdes.Padding = PaddingMode.PKCS7;
+            ICryptoTransform cTransform = tdes.CreateDecryptor();
+            byte[] resultado = cTransform.TransformFinalBlock(decriptar, 0, decriptar.Length);
+            tdes.Clear();
+            return Encoding.UTF8.GetString(resultado);
+        }
+
+
         public Registro()
         {
             InitializeComponent();
@@ -134,6 +170,7 @@ namespace MailboxCUCEI
                 }
                 else
                 {
+                    TxtPasswordRegistro.Text = Encriptar(TxtPasswordRegistro.Text,Llave);
                     MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
                     conectar.Open();
                     MySqlCommand comando = new MySqlCommand("INSERT INTO Usuarios (Codigo,Nombre,Password,Correo,F_Nacimiento) VALUES ('" + TxtCodigoRegistro.Text + "', '" + TxtNombre.Text + "','" + TxtPasswordRegistro.Text + "','" + TxtCorreo.Text + "','"+txtFecha.Text+"');");

@@ -11,11 +11,15 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Net;
 using System.Threading;
+using System.Security.Cryptography;
 
 namespace MailboxCUCEI
 {
     public partial class Login : Form
     {
+
+
+        public static string Llave = "jwey89e09ewhfo24";
         public Login()
         {
             InitializeComponent();
@@ -88,6 +92,37 @@ namespace MailboxCUCEI
             }
             connetionBD.Close();
         }
+
+        public string Decriptar(string dato, string llave)
+        {
+            byte[] keyArray;
+            byte[] decriptar = Convert.FromBase64String(dato);
+            keyArray = Encoding.UTF8.GetBytes(llave);
+            var tdes = new TripleDESCryptoServiceProvider();
+            tdes.Key = keyArray;
+            tdes.Mode = CipherMode.ECB;
+            tdes.Padding = PaddingMode.PKCS7;
+            ICryptoTransform cTransform = tdes.CreateDecryptor();
+            byte[] resultado = cTransform.TransformFinalBlock(decriptar, 0, decriptar.Length);
+            tdes.Clear();
+            return Encoding.UTF8.GetString(resultado);
+        }
+
+        void RecuperarPass()
+        {
+            
+            MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM Usuarios WHERE Codigo = @ID", conexion);
+            comando.Parameters.AddWithValue("@ID", TxtUsuario.Text);
+            conexion.Open();
+            MySqlDataReader registro = comando.ExecuteReader();
+            if (registro.Read())
+            {
+                lblComparacion.Text = registro["Password"].ToString();
+            }
+            conexion.Close();
+        }
+
         private void BtnInicioSesion_Click(object sender, EventArgs e)
         {
             if (Offline)
@@ -99,36 +134,36 @@ namespace MailboxCUCEI
             else
             {
                 Esperar.Show();
+                RecuperarPass();//recupera encriptada de la BD
+                lblComparacion.Text = Decriptar(lblComparacion.Text, Llave);//desencripta y guarda en lbl
                 MySqlConnection conectar = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
                 conectar.Open();
                 MySqlCommand checkin = new MySqlCommand();
                 MySqlConnection conectarya = new MySqlConnection();
                 checkin.Connection = conectar;
-                checkin.CommandText = ("SELECT *From Usuarios WHERE Codigo='" + TxtUsuario.Text + "'and Password ='" + TxtPassword.Text + "'");
-                MySqlDataReader leer = checkin.ExecuteReader();
-                if (leer.Read())
+                checkin.CommandText = ("SELECT *From Usuarios WHERE Codigo='" + TxtUsuario.Text + "'");
+                if (TxtPassword.Text == lblComparacion.Text)
                 {
-                    GenerateUser();
+                    MySqlDataReader leer = checkin.ExecuteReader();
+                    if (leer.Read())
+                    {
+                        GenerateUser();
+                        conectar.Close();
+                        Thread.Sleep(3000);
+                        MessageBox.Show("Bienvenido");
+
+                        Principal go = new Principal();
+                        go.User = false;
+                        go.ActUser = ActUser;
+                        go.manduser.Text = TxtUsuario.Text;
+                        go.Show();
+                        this.Hide();
+                    }
                     conectar.Close();
-                    Thread.Sleep(3000);
-                    MessageBox.Show("Bienvenido");
 
-                    Principal go = new Principal();
-                    go.User = false;
-                    go.ActUser = ActUser;
-                    go.manduser.Text = TxtUsuario.Text;
-                    go.Show();
-                    this.Hide();
+                    Esperar.Hide();
                 }
-                else
-                {
-                    MessageBox.Show("Código o contraseña erroneos");
-                }
-                conectar.Close();
-               
-                Esperar.Hide();
             }
-
         }
 
         private void LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

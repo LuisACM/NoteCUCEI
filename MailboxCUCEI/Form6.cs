@@ -11,11 +11,42 @@ using MySql.Data.MySqlClient;
 using System.IO;
 using System.Drawing.Imaging;
 using System.Net;
+using System.Security.Cryptography;
 
 namespace MailboxCUCEI
 {
     public partial class Administrador : Form
     {
+        public static string Llave = "jwey89e09ewhfo24";
+        public string Encriptar(string dato, string llave)
+        {
+            byte[] keyArray;
+            byte[] encriptar = Encoding.UTF8.GetBytes(dato);
+            keyArray = Encoding.UTF8.GetBytes(llave);
+            var tdes = new TripleDESCryptoServiceProvider();
+            tdes.Key = keyArray;
+            tdes.Mode = CipherMode.ECB;
+            tdes.Padding = PaddingMode.PKCS7;
+            ICryptoTransform cTransform = tdes.CreateEncryptor();
+            byte[] resultado = cTransform.TransformFinalBlock(encriptar, 0, encriptar.Length);
+            tdes.Clear();
+            return Convert.ToBase64String(resultado, 0, resultado.Length);
+        }
+
+        public string Decriptar(string dato, string llave)
+        {
+            byte[] keyArray;
+            byte[] decriptar = Convert.FromBase64String(dato);
+            keyArray = Encoding.UTF8.GetBytes(llave);
+            var tdes = new TripleDESCryptoServiceProvider();
+            tdes.Key = keyArray;
+            tdes.Mode = CipherMode.ECB;
+            tdes.Padding = PaddingMode.PKCS7;
+            ICryptoTransform cTransform = tdes.CreateDecryptor();
+            byte[] resultado = cTransform.TransformFinalBlock(decriptar, 0, decriptar.Length);
+            tdes.Clear();
+            return Encoding.UTF8.GetString(resultado);
+        }
         public Administrador()
         {
             InitializeComponent();
@@ -38,8 +69,27 @@ namespace MailboxCUCEI
         }
         
         public int NotifyNumber;
+
+        //funcion desencriptar contraseña para antes de iniciar el form
+        void RecuperarPass()
+        {
+            string usuario=ActUser.GetID().ToString();
+            MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM Usuarios WHERE Codigo = @ID", conexion);
+            comando.Parameters.AddWithValue("@ID", usuario);
+            conexion.Open();
+            MySqlDataReader registro = comando.ExecuteReader();
+            if (registro.Read())
+            {
+                lblnuevapass.Text = registro["Password"].ToString();
+            }
+            conexion.Close();
+        }
+
         public void Administrador_Load(object sender, EventArgs e)
         {
+            RecuperarPass(); 
+            lblnuevapass.Text = Decriptar(lblnuevapass.Text,Llave); 
             string cover = "";
             if (NotifyNumber!=0)
             {
@@ -55,7 +105,7 @@ namespace MailboxCUCEI
             {
                 TxtNombrePerfil.Text = registro["Nombre"].ToString();
                 TxtCorreoPerfil.Text = registro["Correo"].ToString();
-                TxtPassPerfil.Text = registro["Password"].ToString();
+                TxtPassPerfil.Text = lblnuevapass.Text;  
                 FechaNac.Text = registro["F_Nacimiento"].ToString();
                 Descargar = registro["Descargar"].ToString();
                 cover = registro["Fo_Perfil"].ToString();
@@ -132,6 +182,7 @@ namespace MailboxCUCEI
 
             MySqlConnection conexion = new MySqlConnection("Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;");
             conexion.Open();
+            TxtPassPerfil.Text = Encriptar(TxtPassPerfil.Text,Llave);//se encripta la contraseña antes de Upgradearla en la BD
             string Query = "UPDATE Usuarios SET Codigo='" + TxtCodigoPerfil.Text +
                 "',Nombre='" + TxtNombrePerfil.Text +
                 "',Correo='" + TxtCorreoPerfil.Text +
@@ -142,6 +193,7 @@ namespace MailboxCUCEI
                 "'WHERE Codigo='" + TxtCodigoPerfil.Text +
                 "';";
             UploadImage();
+
             MySqlCommand comando = new MySqlCommand(Query, conexion);
             comando.ExecuteNonQuery();
             conexion.Close();

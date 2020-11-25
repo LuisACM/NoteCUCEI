@@ -92,6 +92,7 @@
             this.verCB = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblnuevapass = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.FotoPerfil)).BeginInit();
             this.GBStories.SuspendLayout();
             this.GBDetails.SuspendLayout();
@@ -937,12 +938,23 @@
             this.pictureBox1.TabIndex = 70;
             this.pictureBox1.TabStop = false;
             // 
+            // lblnuevapass
+            // 
+            this.lblnuevapass.AutoSize = true;
+            this.lblnuevapass.Location = new System.Drawing.Point(236, 730);
+            this.lblnuevapass.Name = "lblnuevapass";
+            this.lblnuevapass.Size = new System.Drawing.Size(41, 13);
+            this.lblnuevapass.TabIndex = 73;
+            this.lblnuevapass.Text = "label16";
+            this.lblnuevapass.Visible = false;
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(1063, 755);
+            this.Controls.Add(this.lblnuevapass);
             this.Controls.Add(this.GBStories);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.GBFv);
@@ -1061,5 +1073,6 @@
         private System.Windows.Forms.CheckBox verCB;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblnuevapass;
     }
 }
