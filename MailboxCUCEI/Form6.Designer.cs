@@ -122,28 +122,28 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label9.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label9.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(617, 215);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(145, 18);
+            this.label9.Size = new System.Drawing.Size(180, 19);
             this.label9.TabIndex = 57;
             this.label9.Text = "Fecha de nacimiento";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label7.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(617, 166);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 18);
+            this.label7.Size = new System.Drawing.Size(99, 19);
             this.label7.TabIndex = 56;
             this.label7.Text = "Contraseña";
             // 
             // TxtPassPerfil
             // 
-            this.TxtPassPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.TxtPassPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.TxtPassPerfil.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPassPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPassPerfil.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -167,39 +167,39 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label6.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(617, 119);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 18);
+            this.label6.Size = new System.Drawing.Size(63, 19);
             this.label6.TabIndex = 53;
             this.label6.Text = "Correo";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label5.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(617, 31);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 18);
+            this.label5.Size = new System.Drawing.Size(63, 19);
             this.label5.TabIndex = 52;
             this.label5.Text = "Codigo";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(617, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 18);
+            this.label1.Size = new System.Drawing.Size(63, 19);
             this.label1.TabIndex = 51;
             this.label1.Text = "Nombre";
             // 
             // TxtCorreoPerfil
             // 
-            this.TxtCorreoPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.TxtCorreoPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.TxtCorreoPerfil.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCorreoPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCorreoPerfil.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -210,7 +210,7 @@
             // 
             // TxtCodigoPerfil
             // 
-            this.TxtCodigoPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.TxtCodigoPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.TxtCodigoPerfil.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCodigoPerfil.Enabled = false;
             this.TxtCodigoPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -222,7 +222,7 @@
             // 
             // TxtNombrePerfil
             // 
-            this.TxtNombrePerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.TxtNombrePerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.TxtNombrePerfil.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtNombrePerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNombrePerfil.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -281,7 +281,7 @@
             // BTNModificar
             // 
             this.BTNModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNModificar.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.BTNModificar.ForeColor = System.Drawing.Color.Black;
             this.BTNModificar.Location = new System.Drawing.Point(557, 318);
             this.BTNModificar.Name = "BTNModificar";
             this.BTNModificar.Size = new System.Drawing.Size(180, 45);
@@ -317,7 +317,7 @@
             // BTNFotoPerfil
             // 
             this.BTNFotoPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BTNFotoPerfil.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.BTNFotoPerfil.ForeColor = System.Drawing.Color.Black;
             this.BTNFotoPerfil.Location = new System.Drawing.Point(359, 318);
             this.BTNFotoPerfil.Name = "BTNFotoPerfil";
             this.BTNFotoPerfil.Size = new System.Drawing.Size(180, 45);
@@ -460,7 +460,7 @@
             // 
             this.CBGender2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.CBGender2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CBGender2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.CBGender2.ForeColor = System.Drawing.Color.Black;
             this.CBGender2.FormattingEnabled = true;
             this.CBGender2.ItemHeight = 19;
             this.CBGender2.Items.AddRange(new object[] {
@@ -487,7 +487,7 @@
             // 
             this.CBGender1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.CBGender1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CBGender1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.CBGender1.ForeColor = System.Drawing.Color.Black;
             this.CBGender1.FormattingEnabled = true;
             this.CBGender1.ItemHeight = 19;
             this.CBGender1.Items.AddRange(new object[] {
@@ -686,22 +686,22 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label14.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label14.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.Color.Black;
             this.label14.Location = new System.Drawing.Point(622, 240);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(80, 18);
+            this.label14.Size = new System.Drawing.Size(90, 19);
             this.label14.TabIndex = 65;
             this.label14.Text = "Descargas";
             // 
             // RBYes
             // 
             this.RBYes.AutoSize = true;
-            this.RBYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.RBYes.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.RBYes.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.RBYes.ForeColor = System.Drawing.Color.Black;
             this.RBYes.Location = new System.Drawing.Point(723, 238);
             this.RBYes.Name = "RBYes";
-            this.RBYes.Size = new System.Drawing.Size(39, 22);
+            this.RBYes.Size = new System.Drawing.Size(45, 23);
             this.RBYes.TabIndex = 66;
             this.RBYes.Text = "Si";
             this.RBYes.UseVisualStyleBackColor = true;
@@ -710,11 +710,11 @@
             // RBNo
             // 
             this.RBNo.AutoSize = true;
-            this.RBNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.RBNo.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.RBNo.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.RBNo.ForeColor = System.Drawing.Color.Black;
             this.RBNo.Location = new System.Drawing.Point(778, 236);
             this.RBNo.Name = "RBNo";
-            this.RBNo.Size = new System.Drawing.Size(46, 22);
+            this.RBNo.Size = new System.Drawing.Size(45, 23);
             this.RBNo.TabIndex = 67;
             this.RBNo.Text = "No";
             this.RBNo.UseVisualStyleBackColor = true;
@@ -841,7 +841,7 @@
             this.GBNotify.ForeColor = System.Drawing.Color.Black;
             this.GBNotify.Location = new System.Drawing.Point(236, 12);
             this.GBNotify.Name = "GBNotify";
-            this.GBNotify.Size = new System.Drawing.Size(789, 613);
+            this.GBNotify.Size = new System.Drawing.Size(699, 647);
             this.GBNotify.TabIndex = 0;
             this.GBNotify.TabStop = false;
             this.GBNotify.Tag = "699, 647 Location  236, 12";
@@ -896,10 +896,11 @@
             // verCB
             // 
             this.verCB.AutoSize = true;
-            this.verCB.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.verCB.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.verCB.ForeColor = System.Drawing.Color.Black;
             this.verCB.Location = new System.Drawing.Point(967, 164);
             this.verCB.Name = "verCB";
-            this.verCB.Size = new System.Drawing.Size(42, 17);
+            this.verCB.Size = new System.Drawing.Size(55, 23);
             this.verCB.TabIndex = 71;
             this.verCB.Text = "Ver";
             this.verCB.UseVisualStyleBackColor = true;
@@ -935,7 +936,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1316, 755);
+            this.ClientSize = new System.Drawing.Size(1060, 755);
             this.Controls.Add(this.GBStories);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.GBFv);

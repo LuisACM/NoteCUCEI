@@ -116,7 +116,7 @@ namespace MailboxCUCEI
                 string temp = ((Button)sender).Tag.ToString();
                 ListChoose.Add(temp);
                 
-                if (SelectedStories == 5)
+                if (SelectedStories == 3)
                 {
                     button1.Enabled = true;
                 }
@@ -140,7 +140,7 @@ namespace MailboxCUCEI
                     }
                 }
                 ListChoose = Temporally;
-                if (SelectedStories < 5)
+                if (SelectedStories < 3)
                 {
                     button1.Enabled = false;
                 }

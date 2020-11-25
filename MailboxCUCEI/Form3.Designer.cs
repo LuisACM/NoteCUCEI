@@ -49,6 +49,7 @@
             this.btnImage = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PBCover)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -350,5 +351,6 @@
         private System.Windows.Forms.Button btnImage;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }

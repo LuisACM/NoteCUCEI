@@ -13,6 +13,7 @@ using System.Net;
 using Renci.SshNet.Common;
 using Microsoft.ML;
 using Microsoft.ML.Trainers;
+using System.Threading;
 
 namespace MailboxCUCEI
 {
@@ -156,7 +157,8 @@ namespace MailboxCUCEI
 		string[] OfflineChaptersList;
 		private void FRMWrite_Load(object sender, EventArgs e)
 		{
-
+			WaitForm Wait = new WaitForm();
+			Wait.Show();
 			//luis'codigo
 			if (Ventana.User == false)
 			{
@@ -220,42 +222,53 @@ namespace MailboxCUCEI
 				temp = ListChapters[ActualChapter];
 				lblCapitulo.Text = temp.GetName();
 				lblStoryName.Text = MainStory.GetName();
-				DownloadStory("https://notecucei.000webhostapp.com/" + temp.GetFilename(), temp.GetFilename());
+				string nameWithoutSpaces = temp.GetFilename();
+				DownloadStory("https://notecucei.000webhostapp.com/" + nameWithoutSpaces, temp.GetFilename());
 				RTBWriteZone.LoadFile(temp.GetFilename());
+				//Volver oscuro
+				RTBWriteZone.SelectAll();
+				RTBWriteZone.SelectionColor = Color.Black;
+				RTBWriteZone.ForeColor = Color.Black;
+				RTBWriteZone.DeselectAll();
 				if (!MoreChapter())
 				{
 					BTNNextChapter.Enabled = false;
 				}
 			}
 
-			//Sistema de recomendación
-			MLContext mlContext = new MLContext();
-			(IDataView trainingDataView, IDataView testDataView) = LoadData(mlContext);
-			ITransformer model = BuildAndTrainModel(mlContext, trainingDataView);
-			EvaluateModel(mlContext, testDataView, model);
-
-			//Sacar lista de ID
-			string query = "SELECT DISTINCT ID_Historia From Rating";
-			string conexionAlt = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
-			MySqlConnection connetionBD = new MySqlConnection(conexionAlt);
-			MySqlCommand comandoAlt = new MySqlCommand(query, connetionBD);
-			MySqlDataReader lector;
-			connetionBD.Open();
-			lector = comandoAlt.ExecuteReader();
-			while (lector.Read())
+			if (Ventana.User == false )
             {
-				if (UseModelForSinglePrediction(mlContext, model,ActUser.GetID(),lector.GetInt32(0)))
+				if (!Offline)
                 {
-					if (lector.GetInt32(0) != MainStory.GetID())
-					{
-						CreateObjectStory(lector.GetInt32(0));
-					}
-				}
-			}
-			connetionBD.Close();
-			CreateObjects();
-			SaveModel(mlContext, trainingDataView.Schema, model);
+					MLContext mlContext = new MLContext();
+					(IDataView trainingDataView, IDataView testDataView) = LoadData(mlContext);
+					ITransformer model = BuildAndTrainModel(mlContext, trainingDataView);
+					EvaluateModel(mlContext, testDataView, model);
 
+					//Sacar lista de ID
+					string query = "SELECT DISTINCT ID_Historia From Rating";
+					string conexionAlt = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
+					MySqlConnection connetionBD = new MySqlConnection(conexionAlt);
+					MySqlCommand comandoAlt = new MySqlCommand(query, connetionBD);
+					MySqlDataReader lector;
+					connetionBD.Open();
+					lector = comandoAlt.ExecuteReader();
+					while (lector.Read())
+					{
+						if (UseModelForSinglePrediction(mlContext, model, ActUser.GetID(), lector.GetInt32(0)))
+						{
+							if (lector.GetInt32(0) != MainStory.GetID())
+							{
+								CreateObjectStory(lector.GetInt32(0));
+							}
+						}
+					}
+					connetionBD.Close();
+					CreateObjects();
+				}
+            }
+			Thread.Sleep(3000);
+			Wait.Dispose();
 		}
 
 		void LoadComments()

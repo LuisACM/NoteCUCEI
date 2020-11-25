@@ -74,7 +74,7 @@
             this.groupBox3.Size = new System.Drawing.Size(794, 222);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Elige al menos cinco historias";
+            this.groupBox3.Text = "Elige al menos tres historias";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // PNResults

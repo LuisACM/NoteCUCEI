@@ -334,8 +334,8 @@ namespace MailboxCUCEI
 				RTBWriteZone.Rtf = data.GetData(DataFormats.Rtf).ToString();
 				oWord.Quit(ref missing, ref missing, ref missing);
 				RTBWriteZone.SelectAll();
-				RTBWriteZone.ForeColor = Color.DodgerBlue;
-				RTBWriteZone.SelectionColor = Color.DodgerBlue;
+				RTBWriteZone.ForeColor = Color.Black;
+				RTBWriteZone.SelectionColor = Color.Black;
 				RTBWriteZone.DeselectAll();
 			}
 		}

@@ -110,7 +110,9 @@ namespace MailboxCUCEI
                 {
                     GenerateUser();
                     conectar.Close();
+                    Thread.Sleep(3000);
                     MessageBox.Show("Bienvenido");
+
                     Principal go = new Principal();
                     go.User = false;
                     go.ActUser = ActUser;
@@ -123,7 +125,7 @@ namespace MailboxCUCEI
                     MessageBox.Show("Código o contraseña erroneos");
                 }
                 conectar.Close();
-                Thread.Sleep(3000);
+               
                 Esperar.Hide();
             }
 
@@ -143,11 +145,18 @@ namespace MailboxCUCEI
 
         private void BTNINVITADO_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bienvenido!");
+            WaitForm Wait = new WaitForm();
+            Wait.Show();
+            Thread.Sleep(3000);
+            MessageBox.Show("¡Bienvenido!");
+            MessageBox.Show("Entraras en modo invitado, no podras:" +Environment.NewLine+">Escribir historias" +
+            Environment.NewLine + ">Comentar historias, descargarlas o seguirlas"+
+            Environment.NewLine + ">Que te recomendemos peliculas","¡Atención!");
             Principal directo = new Principal();
             directo.User = true;
             directo.Show();
             this.Hide();
+            Wait.Dispose();
         }
         bool Online ()
         {

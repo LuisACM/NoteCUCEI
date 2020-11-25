@@ -11,6 +11,7 @@ using System.Net;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 using System.IO;
+using System.Threading;
 
 namespace MailboxCUCEI
 {
@@ -28,6 +29,7 @@ namespace MailboxCUCEI
 		{
 			Esperar.Show();
 			this.toolTip1.SetToolTip(this.CBRaiting, "K: Apto para todo publico" + Environment.NewLine + "K+: Apto para mayores de 8 años" + Environment.NewLine + "T: Apto para adolecentes" + Environment.NewLine + "M: Apto para mayores de 18 años");
+			this.toolTip2.SetToolTip(this.CBEstatus, "Completo si vas a publicar una historias de un solo capitulo y ya no tendra más"+Environment.NewLine +"Incompleto si vas a publicar más capitulos");
 			string query = "SELECT * FROM Generos";
 			string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
 			MySqlConnection connetionBD = new MySqlConnection(conexion);
@@ -122,6 +124,7 @@ namespace MailboxCUCEI
 				comando.ExecuteNonQuery();
 				UploadImage();
 				conectar.Close();
+				Thread.Sleep(3000);
 				MessageBox.Show("Historia subida con exito, ahora pasaras al area de escritura");
 				InsertRelation();
 				FRMWrite NewWindows = new FRMWrite();
