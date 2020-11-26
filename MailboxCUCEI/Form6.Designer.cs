@@ -144,7 +144,7 @@
             // 
             // TxtPassPerfil
             // 
-            this.TxtPassPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.TxtPassPerfil.BackColor = System.Drawing.Color.Gray;
             this.TxtPassPerfil.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPassPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPassPerfil.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -200,7 +200,7 @@
             // 
             // TxtCorreoPerfil
             // 
-            this.TxtCorreoPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.TxtCorreoPerfil.BackColor = System.Drawing.Color.Gray;
             this.TxtCorreoPerfil.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCorreoPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCorreoPerfil.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -211,7 +211,7 @@
             // 
             // TxtCodigoPerfil
             // 
-            this.TxtCodigoPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.TxtCodigoPerfil.BackColor = System.Drawing.Color.Gray;
             this.TxtCodigoPerfil.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCodigoPerfil.Enabled = false;
             this.TxtCodigoPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -223,7 +223,7 @@
             // 
             // TxtNombrePerfil
             // 
-            this.TxtNombrePerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.TxtNombrePerfil.BackColor = System.Drawing.Color.Gray;
             this.TxtNombrePerfil.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtNombrePerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNombrePerfil.ForeColor = System.Drawing.Color.DodgerBlue;
@@ -272,7 +272,7 @@
             this.BTNSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNSalir.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNSalir.ForeColor = System.Drawing.Color.Black;
-            this.BTNSalir.Location = new System.Drawing.Point(12, 682);
+            this.BTNSalir.Location = new System.Drawing.Point(12, 653);
             this.BTNSalir.Name = "BTNSalir";
             this.BTNSalir.Size = new System.Drawing.Size(163, 50);
             this.BTNSalir.TabIndex = 44;
@@ -282,6 +282,7 @@
             // 
             // BTNModificar
             // 
+            this.BTNModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNModificar.ForeColor = System.Drawing.Color.Black;
             this.BTNModificar.Location = new System.Drawing.Point(557, 318);
@@ -289,7 +290,7 @@
             this.BTNModificar.Size = new System.Drawing.Size(180, 45);
             this.BTNModificar.TabIndex = 43;
             this.BTNModificar.Text = "Guardar cambios";
-            this.BTNModificar.UseVisualStyleBackColor = true;
+            this.BTNModificar.UseVisualStyleBackColor = false;
             this.BTNModificar.Click += new System.EventHandler(this.BTNModificar_Click);
             // 
             // BTNEliminar
@@ -319,6 +320,7 @@
             // 
             // BTNFotoPerfil
             // 
+            this.BTNFotoPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BTNFotoPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNFotoPerfil.ForeColor = System.Drawing.Color.Black;
             this.BTNFotoPerfil.Location = new System.Drawing.Point(359, 318);
@@ -326,7 +328,7 @@
             this.BTNFotoPerfil.Size = new System.Drawing.Size(180, 45);
             this.BTNFotoPerfil.TabIndex = 60;
             this.BTNFotoPerfil.Text = "Cargar foto de perfil";
-            this.BTNFotoPerfil.UseVisualStyleBackColor = true;
+            this.BTNFotoPerfil.UseVisualStyleBackColor = false;
             this.BTNFotoPerfil.Click += new System.EventHandler(this.BTNFotoPerfil_Click);
             // 
             // GBStories
@@ -346,7 +348,6 @@
             // 
             // GBDetails
             // 
-            this.GBDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.GBDetails.Controls.Add(this.button3);
             this.GBDetails.Controls.Add(this.label13);
             this.GBDetails.Controls.Add(this.CBEstatus);
@@ -375,6 +376,7 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.DimGray;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.Red;
             this.button3.Location = new System.Drawing.Point(7, 387);
@@ -382,7 +384,7 @@
             this.button3.Size = new System.Drawing.Size(204, 27);
             this.button3.TabIndex = 43;
             this.button3.Text = "Eliminar Historia";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label13
@@ -399,7 +401,7 @@
             // 
             // CBEstatus
             // 
-            this.CBEstatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CBEstatus.BackColor = System.Drawing.Color.Gray;
             this.CBEstatus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CBEstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBEstatus.ForeColor = System.Drawing.Color.Black;
@@ -429,7 +431,7 @@
             // 
             // CBRaiting
             // 
-            this.CBRaiting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CBRaiting.BackColor = System.Drawing.Color.Gray;
             this.CBRaiting.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CBRaiting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBRaiting.ForeColor = System.Drawing.Color.Black;
@@ -461,7 +463,7 @@
             // 
             // CBGender2
             // 
-            this.CBGender2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CBGender2.BackColor = System.Drawing.Color.Gray;
             this.CBGender2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CBGender2.ForeColor = System.Drawing.Color.Black;
             this.CBGender2.FormattingEnabled = true;
@@ -488,7 +490,7 @@
             // 
             // CBGender1
             // 
-            this.CBGender1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CBGender1.BackColor = System.Drawing.Color.Gray;
             this.CBGender1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CBGender1.ForeColor = System.Drawing.Color.Black;
             this.CBGender1.FormattingEnabled = true;
@@ -526,10 +528,10 @@
             // 
             // txtnombre
             // 
-            this.txtnombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtnombre.BackColor = System.Drawing.Color.Gray;
             this.txtnombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtnombre.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.txtnombre.ForeColor = System.Drawing.Color.DimGray;
+            this.txtnombre.ForeColor = System.Drawing.Color.Black;
             this.txtnombre.Location = new System.Drawing.Point(217, 22);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(541, 19);
@@ -551,10 +553,10 @@
             // 
             // TXTSummary
             // 
-            this.TXTSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.TXTSummary.BackColor = System.Drawing.Color.Gray;
             this.TXTSummary.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TXTSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTSummary.ForeColor = System.Drawing.Color.DimGray;
+            this.TXTSummary.ForeColor = System.Drawing.Color.Black;
             this.TXTSummary.HideSelection = false;
             this.TXTSummary.Location = new System.Drawing.Point(220, 155);
             this.TXTSummary.MaximumSize = new System.Drawing.Size(433, 184);
@@ -568,7 +570,7 @@
             // 
             // BtnModi
             // 
-            this.BtnModi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BtnModi.BackColor = System.Drawing.Color.DimGray;
             this.BtnModi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnModi.Location = new System.Drawing.Point(6, 355);
             this.BtnModi.Name = "BtnModi";
@@ -581,7 +583,7 @@
             // 
             // BTNImage
             // 
-            this.BTNImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BTNImage.BackColor = System.Drawing.Color.DimGray;
             this.BTNImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNImage.Location = new System.Drawing.Point(7, 321);
             this.BTNImage.Name = "BTNImage";
@@ -605,7 +607,7 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.Controls.Add(this.lblwarningchapters);
             this.panel1.Location = new System.Drawing.Point(217, 280);
             this.panel1.Name = "panel1";
@@ -615,7 +617,7 @@
             // lblwarningchapters
             // 
             this.lblwarningchapters.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblwarningchapters.ForeColor = System.Drawing.Color.DimGray;
+            this.lblwarningchapters.ForeColor = System.Drawing.Color.Black;
             this.lblwarningchapters.Location = new System.Drawing.Point(3, 58);
             this.lblwarningchapters.Name = "lblwarningchapters";
             this.lblwarningchapters.Size = new System.Drawing.Size(451, 27);
@@ -639,7 +641,6 @@
             // PNResults
             // 
             this.PNResults.AutoScroll = true;
-            this.PNResults.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.PNResults.Controls.Add(this.lblWarningMyStory);
             this.PNResults.Location = new System.Drawing.Point(7, 23);
             this.PNResults.Name = "PNResults";
@@ -649,7 +650,7 @@
             // lblWarningMyStory
             // 
             this.lblWarningMyStory.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWarningMyStory.ForeColor = System.Drawing.Color.DimGray;
+            this.lblWarningMyStory.ForeColor = System.Drawing.Color.Black;
             this.lblWarningMyStory.Location = new System.Drawing.Point(178, 75);
             this.lblWarningMyStory.Name = "lblWarningMyStory";
             this.lblWarningMyStory.Size = new System.Drawing.Size(335, 27);
@@ -772,7 +773,7 @@
             // 
             // GBFollows
             // 
-            this.GBFollows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.GBFollows.BackColor = System.Drawing.Color.Gray;
             this.GBFollows.Controls.Add(this.PNFollows);
             this.GBFollows.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
             this.GBFollows.ForeColor = System.Drawing.Color.Black;
@@ -787,7 +788,7 @@
             // PNFollows
             // 
             this.PNFollows.AutoScroll = true;
-            this.PNFollows.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.PNFollows.BackColor = System.Drawing.Color.Gray;
             this.PNFollows.Controls.Add(this.LBLWarningStory);
             this.PNFollows.Location = new System.Drawing.Point(6, 26);
             this.PNFollows.Name = "PNFollows";
@@ -797,7 +798,7 @@
             // LBLWarningStory
             // 
             this.LBLWarningStory.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLWarningStory.ForeColor = System.Drawing.Color.DimGray;
+            this.LBLWarningStory.ForeColor = System.Drawing.Color.Black;
             this.LBLWarningStory.Location = new System.Drawing.Point(188, 77);
             this.LBLWarningStory.Name = "LBLWarningStory";
             this.LBLWarningStory.Size = new System.Drawing.Size(301, 27);
@@ -821,7 +822,7 @@
             // PNFavs
             // 
             this.PNFavs.AutoScroll = true;
-            this.PNFavs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.PNFavs.BackColor = System.Drawing.Color.Gray;
             this.PNFavs.Controls.Add(this.lblWarningFavs);
             this.PNFavs.Location = new System.Drawing.Point(7, 23);
             this.PNFavs.Name = "PNFavs";
@@ -831,7 +832,7 @@
             // lblWarningFavs
             // 
             this.lblWarningFavs.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWarningFavs.ForeColor = System.Drawing.Color.DimGray;
+            this.lblWarningFavs.ForeColor = System.Drawing.Color.Black;
             this.lblWarningFavs.Location = new System.Drawing.Point(106, 69);
             this.lblWarningFavs.Name = "lblWarningFavs";
             this.lblWarningFavs.Size = new System.Drawing.Size(471, 27);
@@ -848,7 +849,7 @@
             this.GBNotify.ForeColor = System.Drawing.Color.Black;
             this.GBNotify.Location = new System.Drawing.Point(236, 12);
             this.GBNotify.Name = "GBNotify";
-            this.GBNotify.Size = new System.Drawing.Size(699, 647);
+            this.GBNotify.Size = new System.Drawing.Size(786, 647);
             this.GBNotify.TabIndex = 0;
             this.GBNotify.TabStop = false;
             this.GBNotify.Tag = "699, 647 Location  236, 12";
@@ -941,7 +942,7 @@
             // lblnuevapass
             // 
             this.lblnuevapass.AutoSize = true;
-            this.lblnuevapass.Location = new System.Drawing.Point(236, 730);
+            this.lblnuevapass.Location = new System.Drawing.Point(245, 698);
             this.lblnuevapass.Name = "lblnuevapass";
             this.lblnuevapass.Size = new System.Drawing.Size(41, 13);
             this.lblnuevapass.TabIndex = 73;

@@ -543,6 +543,7 @@ namespace MailboxCUCEI
 				Button lblPlateNOBAR = new Button();
 				lblPlateNOBAR.Text = elements.GetName();
 				lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
+				lblPlateNOBAR.BackColor = Color.DimGray;
 				lblPlateNOBAR.Font = new Font("Consola", 9, FontStyle.Bold);
 				lblPlateNOBAR.Size = new Size(194, 30);
 				lblPlateNOBAR.ForeColor = Color.Black;
@@ -632,6 +633,11 @@ namespace MailboxCUCEI
         }
 
         private void GBRecommend_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GBDetails_Enter(object sender, EventArgs e)
         {
 
         }

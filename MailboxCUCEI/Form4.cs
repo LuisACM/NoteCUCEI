@@ -127,6 +127,7 @@ namespace MailboxCUCEI
                     lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
                     lblPlateNOBAR.Font = new Font("Consolas", 9,FontStyle.Bold);
                     lblPlateNOBAR.Size = new Size(194, 30);
+                    lblPlateNOBAR.BackColor = Color.DimGray;
                     lblPlateNOBAR.ForeColor = Color.Black;
                     lblPlateNOBAR.Location = new Point(LocalX, 140);
                     this.toolTip1.SetToolTip(lblPlateNOBAR, elements.GetSummary());
@@ -153,6 +154,7 @@ namespace MailboxCUCEI
                     pbox.Image = Image.FromFile(elements.GetCover());
                     //Crear Boton
                     Button lblPlateNOBAR = new Button();
+                    lblPlateNOBAR.BackColor = Color.DimGray;
                     lblPlateNOBAR.Text = elements.GetName();
                     lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
                     lblPlateNOBAR.Font = new Font("Consola", 9,FontStyle.Bold);
@@ -452,6 +454,7 @@ namespace MailboxCUCEI
                 //Crear Boton
                 Button lblPlateNOBAR = new Button();
                 lblPlateNOBAR.Text = elements.GetName();
+                lblPlateNOBAR.BackColor = Color.DimGray;
                 lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
                 lblPlateNOBAR.Font = new Font("Consolas", 9,FontStyle.Bold);
                 lblPlateNOBAR.Size = new Size(194, 30);

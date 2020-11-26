@@ -69,7 +69,6 @@ namespace MailboxCUCEI
        
         private void Principal_Load(object sender, EventArgs e)
         {
-           
             string query = "SELECT h.Nom_Historia,h.ID_Historia,h.Resumen,h.ID_Genero,h.Fo_Portada,h.Raiting,h.Estatus,Base.ID_Usuario,h.Seguidores,h.Favoritos,h.Vistas,u.Nombre From Usuarios_Historias AS Base INNER JOIN Usuarios AS u ON u.Codigo = Base.ID_Usuario INNER JOIN Historias AS h ON h.ID_Historia = Base.ID_Historia  ORDER BY h.Vistas DESC LIMIT 10 ";
             string conexion = "Server=bnqmsqe56xfyefbufx1k-mysql.services.clever-cloud.com; Database=bnqmsqe56xfyefbufx1k; Uid=ugdvlaubdknaqnb8; Pwd=nXHPKx9vaIhEJ2W8ZAqT;";
             MySqlConnection connetionBD = new MySqlConnection(conexion);
@@ -92,6 +91,7 @@ namespace MailboxCUCEI
                 lblPlateNOBAR.Text = "Escoger";
                 lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
                 lblPlateNOBAR.Font = new Font("Consolas", 9, FontStyle.Bold);
+                lblPlateNOBAR.BackColor = Color.DimGray;
                 lblPlateNOBAR.Size = new Size(194, 30);
                 lblPlateNOBAR.ForeColor = Color.Black;
                 lblPlateNOBAR.Location = new Point(LocalX, 140);

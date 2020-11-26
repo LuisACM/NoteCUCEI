@@ -115,6 +115,7 @@
             this.GBDetails.TabIndex = 16;
             this.GBDetails.TabStop = false;
             this.GBDetails.Text = "Estas Leyendo";
+            this.GBDetails.Enter += new System.EventHandler(this.GBDetails_Enter);
             // 
             // label1
             // 
@@ -340,7 +341,7 @@
             // 
             this.GBRecommend.Controls.Add(this.PNRecommends);
             this.GBRecommend.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.GBRecommend.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.GBRecommend.ForeColor = System.Drawing.Color.Black;
             this.GBRecommend.Location = new System.Drawing.Point(254, 539);
             this.GBRecommend.Name = "GBRecommend";
             this.GBRecommend.Size = new System.Drawing.Size(878, 237);
@@ -352,7 +353,6 @@
             // PNRecommends
             // 
             this.PNRecommends.AutoScroll = true;
-            this.PNRecommends.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.PNRecommends.Controls.Add(this.button2);
             this.PNRecommends.Controls.Add(this.pictureBox2);
             this.PNRecommends.Controls.Add(this.pictureBox1);
@@ -444,7 +444,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1469, 788);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.flagLabel);

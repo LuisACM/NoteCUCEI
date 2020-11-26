@@ -95,6 +95,7 @@ namespace MailboxCUCEI
                     lblPlateNOBAR.Text = nombre;
                     lblPlateNOBAR.FlatStyle = FlatStyle.Flat;
                     lblPlateNOBAR.Font = new Font("Consolas",9,FontStyle.Bold);
+                    lblPlateNOBAR.BackColor = Color.DimGray;
                     lblPlateNOBAR.Size = new Size(194, 30);
                     lblPlateNOBAR.ForeColor = Color.Black;
                     lblPlateNOBAR.Location = new Point(LocalX, 140);

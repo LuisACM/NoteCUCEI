@@ -105,7 +105,7 @@
             // PanelTopStories
             // 
             this.PanelTopStories.AutoScroll = true;
-            this.PanelTopStories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.PanelTopStories.BackColor = System.Drawing.Color.Gray;
             this.PanelTopStories.Controls.Add(this.button2);
             this.PanelTopStories.Controls.Add(this.pictureBox2);
             this.PanelTopStories.Controls.Add(this.pictureBox1);
@@ -211,7 +211,7 @@
             // 
             // CBSort
             // 
-            this.CBSort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CBSort.BackColor = System.Drawing.Color.Gray;
             this.CBSort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CBSort.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold);
             this.CBSort.ForeColor = System.Drawing.Color.Black;
@@ -238,7 +238,7 @@
             // 
             // CBGender
             // 
-            this.CBGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.CBGender.BackColor = System.Drawing.Color.Gray;
             this.CBGender.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.CBGender.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold);
             this.CBGender.ForeColor = System.Drawing.Color.Black;
@@ -292,7 +292,7 @@
             // 
             // txtsearch
             // 
-            this.txtsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtsearch.BackColor = System.Drawing.Color.Gray;
             this.txtsearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtsearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtsearch.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold);
@@ -322,7 +322,7 @@
             // PNResults
             // 
             this.PNResults.AutoScroll = true;
-            this.PNResults.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.PNResults.BackColor = System.Drawing.Color.Gray;
             this.PNResults.Controls.Add(this.lblwarningsearch);
             this.PNResults.Location = new System.Drawing.Point(7, 23);
             this.PNResults.Name = "PNResults";
@@ -332,7 +332,7 @@
             // lblwarningsearch
             // 
             this.lblwarningsearch.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblwarningsearch.ForeColor = System.Drawing.Color.DimGray;
+            this.lblwarningsearch.ForeColor = System.Drawing.Color.Black;
             this.lblwarningsearch.Location = new System.Drawing.Point(223, 75);
             this.lblwarningsearch.Name = "lblwarningsearch";
             this.lblwarningsearch.Size = new System.Drawing.Size(335, 27);
