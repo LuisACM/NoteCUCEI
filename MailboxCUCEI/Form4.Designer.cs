@@ -66,28 +66,32 @@
             // 
             // BTNCerrarSesion
             // 
+            this.BTNCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BTNCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNCerrarSesion.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNCerrarSesion.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BTNCerrarSesion.ForeColor = System.Drawing.Color.Black;
             this.BTNCerrarSesion.Location = new System.Drawing.Point(10, 435);
             this.BTNCerrarSesion.Name = "BTNCerrarSesion";
             this.BTNCerrarSesion.Size = new System.Drawing.Size(190, 41);
             this.BTNCerrarSesion.TabIndex = 1;
             this.BTNCerrarSesion.Text = "Cerrar Sesión";
-            this.BTNCerrarSesion.UseVisualStyleBackColor = true;
+            this.BTNCerrarSesion.UseVisualStyleBackColor = false;
             this.BTNCerrarSesion.Click += new System.EventHandler(this.BTNCerrarSesion_Click);
             // 
             // BTNEscribir
             // 
+            this.BTNEscribir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BTNEscribir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNEscribir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNEscribir.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNEscribir.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BTNEscribir.ForeColor = System.Drawing.Color.Black;
             this.BTNEscribir.Location = new System.Drawing.Point(10, 204);
             this.BTNEscribir.Name = "BTNEscribir";
             this.BTNEscribir.Size = new System.Drawing.Size(190, 41);
             this.BTNEscribir.TabIndex = 3;
             this.BTNEscribir.Text = "Escribe tu historia";
-            this.BTNEscribir.UseVisualStyleBackColor = true;
+            this.BTNEscribir.UseVisualStyleBackColor = false;
             this.BTNEscribir.Click += new System.EventHandler(this.BTNEscribirClick);
             // 
             // groupBox1
@@ -172,15 +176,17 @@
             // 
             // BtnPerfil
             // 
+            this.BtnPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPerfil.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPerfil.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.BtnPerfil.ForeColor = System.Drawing.Color.Black;
             this.BtnPerfil.Location = new System.Drawing.Point(10, 266);
             this.BtnPerfil.Name = "BtnPerfil";
             this.BtnPerfil.Size = new System.Drawing.Size(190, 41);
             this.BtnPerfil.TabIndex = 10;
             this.BtnPerfil.Text = "Mi Perfil";
-            this.BtnPerfil.UseVisualStyleBackColor = true;
+            this.BtnPerfil.UseVisualStyleBackColor = false;
             this.BtnPerfil.Click += new System.EventHandler(this.BtnPerfil_Click);
             // 
             // manduser

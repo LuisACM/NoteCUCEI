@@ -257,7 +257,7 @@
             this.txtcomments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.txtcomments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtcomments.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.txtcomments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtcomments.ForeColor = System.Drawing.Color.Black;
             this.txtcomments.Location = new System.Drawing.Point(3, 37);
             this.txtcomments.Multiline = true;
             this.txtcomments.Name = "txtcomments";
@@ -444,7 +444,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1475, 788);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.flagLabel);
